@@ -44,7 +44,9 @@
             <button onclick="increaseFont()">Increase Font Size</button>
             <button onclick="decreaseFont()">Decrease Font Size</button>
               <button onclick="invertColors()">Invert Colors</button>
-            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+              <button onclick="toggleLightMode()">Toggle Light Mode</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
             <button onclick="increaseBrightness()">Increase Brightness</button>
             <button onclick="increaseContrast()">Increase Contrast</button>
             <button onclick="adjustSaturation(10)">Increase Saturation</button>
@@ -549,6 +551,52 @@ document.addEventListener('DOMContentLoaded', function () {
     updateStyles();
     updateContrast();
     updateBrightness();
+  }
+</script>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Toggle dark mode on the navbar (assuming your navbar has a specific ID or class)
+    var navbar = document.getElementById("yourNavbarId"); // Replace "yourNavbarId" with the actual ID or class of your navbar
+    if (navbar) {
+      navbar.classList.toggle("dark-mode");
+    }
+  }
+</script>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // You can add more elements to toggle dark mode if needed
+    var elementsToToggle = document.querySelectorAll(".dark-mode-toggle");
+    elementsToToggle.forEach(function (element) {
+      element.classList.toggle("dark-mode");
+    });
+  }
+</script>
+<script>
+  var currentMode = "normal"; // Default to normal mode
+
+  function toggleLightMode() {
+    currentMode = "light";
+    applyMode();
+  }
+
+  function toggleDarkMode() {
+    currentMode = "dark";
+    applyMode();
+  }
+
+  function applyMode() {
+    document.body.classList.remove("light-mode", "dark-mode");
+
+    if (currentMode === "light") {
+      document.body.classList.add("light-mode");
+    } else if (currentMode === "dark") {
+      document.body.classList.add("dark-mode");
+    }
   }
 </script>
 

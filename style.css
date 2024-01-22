@@ -31,7 +31,7 @@ body {
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
-  background-color: black;
+  background-color: grey;
   color: white;
 }
 
@@ -114,6 +114,14 @@ body.invert-colors {
   height: 100%;
   z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
 }
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
+
 
 :focus {
     outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
@@ -147,4 +155,142 @@ body {
 
 .decrease-contrast {
   filter: contrast(90%);
+}
+/* Light mode styles */
+body {
+  background-color: #fff; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+.topnav {
+  background-color: #f2f2f2; /* Light navbar background color */
+  color: #333; /* Dark navbar text color */
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+.dark-mode .topnav {
+  background-color: #444; /* Dark navbar background color */
+  color: #eee; /* Light navbar text color */
+}
+
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Normal mode styles */
+body {
+  background-color: grey; /* Red background for normal mode */
+  color: #000;
+}
+/* Light mode styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.light-mode .navbar {
+  background-color: #blue; /* White background for the navbar */
+  color: #000; /* Black font color for the navbar */
+}
+/* Light mode styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.light-mode .topnav {
+  background-color: floralwhite; /* White background for the navbar */
+  color: #000; /* Black font color for the navbar */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.light-mode .topnav {
+  background-color: #fff; /* White background for the navbar */
+  color: #000; /* Black font color for the navbar */
+}
+
+body.light-mode .topnav a {
+  color: #000; /* Black font color for the links in the navbar */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+body.dark-mode .topnav a {
+  color: #fff; /* White font color for the links in the navbar in dark mode */
+}
+
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */
+}
+
+body .topnav a {
+  color: #fff; /* White font color for the links in the navbar in normal mode */
 }
