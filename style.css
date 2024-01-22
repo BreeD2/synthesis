@@ -1,7 +1,8 @@
 body {
-  background-color: cornflowerblue;
+  background-color:white;
   width:100%;
-  color:white;
+  color:color;
+  transition: background-color 0.5s ease;
 }
 
 /* Add a black background color to the top navigation bar */
@@ -9,6 +10,7 @@ body {
   overflow: hidden;
   background-color: firebrick;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -29,7 +31,7 @@ body {
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
-  background-color: #2196F3;
+  background-color: black;
   color: white;
 }
 
@@ -56,4 +58,64 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
+}
+#accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#accessibility-dropdown {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1;
+}
+
+#accessibility-button:hover #accessibility-dropdown {
+    display: block;
+}
+
+#accessibility-dropdown button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#accessibility-dropdown button:hover {
+    text-decoration: underline;
+}
+
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
 }

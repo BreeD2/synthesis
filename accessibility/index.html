@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your styles if needed -->
+    <!-- Other head elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #accessibility-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #accessibility-dropdown {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+            z-index: 1;
+        }
+
+        #accessibility-button:hover #accessibility-dropdown {
+            display: block;
+        }
+
+        #accessibility-dropdown button {
+            display: block;
+            margin-bottom: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        #accessibility-dropdown button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <!-- The main content of your page goes here -->
+        <h1>Welcome to My Website</h1>
+        <p>This is the main content of the page.</p>
+    </div>
+
+    <!-- Accessibility button with popover-style dropdown -->
+    <div id="accessibility-button"
+      aria-label="Accessibility Settings">
+ <i class="fa fa-cog" aria-hidden="true"> Accessibility</i>
+        <div id="accessibility-dropdown">
+            <button onclick="toggleHighContrast()">Toggle High Contrast</button>
+            <button onclick="increaseFont()">Increase Font Size</button>
+            <button onclick="decreaseFont()">Decrease Font Size</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <!-- Add other accessibility features here -->
+        </div>
+    </div>
+
+    <script>
+        function toggleHighContrast() {
+            document.body.classList.toggle("high-contrast");
+        }
+
+        function increaseFont() {
+            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+            document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
+        }
+
+        function decreaseFont() {
+            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+            document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

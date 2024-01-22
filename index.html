@@ -10,6 +10,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="accessibility/index.html"></script>
+  <script src="script.js"></script>
 <style>
 </style>
 </head>
@@ -20,6 +22,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <body>
   <div class="topnav">
   <a class="active" href="index.html">Home</a>
@@ -27,4 +30,84 @@
   <a href="#contact">Contact</a>
   <input type="text" placeholder="Search..">
 </div>
-</body>
+
+
+<div id="searchResults">
+        <!-- Display search results here -->
+    </div>
+
+    <!-- Accessibility button with popover-style dropdown -->
+    <div id="accessibility-button"
+      aria-label="Accessibility Settings">
+  <i class="fa fa-cog" aria-hidden="true"> Accessibility</i>
+        <div id="accessibility-dropdown">
+            <button onclick="toggleHighContrast()">Toggle High Contrast</button>
+            <button onclick="increaseFont()">Increase Font Size</button>
+            <button onclick="decreaseFont()">Decrease Font Size</button>
+              <button onclick="invertColors()">Invert Colors</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        </div>
+    </div>
+
+
+    <script>
+        function search() {
+            var searchInput = document.getElementById("searchInput").value;
+            var searchResults = document.getElementById("searchResults");
+
+            // Implement your search functionality here
+            // For simplicity, I'm just showing and hiding the search-results div in this example
+            if (searchInput.trim() !== "") {
+                searchResults.style.display = "block";
+                searchResults.innerHTML = "Search results for: " + searchInput;
+            } else {
+                searchResults.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function toggleHighContrast() {
+            document.body.classList.toggle("high-contrast");
+        }
+
+        function increaseFont() {
+            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+            document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
+        }
+
+        function decreaseFont() {
+            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+            document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+  darkModeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const highContrastToggle = document.getElementById('high-contrast-toggle');
+
+  highContrastToggle.addEventListener('click', function () {
+    document.body.classList.toggle('high-contrast');
+  });
+});
+</script>
+<script>
+  function invertColors() {
+  document.body.classList.toggle('invert-colors');
+}
+</script>
+  </body>
+  </html>
