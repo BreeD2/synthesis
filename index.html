@@ -41,17 +41,123 @@
       aria-label="Accessibility Settings">
   <i class="fa fa-cog" aria-hidden="true"> Accessibility</i>
         <div id="accessibility-dropdown">
-            <button onclick="toggleHighContrast()">Toggle High Contrast</button>
             <button onclick="increaseFont()">Increase Font Size</button>
             <button onclick="decreaseFont()">Decrease Font Size</button>
               <button onclick="invertColors()">Invert Colors</button>
             <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button onclick="increaseBrightness()">Increase Brightness</button>
+            <button onclick="increaseContrast()">Increase Contrast</button>
+            <button onclick="adjustSaturation(10)">Increase Saturation</button>
+  <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+  <button onclick="applyRedFilter()">Apply Red Filter</button>
+<button onclick="toggleGrayscale()">Toggle Grayscale</button>
+<button onclick="resetSettings()">Reset Settings</button>
 
-        </div>
+
+
+   <button onclick="decreaseContrast()">Decrease Contrast</button>
+  <button onclick="decreaseBrightness()">Decrease Brightness</button>
+
+
     </div>
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Saturation, Contrast, and Sepia control scripts -->
+    <!-- Red-Green Filter control scripts -->
+    <!-- Blue-Yellow Filter control scripts -->
+    <!-- Blue-Yellow Filter control scripts -->
+    <!-- Grayscale Filter control scripts -->
+    <script>
+      var grayscaleFilter = false;
+
+      function updateFilter() {
+        document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
+      }
+
+      function toggleGrayscale() {
+        grayscaleFilter = !grayscaleFilter;
+        updateFilter();
+      }
+
+      function resetFilter() {
+        grayscaleFilter = false;
+        updateFilter();
+      }
+    </script>
+
+
+
+    <!-- Red-Green Filter control scripts -->
+
 
 
     <script>
+      var saturation = 100;
+      var contrast = 100;
+      var sepia = 0;
+
+      function updateStyles() {
+        document.body.style.filter = "saturate(" + saturation + "%) contrast(" + contrast + "%) sepia(" + sepia + "%)";
+      }
+
+      function toggleSepia() {
+        sepia = sepia === 0 ? 100 : 0;
+        updateStyles();
+      }
+
+      function adjustContrast(step) {
+        contrast += step;
+        updateStyles();
+      }
+
+      function adjustSaturation(step) {
+        saturation += step;
+        updateStyles();
+      }
+    </script>
+
+
+<script>
+  <!-- Increase/Decrease Font Size and Toggle Dark Mode scripts -->
+<script>
+  function increaseFont() {
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
+  }
+
+  function decreaseFont() {
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
+<script>
+  // Contrast control variables
+var contrast = 100;
+var contrastStep = 10;
+
+// Contrast control functions
+function increaseContrast() {
+  contrast += contrastStep;
+  updateContrast();
+}
+
+function decreaseContrast() {
+  contrast -= contrastStep;
+  updateContrast();
+}
+
+function updateContrast() {
+  document.body.style.filter = "contrast(" + contrast + "%)";
+}
+</script>
+    <script>
+
         function search() {
             var searchInput = document.getElementById("searchInput").value;
             var searchResults = document.getElementById("searchResults");
@@ -104,10 +210,348 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+<script
 <script>
   function invertColors() {
   document.body.classList.toggle('invert-colors');
 }
 </script>
+<script>
+  // Brightness control variables
+  var brightness = 100;
+  var brightnessStep = 10;
+
+  // Brightness control functions
+  function increaseBrightness() {
+    brightness += brightnessStep;
+    updateBrightness();
+  }
+
+  function decreaseBrightness() {
+    brightness -= brightnessStep;
+    updateBrightness();
+  }
+
+  function updateBrightness() {
+    document.body.style.filter = "brightness(" + brightness + "%)";
+  }
+
+  // Add event listeners to brightness control buttons
+  document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
+  document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
+</script>
+
+<!-- Contrast control script -->
+<script>
+  // Contrast control variables
+  var contrast = 100;
+  var contrastStep = 10;
+
+  // Contrast control functions
+  function increaseContrast() {
+    contrast += contrastStep;
+    updateContrast();
+  }
+
+  function decreaseContrast() {
+    contrast -= contrastStep;
+    updateContrast();
+  }
+
+  function updateContrast() {
+    document.body.style.filter = "contrast(" + contrast + "%)";
+  }
+</script>
+
+<!-- Search script -->
+<script>
+  function search() {
+    var searchInput = document.getElementById("searchInput").value;
+    var searchResults = document.getElementById("searchResults");
+
+    // Implement your search functionality here
+    // For simplicity, I'm just showing and hiding the search-results div in this example
+    if (searchInput.trim() !== "") {
+      searchResults.style.display = "block";
+      searchResults.innerHTML = "Search results for: " + searchInput;
+    } else {
+      searchResults.style.display = "none";
+    }
+  }
+</script>
+
+<!-- Accessibility and Styling scripts -->
+<script>
+  function toggleHighContrast() {
+    document.body.classList.toggle("high-contrast");
+  }
+
+  function increaseFont() {
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
+  }
+
+  function decreaseFont() {
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+
+  function invertColors() {
+    document.body.classList.toggle('invert-colors');
+  }
+
+  // Brightness control variables
+  var brightness = 100;
+  var brightnessStep = 10;
+
+  // Brightness control functions
+  function increaseBrightness() {
+    brightness += brightnessStep;
+    updateBrightness();
+  }
+
+  function decreaseBrightness() {
+    brightness -= brightnessStep;
+    updateBrightness();
+  }
+
+  function updateBrightness() {
+    document.body.style.filter = "brightness(" + brightness + "%)";
+  }
+
+  // Add event listeners to brightness control buttons
+  document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
+  document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
+</script>
+
+<!-- Dark Mode Toggle script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    darkModeToggle.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+</script>
+
+<!-- High Contrast Toggle script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const highContrastToggle = document.getElementById('high-contrast-toggle');
+
+    highContrastToggle.addEventListener('click', function () {
+      document.body.classList.toggle('high-contrast');
+    });
+  });
+</script>
+<!-- Grayscale Filter control scripts -->
+<!-- Grayscale Filter control scripts -->
+<script>
+  var grayscaleFilter = false;
+  var redGreenFilter = 0;
+
+  function updateFilter() {
+    if (grayscaleFilter) {
+      document.body.style.filter = "grayscale(100%)";
+    } else if (redGreenFilter === 1) {
+      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(-20deg)";
+    } else if (redGreenFilter === -1) {
+      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(90deg)";
+    } else {
+      document.body.style.filter = "none";
+    }
+  }
+
+  function toggleGrayscale() {
+    grayscaleFilter = !grayscaleFilter;
+    updateFilter();
+  }
+
+  function applyRedFilter() {
+    redGreenFilter = 1;
+    grayscaleFilter = false; // Ensure grayscale is turned off when applying red filter
+    updateFilter();
+  }
+
+  function applyGreenFilter() {
+    redGreenFilter = -1;
+    grayscaleFilter = false; // Ensure grayscale is turned off when applying green filter
+    updateFilter();
+  }
+
+  // Other scripts go here
+</script>
+
+<script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+
+<script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset dark mode to default
+    document.body.classList.remove("dark-mode");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+<script>
+  function invertColors() {
+    document.body.classList.toggle('invert-colors');
+  }
+</script>
+<script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset dark mode to default
+    document.body.classList.remove("dark-mode");
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+<script>
+  function invertColors() {
+    document.body.classList.toggle('invert-colors');
+  }
+</script><script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset dark mode to default
+    document.body.classList.remove("dark-mode");
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+<script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset dark mode to default
+    document.body.classList.remove("dark-mode");
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+<script>
+  var isInverted = false;
+
+  function invertColors() {
+    isInverted = !isInverted;
+    document.body.style.filter = isInverted ? "invert(100%)" : "none";
+  }
+</script>
+
+<script>
+  function resetSettings() {
+    // Reset all settings to their default values
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset dark mode to default
+    document.body.classList.remove("dark-mode");
+
+    // Reset invert colors
+    isInverted = false;
+    document.body.style.filter = "none";
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+  }
+</script>
+
+
   </body>
   </html>

@@ -1,7 +1,7 @@
 body {
   background-color:white;
   width:100%;
-  color:color;
+  color:black;
   transition: background-color 0.5s ease;
 }
 
@@ -60,9 +60,11 @@ body {
   }
 }
 #accessibility-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: sticky;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    max-width: 300px; /* Set a maximum width if needed */
     background-color: #007bff;
     color: #fff;
     padding: 10px;
@@ -71,14 +73,12 @@ body {
 }
 
 #accessibility-dropdown {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
+    position: sticky;
+    max-width: 200px; /* Set a maximum width if needed */
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ccc;
     display: none;
-    z-index: 1;
 }
 
 #accessibility-button:hover #accessibility-dropdown {
@@ -99,12 +99,7 @@ body {
 
 
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-}
+
 
 body.dark-mode {
   background-color: #333333;
@@ -118,4 +113,38 @@ body.invert-colors {
   width: 100%;
   height: 100%;
   z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+
+:focus {
+    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
+}
+
+}
+
+body.increase-contrast {
+  filter: contrast(110%) sepia(0%);
+}
+
+body.decrease-contrast {
+  filter: contrast(90%) sepia(0%);
+}
+
+body.sepia-effect {
+  filter: contrast(100%) sepia(100%);
+}
+/* CSS for sepia and contrast adjustments */
+body {
+  transition: filter 0.5s ease; /* Optional: Add a smooth transition effect */
+}
+
+.sepia-effect {
+  filter: sepia(100%);
+}
+
+.increase-contrast {
+  filter: contrast(110%);
+}
+
+.decrease-contrast {
+  filter: contrast(90%);
 }
