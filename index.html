@@ -18,8 +18,7 @@
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -35,33 +34,66 @@
 <div id="searchResults">
         <!-- Display search results here -->
     </div>
-
-    <!-- Accessibility button with popover-style dropdown -->
-    <div id="accessibility-button"
-      aria-label="Accessibility Settings">
-  <i class="fa fa-cog" aria-hidden="true"> Accessibility</i>
-        <div id="accessibility-dropdown">
-            <button onclick="increaseFont()">Increase Font Size</button>
-            <button onclick="decreaseFont()">Decrease Font Size</button>
-              <button onclick="invertColors()">Invert Colors</button>
-              <button onclick="toggleLightMode()">Toggle Light Mode</button>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
-            <button onclick="increaseBrightness()">Increase Brightness</button>
-            <button onclick="increaseContrast()">Increase Contrast</button>
-            <button onclick="adjustSaturation(10)">Increase Saturation</button>
-  <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-  <button onclick="applyRedFilter()">Apply Red Filter</button>
-<button onclick="toggleGrayscale()">Toggle Grayscale</button>
-<button onclick="resetSettings()">Reset Settings</button>
-
-
-
-   <button onclick="decreaseContrast()">Decrease Contrast</button>
-  <button onclick="decreaseBrightness()">Decrease Brightness</button>
-
-
+    <!-- Font Awesome cog icon with click event -->
+    <!-- Font Awesome cog icon with click event -->
+    <div class="cog-icon">
+        <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
     </div>
+
+    <!-- Accessibility dropup content -->
+    <div id="accessibility-dropup" class="dropup-content">
+          <button onclick="resetSettings()">Reset Settings</button><button onclick="increaseFont()">Increase Font Size</button>
+        <button onclick="decreaseFont()">Decrease Font Size</button>
+        <button onclick="invertColors()">Invert Colors</button>
+        <button onclick="toggleLightMode()">Toggle Light Mode</button>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button onclick="increaseBrightness()">Increase Brightness</button>
+          <button onclick="decreaseBrightness()">Decrease Brightness</button>
+        <button onclick="increaseContrast()">Increase Contrast</button>
+          <button onclick="decreaseContrast()">Decrease Contrast</button>
+        <button onclick="adjustSaturation(10)">Increase Saturation</button>
+        <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+        <button onclick="applyRedFilter()">Apply Red Filter</button>
+        <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+
+
+
+        <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+    </div>
+
+
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+    <script>
+    function toggleAccessibilityMenu() {
+        var accessibilityDropup = document.getElementById("accessibility-dropup");
+        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
+    }
+
+    // Add your functions for the accessibility options here
+    function increaseFont() {
+        // Add your code for increasing font size
+    }
+
+    function decreaseFont() {
+        // Add your code for decreasing font size
+    }
+
+    // Add other functions for the remaining accessibility options
+
+</script>
+<script>
+  // Function to be called when the Toggle Light Mode button is clicked
+function toggleLightMode() {
+  document.body.classList.toggle('light-mode');
+}
+</script>
+
     <!-- Contrast and Sepia control scripts -->
     <!-- Contrast and Sepia control scripts -->
     <!-- Contrast and Sepia control scripts -->
@@ -120,8 +152,7 @@
     </script>
 
 
-<script>
-  <!-- Increase/Decrease Font Size and Toggle Dark Mode scripts -->
+
 <script>
   function increaseFont() {
     var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
@@ -576,29 +607,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 </script>
-<script>
-  var currentMode = "normal"; // Default to normal mode
 
-  function toggleLightMode() {
-    currentMode = "light";
-    applyMode();
-  }
-
-  function toggleDarkMode() {
-    currentMode = "dark";
-    applyMode();
-  }
-
-  function applyMode() {
-    document.body.classList.remove("light-mode", "dark-mode");
-
-    if (currentMode === "light") {
-      document.body.classList.add("light-mode");
-    } else if (currentMode === "dark") {
-      document.body.classList.add("dark-mode");
-    }
-  }
-</script>
 
 
   </body>
