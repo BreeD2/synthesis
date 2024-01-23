@@ -6,6 +6,7 @@ body {
   font-family: arial;
     min-width: 520px; /* Adjust the minimum width as needed */
 
+
 }
 html {
   font-family: arial;
@@ -26,7 +27,7 @@ html {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
+
   font-family: arial;
 }
 
@@ -50,7 +51,7 @@ html {
   border: none;
   margin-top: 8px;
   margin-right: 2%;
-  font-size: 17px;
+
 }
 
 
@@ -62,7 +63,7 @@ html {
   border: none;
   margin-top: 8px;
   margin-right: 2.6%;
-  font-size: 17px;
+
   width: 20%;
 }
 
@@ -161,11 +162,7 @@ body.dark-mode {
   color: #fff;
 }
 
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
+
 
 /* Dark mode styles */
 body.dark-mode {
@@ -270,39 +267,6 @@ body .topnav a {
 
 
 
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-body.light-mode #accessibility-button {
-  position: sticky;
-  margin-top: 10%;
-  margin-left: 75%;
-  width: 80%;
-  max-width: 300px;
-  background-color: lightgrey; /* White background for the button in light mode */
-  color: #000; /* Black font color for the button in light mode */
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode #accessibility-button {
-
-  background-color: grey; /* Black background for the button in dark mode */
-  color: white; /* White font color for the button in dark mode */
-
-}
 
 
 
@@ -362,27 +326,6 @@ body {
 
 
 
-  /* Light mode styles */
-  body.light-mode {
-    background-color: #f5f5f5;
-    color: #000;
-  }
-
-  body.light-mode #accessibility-button {
-    background-color: lightgrey; /* White background for the button in light mode */
-    color: #000; /* Black font color for the button in light mode */
-  }
-
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-
-  body.dark-mode #accessibility-button {
-    background-color: grey; /* Black background for the button in dark mode */
-    color: white; /* White font color for the button in dark mode */
-  }
 
   /* Normal mode styles */
   body {
@@ -398,7 +341,7 @@ body {
 
       width: 20%;
   padding: 5px; /* Add padding for better visual appearance */
-      font-size: 12px;
+
       color: white;
       margin: 0%;
       margin-left: 15%;
@@ -444,10 +387,14 @@ body {
     color: #000;
     /* Add other light mode styles as needed */
   }
-  body,
+
 .cog-icon i,
 .acc {
-  font-family: 'arial', sans-serif; /* Add the desired font-family */
+  font-family: 'arial', sans-serif; /* Add the desired font-family */;
+
+}
+body {
+  background-color: pink
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
 color:red
@@ -456,7 +403,7 @@ color:red
 /* Style the search input */
 input[type=text] {
   padding: 10px; /* Add padding */
-  font-size: 16px; /* Set font size */
+
   border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Add border radius for rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
@@ -488,49 +435,58 @@ input[type=text]:focus {
     position: sticky;
     width: 20%;
     padding: 5px;
-    font-size: 12px;
+
     margin: 0%;
     margin-left: 75%;
     margin-bottom: 5%;
 }
 
+
+/* Common styles for both light and dark modes */
+.dropup-content {
+    display: none;
+    position: sticky;
+    width: 20%;
+    padding: 5px;
+    margin: 0%;
+    margin-left: 75%;
+    margin-bottom: 5%;
+}
+
+/* Dark mode styles */
+body.dark-mode .dropup-content,
+body.dark-mode .dropup-content * {
+    color: white; /* Text color in dark mode */
+    background-color: dimgrey; /* Background color in dark mode */
+}
+
+
+
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+
 /* Light mode styles */
-body.light-mode .dropup-content {
-    color: #000; /* Set text color to black in light mode */
-    background-color: white;
+body.light-mode .dropup-content,
+body.light-mode .dropup-content * {
+    color: black; /* Text color in light mode */
+    background-color: white; /* Background color in light mode */
 }
 
 body.light-mode .dropup-content button {
-    color: black; /* Set button text color to black in light mode */
-    background-color: white;
+    color: black; /* Button text color in light mode */
+    background-color: white; /* Button background color in light mode */
 }
 
 body.light-mode .cog-icon,
 body.light-mode .cog-icon * {
-    color: black;
-    background-color: white;
-}
-
-/* Dark mode styles */
-body.dark-mode .dropup-content {
-    color: white; /* Set text color to white in dark mode */
-    background-color: dimgrey;
-}
-
-body.dark-mode .dropup-content button {
-    color: white; /* Set button text color to white in dark mode */
-    background-color: dimgrey;
-}
-
-/* Dark mode styles for cog-icon */
-body.dark-mode .cog-icon,
-body.dark-mode .cog-icon * {
-    color: white;
-    background-color: dimgrey;
-}
-
-/* Close button specific styles */
-.dropup-content button.close-button {
-    width: 100%; /* Make close button full width */
-    margin-bottom: 5px; /* Add some margin for separation */
+    color: black; /* Icon color in light mode */
+    background-color: white; /* Icon background color in light mode */
 }
