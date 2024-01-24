@@ -552,6 +552,30 @@ body.light-mode .cog-icon * {
        display: block;
        transition: 0.3s;
    }
+   /* Light mode styles */
+   body.light-mode .sidebar,
+   body.light-mode .sidebar * {
+       color: black; /* Text color in light mode */
+       background-color: white; /* Background color in light mode */
+   }
+   /* Search Input Styles */
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 2px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+
 
    .sidebar a:hover {
        color: #f1f1f1;
@@ -588,4 +612,23 @@ body.light-mode .cog-icon * {
        main {
            padding-top: 60px;
        }
+   }
+
+   /* Sidebar Styles */
+   .sidebar {
+       height: 100%;
+       width: 250px;
+       position: fixed;
+       z-index: 1;
+       top: 40px;
+       left: -250px;
+       background-color: #111;
+       overflow-y: auto; /* Add overflow-y to enable vertical scrollbar */
+       padding-top: 20px;
+       transition: 0.5s;
+   }
+
+   /* Game List Styles */
+   .game-list {
+       max-height: calc(100% - 40px); /* Adjust the maximum height as needed */
    }
