@@ -61,7 +61,51 @@
         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
     </div>
 
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <h2>All Games</h2>
+        <div id="game-list">
+            <!-- List all games - Repeat this list item for each game -->
+            <!-- Adjust the number of game links as needed -->
+            <!-- Note: If you have a large number of games, consider dynamically generating these links using JavaScript -->
+            <!-- For simplicity, we're manually adding links in this example -->
+            <a href="#" data-game="game1">Game 1 Title</a>
+            <a href="#" data-game="game2">Game 2 Title</a>
+            <!-- Add more game links as needed -->
+            <!-- ... -->
+            <!-- Add more game links as needed -->
+            <!-- ... -->
+            <!-- Add more game links as needed -->
+            <!-- ... -->
+            <!-- Add more game links as needed -->
+            <!-- ... -->
+            <!-- Add more game links as needed -->
+        </div>
+    </aside>
 
+    <!-- Sidebar Toggle Button -->
+    <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Your existing content goes here -->
+        <!-- Header, Hero, Browse Section, Footer, etc. -->
+    </main>
+
+
+
+    <!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Your existing JavaScript code for modal functionality
+            // ...
+        });
+    </script>
 
     <script>
         function toggleDropdown() {
@@ -631,6 +675,25 @@
     }
 </script>
 
+<script>
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var mainContent = document.querySelector('main');
+
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '0px';
+        } else {
+            sidebar.style.left = '0px';
+            mainContent.style.marginLeft = '250px';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing JavaScript code for modal functionality
+        // ...
+    });
+</script>
 
   </body>
   </html>

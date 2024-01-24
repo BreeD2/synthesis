@@ -394,7 +394,7 @@ body {
 
 }
 body {
-  background-color: pink
+  background-color: ghostwhite
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
 color:red
@@ -490,3 +490,102 @@ body.light-mode .cog-icon * {
     color: black; /* Icon color in light mode */
     background-color: white; /* Icon background color in light mode */
 }
+
+/* Add your existing styles here */
+
+/* Style for the welcome message container */
+#welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 999;
+
+}
+
+/* Hide the welcome message by default */
+.hidden {
+    display: none;
+}
+
+/* Top Navigation Bar Styles */
+   .topnav {
+       overflow: hidden;
+       background-color: firebrick;
+       z-index: 1000; /* Ensure topmost layer */
+   }
+
+   .topnav a {
+       float: left;
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+       font-family: arial;
+   }
+
+   /* Sidebar Styles */
+   .sidebar {
+       height: 100%;
+       width: 250px;
+       position: fixed;
+       z-index: 1;
+       top: 50px; /* Adjust this value based on the height of your top navigation bar */
+       left: -250px;
+       background-color: #111;
+       overflow-y: auto;
+       padding-top: 20px;
+       transition: 0.5s;
+   }
+
+   .sidebar a {
+       padding: 8px 8px 8px 16px;
+       text-decoration: none;
+       font-size: 14px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+   }
+
+   .sidebar a:hover {
+       color: #f1f1f1;
+   }
+
+   .sidebar h2 {
+       color: #f1f1f1;
+       text-align: center;
+   }
+
+   /* JavaScript for Sidebar Toggle */
+   .menu-toggle {
+       cursor: pointer;
+       position: fixed;
+       top: 50px;
+       left: 15px;
+       z-index: 2;
+       font-size: 25px;
+       color: dimgrey;
+   }
+
+   /* Main Content Section */
+   main {
+       margin-left: 0;
+       transition: margin-left 0.5s;
+       padding: 16px; /* Adjust padding to your needs */
+   }
+
+   @media screen and (max-width: 768px) {
+       .sidebar {
+           top: 50px;
+       }
+
+       main {
+           padding-top: 60px;
+       }
+   }
