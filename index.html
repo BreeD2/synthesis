@@ -68,35 +68,25 @@
          <ul class="search-results" id="searchResults"></ul>
         <div id="game-list">
 <a href="animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
-">Animal Crossing: New Horizons
+">Animal Crossing: New Horizons</a>
+<a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
+">Animal Crossing: New Leaf</a>
+<a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
+<a href="bigbrainacademywiidegree/index.html" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: Wii Degree</a>
+<a href="blur/index.html" data-game="Blur">Blur</a>
+<a href="cars/index.html" data-game="Cars">Cars</a>
+<a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls Remastered</a>
+<a href="deadpool/index.html" data-game="Deadpool">Deadpool</a>
+<a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: Minion Mayhem
 </a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Assassin’s Creed Odyssey
-">Assassin’s Creed Odyssey</a>
-<a href="#" data-game="Big Brain Academy: Wii Degree
-">Big Brain Academy: Wii Degree</a>
-<a href="#" data-game="Blur
-">Blur</a>
-<a href="#" data-game="Cars">Cars</a>
-<a href="#" data-game="Dark Souls Remastered">Dark Souls Remastered
-</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
+<a href="disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
+<a href="disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
+<a href="disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
+">Donkey Kong Country Returns</a>
+<a href="dragonageinquisition/index.html" data-game="Dragon Age Inquisition
+">Dragon Age Inquisition</a>
 <a href="#" data-game="Animal Crossing: New Leaf
 ">Animal Crossing: New Leaf</a>
 
@@ -796,6 +786,68 @@
         } catch (error) {
             console.error('Error fetching results:', error);
         }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing JavaScript code for modal functionality or other features
+        // ...
+    });
+</script>
+
+<!-- JavaScript -->
+<script>
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var mainContent = document.querySelector('main');
+
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '0px';
+        } else {
+            sidebar.style.left = '0px';
+            mainContent.style.marginLeft = '250px';
+        }
+    }
+
+    function liveSearch(query) {
+        var searchResultsContainer = document.getElementById('searchResults');
+        var gameListContainer = document.getElementById('game-list');
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        // Simulated array of games with game type (replace with actual data)
+        var allGames = [
+            { title: 'Animal Crossing: New Horizons', type: 'Simulation' },
+            { title: 'Animal Crossing: New Leaf', type: 'Simulation' },
+            { title: 'Assassin’s Creed Odyssey', type: 'Action-Adventure' },
+            { title: 'Big Brain Academy: Wii Degree', type: 'Educational' },
+            { title: 'Blur', type: 'Racing' },
+            { title: 'Cars', type: 'Racing' },
+            // Add more games as needed
+        ];
+
+        // Filter games based on the query
+        var filteredGames = allGames.filter(function (game) {
+            return game.title.toLowerCase().includes(query.toLowerCase());
+        });
+
+        // Display filtered games in the search results list
+        filteredGames.forEach(function (result) {
+            var listItem = document.createElement('li');
+            listItem.textContent = result.title + ' - Type: ' + result.type;
+            searchResultsContainer.appendChild(listItem);
+        });
+
+        // Update game list based on the query
+        gameListContainer.innerHTML = ''; // Clear previous game list
+
+        // Display filtered games in the game list
+        filteredGames.forEach(function (game) {
+            var gameLink = document.createElement('a');
+            gameLink.href = '#' + game.title.toLowerCase().replace(/\s+/g, ''); // Replace with actual link or action
+            gameLink.setAttribute('data-game', game.title);
+            gameLink.textContent = game.title + ' - Type: ' + game.type;
+            gameListContainer.appendChild(gameLink);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
