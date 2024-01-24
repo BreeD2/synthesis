@@ -30,7 +30,53 @@
   <input type="text" placeholder="Search..">
 </div>
 
+<aside class="sidebar">
+    <h3>All Games</h3>
+    <input type="text" placeholder="Search..">
+     <ul class="search-results" id="searchResults"></ul>
+    <div id="game-list">
+<a href="animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
+">Animal Crossing: New Horizons</a>
+<a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
+">Animal Crossing: New Leaf</a>
+<a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
+<a href="bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: Wii Degree</a>
+<a href="blur/index.html" data-game="Blur">Blur</a>
+<a href="cars/index.html" data-game="Cars">Cars</a>
+<a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls Remastered</a>
+<a href="deadpool/index.html" data-game="Deadpool">Deadpool</a>
+<a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: Minion Mayhem
+</a>
+<a href="disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
+<a href="disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
+<a href="disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
+">Donkey Kong Country Returns</a>
+<a href="dragonageinquisition/index.html" data-game="Dragon Age Inquisition
+">Dragon Age Inquisition</a>
+<a href="dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: Dark Arisen</a>
+<a href="driven/index.html" data-game="Driven
+">Driven</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
 
+    </div>
+</aside>
+
+<!-- Sidebar Toggle Button -->
+<div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
 <div id="searchResults">
 
     </div>
@@ -54,6 +100,10 @@
         <button onclick="adjustSaturation(10)">Increase Saturation</button>
         <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
         <button onclick="applyRedFilter()">Apply Red Filter</button>
+        <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
+      <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+      <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+  <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
         <button onclick="toggleGrayscale()">Toggle Grayscale</button>
 
 
@@ -61,40 +111,6 @@
         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
     </div>
 
-    <!-- Sidebar Section -->
-    <aside class="sidebar">
-        <h2>All Games</h2>
-        <input type="text" placeholder="Search..">
-         <ul class="search-results" id="searchResults"></ul>
-        <div id="game-list">
-<a href="animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
-">Animal Crossing: New Horizons</a>
-<a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-<a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
-<a href="bigbrainacademywiidegree/index.html" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: Wii Degree</a>
-<a href="blur/index.html" data-game="Blur">Blur</a>
-<a href="cars/index.html" data-game="Cars">Cars</a>
-<a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls Remastered</a>
-<a href="deadpool/index.html" data-game="Deadpool">Deadpool</a>
-<a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: Minion Mayhem
-</a>
-<a href="disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
-<a href="disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
-<a href="disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
-<a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
-<a href="donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
-">Donkey Kong Country Returns</a>
-<a href="dragonageinquisition/index.html" data-game="Dragon Age Inquisition
-">Dragon Age Inquisition</a>
-<a href="#" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
-
-        </div>
-    </aside>
-
-    <!-- Sidebar Toggle Button -->
-  <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
 
 
     <!-- Main Content Section -->
@@ -104,6 +120,7 @@
     </main>
     <!-- JavaScript for Sidebar Toggle and Live Search -->
     <!-- JavaScript for Sidebar Toggle and Live Search -->
+
     <script>
         function toggleSidebar() {
             var sidebar = document.querySelector('.sidebar');
@@ -401,120 +418,7 @@
   }
 </script>
 
-<!-- Search script -->
-<script>
-  function search() {
-    var searchInput = document.getElementById("searchInput").value;
-    var searchResults = document.getElementById("searchResults");
 
-    // Implement your search functionality here
-    // For simplicity, I'm just showing and hiding the search-results div in this example
-    if (searchInput.trim() !== "") {
-      searchResults.style.display = "block";
-      searchResults.innerHTML = "Search results for: " + searchInput;
-    } else {
-      searchResults.style.display = "none";
-    }
-  }
-</script>
-
-
-
-<!-- High Contrast Toggle script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const highContrastToggle = document.getElementById('high-contrast-toggle');
-
-    highContrastToggle.addEventListener('click', function () {
-      document.body.classList.toggle('high-contrast');
-    });
-  });
-</script>
-<!-- Grayscale Filter control scripts -->
-<!-- Grayscale Filter control scripts -->
-<script>
-  var grayscaleFilter = false;
-  var redGreenFilter = 0;
-
-  function updateFilter() {
-    if (grayscaleFilter) {
-      document.body.style.filter = "grayscale(100%)";
-    } else if (redGreenFilter === 1) {
-      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(-20deg)";
-    } else if (redGreenFilter === -1) {
-      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(90deg)";
-    } else {
-      document.body.style.filter = "none";
-    }
-  }
-
-  function toggleGrayscale() {
-    grayscaleFilter = !grayscaleFilter;
-    updateFilter();
-  }
-
-  function applyRedFilter() {
-    redGreenFilter = 1;
-    grayscaleFilter = false; // Ensure grayscale is turned off when applying red filter
-    updateFilter();
-  }
-
-  function applyGreenFilter() {
-    redGreenFilter = -1;
-    grayscaleFilter = false; // Ensure grayscale is turned off when applying green filter
-    updateFilter();
-  }
-
-  // Other scripts go here
-</script>
-
-
-
-
-<script>
-  function invertColors() {
-    document.body.classList.toggle('invert-colors');
-  }
-</script>
-
-
-<script>
-  var isInverted = false;
-
-  function invertColors() {
-    isInverted = !isInverted;
-    document.body.style.filter = isInverted ? "invert(100%)" : "none";
-  }
-</script>
-
-<script>
-  function resetSettings() {
-    // Reset all settings to their default values
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
-
-    // Reset font size to default
-    document.body.style.fontSize = "";
-
-    // Reset dark mode to default
-    document.body.classList.remove("dark-mode");
-
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-  }
-
-
-</script>
 
 <script>
   function toggleDarkMode() {
@@ -635,102 +539,51 @@
 </script>
 
 <!-- JavaScript -->
-<script>
-    function resetSettings() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
 
-        // Remove light mode explicitly to reset to the default state
-        document.body.classList.remove('light-mode');
 
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
 
 <script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
 
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
 
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
+    // Reset font size to default
+    document.body.style.fontSize = "";
 
-    function resetSettings() {
-        // Reset all settings to their default values
-        grayscaleFilter = false;
-        redGreenFilter = 0;
-        saturation = 100;
-        contrast = 100;
-        sepia = 0;
-        brightness = 100;
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
 
-        // Reset font size to default
-        document.body.style.fontSize = "";
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
 
-        // Reset dark mode to default
-        document.body.classList.remove("dark-mode");
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
 
-        // Reset invert colors
-        document.body.classList.remove("invert-colors");
+    // Close the dropup after the action
+    closeAccessibilityDropup();
 
-        // Update the styles to reflect the default settings
-        updateFilter();
-        updateStyles();
-        updateContrast();
-        updateBrightness();
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
 
-        // Close the dropup after resetting settings
-        closeAccessibilityDropup();
-    }
-</script>
-<script>
-    function resetSettings() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        document.body.classList.remove('light-mode'); // Add this line to explicitly remove 'light-mode'
-
-        // Reset other variables if needed
-        grayscaleFilter = false;
-        redGreenFilter = 0;
-        saturation = 100;
-        contrast = 100;
-        sepia = 0;
-        brightness = 100;
-
-        // Reset font size to default
-        document.body.style.fontSize = "";
-
-        // Reset invert colors
-        document.body.classList.remove("invert-colors");
-
-        // Update the styles to reflect the default settings
-        updateFilter();
-        updateStyles();
-        updateContrast();
-        updateBrightness();
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
+console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
+    // ... (existing code)
+    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
 </script>
 
 <script>
@@ -794,7 +647,6 @@
     });
 </script>
 
-<!-- JavaScript -->
 <script>
     function toggleSidebar() {
         var sidebar = document.querySelector('.sidebar');
@@ -809,45 +661,47 @@
         }
     }
 
-    function liveSearch(query) {
+    async function liveSearch(query) {
         var searchResultsContainer = document.getElementById('searchResults');
         var gameListContainer = document.getElementById('game-list');
         searchResultsContainer.innerHTML = ''; // Clear previous results
 
-        // Simulated array of games with game type (replace with actual data)
-        var allGames = [
-            { title: 'Animal Crossing: New Horizons', type: 'Simulation' },
-            { title: 'Animal Crossing: New Leaf', type: 'Simulation' },
-            { title: 'Assassin’s Creed Odyssey', type: 'Action-Adventure' },
-            { title: 'Big Brain Academy: Wii Degree', type: 'Educational' },
-            { title: 'Blur', type: 'Racing' },
-            { title: 'Cars', type: 'Racing' },
-            // Add more games as needed
-        ];
+        try {
+            // Simulate fetching results from a server (Replace with actual data retrieval)
+            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
+            var serverResults = await response.json();
 
-        // Filter games based on the query
-        var filteredGames = allGames.filter(function (game) {
-            return game.title.toLowerCase().includes(query.toLowerCase());
-        });
+            // Display server results in the search results list
+            serverResults.forEach(function (result) {
+                var listItem = document.createElement('li');
+                listItem.textContent = result;
+                searchResultsContainer.appendChild(listItem);
+            });
 
-        // Display filtered games in the search results list
-        filteredGames.forEach(function (result) {
-            var listItem = document.createElement('li');
-            listItem.textContent = result.title + ' - Type: ' + result.type;
-            searchResultsContainer.appendChild(listItem);
-        });
+            // Update game list based on the query
+            gameListContainer.innerHTML = ''; // Clear previous game list
 
-        // Update game list based on the query
-        gameListContainer.innerHTML = ''; // Clear previous game list
+            // Simulate updating the game list based on the search query
+            // Replace with your logic to filter and update game list
+            var filteredGames = [
+                'Animal Crossing: New Horizons',
+                'Animal Crossing: New Leaf',
+                'Another Game Title',
+                'Yet Another Game Title',
+                'Example Game Title'
+            ];
 
-        // Display filtered games in the game list
-        filteredGames.forEach(function (game) {
-            var gameLink = document.createElement('a');
-            gameLink.href = '#' + game.title.toLowerCase().replace(/\s+/g, ''); // Replace with actual link or action
-            gameLink.setAttribute('data-game', game.title);
-            gameLink.textContent = game.title + ' - Type: ' + game.type;
-            gameListContainer.appendChild(gameLink);
-        });
+            // Display filtered games in the game list
+            filteredGames.forEach(function (game) {
+                var gameLink = document.createElement('a');
+                gameLink.href = '#'; // Replace with actual link or action
+                gameLink.setAttribute('data-game', game);
+                gameLink.textContent = game;
+                gameListContainer.appendChild(gameLink);
+            });
+        } catch (error) {
+            console.error('Error fetching results:', error);
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -855,7 +709,207 @@
         // ...
     });
 </script>
+<script>
+  function applyGreenRedFilter() {
+     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+   }
 
+   function applyBlueYellowFilter() {
+     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(240deg)";
+   }
+   function applyRedFilter() {
+      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+    }
+
+</script>
+
+<script>
+  // Function to adjust font size (similar to the previous example)
+  function adjustFontSize(action) {
+      var currentSize = parseFloat(document.body.style.fontSize) || 16;
+
+      var newSize;
+      if (action === 'increase') {
+          newSize = currentSize * 1.2;
+      } else if (action === 'decrease') {
+          newSize = currentSize / 1.2;
+      }
+
+      document.body.style.fontSize = newSize + 'px';
+  }
+</script>
+<script>
+  function adjustFontSize(factor) {
+    // Adjust the font size of the body
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    var newFontSize = currentFontSize * factor;
+    document.body.style.fontSize = newFontSize + 'px';
+
+    // Adjust the font size of the h1 element
+    var h1Element = document.querySelector('h3');
+    var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
+    var newH1Size = currentH1Size * factor;
+    h1Element.style.fontSize = newH1Size + 'px';
+}
+
+function increaseFont() {
+    adjustFontSize(1.1); // Increase font size by 10%
+}
+
+function decreaseFont() {
+    adjustFontSize(0.9); // Decrease font size by 10%
+}
+</script>
+<script>
+  function adjustFontSize(factor) {
+    // Adjust the font size of the body
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    var newFontSize = currentFontSize * factor;
+    document.body.style.fontSize = newFontSize + 'px';
+
+    // Adjust the font size of links (a elements)
+    var links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+        var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+        var newLinkSize = currentLinkSize * factor;
+        link.style.fontSize = newLinkSize + 'px';
+    });
+}
+
+function increaseFont() {
+    adjustFontSize(1.1); // Increase font size by 10%
+}
+
+function decreaseFont() {
+    adjustFontSize(0.9); // Decrease font size by 10%
+}
+</script>
+
+  <script>
+    function decreaseFont() {
+        // Decrease the font size
+        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+        var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
+        document.body.style.fontSize = newFontSize + 'px';
+
+        // Adjust the sidebar size
+        var sidebar = document.querySelector('.sidebar');
+        var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
+        var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
+        sidebar.style.width = newSidebarWidth + 'px';
+
+        // Adjust other elements inside the sidebar if needed
+        var links = document.querySelectorAll('.sidebar a');
+        links.forEach(function(link) {
+            var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+            var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
+            link.style.fontSize = newLinkSize + 'px';
+        });
+
+        // Adjust the top position of the sidebar to maintain its top position
+        var topnavHeight = document.querySelector('.topnav').offsetHeight;
+        sidebar.style.top = topnavHeight + 'px';
+    }
+
+</script>
+<script>
+
+  function applyRedFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+  }
+
+  function applyGreenRedFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+  }
+
+  function applyBlueYellowFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(180deg)";
+  }
+  function applyHueRotate() {
+   document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(45deg)"; // Set your desired hue-rotate value
+ }
+
+ function applySepia() {
+   document.body.style.filter = "sepia(80%) saturate(100%) hue-rotate(0deg)"; // Set your desired sepia value
+ }
+</script>
+
+<script>
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
+
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+
+    // Reset the font size of h3 elements
+    var h3Elements = document.querySelectorAll('h3');
+    h3Elements.forEach(function(h3) {
+        h3.style.fontSize = ""; // Reset to default or set your default size
+    });
+
+    // Close the dropup after the action
+    closeAccessibilityDropup();
+
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchInput = document.querySelector('.sidebar input[type="text"]');
+        var gameListContainer = document.querySelector('.sidebar #game-list');
+
+        // Get all game links in the game list with data-game attribute
+        var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list [data-game]'));
+
+        searchInput.addEventListener('input', function () {
+            var searchTerm = this.value.toLowerCase();
+
+            // Filter game links based on an exact match with the data-game attribute
+            var filteredGames = gameLinks.filter(function (gameLink) {
+                return gameLink.getAttribute('data-game').toLowerCase().includes(searchTerm);
+            });
+
+            // Update game list based on the exact match with the data-game attribute
+            gameListContainer.innerHTML = '';
+            filteredGames.forEach(function (gameLink) {
+                var clonedLink = gameLink.cloneNode(true);
+                gameListContainer.appendChild(clonedLink);
+            });
+        });
+    });
+</script>
+
+<!-- Your existing HTML code continues here -->
+
+  </script>
 
   </body>
   </html>

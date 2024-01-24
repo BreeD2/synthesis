@@ -2,9 +2,10 @@ body {
   background-color:white;
   width:100%;
   color:black;
-  transition: background-color 0.5s ease;
+
   font-family: arial;
-    min-width: 520px; /* Adjust the minimum width as needed */
+    min-width: 520px; /* Adjust the minimum width as needed */;
+     box-sizing: border-box;
 
 
 }
@@ -16,6 +17,7 @@ html {
 .topnav {
   overflow: hidden;
   background-color: firebrick;
+  z-index: 100
 }
 
 
@@ -112,9 +114,7 @@ body.sepia-effect {
   filter: contrast(100%) sepia(100%);
 }
 /* CSS for sepia and contrast adjustments */
-body {
-  transition: filter 0.5s ease; /* Optional: Add a smooth transition effect */
-}
+
 
 .sepia-effect {
   filter: sepia(100%);
@@ -133,10 +133,7 @@ body {
   color: #000; /* Dark text color */
 }
 
-.topnav {
-  background-color: #f2f2f2; /* Light navbar background color */
-  color: #333; /* Dark navbar text color */
-}
+
 
 /* Dark mode styles */
 .dark-mode {
@@ -209,10 +206,7 @@ body {
   color: #000;
 }
 
-body .topnav {
-  background-color: #ff0000; /* Red background for the navbar in normal mode */
-  color: #fff; /* White font color for the navbar in normal mode */
-}
+
 
 /* Light mode styles */
 body.light-mode {
@@ -260,33 +254,11 @@ body .topnav a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Normal mode styles */
 body {
   background-color: #ff0000;
   color: #000;
 }
-
-
-
-
-
-
-
-
 
   #accessibility-dropup {
     display: none; /* Initially hide the dropdown */
@@ -397,7 +369,8 @@ body {
   background-color: ghostwhite
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
-color:red
+color:red;
+Hide
 
 }
 /* Style the search input */
@@ -493,18 +466,6 @@ body.light-mode .cog-icon * {
 
 /* Add your existing styles here */
 
-/* Style for the welcome message container */
-#welcome-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: black;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 999;
 
 }
 
@@ -513,36 +474,23 @@ body.light-mode .cog-icon * {
     display: none;
 }
 
-/* Top Navigation Bar Styles */
-   .topnav {
-       overflow: hidden;
-       background-color: firebrick;
-       z-index: 1000; /* Ensure topmost layer */
-   }
 
-   .topnav a {
-       float: left;
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 14px 16px;
-       text-decoration: none;
-       font-family: arial;
-   }
 
-   /* Sidebar Styles */
-   .sidebar {
-       height: 100%;
-       width: 250px;
-       position: fixed;
-       z-index: 1;
-       top: 50px; /* Adjust this value based on the height of your top navigation bar */
-       left: -250px;
-       background-color: #111;
-       overflow-y: auto;
-       padding-top: 20px;
-       transition: 0.5s;
-   }
+
+/* Sidebar Styles */
+.sidebar {
+
+    width: 250px;
+    position: fixed;
+    z-index: -1;
+    
+    transition: none;
+    background-color: black;
+    overflow-y: auto;
+    padding-top: 20px;
+
+}
+
 
    .sidebar a {
        padding: 8px 8px 8px 16px;
@@ -550,13 +498,14 @@ body.light-mode .cog-icon * {
        font-size: 14px;
        color: #818181;
        display: block;
-       transition: 0.3s;
+
    }
    /* Light mode styles */
    body.light-mode .sidebar,
    body.light-mode .sidebar * {
-       color: black; /* Text color in light mode */
-       background-color: white; /* Background color in light mode */
+       color: black; /* Text color in light mode */;
+       background-color: white; /* Background color in light mode */;
+
    }
    /* Search Input Styles */
 .sidebar input[type="text"] {
@@ -581,9 +530,9 @@ body.light-mode .cog-icon * {
        color: #f1f1f1;
    }
 
-   .sidebar h2 {
+   .sidebar h3 {
        color: #f1f1f1;
-       text-align: center;
+
    }
 
    /* JavaScript for Sidebar Toggle */
@@ -600,35 +549,16 @@ body.light-mode .cog-icon * {
    /* Main Content Section */
    main {
        margin-left: 0;
-       transition: margin-left 0.5s;
+
        padding: 16px; /* Adjust padding to your needs */
    }
 
    @media screen and (max-width: 768px) {
        .sidebar {
-           top: 50px;
+           top: 5%;
        }
 
        main {
            padding-top: 60px;
        }
-   }
-
-   /* Sidebar Styles */
-   .sidebar {
-       height: 100%;
-       width: 250px;
-       position: fixed;
-       z-index: 1;
-       top: 50px;
-       left: -250px;
-       background-color: #111;
-       overflow-y: auto; /* Add overflow-y to enable vertical scrollbar */
-       padding-top: 20px;
-       transition: 0.5s;
-   }
-
-   /* Game List Styles */
-   .game-list {
-       max-height: calc(100% - 40px); /* Adjust the maximum height as needed */
    }
