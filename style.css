@@ -35,7 +35,7 @@ html {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: lightgrey;
   color: black;
 
 }
@@ -498,6 +498,67 @@ body.light-mode .cog-icon * {
     padding-top: 20px;
     scroll-behavior: auto;
       overflow-y: auto;
+
+}
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Light Mode Styles */
+.light-mode .sidebar {
+    background-color: #f0f0f0; /* Light background for light mode */
+}
+
+.light-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.light-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #a0a0a0 #e0e0e0;
+}
+
+/* Dark Mode Styles */
+.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+}
+
+.dark-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #2c2c2c;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dark-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #555 #2c2c2c;
 }
 
 
@@ -509,6 +570,10 @@ body.light-mode .cog-icon * {
        display: block;
 
    }
+   .sidebar a:focus {
+    outline: 2px solid grey; /* Customize as needed */
+}
+
    /* Light mode styles */
    body.light-mode .sidebar,
    body.light-mode .sidebar * {
@@ -516,6 +581,7 @@ body.light-mode .cog-icon * {
        background-color: white; /* Background color in light mode */;
 
    }
+
    /* Search Input Styles */
 .sidebar input[type="text"] {
     width: 80%;
@@ -536,8 +602,12 @@ body.light-mode .cog-icon * {
 
 
    .sidebar a:hover {
-       color: #f1f1f1;
+       color: grey;
    }
+
+
+
+
 
    .sidebar h3 {
        color: #f1f1f1;
