@@ -42,7 +42,7 @@ html {
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
-  background-color: grey;
+  background-color: #1a1a1a;;
   color: white;
 }
 
@@ -55,7 +55,16 @@ html {
   margin-right: 2%;
 
 }
-
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: #1a1a1a;;
+  color: #ffffff;
+}
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
 
 
 /* Style the search box inside the navigation bar */
@@ -483,9 +492,9 @@ body.light-mode .cog-icon * {
     width: 250px;
     position: fixed;
     z-index: -1;
- height: 100vh;
+    height: 100vh;
     transition: none;
-    background-color: black;
+    background-color: #1a1a1a;
     padding-top: 20px;
     scroll-behavior: auto;
       overflow-y: auto;
@@ -496,7 +505,7 @@ body.light-mode .cog-icon * {
        padding: 8px 8px 8px 16px;
        text-decoration: none;
        font-size: 14px;
-       color: #818181;
+       color: white;
        display: block;
 
    }
@@ -543,8 +552,9 @@ body.light-mode .cog-icon * {
        left: 15px;
        z-index: 2;
        font-size: 25px;
-       color: dimgrey;
+       color: grey;
    }
+
 
    /* Main Content Section */
    main {
