@@ -1,134 +1,532 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <title>Synthesis</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Video Game Archive</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-y: auto; /* Enable vertical scrollbar if needed */
-            padding-top: 20px;
-            transition: 0.5s;
-        }
-
-        .sidebar a {
-            padding: 8px 8px 8px 16px;
-            text-decoration: none;
-            font-size: 14px; /* Adjust font size to fit more games */
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
-
-        .sidebar h2 {
-            color: #f1f1f1;
-            text-align: center;
-        }
-
-        .container {
-            margin-left: 260px; /* Adjust this value based on the width of the sidebar */
-            padding: 16px;
-        }
-
-        /* JavaScript for Sidebar Toggle */
-        .menu-toggle {
-            cursor: pointer;
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            z-index: 2;
-            font-size: 20px;
-            color: #fff;
-        }
-
-        /* Modal Styles (unchanged from the previous example) */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
+        /* Your CSS styles */
     </style>
 </head>
 <body>
 
-<!-- Sidebar Section -->
-<aside class="sidebar">
-    <h2>All Games</h2>
-    <div id="game-list">
-        <!-- List all games - Repeat this list item for each game -->
-        <!-- Adjust the number of game links as needed -->
-        <!-- Note: If you have a large number of games, consider dynamically generating these links using JavaScript -->
-        <!-- For simplicity, we're manually adding links in this example -->
-        <a href="#" data-game="game1">Game 1 Title</a>
-        <a href="#" data-game="game2">Game 2 Title</a>
-        <!-- Add more game links as needed -->
-        <!-- ... -->
-        <!-- Add more game links as needed -->
-        <!-- ... -->
-        <!-- Add more game links as needed -->
-        <!-- ... -->
-        <!-- Add more game links as needed -->
-        <!-- ... -->
-        <!-- Add more game links as needed -->
-    </div>
-</aside>
 
-<!-- Sidebar Toggle Button -->
-<div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
 
-<!-- Main Content Section -->
-<main class="container">
-    <!-- Your existing content goes here -->
-    <!-- Header, Hero, Browse Section, Footer, etc. -->
-</main>
 
-<!-- Modal Section (unchanged from the previous example) -->
-<div class="modal" id="gameModal">
-    <div class="modal-content">
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
-        <button id="closeModal">Close</button>
+  <div class="dropup">
+    <button class="dropbtn">Accessibility Options</button>
+    <div class="dropup-content">Accessibility Options
+        <button onclick="resetSettings()">Reset Settings</button>
+        <button onclick="increaseFont()">Increase Font Size</button>
+        <button onclick="decreaseFont()">Decrease Font Size</button>
+        <button onclick="invertColors()">Invert Colors</button>
+        <button onclick="toggleLightMode()">Toggle Light Mode</button>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button onclick="increaseBrightness()">Increase Brightness</button>
+        <button onclick="decreaseBrightness()">Decrease Brightness</button>
+        <button onclick="increaseContrast()">Increase Contrast</button>
+        <button onclick="decreaseContrast()">Decrease Contrast</button>
+        <button onclick="adjustSaturation(10)">Increase Saturation</button>
+        <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+        <button onclick="applyRedFilter()">Apply Red Filter</button>
+        <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
+        <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+        <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+        <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
+        <button onclick="toggleGrayscale()">Toggle Grayscale</button>
     </div>
 </div>
 
 
-<!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
+    <script src="script.js"></script>
+    <script>
+    function toggleAccessibilityMenu() {
+  var dropup = document.getElementById('accessibility-dropup');
+  dropup.classList.toggle('show-dropup');
+}
+    </script>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            var mainContent = document.querySelector('main');
+
+            if (sidebar.style.left === '0px') {
+                sidebar.style.left = '-250px';
+                mainContent.style.marginLeft = '0px';
+            } else {
+                sidebar.style.left = '0px';
+                mainContent.style.marginLeft = '250px';
+            }
+        }
+
+        function liveSearch(query) {
+            var searchResultsContainer = document.getElementById('searchResults');
+            searchResultsContainer.innerHTML = ''; // Clear previous results
+
+            // Simulate fetching results from a server (Replace with actual data retrieval)
+            var simulatedResults = [
+                'Game 1 Result',
+                'Game 2 Result',
+                'Another Game Result',
+                'Yet Another Result',
+                'Example Game Result'
+            ];
+
+            // Filter results based on the query
+            var filteredResults = simulatedResults.filter(function (result) {
+                return result.toLowerCase().includes(query.toLowerCase());
+            });
+
+            // Display filtered results in the sidebar
+            filteredResults.forEach(function (result) {
+                var listItem = document.createElement('li');
+                listItem.textContent = result;
+                searchResultsContainer.appendChild(listItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Your existing JavaScript code for modal functionality or other features
+            // ...
+        });
+    </script>
+
+
+
+    <!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Your existing JavaScript code for modal functionality
+            // ...
+        });
+    </script>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+    <script>
+    function toggleAccessibilityMenu() {
+        var accessibilityDropup = document.getElementById("accessibility-dropup");
+        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
+    }
+
+    // Add your functions for the accessibility options here
+    function increaseFont() {
+        // Add your code for increasing font size
+    }
+
+    function decreaseFont() {
+        // Add your code for decreasing font size
+    }
+
+    // Add other functions for the remaining accessibility options
+
+</script>
+<script>
+    function toggleLightMode() {
+        // Remove other classes that might affect the background
+        document.body.classList.remove('dark-mode');
+        document.body.classList.remove('invert-colors');
+        // Add or remove the 'light-mode' class based on the current state
+        document.body.classList.toggle('light-mode');
+        // Set button styles explicitly for light mode
+        if (document.body.classList.contains('light-mode')) {
+            document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
+            document.getElementById('accessibility-dropup').style.color = 'black';
+        } else {
+            // Set button styles explicitly for dark mode
+            document.getElementById('accessibility-dropup').style.backgroundColor = 'dodgerblue';
+            document.getElementById('accessibility-dropup').style.color = 'white';
+        }
+    }
+</script>
+
+<!-- JavaScript -->
+<!-- JavaScript -->
+<script>
+    function toggleLightMode() {
+        // Remove other classes that might affect the background
+        document.body.classList.remove('dark-mode');
+        document.body.classList.remove('invert-colors');
+        // Add or remove the 'light-mode' class based on the current state
+        document.body.classList.toggle('light-mode');
+
+        // Close the dropup after the action
+        closeAccessibilityDropup();
+    }
+
+    // Add this function to close the dropup
+    function closeAccessibilityDropup() {
+        var dropup = document.getElementById('accessibility-dropup');
+        dropup.style.display = 'none';
+    }
+</script>
+
+<!-- JavaScript -->
+<script>
+    function toggleLightMode() {
+        // Remove other classes that might affect the background
+        document.body.classList.remove('dark-mode');
+        document.body.classList.remove('invert-colors');
+        // Add or remove the 'light-mode' class based on the current state
+        document.body.classList.toggle('light-mode');
+
+        // Close the dropup after the action
+        closeAccessibilityDropup();
+    }
+
+    // Add this function to close the dropup
+    function closeAccessibilityDropup() {
+        var dropup = document.getElementById('accessibility-dropup');
+        dropup.style.display = 'none';
+    }
+</script>
+
+
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Contrast and Sepia control scripts -->
+    <!-- Saturation, Contrast, and Sepia control scripts -->
+    <!-- Red-Green Filter control scripts -->
+    <!-- Blue-Yellow Filter control scripts -->
+    <!-- Blue-Yellow Filter control scripts -->
+    <!-- Grayscale Filter control scripts -->
+    <script>
+      var grayscaleFilter = false;
+
+      function updateFilter() {
+        document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
+      }
+
+      function toggleGrayscale() {
+        grayscaleFilter = !grayscaleFilter;
+        updateFilter();
+      }
+
+      function resetFilter() {
+        grayscaleFilter = false;
+        updateFilter();
+      }
+    </script>
+
+
+
+
+
+
+
+    <script>
+      var saturation = 100;
+      var contrast = 100;
+      var sepia = 0;
+
+      function updateStyles() {
+        document.body.style.filter = "saturate(" + saturation + "%) contrast(" + contrast + "%) sepia(" + sepia + "%)";
+      }
+
+      function toggleSepia() {
+        sepia = sepia === 0 ? 100 : 0;
+        updateStyles();
+      }
+
+      function adjustContrast(step) {
+        contrast += step;
+        updateStyles();
+      }
+
+      function adjustSaturation(step) {
+        saturation += step;
+        updateStyles();
+      }
+    </script>
+
+
+
+
+    <script>
+
+        function search() {
+            var searchInput = document.getElementById("searchInput").value;
+            var searchResults = document.getElementById("searchResults");
+
+            // Implement your search functionality here
+            // For simplicity, I'm just showing and hiding the search-results div in this example
+            if (searchInput.trim() !== "") {
+                searchResults.style.display = "block";
+                searchResults.innerHTML = "Search results for: " + searchInput;
+            } else {
+                searchResults.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+    function toggleAccessibilityMenu() {
+      var accessibilityDropup = document.getElementById("accessibility-dropup");
+      accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
+    }
+
+    // Existing functions for accessibility options
+
+    function increaseFont() {
+      // Add your code for increasing font size
+      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+      document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
+    }
+
+    function decreaseFont() {
+      // Add your code for decreasing font size
+      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+      document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
+    }
+  </script>
+
+<script
+<script>
+  function invertColors() {
+  document.body.classList.toggle('invert-colors');
+}
+</script>
+<script>
+  // Brightness control variables
+  var brightness = 100;
+  var brightnessStep = 10;
+
+  // Brightness control functions
+  function increaseBrightness() {
+    brightness += brightnessStep;
+    updateBrightness();
+  }
+
+  function decreaseBrightness() {
+    brightness -= brightnessStep;
+    updateBrightness();
+  }
+
+  function updateBrightness() {
+    document.body.style.filter = "brightness(" + brightness + "%)";
+  }
+
+  // Add event listeners to brightness control buttons
+  document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
+  document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
+</script>
+
+<!-- Contrast control script -->
+<script>
+  // Contrast control variables
+  var contrast = 100;
+  var contrastStep = 10;
+
+  // Contrast control functions
+  function increaseContrast() {
+    contrast += contrastStep;
+    updateContrast();
+  }
+
+  function decreaseContrast() {
+    contrast -= contrastStep;
+    updateContrast();
+  }
+
+  function updateContrast() {
+    document.body.style.filter = "contrast(" + contrast + "%)";
+  }
+</script>
+
+
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Toggle dark mode on the navbar (assuming your navbar has a specific ID or class)
+    var navbar = document.getElementById("yourNavbarId"); // Replace "yourNavbarId" with the actual ID or class of your navbar
+    if (navbar) {
+      navbar.classList.toggle("dark-mode");
+    }
+  }
+</script>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // You can add more elements to toggle dark mode if needed
+    var elementsToToggle = document.querySelectorAll(".dark-mode-toggle");
+    elementsToToggle.forEach(function (element) {
+      element.classList.toggle("dark-mode");
+    });
+  }
+</script>
+
+<script>
+    function toggleHighContrast() {
+        document.body.classList.toggle("high-contrast");
+        toggleAccessibilityMenu(); // Added to toggle the menu when changing contrast
+    }
+
+    function adjustFontSize(action) {
+        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+        var newSize;
+
+        if (action === 'increase') {
+            newSize = currentFontSize * 1.1 + 'px';
+        } else if (action === 'decrease') {
+            newSize = currentFontSize / 1.1 + 'px';
+        }
+
+        document.body.style.fontSize = newSize;
+        toggleAccessibilityMenu(); // Added to toggle the menu when changing font size
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        toggleAccessibilityMenu(); // Added to toggle the menu when changing dark mode
+    }
+
+    function toggleAccessibilityMenu() {
+        var accessibilityDropup = document.getElementById("accessibility-dropup");
+        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        darkModeToggle.addEventListener('click', function () {
+            toggleDarkMode();
+        });
+
+        const highContrastToggle = document.getElementById('high-contrast-toggle');
+
+        highContrastToggle.addEventListener('click', function () {
+            toggleHighContrast();
+        });
+
+        const accessibilityCogIcon = document.querySelector('.cog-icon');
+
+        accessibilityCogIcon.addEventListener('click', function () {
+            toggleAccessibilityMenu();
+        });
+
+        const increaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(2)');
+        const decreaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(3)');
+
+        increaseFontButton.addEventListener('click', function () {
+            adjustFontSize('increase');
+        });
+
+        decreaseFontButton.addEventListener('click', function () {
+            adjustFontSize('decrease');
+        });
+    });
+</script>
+
+<!-- JavaScript -->
+<script>
+    function toggleLightMode() {
+        // Remove other classes that might affect the background
+        document.body.classList.remove('dark-mode');
+        document.body.classList.remove('invert-colors');
+
+        // Add or remove the 'light-mode' class based on the current state
+        document.body.classList.toggle('light-mode');
+
+        // Close the dropup after the action
+        closeAccessibilityDropup();
+    }
+
+    function toggleDarkMode() {
+        // Remove other classes that might affect the background
+        document.body.classList.remove('light-mode');
+        document.body.classList.remove('invert-colors');
+
+        // Add or remove the 'dark-mode' class based on the current state
+        document.body.classList.toggle('dark-mode');
+
+        // Close the dropup after the action
+        closeAccessibilityDropup();
+    }
+
+    // Add this function to close the dropup
+    function closeAccessibilityDropup() {
+        var dropup = document.getElementById('accessibility-dropup');
+        dropup.style.display = 'none';
+    }
+</script>
+
+<!-- JavaScript -->
+
+
+
+<script>
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
+
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+
+    // Close the dropup after the action
+    closeAccessibilityDropup();
+
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
+
+console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
+    // ... (existing code)
+    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
+</script>
+
 <script>
     function toggleSidebar() {
         var sidebar = document.querySelector('.sidebar');
-        sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        var mainContent = document.querySelector('main');
+
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '0px';
+        } else {
+            sidebar.style.left = '0px';
+            mainContent.style.marginLeft = '250px';
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -137,5 +535,314 @@
     });
 </script>
 
+<!-- JavaScript for Sidebar Toggle and Live Search -->
+<script>
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var mainContent = document.querySelector('main');
+
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '0px';
+        } else {
+            sidebar.style.left = '0px';
+            mainContent.style.marginLeft = '250px';
+        }
+    }
+
+    async function liveSearch(query) {
+        var searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        try {
+            // Simulate fetching results from a server (Replace with actual data retrieval)
+            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
+            var serverResults = await response.json();
+
+            // Display server results in the sidebar
+            serverResults.forEach(function (result) {
+                var listItem = document.createElement('li');
+                listItem.textContent = result;
+                searchResultsContainer.appendChild(listItem);
+            });
+        } catch (error) {
+            console.error('Error fetching results:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing JavaScript code for modal functionality or other features
+        // ...
+    });
+</script>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        var mainContent = document.querySelector('main');
+
+        if (sidebar.style.left === '0px') {
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '0px';
+        } else {
+            sidebar.style.left = '0px';
+            mainContent.style.marginLeft = '250px';
+        }
+    }
+
+    async function liveSearch(query) {
+        var searchResultsContainer = document.getElementById('searchResults');
+        var gameListContainer = document.getElementById('game-list');
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        try {
+            // Simulate fetching results from a server (Replace with actual data retrieval)
+            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
+            var serverResults = await response.json();
+
+            // Display server results in the search results list
+            serverResults.forEach(function (result) {
+                var listItem = document.createElement('li');
+                listItem.textContent = result;
+                searchResultsContainer.appendChild(listItem);
+            });
+
+            // Update game list based on the query
+            gameListContainer.innerHTML = ''; // Clear previous game list
+
+            // Simulate updating the game list based on the search query
+            // Replace with your logic to filter and update game list
+            var filteredGames = [
+                'Animal Crossing: New Horizons',
+                'Animal Crossing: New Leaf',
+                'Another Game Title',
+                'Yet Another Game Title',
+                'Example Game Title'
+            ];
+
+            // Display filtered games in the game list
+            filteredGames.forEach(function (game) {
+                var gameLink = document.createElement('a');
+                gameLink.href = '#'; // Replace with actual link or action
+                gameLink.setAttribute('data-game', game);
+                gameLink.textContent = game;
+                gameListContainer.appendChild(gameLink);
+            });
+        } catch (error) {
+            console.error('Error fetching results:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing JavaScript code for modal functionality or other features
+        // ...
+    });
+</script>
+<script>
+  function applyGreenRedFilter() {
+     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+   }
+
+   function applyBlueYellowFilter() {
+     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(240deg)";
+   }
+   function applyRedFilter() {
+      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+    }
+
+</script>
+
+<script>
+  // Function to adjust font size (similar to the previous example)
+  function adjustFontSize(action) {
+      var currentSize = parseFloat(document.body.style.fontSize) || 16;
+
+      var newSize;
+      if (action === 'increase') {
+          newSize = currentSize * 1.2;
+      } else if (action === 'decrease') {
+          newSize = currentSize / 1.2;
+      }
+
+      document.body.style.fontSize = newSize + 'px';
+  }
+</script>
+<script>
+  function adjustFontSize(factor) {
+    // Adjust the font size of the body
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    var newFontSize = currentFontSize * factor;
+    document.body.style.fontSize = newFontSize + 'px';
+
+    // Adjust the font size of the h1 element
+    var h1Element = document.querySelector('h3');
+    var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
+    var newH1Size = currentH1Size * factor;
+    h1Element.style.fontSize = newH1Size + 'px';
+}
+
+function increaseFont() {
+    adjustFontSize(1.1); // Increase font size by 10%
+}
+
+function decreaseFont() {
+    adjustFontSize(0.9); // Decrease font size by 10%
+}
+</script>
+<script>
+  function adjustFontSize(factor) {
+    // Adjust the font size of the body
+    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+    var newFontSize = currentFontSize * factor;
+    document.body.style.fontSize = newFontSize + 'px';
+
+    // Adjust the font size of links (a elements)
+    var links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+        var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+        var newLinkSize = currentLinkSize * factor;
+        link.style.fontSize = newLinkSize + 'px';
+    });
+}
+
+function increaseFont() {
+    adjustFontSize(1.1); // Increase font size by 10%
+}
+
+function decreaseFont() {
+    adjustFontSize(0.9); // Decrease font size by 10%
+}
+</script>
+
+  <script>
+    function decreaseFont() {
+        // Decrease the font size
+        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+        var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
+        document.body.style.fontSize = newFontSize + 'px';
+
+        // Adjust the sidebar size
+        var sidebar = document.querySelector('.sidebar');
+        var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
+        var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
+        sidebar.style.width = newSidebarWidth + 'px';
+
+        // Adjust other elements inside the sidebar if needed
+        var links = document.querySelectorAll('.sidebar a');
+        links.forEach(function(link) {
+            var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+            var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
+            link.style.fontSize = newLinkSize + 'px';
+        });
+
+        // Adjust the top position of the sidebar to maintain its top position
+        var topnavHeight = document.querySelector('.topnav').offsetHeight;
+        sidebar.style.top = topnavHeight + 'px';
+    }
+
+</script>
+<script>
+
+  function applyRedFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
+  }
+
+  function applyGreenRedFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
+  }
+
+  function applyBlueYellowFilter() {
+    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(180deg)";
+  }
+  function applyHueRotate() {
+   document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(45deg)"; // Set your desired hue-rotate value
+ }
+
+ function applySepia() {
+   document.body.style.filter = "sepia(80%) saturate(100%) hue-rotate(0deg)"; // Set your desired sepia value
+ }
+</script>
+
+<script>
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
+
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+
+    // Reset the font size of h3 elements
+    var h3Elements = document.querySelectorAll('h3');
+    h3Elements.forEach(function(h3) {
+        h3.style.fontSize = ""; // Reset to default or set your default size
+    });
+
+    // Close the dropup after the action
+    closeAccessibilityDropup();
+
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchInput = document.querySelector('.sidebar input[type="text"]');
+        var gameListContainer = document.querySelector('.sidebar #game-list');
+
+        // Get all game links in the game list with data-game attribute
+        var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list [data-game]'));
+
+        searchInput.addEventListener('input', function () {
+            var searchTerm = this.value.toLowerCase();
+
+            // Filter game links based on an exact match with the data-game attribute
+            var filteredGames = gameLinks.filter(function (gameLink) {
+                return gameLink.getAttribute('data-game').toLowerCase().includes(searchTerm);
+            });
+
+            // Update game list based on the exact match with the data-game attribute
+            gameListContainer.innerHTML = '';
+            filteredGames.forEach(function (gameLink) {
+                var clonedLink = gameLink.cloneNode(true);
+                gameListContainer.appendChild(clonedLink);
+            });
+        });
+    });
+</script>
+
+
+<script>
+  function toggleAccessibilityMenu() {
+      var dropup = document.getElementById('accessibility-dropup');
+      dropup.classList.toggle('show-dropup');
+  }
+
+</script>
 </body>
 </html>

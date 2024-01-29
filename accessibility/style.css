@@ -1,143 +1,131 @@
-/* style.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+/* Style the dropup container */
+.dropup {
+    position: relative;
+    display: inline-block;
+    margin-top: 46%;
+    margin-right: 40%;
 }
 
-h1 {
-    color: red;
+/* Style the button used to open the dropup content */
+.dropbtn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+
+
 }
 
-button {
-  background-color: blue
-}
-
-p {
-    line-height: 1.5;
-}
-
-#accessibility-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Dropup content (hidden by default) */
+.dropup-content {
     display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* Light grey background */
+    min-width: 160px;
+    bottom: 100%; /* Position it above the button */
+    z-index: 1; /* Make sure it appears on top */;
+
+
+
 }
 
-#accessibility-container.visible {
+/* Style for individual buttons inside the dropup content */
+.dropup-content button {
+    color: black; /* Black text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Full width */
+    border: none;
+    background-color: transparent; /* Transparent background */;
+
+
+
+}
+
+/* Change the background color of the buttons on hover */
+.dropup-content button:hover {
+    background-color: #ddd;
+
+
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+    display: block;
+      margin-top: 35%;
+
+}
+
+/* Change background color of the dropbtn on hover */
+.dropup:hover .dropbtn {
+    background-color: #3e8e41;
+      margin-top: 35%;
+
+}
+
+
+/* Style the dropup container */
+.dropup {
+    position: relative;
+    display: inline-block; /* Keeps the dropup container inline */
+    margin-top: 2%; /* Adjust top margin as needed */
+    /* Remove or adjust margins/paddings if necessary */
+}
+
+/* Style the button used to open the dropup content */
+.dropbtn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for the button */
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 10px 20px; /* Adjust as per design needs */
+}
+
+/* Dropup content (hidden by default) */
+.dropup-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9; /* Light grey background */
+    min-width: 160px; /* Minimum width of the dropup content */;
+
+    bottom: 58%; /* Position it above the button */
+    left: 0; /* Align with the left edge of the dropup button */
+    border-radius: 5px; /* Rounded corners for the content */
+    z-index: 1;
+}
+
+/* Style for individual buttons inside the dropup content */
+.dropup-content button {
+    color: black; /* Black text */
+    padding: 10px 15px; /* Adjust padding as needed */
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Full width */
+    border: none;
+    background-color: transparent; /* Transparent background */
+    text-align: left; /* Left align text */
+}
+
+/* Change the background color of the buttons on hover */
+.dropup-content button:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
     display: block;
 }
 
-/* Add more styles as needed */
-
-#accessibility-container {
-          position: fixed;
-          top: 10px;
-          right: 10px;
-          background-color: #fff;
-          padding: 10px;
-          border: 1px solid #ccc;
-          display: none;
-      }
-
-      #accessibility-button {
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          background-color: #007bff;
-          color: #fff;
-          padding: 8px;
-          border: none;
-          cursor: pointer;
-      }
-
-      /* Responsive styles */
-      @media only screen and (max-width: 600px) {
-          #accessibility-button {
-              top: 10px;
-              right: 10px;
-          }
-
-          #accessibility-container {
-              top: 50px;
-              right: 10px;
-          }
-      }
-
-      #accessibility-button:hover + #accessibility-dropup,
-      #accessibility-dropup:hover {
-        display: block; /* Show the dropdown when the button is hovered or the dropdown itself is hovered */
-      }
-
-      #accessibility-dropup button {
-        display: block;
-        margin-bottom: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-
-
-
-      /* Light mode styles */
-      body.light-mode {
-        background-color: #f5f5f5;
-        color: #000;
-      }
-
-      body.light-mode #accessibility-button {
-        background-color: lightgrey; /* White background for the button in light mode */
-        color: #000; /* Black font color for the button in light mode */
-      }
-
-      /* Dark mode styles */
-      body.dark-mode {
-        background-color: #333;
-        color: #fff;
-      }
-      /* Sidebar Styles */
-      .sidebar {
-          height: 100%;
-          width: 250px;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111;
-          overflow-y: auto; /* Enable vertical scrollbar if needed */
-          padding-top: 20px;
-          transition: 0.5s;
-      }
-
-      .sidebar a {
-          padding: 8px 8px 8px 16px;
-          text-decoration: none;
-          font-size: 14px; /* Adjust font size to fit more games */
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-      }
-
-      .sidebar a:hover {
-          color: #f1f1f1;
-      }
-
-      .sidebar h2 {
-          color: #f1f1f1;
-          text-align: center;
-      }
-
-      body.dark-mode #accessibility-button {
-        background-color: grey; /* Black background for the button in dark mode */
-        color: white; /* White font color for the button in dark mode */
-      }
-
-      /* Normal mode styles */
-      body {
-        background-color: #ff0000;
-        color: #000;
-      }
+/* Change background color of the dropbtn on hover */
+.dropup:hover .dropbtn {
+    background-color: #3e8e41; /* Darker green */
+}
