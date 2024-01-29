@@ -1,4 +1,110 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background-color:white;
+
+
+
+
+}
+html {
+  font-family: arial;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: sticky; /* Make the navigation bar fixed */
+  top: 0;         /* Align the navigation bar at the top of the page */
+  width: 100%;    /* Make the navigation bar span the full width of the page */
+  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  font-family: arial;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightgrey;
+  color: black;
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #1a1a1a;;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2%;
+
+}
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: #1a1a1a;;
+  color: #ffffff;
+}
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2.6%;
+
+  width: 20%;
+}
+
+
+
+
+
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
 
 
 :focus {
@@ -51,7 +157,12 @@ body {
   color: #eee; /* Light navbar text color */
 }
 
-
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #000;
+    font-family:   'arial', sans-serif; /* Add the desired font-family */
+}
 
 /* Dark mode styles */
 body.dark-mode {
@@ -100,6 +211,11 @@ body.dark-mode .topnav {
   color: #fff; /* White font color for the navbar in dark mode */
 }
 
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
 
 
 
@@ -133,11 +249,16 @@ body.dark-mode .topnav a {
   color: #fff; /* White font color for the links in the navbar in dark mode */
 }
 
-
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
 
 body .topnav {
   background-color: #ff0000; /* Red background for the navbar in normal mode */
-  color: #fff; /* White font color for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */;
+
 }
 
 body .topnav a {
@@ -151,10 +272,7 @@ body {
   color: #000;
 }
 
-  #accessibility-dropup {
-    display: none; /* Initially hide the dropdown */;
-    margin-top: 6.6%;
-  }
+
 
   .dropup-hidden {
     display: none; /* Hide the dropdown when the dropup-hidden class is present */
@@ -163,6 +281,20 @@ body {
   /* Adjust other styles as needed */
 
   /* Accessibility button styles */
+  #accessibility-button {
+    position: fixed;
+    margin-top: 40%;
+    margin-left: 30%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+  }
 
 
 
@@ -170,17 +302,35 @@ body {
 
   #accessibility-dropup button {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 5px;
     background: none;
     border: none;
     cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
 
   }
 
 
 
 
+  /* Normal mode styles */
+  body {
+    background-color: white;
+    color: #000;
+  }
 
+  /* Change background color to red */
+  .dropup-content {
+
+      background-color: dodgerblue; /* Change background color to red */
+
+      width: 20%;
+  padding: 5px; /* Add padding for better visual appearance */
+
+      color: white;
+
+  }
 
 
 
@@ -200,20 +350,20 @@ body {
 
 
 
-
+  /* Change background color of the icon container */
   .cog-icon {
-    background-color: dodgerblue;
-    width: 20%;
-    padding: 5px;
-    position: absolute; /* Change to absolute positioning */
-    top: 80.2px; /* Position from the top of the nearest positioned ancestor */
-    right: 10px; /* Position from the right of the nearest positioned ancestor */
+      background-color: dodgerblue; /* Change to your desired background color */
+      margin-left:75%; /* Adjust margin for better alignment */
+      width: 20%; /* Adjust width for consistency with other elements */;
 
-}
+      padding: 5px; /* Add padding for better visual appearance */;
+      font-family: 'arial', sans-serif;
+      font-size: 15px;
+
+
 
 
   }
-
 
 
 
@@ -224,23 +374,31 @@ body {
     /* Add other light mode styles as needed */
   }
 
-.-icon i,
+.cog-icon i,
 .acc {
   font-family: 'arial', sans-serif; /* Add the desired font-family */;
 
 }
 body {
   background-color: ghostwhite;
-  box-sizing: border-box;
-  font-size: arial;
-  width:100%;
+  font-family: 'arial', sans-serif;
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
 color:red;
 
 
 }
+/* Style the search input */
+input[type=text] {
+  padding: 10px; /* Add padding */
 
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  outline: none; /* Remove default outline */;
+  font-family: arial;
+
+}
 
 /* Style the placeholder text */
 input[type=text]::placeholder {
@@ -259,18 +417,20 @@ input[type=text]:focus {
   --dropup-bg-dark: grey; /* Change to your desired dark mode background color */
 }
 
-
-
 /* Common styles for both light and dark modes */
 .dropup-content {
     display: none;
     position: sticky;
     width: 20%;
     padding: 5px;
+
     margin: 0%;
     margin-left: 75%;
     margin-bottom: 5%;
 }
+
+
+
 
 /* Dark mode styles */
 body.dark-mode .dropup-content,
@@ -331,33 +491,28 @@ body.light-mode .cog-icon * {
     z-index: -1;
     height: 100vh;
     transition: none;
-    background-color: black;
+    background-color: #1a1a1a;
     padding-top: 20px;
     scroll-behavior: auto;
       overflow-y: auto;
-      top: 50px;
 
 }
-.sidebar-close {
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  z-index: 3;
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
 }
 
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
 
-
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 /* Light Mode Styles */
 .light-mode .sidebar {
     background-color: #f0f0f0; /* Light background for light mode */
-}
-w3-main main-content {
-  background-color: red
-}
-w3-container {
-  background-color: blue
 }
 
 .light-mode .sidebar::-webkit-scrollbar {
@@ -456,14 +611,12 @@ w3-container {
 
    }
 
-
-   /* JavaScript for Sidebar Toggle */
    .menu-toggle {
        cursor: pointer;
        position: fixed;
-       top:60px;
-       left: 15px;
-       z-index: 2;
+    left:25px;
+    top:73px;
+       z-index: 1;
        font-size: 25px;
        color: grey;
    }
@@ -480,561 +633,14 @@ w3-container {
 
    @media screen and (max-width: 768px) {
        .sidebar {
-           top: 6%;
+
        }
 
        main {
            padding-top: 60px;
        }
+
+           .menu-toggle {
+             
+           }
    }
-
-   body {
-       font-family: Arial, sans-serif;
-       margin: 0;
-       padding: 0;
-   }
-
-
-   /* The top navigation menu */
-   .topnav {
-       background-color: #f1f1f1;
-       overflow: hidden;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       padding: 0 16px;
-   }
-
-   /* Logo and title styling */
-   .topnav .logo-container {
-       display: flex;
-       align-items: center;
-   }
-
-   .topnav .logo {
-       height: 40px; /* Adjust based on your logo */
-       margin-right: 10px;
-   }
-
-   .topnav .site-title {
-       color: black;
-       text-decoration: none;
-       font-size: 20px;
-       font-weight: bold;
-   }
-
-   /* Navigation links */
-   .topnav .nav-links {
-       display: flex;
-   }
-
-   .topnav .nav-links a {
-       color: black;
-       padding: 16px;
-       text-decoration: none;
-       display: block;
-   }
-
-   /* Active/current link */
-   .topnav .nav-links a.active {
-       background-color: #04AA6D;
-       color: white;
-   }
-
-   /* Links on mouse-over */
-   .topnav .nav-links a:hover:not(.active) {
-       background-color: #555;
-       color: white;
-   }
-
-   /* Page content */
-   div.content {
-       padding: 1px 16px;
-       height: 1000px; /* Adjust as needed */
-   }
-
-   /* Responsive adjustments */
-   @media screen and (max-width: 700px) {
-       .topnav .nav-links, .topnav input[type=text] {
-           display: none;
-       }
-
-       .topnav .logo-container {
-           width: 100%;
-           justify-content: space-between;
-       }
-
-
-
-   /* On screens smaller than 400px, adjust logo and title */
-   @media screen and (max-width: 400px) {
-       .topnav .site-title {
-           font-size: 18px;
-       }
-       .topnav .logo {
-           height: 30px;
-       }
-   }
-
-   /* Custom styles */
-
-   /* Logo and Navbar Styling */
-   .w3-bar .w3-bar-item.w3-button.w3-wide {
-       font-size: 24px; /* Adjust the size of the logo text */
-       font-weight: bold;
-   }
-
-   /* Navbar Links Styling */
-   .w3-bar .w3-bar-item.w3-button {
-       color: #333; /* Text color of navbar items */
-       padding: 8px 16px; /* Adjust padding for navbar items */
-   }
-
-   /* Hamburger Icon Styling */
-   .w3-bar .w3-bar-item.w3-button.w3-right.w3-hide-large.w3-hide-medium {
-       font-size: 20px; /* Size of the hamburger icon */
-       padding: 8px 16px; /* Padding around the hamburger icon */
-   }
-
-   /* Sidebar Styling */
-   .w3-sidebar {
-       z-index: 3; /* Ensures the sidebar is on top */
-       width: 250px; /* Width of the sidebar */
-   }
-
-   .w3-sidebar .w3-bar-item {
-       padding: 12px 24px; /* Padding inside sidebar items */
-       font-size: 16px; /* Font size in the sidebar */
-   }
-
-   .w3-sidebar .w3-bar-item.w3-button {
-       text-align: left; /* Align sidebar text to the left */
-   }
-
-   .w3-sidebar .w3-bar-item.w3-button:hover {
-       background-color: #04AA6D; /* Background color on hover */
-       color: white; /* Text color on hover */
-   }
-
-   /* Adjustments for smaller screens */
-   @media screen and (max-width: 700px) {
-       .w3-bar .w3-bar-item.w3-button {
-           padding: 8px 10px; /* Smaller padding for navbar items */;
-           bottom: 0px;
-       }
-
-       /* Adjust sidebar width for very small screens */
-       .w3-sidebar {
-           width: 100%;
-       }
-   }
-
-   body.light-mode .w3-bar, body.light-mode .w3-sidebar {
-       background-color: #f1f1f1; /* Light background for light mode */
-       color: #333; /* Dark text for light mode */
-   }
-
-
-   body.dark-mode .w3-bar, body.dark-mode .w3-sidebar {
-       background-color: #333; /* Dark background for dark mode */
-       color: #f1f1f1; /* Light text for dark mode */
-   }
-
-   /* ... rest of your existing styles ... */
-
-   /* Specific overrides for dark mode */
-   body.dark-mode .w3-bar .w3-bar-item.w3-button {
-       color: #f1f1f1;
-   }
-
-   body.dark-mode .w3-bar .w3-bar-item.w3-button:hover,
-   body.dark-mode .w3-sidebar .w3-bar-item.w3-button:hover {
-       background-color: #04AA6D;
-       color: white;
-   }
-
-   /* Custom text color for navigation links */
-   .w3-bar .w3-bar-item.w3-button {
-       color: white; /* Replace with your desired color */
-   }
-
-   /* Custom text color for hover state */
-   .w3-bar .w3-bar-item.w3-button.w3-hover-white:hover {
-       color: #fff; /* Replace with your desired hover color */
-       background-color: #333; /* Optional: change background color on hover */
-   }
-
-   /* Style the search input */
-   .w3-bar .w3-input {
-       padding: 5px;
-       margin-right: 20px; /* Adjust space to the right */;
-       margin-top: 0.3%;
-       border: 1px solid #ccc; /* Border color */
-       border-radius: 4px; /* Rounded corners */
-   }
-
-   /* Style the search input on focus */
-   .w3-bar .w3-input:focus {
-       outline: none;
-       border-color: #666; /* Border color on focus */
-       box-shadow: 0 0 8px rgba(102, 102, 102, 0.5); /* Optional: add shadow on focus */
-   }
-
-   /* Responsive styling for smaller screens */
-@media screen and (max-width: 600px) {
-  #navDemo {
-    display: none; /* Initially hidden */
-    position: fixed; /* Fixed positioning relative to the viewport */
-    right: 0; /* Align to the right of the screen */
-    top: 10; /* Align to the top of the screen */
-    width: 50%; /* Set the width to 50% of the viewport */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if content overflows */
-    z-index: 2; /* Ensure it's above other content */
-  }
-
-
-  /* Show navDemo when it's supposed to be visible */
-  #navDemo.w3-show {
-    display: block;
-  }
-}
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 600px) {
-    #accessibility-dropup .dropup-content {
-        /* Adjust layout for smaller screens */
-        width: 100%;
-        padding: 10px;
-    }
-
-    #accessibility-dropup .dropup-content button {
-        /* Make buttons larger and more spaced out */
-        font-size: 16px;
-        padding: 10px 20px;
-        margin: 5px 0;
-        margin-top:
-    }
-}
-.custom-link {
-  position: relative; /* or absolute, depending on your layout */
-  right: 15px; /* Moves the element to the left */
-  /* Other styles... */
-}
-
-
-/* Style for the FontAwesome gear icon, if needed */
-.fa-gear {
-    cursor: pointer; /* Indicates the icon is clickable */
-    /* Add more styling as needed */
-}
-
-
-
-/* Show the dropup content when it's triggered */
-.show-dropup {
-    display: block;
-}
-
-/* Style for individual buttons inside the drop-up */
-#accessibility-dropup button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #f8f8f8;
-    text-align: left;
-    /* Add more styling as needed (hover effects, color, etc.) */
-}
-
-#accessibility-dropup button:hover {
-    background-color: #e0e0e0; /* Hover effect for buttons */
-}
-/* Style for the cog icon container */
-.cog-icon {
-    background-color: dodgerblue;
-    margin-left: 75%;
-    width: 20%;
-    padding: 5px;
-    position: absolute; /* Change to absolute positioning */
-    top: 80.2px; /* Position from the top of the nearest positioned ancestor */
-    right: 10px; /* Position from the right of the nearest positioned ancestor */
-
-    cursor: pointer; /* Change cursor to indicate it's clickable */
-}
-
-/* Style for the drop-up content */
-#accessibility-dropup {
-    display: none; /* Hidden by default */
-    position: absolute; /* Position relative to its positioned ancestor */
-    bottom: 100%; /* Position above the cog icon */
-    left: 0;
-    background-color: white; /* Background color for the drop-up content */
-    border: 1px solid #ddd; /* Border around the drop-up content */
-
-}
-
-/* Show the drop-up content when the cog icon is clicked */
-.show-dropup {
-    display: block;
-}
-
-/* Style the dropup container */
-.dropup {
-    position: fixed; /* Fixed position relative to the viewport */
-    bottom: 10px; /* 10px from the bottom of the viewport */
-    right: 10px; /* 10px from the right of the viewport */
-    z-index: 1000; /* Ensure it appears above other content */
-    font-size: 14px;
-}
-
-/* Style the button used to open the dropup content */
-.dropbtn {
-    background-color: dodgerblue; /* Dodger blue background */
-    color: white; /* White text */
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
-    width: 100%;
-}
-
-/* Dropup content (hidden by default) */
-.dropup-content {
-    display: none;
-    position: absolute;
-    background-color: white; /* White background */
-    min-width: 160px;
-    bottom: 100%; /* Position above the button */
-    left: -139px; /* Adjust if necessary for alignment */
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Shadow for visibility */
-    z-index: 1;
-    text-align: center;
-}
-
-/* Style for buttons inside the dropup content */
-.dropup-content button {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    text-align: left;
-}
-
-body {
-  background-color:white;
-  width:100%;
-  color:black;
-  transition: background-color 0.5s ease;
-  font-family: arial;
-    min-width: 520px; /* Adjust the minimum width as needed */
-
-
-}
-html {
-  font-family: arial;
-}
-
-/* Add a black background color to the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: firebrick;
-}
-
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-
-  font-family: arial;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-
-}
-
-/* Style the "active" element to highlight the current page */
-.topnav a.active {
-  background-color: grey;
-  color: white;
-}
-
-/* Style the search box inside the navigation bar */
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 2%;
-
-}
-
-
-
-
-
-
-
-
-
-
-body.dark-mode {
-  background-color: #333333;
-  color: #ffffff;
-}
-body.invert-colors {
-  filter: invert(100%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
-}
-.dark-mode {
-  /* Dark mode styles for the body */
-}
-
-.dark-mode .your-navbar-class {
-  /* Dark mode styles for the navbar */
-}
-
-
-:focus {
-    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
-}
-
-}
-
-body.increase-contrast {
-  filter: contrast(110%) sepia(0%);
-}
-
-body.decrease-contrast {
-  filter: contrast(90%) sepia(0%);
-}
-
-body.sepia-effect {
-  filter: contrast(100%) sepia(100%);
-}
-/* CSS for sepia and contrast adjustments */
-body {
-  transition: filter 0.5s ease; /* Optional: Add a smooth transition effect */
-}
-
-.sepia-effect {
-  filter: sepia(100%);
-}
-
-.increase-contrast {
-  filter: contrast(110%);
-}
-
-.decrease-contrast {
-  filter: contrast(90%);
-}
-/* Light mode styles */
-body {
-  background-color: #fff; /* Light background color */
-  color: #000; /* Dark text color */
-}
-
-.topnav {
-  background-color: #f2f2f2; /* Light navbar background color */
-  color: #333; /* Dark navbar text color */
-}
-
-/* Dark mode styles */
-.dark-mode {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Light text color */
-}
-
-.dark-mode .topnav {
-  background-color: #444; /* Dark navbar background color */
-  color: #eee; /* Light navbar text color */
-}
-
-/* Light mode styles */
-body {
-  background-color: #fff;
-  color: #000;
-    font-family:   'arial', sans-serif; /* Add the desired font-family */
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-body.light-mode .navbar {
-  background-color: #blue; /* White background for the navbar */
-  color: #000; /* Black font color for the navbar */
-}
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-body.light-mode .topnav {
-  background-color: floralwhite; /* White background for the navbar */
-  color: #000; /* Black font color for the navbar */
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode .topnav {
-  background-color: #222; /* Dark background for the navbar in dark mode */
-  color: #fff; /* White font color for the navbar in dark mode */
-}
-
-/* Normal mode styles */
-body {
-  background-color: gray; /* Red background for normal mode */
-  color: #000;
-  margin: 0%;
-}
-
-body .topnav {
-  background-color: #ff0000; /* Red background for the navbar in normal mode */
-  color: #fff; /* White font color for the navbar in normal mode */
-}
-
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}

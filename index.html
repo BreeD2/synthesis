@@ -21,98 +21,20 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <body>
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card w3-left-align w3-large"style="margin-top: ">
-    <!-- Menu icon for small screens -->
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-red w3-large w3-grey" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-
-    <!-- Navbar Links -->
-    <!-- Reminiscence Collection - Moved to the left -->
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large custom-link">Reminiscence Collection</a>
-
-
-    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
-    <a href="about/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
-    <a href="contact/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
-
-    <!-- Search Bar for larger screens -->
-    <input type="text" class="w3-bar-item w3-input w3-hide-small w3-right w3-white" placeholder="Search..." style="margin-right: 10px; margin-top:4px;border-radius:4px  ">
-
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="about/index.html" class="w3-bar-item w3-button w3-padding-large">About</a>
-    <a href="locations/index.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
-
-    <!-- Search Bar for small screens -->
-    <input type="text" class="w3-bar-item w3-input w3-white" placeholder="Search...">
-  </div>
+  <div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="about/index.htmlr">About</a>
+  <a href="contact/index.html">Contact</a>
+  <input type="text" placeholder="Search..">
 </div>
 
-    <script>
-    // Script to open and close the sidebar
-    function w3_open() {
-        document.getElementById("navDemo").style.display = "block";
-    }
-
-    function w3_close() {
-        document.getElementById("navDemo").style.display = "none";
-    }
-    </script>
-
-
-    <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-    </script>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
-<script>
-  function toggleMenu() {
-      var navLinks = document.getElementById("navLinks");
-      if (navLinks.style.display === "block") {
-          navLinks.style.display = "none";
-      } else {
-          navLinks.style.display = "block";
-      }
-  }
-
-</script>
-
 <aside class="sidebar">
-  <!-- Sidebar Toggle Button -->
-  <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
-  <div id="searchResults">
-
-      </div>  <h3>All Games</h3>
+    <h3>All Games</h3>
     <input type="text" placeholder="Search..">
      <ul class="search-results" id="searchResults"></ul>
     <div id="game-list">
-
 <a href="animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
 ">Animal Crossing: New Horizons</a>
 <a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
@@ -317,633 +239,51 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
     </div>
 </aside>
 
-<script>sampfunction toggleSidebar() {
-  var sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
-}
-
-function closeSidebar() {
-  document.querySelector('.sidebar').style.display = 'none';
-}
-</script>
-
 <!-- Sidebar Toggle Button -->
 <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
 <div id="searchResults">
 
     </div>
 
-
-
-
-
-
-
-
-
-      <div class="cog-icon">
-            <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
-        </div>
-
-        <!-- Accessibility dropup content -->
-        <div id="accessibility-dropup" class="dropup-content">
-              <button onclick="resetSettings()">Reset Settings</button>
-              <button onclick="increaseFont()">Increase Font Size</button>
-            <button onclick="decreaseFont()">Decrease Font Size</button>
-            <button onclick="invertColors()">Invert Colors</button>
-            <button onclick="toggleLightMode()">Toggle Light Mode</button>
-            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-            <button onclick="increaseBrightness()">Increase Brightness</button>
-              <button onclick="decreaseBrightness()">Decrease Brightness</button>
-            <button onclick="increaseContrast()">Increase Contrast</button>
-              <button onclick="decreaseContrast()">Decrease Contrast</button>
-            <button onclick="adjustSaturation(10)">Increase Saturation</button>
-            <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-            <button onclick="applyRedFilter()">Apply Red Filter</button>
-            <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-
-
-
-            <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
-        </div>
-
-
-
-        <script>
-            function toggleDropdown() {
-                var dropdownContent = document.getElementById("dropdownContent");
-                dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-            }
-        </script>
-
-        <script>
-        function toggleAccessibilityMenu() {
-            var accessibilityDropup = document.getElementById("accessibility-dropup");
-            accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-        }
-
-        // Add your functions for the accessibility options here
-        function increaseFont() {
-            // Add your code for increasing font size
-        }
-
-        function decreaseFont() {
-            // Add your code for decreasing font size
-        }
-
-        // Add other functions for the remaining accessibility options
-
-    </script>
-    <script>
-        function toggleLightMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-            // Add or remove the 'light-mode' class based on the current state
-            document.body.classList.toggle('light-mode');
-            // Set button styles explicitly for light mode
-            if (document.body.classList.contains('light-mode')) {
-                document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
-                document.getElementById('accessibility-dropup').style.color = 'black';
-            } else {
-                // Set button styles explicitly for dark mode
-                document.getElementById('accessibility-dropup').style.backgroundColor = 'dodgerblue';
-                document.getElementById('accessibility-dropup').style.color = 'white';
-            }
-        }
-    </script>
-
-    <!-- JavaScript -->
-    <!-- JavaScript -->
-    <script>
-        function toggleLightMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-            // Add or remove the 'light-mode' class based on the current state
-            document.body.classList.toggle('light-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        // Add this function to close the dropup
-        function closeAccessibilityDropup() {
-            var dropup = document.getElementById('accessibility-dropup');
-            dropup.style.display = 'none';
-        }
-    </script>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleLightMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-            // Add or remove the 'light-mode' class based on the current state
-            document.body.classList.toggle('light-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        // Add this function to close the dropup
-        function closeAccessibilityDropup() {
-            var dropup = document.getElementById('accessibility-dropup');
-            dropup.style.display = 'none';
-        }
-    </script>
-
-
-        <!-- Contrast and Sepia control scripts -->
-        <!-- Contrast and Sepia control scripts -->
-        <!-- Contrast and Sepia control scripts -->
-        <!-- Saturation, Contrast, and Sepia control scripts -->
-        <!-- Red-Green Filter control scripts -->
-        <!-- Blue-Yellow Filter control scripts -->
-        <!-- Blue-Yellow Filter control scripts -->
-        <!-- Grayscale Filter control scripts -->
-        <script>
-          var grayscaleFilter = false;
-
-          function updateFilter() {
-            document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
-          }
-
-          function toggleGrayscale() {
-            grayscaleFilter = !grayscaleFilter;
-            updateFilter();
-          }
-
-          function resetFilter() {
-            grayscaleFilter = false;
-            updateFilter();
-          }
-        </script>
-
-
-
-
-
-
-
-        <script>
-          var saturation = 100;
-          var contrast = 100;
-          var sepia = 0;
-
-          function updateStyles() {
-            document.body.style.filter = "saturate(" + saturation + "%) contrast(" + contrast + "%) sepia(" + sepia + "%)";
-          }
-
-          function toggleSepia() {
-            sepia = sepia === 0 ? 100 : 0;
-            updateStyles();
-          }
-
-          function adjustContrast(step) {
-            contrast += step;
-            updateStyles();
-          }
-
-          function adjustSaturation(step) {
-            saturation += step;
-            updateStyles();
-          }
-        </script>
-
-
-
-
-        <script>
-
-            function search() {
-                var searchInput = document.getElementById("searchInput").value;
-                var searchResults = document.getElementById("searchResults");
-
-                // Implement your search functionality here
-                // For simplicity, I'm just showing and hiding the search-results div in this example
-                if (searchInput.trim() !== "") {
-                    searchResults.style.display = "block";
-                    searchResults.innerHTML = "Search results for: " + searchInput;
-                } else {
-                    searchResults.style.display = "none";
-                }
-            }
-        </script>
-        <script>
-        function toggleAccessibilityMenu() {
-          var accessibilityDropup = document.getElementById("accessibility-dropup");
-          accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-        }
-
-        // Existing functions for accessibility options
-
-        function increaseFont() {
-          // Add your code for increasing font size
-          var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-          document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
-        }
-
-        function decreaseFont() {
-          // Add your code for decreasing font size
-          var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-          document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
-        }
-      </script>
-
-    <script
-    <script>
-      function invertColors() {
-      document.body.classList.toggle('invert-colors');
-    }
-    </script>
-    <script>
-      // Brightness control variables
-      var brightness = 100;
-      var brightnessStep = 10;
-
-      // Brightness control functions
-      function increaseBrightness() {
-        brightness += brightnessStep;
-        updateBrightness();
-      }
-
-      function decreaseBrightness() {
-        brightness -= brightnessStep;
-        updateBrightness();
-      }
-
-      function updateBrightness() {
-        document.body.style.filter = "brightness(" + brightness + "%)";
-      }
-
-      // Add event listeners to brightness control buttons
-      document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
-      document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
-    </script>
-
-    <!-- Contrast control script -->
-    <script>
-      // Contrast control variables
-      var contrast = 100;
-      var contrastStep = 10;
-
-      // Contrast control functions
-      function increaseContrast() {
-        contrast += contrastStep;
-        updateContrast();
-      }
-
-      function decreaseContrast() {
-        contrast -= contrastStep;
-        updateContrast();
-      }
-
-      function updateContrast() {
-        document.body.style.filter = "contrast(" + contrast + "%)";
-      }
-    </script>
-
-    <!-- Search script -->
-    <script>
-      function search() {
-        var searchInput = document.getElementById("searchInput").value;
-        var searchResults = document.getElementById("searchResults");
-
-        // Implement your search functionality here
-        // For simplicity, I'm just showing and hiding the search-results div in this example
-        if (searchInput.trim() !== "") {
-          searchResults.style.display = "block";
-          searchResults.innerHTML = "Search results for: " + searchInput;
-        } else {
-          searchResults.style.display = "none";
-        }
-      }
-    </script>
-
-
-
-    <!-- High Contrast Toggle script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const highContrastToggle = document.getElementById('high-contrast-toggle');
-
-        highContrastToggle.addEventListener('click', function () {
-          document.body.classList.toggle('high-contrast');
-        });
-      });
-    </script>
-    <!-- Grayscale Filter control scripts -->
-    <!-- Grayscale Filter control scripts -->
-    <script>
-      var grayscaleFilter = false;
-      var redGreenFilter = 0;
-
-      function updateFilter() {
-        if (grayscaleFilter) {
-          document.body.style.filter = "grayscale(100%)";
-        } else if (redGreenFilter === 1) {
-          document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(-20deg)";
-        } else if (redGreenFilter === -1) {
-          document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(90deg)";
-        } else {
-          document.body.style.filter = "none";
-        }
-      }
-
-      function toggleGrayscale() {
-        grayscaleFilter = !grayscaleFilter;
-        updateFilter();
-      }
-
-      function applyRedFilter() {
-        redGreenFilter = 1;
-        grayscaleFilter = false; // Ensure grayscale is turned off when applying red filter
-        updateFilter();
-      }
-
-      function applyGreenFilter() {
-        redGreenFilter = -1;
-        grayscaleFilter = false; // Ensure grayscale is turned off when applying green filter
-        updateFilter();
-      }
-
-      // Other scripts go here
-    </script>
-
-
-
-
-    <script>
-      function invertColors() {
-        document.body.classList.toggle('invert-colors');
-      }
-    </script>
-
-
-    <script>
-      var isInverted = false;
-
-      function invertColors() {
-        isInverted = !isInverted;
-        document.body.style.filter = isInverted ? "invert(100%)" : "none";
-      }
-    </script>
-
-    <script>
-      function resetSettings() {
-        // Reset all settings to their default values
-        grayscaleFilter = false;
-        redGreenFilter = 0;
-        saturation = 100;
-        contrast = 100;
-        sepia = 0;
-        brightness = 100;
-
-        // Reset font size to default
-        document.body.style.fontSize = "";
-
-        // Reset dark mode to default
-        document.body.classList.remove("dark-mode");
-
-        // Reset invert colors
-        document.body.classList.remove("invert-colors");
-
-        // Update the styles to reflect the default settings
-        updateFilter();
-        updateStyles();
-        updateContrast();
-        updateBrightness();
-      }
-
-
-    </script>
-
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-
-        // Toggle dark mode on the navbar (assuming your navbar has a specific ID or class)
-        var navbar = document.getElementById("yourNavbarId"); // Replace "yourNavbarId" with the actual ID or class of your navbar
-        if (navbar) {
-          navbar.classList.toggle("dark-mode");
-        }
-      }
-    </script>
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-
-        // You can add more elements to toggle dark mode if needed
-        var elementsToToggle = document.querySelectorAll(".dark-mode-toggle");
-        elementsToToggle.forEach(function (element) {
-          element.classList.toggle("dark-mode");
-        });
-      }
-    </script>
-
-    <script>
-        function toggleHighContrast() {
-            document.body.classList.toggle("high-contrast");
-            toggleAccessibilityMenu(); // Added to toggle the menu when changing contrast
-        }
-
-        function adjustFontSize(action) {
-            var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-            var newSize;
-
-            if (action === 'increase') {
-                newSize = currentFontSize * 1.1 + 'px';
-            } else if (action === 'decrease') {
-                newSize = currentFontSize / 1.1 + 'px';
-            }
-
-            document.body.style.fontSize = newSize;
-            toggleAccessibilityMenu(); // Added to toggle the menu when changing font size
-        }
-
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            toggleAccessibilityMenu(); // Added to toggle the menu when changing dark mode
-        }
-
-        function toggleAccessibilityMenu() {
-            var accessibilityDropup = document.getElementById("accessibility-dropup");
-            accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-            darkModeToggle.addEventListener('click', function () {
-                toggleDarkMode();
-            });
-
-            const highContrastToggle = document.getElementById('high-contrast-toggle');
-
-            highContrastToggle.addEventListener('click', function () {
-                toggleHighContrast();
-            });
-
-            const accessibilityCogIcon = document.querySelector('.cog-icon');
-
-            accessibilityCogIcon.addEventListener('click', function () {
-                toggleAccessibilityMenu();
-            });
-
-            const increaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(2)');
-            const decreaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(3)');
-
-            increaseFontButton.addEventListener('click', function () {
-                adjustFontSize('increase');
-            });
-
-            decreaseFontButton.addEventListener('click', function () {
-                adjustFontSize('decrease');
-            });
-        });
-    </script>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleLightMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-
-            // Add or remove the 'light-mode' class based on the current state
-            document.body.classList.toggle('light-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        function toggleDarkMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('light-mode');
-            document.body.classList.remove('invert-colors');
-
-            // Add or remove the 'dark-mode' class based on the current state
-            document.body.classList.toggle('dark-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        // Add this function to close the dropup
-        function closeAccessibilityDropup() {
-            var dropup = document.getElementById('accessibility-dropup');
-            dropup.style.display = 'none';
-        }
-    </script>
-
-    <!-- JavaScript -->
-    <script>
-        function resetSettings() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-
-            // Remove light mode explicitly to reset to the default state
-            document.body.classList.remove('light-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        // Add this function to close the dropup
-        function closeAccessibilityDropup() {
-            var dropup = document.getElementById('accessibility-dropup');
-            dropup.style.display = 'none';
-        }
-    </script>
-
-    <script>
-        function toggleLightMode() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-            // Add or remove the 'light-mode' class based on the current state
-            document.body.classList.toggle('light-mode');
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-
-        // Add this function to close the dropup
-        function closeAccessibilityDropup() {
-            var dropup = document.getElementById('accessibility-dropup');
-            dropup.style.display = 'none';
-        }
-
-        function resetSettings() {
-            // Reset all settings to their default values
-            grayscaleFilter = false;
-            redGreenFilter = 0;
-            saturation = 100;
-            contrast = 100;
-            sepia = 0;
-            brightness = 100;
-
-            // Reset font size to default
-            document.body.style.fontSize = "";
-
-            // Reset dark mode to default
-            document.body.classList.remove("dark-mode");
-
-            // Reset invert colors
-            document.body.classList.remove("invert-colors");
-
-            // Update the styles to reflect the default settings
-            updateFilter();
-            updateStyles();
-            updateContrast();
-            updateBrightness();
-
-            // Close the dropup after resetting settings
-            closeAccessibilityDropup();
-        }
-    </script>
-    <script>
-        function resetSettings() {
-            // Remove other classes that might affect the background
-            document.body.classList.remove('dark-mode');
-            document.body.classList.remove('invert-colors');
-            document.body.classList.remove('light-mode'); // Add this line to explicitly remove 'light-mode'
-
-            // Reset other variables if needed
-            grayscaleFilter = false;
-            redGreenFilter = 0;
-            saturation = 100;
-            contrast = 100;
-            sepia = 0;
-            brightness = 100;
-
-            // Reset font size to default
-            document.body.style.fontSize = "";
-
-            // Reset invert colors
-            document.body.classList.remove("invert-colors");
-
-            // Update the styles to reflect the default settings
-            updateFilter();
-            updateStyles();
-            updateContrast();
-            updateBrightness();
-
-            // Close the dropup after the action
-            closeAccessibilityDropup();
-        }
-    </script>
-
-
-
-
-
-
-
-
+    <div class="cog-icon">
+        <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
+    </div>
+
+    <!-- Accessibility dropup content -->
+    <div id="accessibility-dropup" class="dropup-content">
+          <button onclick="resetSettings()">Reset Settings</button>
+          <button onclick="increaseFont()">Increase Font Size</button>
+        <button onclick="decreaseFont()">Decrease Font Size</button>
+        <button onclick="invertColors()">Invert Colors</button>
+        <button onclick="toggleLightMode()">Toggle Light Mode</button>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button onclick="increaseBrightness()">Increase Brightness</button>
+          <button onclick="decreaseBrightness()">Decrease Brightness</button>
+        <button onclick="increaseContrast()">Increase Contrast</button>
+          <button onclick="decreaseContrast()">Decrease Contrast</button>
+        <button onclick="adjustSaturation(10)">Increase Saturation</button>
+        <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+        <button onclick="applyRedFilter()">Apply Red Filter</button>
+        <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
+      <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+      <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+  <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
+        <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+
+
+
+        <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+    </div>
+
+
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Your existing content goes here -->
+        <!-- Header, Hero, Browse Section, Footer, etc. -->
+    </main>
+    <!-- JavaScript for Sidebar Toggle and Live Search -->
+    <!-- JavaScript for Sidebar Toggle and Live Search -->
 
     <script>
         function toggleSidebar() {
@@ -1006,7 +346,12 @@ function closeSidebar() {
         });
     </script>
 
-
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+    </script>
 
     <script>
     function toggleAccessibilityMenu() {
@@ -1726,6 +1071,9 @@ function decreaseFont() {
     });
 </script>
 
+<!-- Your existing HTML code continues here -->
+
+  </script>
 
   </body>
   </html>
