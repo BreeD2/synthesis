@@ -22,13 +22,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<body>
-  <div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="about/index.htmlr">About</a>
-  <a href="contact/index.html">Contact</a>
-  <input type="text" placeholder="Search..">
-</div>
+<!-- Navigation Bar with Logo and Website Name -->
+ <div class="topnav">
+   <!-- Logo and Website Name -->
+   <a href="index.html">
+     <img src="r.png" alt="Logo" style="height: 20px;"> <!-- Adjust the path and style as needed -->
+     Reminiscence Collection
+   </a>
+
+   <!-- Navigation Links -->
+   <a class="active" href="index.html">Home</a>
+   <a href="about/index.html">About</a>
+   <a href="contact/index.html">Contact</a>
+
+   <!-- Search Input -->
+   <input type="text" placeholder="Search..">
+ </div>
 
 <aside class="sidebar">
     <h3>All Games</h3>
@@ -902,28 +911,7 @@ console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
       document.body.style.fontSize = newSize + 'px';
   }
 </script>
-<script>
-  function adjustFontSize(factor) {
-    // Adjust the font size of the body
-    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-    var newFontSize = currentFontSize * factor;
-    document.body.style.fontSize = newFontSize + 'px';
 
-    // Adjust the font size of the h1 element
-    var h1Element = document.querySelector('h3');
-    var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
-    var newH1Size = currentH1Size * factor;
-    h1Element.style.fontSize = newH1Size + 'px';
-}
-
-function increaseFont() {
-    adjustFontSize(1.1); // Increase font size by 10%
-}
-
-function decreaseFont() {
-    adjustFontSize(0.9); // Decrease font size by 10%
-}
-</script>
 <script>
   function adjustFontSize(factor) {
     // Adjust the font size of the body
@@ -998,52 +986,10 @@ function decreaseFont() {
  }
 </script>
 
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
 
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
 
-    // Reset font size to default
-    document.body.style.fontSize = "";
 
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
 
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Reset the font size of h3 elements
-    var h3Elements = document.querySelectorAll('h3');
-    h3Elements.forEach(function(h3) {
-        h3.style.fontSize = ""; // Reset to default or set your default size
-    });
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
-}
-
-</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1069,11 +1015,110 @@ function decreaseFont() {
             });
         });
     });
+
+      function adjustFontSize(factor) {
+        // Adjust the font size of the body
+        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+        var newFontSize = currentFontSize * factor;
+        document.body.style.fontSize = newFontSize + 'px';
+
+        // Adjust the font size of the h1 element
+        var h1Element = document.querySelector('h3');
+        var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
+        var newH1Size = currentH1Size * factor;
+        h1Element.style.fontSize = newH1Size + 'px';
+    }
+
+    function increaseFont() {
+        adjustFontSize(1.1); // Increase font size by 10%
+    }
+
+    function decreaseFont() {
+        adjustFontSize(0.9); // Decrease font size by 10%
+    }
+
 </script>
 
-<!-- Your existing HTML code continues here -->
+<script>
+    // Store the original font sizes of sidebar and topnav elements
+    function storeOriginalFontSizes() {
+        var elements = document.querySelectorAll('.sidebar *, .topnav *');
+        elements.forEach(function(element) {
+            element.setAttribute('data-original-font-size', window.getComputedStyle(element, null).getPropertyValue('font-size'));
+        });
+    }
 
-  </script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Your existing DOMContentLoaded code...
+        storeOriginalFontSizes();
+    });
+
+    function adjustFontSize(factor, selector) {
+        var elements = document.querySelectorAll(selector);
+        elements.forEach(function(element) {
+            var currentFontSize = parseFloat(window.getComputedStyle(element, null).getPropertyValue('font-size'));
+            element.style.fontSize = (currentFontSize * factor) + 'px';
+        });
+    }
+
+    function increaseFont() {
+        adjustFontSize(1.1, '.sidebar *, .topnav *');
+    }
+
+    function decreaseFont() {
+        adjustFontSize(0.9, '.sidebar *, .topnav *');
+    }
+
+    function resetFont() {
+        var elements = document.querySelectorAll('.sidebar *, .topnav *');
+        elements.forEach(function(element) {
+            var originalFontSize = element.getAttribute('data-original-font-size');
+            element.style.fontSize = originalFontSize;
+        });
+    }
+
+    function resetSettings() {
+        // Reset the font size of the sidebar and topnav to their original values
+        resetFont();
+
+        // Remove other classes that might affect the background
+        document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode');
+
+        // Reset other variables if needed
+        // Make sure these variables are defined elsewhere
+        grayscaleFilter = false;
+        redGreenFilter = 0;
+        saturation = 100;
+        contrast = 100;
+        sepia = 0;
+        brightness = 100;
+
+        document.body.style.fontSize = "";
+
+        document.body.classList.remove("invert-colors");
+        document.body.classList.add("disable-transition");
+
+        // Make sure these functions are defined elsewhere
+        updateFilter();
+        updateStyles();
+        updateContrast();
+        updateBrightness();
+
+        // Make sure closeAccessibilityDropup() is defined elsewhere
+        closeAccessibilityDropup();
+
+        setTimeout(function () {
+            document.body.classList.remove("disable-transition");
+        }, 1000);
+
+        // Log statements for debugging
+        console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
+        console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
+    }
+</script>
+
+
+
 
   </body>
   </html>
