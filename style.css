@@ -60,9 +60,10 @@ html {
 }
 /* Dark mode styles for the "active" element */
 body.light-mode .topnav a.active {
-  background-color: #1a1a1a;;
+  background-color: grey;;
   color: #ffffff;
 }
+
 /* Dark mode styles for the "active" element */
 body.dark-mode .topnav a.active {
   background-color: grey;;
@@ -153,10 +154,9 @@ body {
   color: #fff; /* Light text color */
 }
 
-.dark-mode .topnav {
-  background-color: #444; /* Dark navbar background color */
-  color: #eee; /* Light navbar text color */
-}
+
+
+
 
 /* Light mode styles */
 body {
@@ -180,27 +180,6 @@ body.dark-mode {
 }
 
 
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-body.light-mode .navbar {
-  background-color: #blue; /* White background for the navbar */
-  color: #000; /* Black font color for the navbar */
-}
-/* Light mode styles */
-body.light-mode {
-  background-color: #f5f5f5;
-  color: #000;
-}
-
-body.light-mode .topnav {
-  background-color: floralwhite; /* White background for the navbar */
-  color: #000; /* Black font color for the navbar */
-}
-
 /* Dark mode styles */
 body.dark-mode {
   background-color: #333;
@@ -212,6 +191,7 @@ body.dark-mode .topnav {
   color: #fff; /* White font color for the navbar in dark mode */
 }
 
+
 /* Normal mode styles */
 body {
   background-color: gray; /* Red background for normal mode */
@@ -222,17 +202,14 @@ body {
 
 /* Light mode styles */
 body.light-mode {
-  background-color: #f5f5f5;
+  background-color: white;
   color: #000;
 }
 
-body.light-mode .topnav {
-  background-color: #fff; /* White background for the navbar */
-  color: #000; /* Black font color for the navbar */
-}
 
 body.light-mode .topnav a {
-  color: #000; /* Black font color for the links in the navbar */
+  color: #000; /* Black font color for the links in the navbar */;
+
 }
 
 /* Dark mode styles */
@@ -279,39 +256,6 @@ body {
     display: none; /* Hide the dropdown when the dropup-hidden class is present */
   }
 
-  /* Adjust other styles as needed */
-
-  /* Accessibility button styles */
-  #accessibility-button {
-    position: fixed;
-    margin-top: 40%;
-    margin-left: 30%;
-    width: 80%;
-    max-width: 300px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
-  }
-
-
-
-
-
-  #accessibility-dropup button {
-    display: block;
-    margin-bottom: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
-
-  }
-
 
 
 
@@ -325,7 +269,7 @@ body {
   .dropup-content {
 
       background-color: dodgerblue; /* Change background color to red */
-
+      position: fixed;
       width: 20%;
   padding: 5px; /* Add padding for better visual appearance */
 
@@ -354,25 +298,18 @@ body {
   /* Change background color of the icon container */
   .cog-icon {
       background-color: dodgerblue; /* Change to your desired background color */
-      margin-left:75%; /* Adjust margin for better alignment */
+      margin-left:75%; /* Adjust margin for better alignment */;
+      border-radius: 5px;
       width: 20%; /* Adjust width for consistency with other elements */;
-
+      position: relative;
       padding: 5px; /* Add padding for better visual appearance */;
       font-family: 'arial', sans-serif;
       font-size: 15px;
+      margin-top: 0%;
+      margin-bottom: 0%;
 
 
 
-
-  }
-
-
-
-  /* Add this in your CSS file or style section */
-  .light-mode {
-    background-color: #fff;
-    color: #000;
-    /* Add other light mode styles as needed */
   }
 
 .cog-icon i,
@@ -380,6 +317,47 @@ body {
   font-family: 'arial', sans-serif; /* Add the desired font-family */;
 
 }
+
+  /* Adjust other styles as needed */
+
+  /* Accessibility button styles */
+  #accessibility-button {
+    position: fixed;
+    margin-top: 40%;
+    margin-left: 30%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+  }
+
+
+  #accessibility-dropup button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+
+  }
+  @media screen and (max-width: 585px) {
+    .cog-icon {
+
+    }
+
+    .up-content {
+
+    }
+}
+
+
 body {
   background-color: ghostwhite;
   font-family: 'arial', sans-serif;
@@ -421,13 +399,13 @@ input[type=text]:focus {
 /* Common styles for both light and dark modes */
 .dropup-content {
     display: none;
-    position: sticky;
+    position: absolute;
     width: 20%;
     padding: 5px;
-
+    border-radius: 5px;
     margin: 0%;
-    margin-left: 75%;
-    margin-bottom: 5%;
+    margin-left: 77.5%;
+    margin-top: 0%;
 }
 
 
@@ -439,7 +417,11 @@ body.dark-mode .dropup-content * {
     color: white; /* Text color in dark mode */
     background-color: dimgrey; /* Background color in dark mode */
 }
+body.light-mode .topnav {
+  background-color: whitesmoke;
+  color: #fff; /* White font color for the navbar in normal mode */;
 
+}
 
 
 body.dark-mode .cog-icon,
@@ -457,18 +439,18 @@ body.dark-mode .cog-icon * {
 body.light-mode .dropup-content,
 body.light-mode .dropup-content * {
     color: black; /* Text color in light mode */
-    background-color: white; /* Background color in light mode */
+    background-color: ghostwhite; /* Background color in light mode */
 }
 
 body.light-mode .dropup-content button {
     color: black; /* Button text color in light mode */
-    background-color: white; /* Button background color in light mode */
+    background-color: ghostwhite; /* Button background color in light mode */
 }
 
 body.light-mode .cog-icon,
 body.light-mode .cog-icon * {
     color: black; /* Icon color in light mode */
-    background-color: white; /* Icon background color in light mode */
+    background-color: ghostwhite; /* Icon background color in light mode */
 }
 
 /* Add your existing styles here */
@@ -489,7 +471,7 @@ body.light-mode .cog-icon * {
 
     width: 250px;
     position: fixed;
-    z-index: -1;
+    z-index: 1;
     height: 100vh;
     transition: none;
     background-color: #1a1a1a;
@@ -576,7 +558,7 @@ body.light-mode .cog-icon * {
    body.light-mode .sidebar,
    body.light-mode .sidebar * {
        color: black; /* Text color in light mode */;
-       background-color: white; /* Background color in light mode */;
+       background-color: whitesmoke; /* Background color in light mode */;
 
    }
 
@@ -632,7 +614,7 @@ body.light-mode .cog-icon * {
        padding: 16px; /* Adjust padding to your needs */
    }
 
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 585px) {
        .sidebar {
 
        }
@@ -642,6 +624,171 @@ body.light-mode .cog-icon * {
        }
 
            .menu-toggle {
-
+             top:118px;
            }
    }
+
+   @media screen and (max-width: 585px) {
+       .cog-icon {
+    
+
+       }
+
+       }
+
+
+   }
+
+   .slideshow-container {
+    position: relative;
+    max-width: 100%; /* Full width */
+    margin: auto;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.slide {
+    display: none;
+    width: 100%; /* Full width */
+}
+
+.slide img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* ... other styles remain the same ... */
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .prev, .next {
+        font-size: 12px; /* Smaller arrows */
+        padding: 10px; /* Smaller touch area */
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  width:
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Container for main content including slideshow */
+.main-content {
+    margin-left: 250px; /* Adjust if sidebar width changes */
+}
+
+/* Container for the image gallery */
+.container {
+    position: relative;
+    max-width: calc(100% - 250px); /* Adjust width to prevent overlap with sidebar */
+    margin: auto; /* Center the container */;
+    margin-left: 20%;
+    margin-right: 20%;
+
+
+}
+
+.mySlides {
+    display: none; /* Hide slides initially */
+    position: relative; /* Position relative to its normal position */
+    text-align: center; /* Center the content inside each slide */
+    width: 70%; /* Full width of the container */;
+
+}
+
+.numbertext {
+    color: #f2f2f2; /* Light-colored text */
+    font-size: 12px; /* Small font size for the number text */
+    padding: 8px 12px; /* Padding for spacing */
+    position: absolute; /* Position it absolutely inside the slide */
+    top: 0; /* At the top of the slide */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    left: 0; /* Align to the left */
+}
+
+.mySlides img {
+    width: 100%; /* Full width of the slide */
+    height: auto; /* Maintain aspect ratio */
+}
