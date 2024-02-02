@@ -19,7 +19,8 @@ html {
   position: sticky; /* Make the navigation bar fixed */
   top: 0;         /* Align the navigation bar at the top of the page */
   width: 100%;    /* Make the navigation bar span the full width of the page */
-  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */
+  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */;
+
 }
 
 
@@ -894,9 +895,9 @@ body.light-mode .cog-icon * {
 
 
 .opening-screen {
-    height: 115vh;
-    margin-top:-13%;
-    width: 110%;
+    height: 100vh;
+    margin: -8%;
+    width: 102vw;
     background: url('featured/p1.webp') no-repeat center center/cover;
     background-color: black;
 
@@ -907,8 +908,9 @@ body.light-mode .cog-icon * {
     align-items: center;
     text-align: center;
     color: #fff;
-    margin-left: -2%; /* Center the element */
-    margin-right: 2%; /* Center the element */
+    margin-left:-3%; /* Center the element */
+    margin-right: -2%; /* Center the element */;
+
 }
 
 .welcome {
@@ -946,6 +948,7 @@ body.light-mode .cog-icon * {
       margin-left: -4%; /* Center the element */
       margin-right: 2%; /* Center the element */;
       margin-top:-27%;
+      
     }
     .opening-screen button {
         padding: 8px 16px;
