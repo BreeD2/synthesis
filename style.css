@@ -66,7 +66,7 @@ body.light-mode .topnav a.active {
 
 /* Dark mode styles for the "active" element */
 body.dark-mode .topnav a.active {
-  background-color: grey;;
+  background-color: dimgrey;
   color: #ffffff;
 }
 
@@ -450,7 +450,7 @@ body.light-mode .dropup-content button {
 body.light-mode .cog-icon,
 body.light-mode .cog-icon * {
     color: black; /* Icon color in light mode */
-    background-color: ghostwhite; /* Icon background color in light mode */
+    background-color: white; /* Icon background color in light mode */
 }
 
 /* Add your existing styles here */
@@ -481,7 +481,7 @@ body.light-mode .cog-icon * {
       overflow-y: auto;
 
       z-index: 1;
-    
+
       left: -250px;
       background-color: #111;
       overflow-x: hidden;
@@ -561,7 +561,7 @@ body.light-mode .cog-icon * {
 
    }
    .sidebar a:focus {
-    outline: 2px solid grey; /* Customize as needed */
+    outline: 2px solid dimgrey; /* Customize as needed */
 }
 
    /* Light mode styles */
@@ -603,15 +603,23 @@ body.light-mode .cog-icon * {
        color: #f1f1f1;
 
    }
-
    .menu-toggle {
        cursor: pointer;
        position: fixed;
-    left:25px;
-    top:73px;
+       left: 25px;
+       top: 73px;
        z-index: 1;
        font-size: 25px;
        color: grey;
+       /* Optional: Default box-shadow for example */
+
+       transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and box-shadow */
+   }
+
+   /* Style for .menu-toggle when active */
+   .menu-toggle.active {
+       color: white; /* Change color when active */
+
    }
 
 
@@ -764,21 +772,9 @@ body.light-mode .cog-icon * {
   opacity: 1;
 }
 
-/* Container for main content including slideshow */
-.main-content {
-    margin-left: 250px; /* Adjust if sidebar width changes */
-}
-
-/* Container for the image gallery */
-.container {
-    position: relative;
-    max-width: calc(100% - 250px); /* Adjust width to prevent overlap with sidebar */
-    margin: auto; /* Center the container */;
-    margin-left: 20%;
-    margin-right: 20%;
 
 
-}
+
 
 .mySlides {
     display: none; /* Hide slides initially */
@@ -948,3 +944,221 @@ body.light-mode .cog-icon * {
         .sidebar-visible .content {
             margin-left: 250px;
         }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+
+
+
+
+.opening-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.opening-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: red;
+}
+#enter-site-button {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Make the text bold */;
+    border-color: #fff; /* White border on hover/focus */
+
+}
+
+#enter-site-button:hover, #enter-site-button:focus {
+    background-color: black; /* Slightly darker green on hover/focus */
+    border-color: #fff; /* White border on hover/focus */
+}
+
+#enter-site-button:active {
+    background-color: #3e8e41; /* Even darker green when active/clicked */
+    transform: translateY(2px); /* Mimic button press */
+}
+
+
+
+.welcome {
+  color:white;
+  font-size: 40px;
+}
+.dark-mode .welcome {
+  background-color: black;
+  color: white;
+}
+
+
+
+.light-mode .opening-screen button {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-mode .opening-screen button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.dark-mode .opening-screen button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.opening-screen {
+    height: 115vh;
+    margin-top:-13%;
+    width: 110%;
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -2%; /* Center the element */
+    margin-right: 2%; /* Center the element */
+}
+
+.welcome {
+    font-size: 30px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    background-color: grey; /* Background color */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px 0; /* Margin outside the div */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-family: 'Arial', sans-serif; /* Specify a font-family */
+    border: 2px solid black; /* Optional: Add a border */;
+    animation:fadeIn 2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.underwelcome {
+  color:white;
+  font-size: 20px;
+}
+
+/* Other styles remain unchanged */
+
+/* Responsive adjustments for small screens */
+@media (max-width: 800px) {
+    .opening-screen p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .opening-screen {
+      margin-left: -4%; /* Center the element */
+      margin-right: 2%; /* Center the element */;
+      margin-top:-27%;
+    }
+    .opening-screen button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+}

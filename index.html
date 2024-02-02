@@ -291,18 +291,59 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 
 
         <div id="main-content" class="content">
-          <div class="slideshow-container">
-  <div class="mySlides fade">
-      <img src="featured/supermarioodyssey.png" style="width:100%">
+          <!-- Container for the image gallery -->
+          <div class="opening-screen">
+                <div class="welcome">Welcome to the Reminiscence Collection<b>
+                <div class="underwelcome">Explore the history and legacy of video games.</div>
+                <button id="enter-site-button" onclick="enterSite()">Enter</button>
+
+            </div>
   </div>
-  <div class="mySlides fade">
-      <img src="img2.jpg" style="width:100%">
-  </div>
-  <div class="mySlides fade">
-      <img src="img3.jpg" style="width:100%">
-  </div>
-</div>
-        </div>
+  <script>document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+</script>
+
+
+<script>function enterSite() {
+    // Example action: hide the opening screen
+    document.querySelector('.opening-screen').style.display = 'none';
+    // In a real site, you might redirect or change the view instead
+    // window.location.href = 'main.html'; // Redirect to the main content page
+}
+</script>
+
+        <script>
+          let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}</script>
 
 <script>
   document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -418,24 +459,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
         }
     </script>
 
-    <script>
-    function toggleAccessibilityMenu() {
-        var accessibilityDropup = document.getElementById("accessibility-dropup");
-        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
 
-    // Add your functions for the accessibility options here
-    function increaseFont() {
-        // Add your code for increasing font size
-    }
-
-    function decreaseFont() {
-        // Add your code for decreasing font size
-    }
-
-    // Add other functions for the remaining accessibility options
-
-</script>
 <script>
     function toggleLightMode() {
         // Remove other classes that might affect the background
@@ -1096,82 +1120,60 @@ function decreaseFont() {
 </script>
 
 <script>
-    // Store the original font sizes of sidebar and topnav elements
-    function storeOriginalFontSizes() {
-        var elements = document.querySelectorAll('.sidebar *, .topnav *');
-        elements.forEach(function(element) {
-            element.setAttribute('data-original-font-size', window.getComputedStyle(element, null).getPropertyValue('font-size'));
-        });
-    }
-
+    // Called once the DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function () {
-        // Your existing DOMContentLoaded code...
-        storeOriginalFontSizes();
+        storeOriginalFontSizes(); // Store original font sizes for specified elements
+        // Add any other initialization code here...
     });
 
+    // Store the original font sizes
+    function storeOriginalFontSizes() {
+        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button, #enter-site-button';
+        document.querySelectorAll(selector).forEach(element => {
+            element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
+        });
+    }
+
+    // Adjust the font size of elements
     function adjustFontSize(factor, selector) {
-        var elements = document.querySelectorAll(selector);
-        elements.forEach(function(element) {
-            var currentFontSize = parseFloat(window.getComputedStyle(element, null).getPropertyValue('font-size'));
-            element.style.fontSize = (currentFontSize * factor) + 'px';
+        document.querySelectorAll(selector).forEach(element => {
+            const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
+            element.style.fontSize = `${currentFontSize * factor}px`;
         });
     }
 
+    // Increase font size
     function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *, .topnav *');
+        adjustFontSize(1.1, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button, #enter-site-button');
     }
 
+    // Decrease font size
     function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *, .topnav *');
+        adjustFontSize(0.9, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button, #enter-site-button');
     }
 
+    // Reset font sizes to their original values
     function resetFont() {
-        var elements = document.querySelectorAll('.sidebar *, .topnav *');
-        elements.forEach(function(element) {
-            var originalFontSize = element.getAttribute('data-original-font-size');
-            element.style.fontSize = originalFontSize;
+        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button, #enter-site-button';
+        document.querySelectorAll(selector).forEach(element => {
+            const originalFontSize = element.getAttribute('data-original-font-size');
+            if (originalFontSize) element.style.fontSize = originalFontSize;
         });
     }
 
+    // Reset settings including font sizes and other visual modifications
     function resetSettings() {
-        // Reset the font size of the sidebar and topnav to their original values
-        resetFont();
-
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode');
-
-        // Reset other variables if needed
-        // Make sure these variables are defined elsewhere
-        grayscaleFilter = false;
-        redGreenFilter = 0;
-        saturation = 100;
-        contrast = 100;
-        sepia = 0;
-        brightness = 100;
-
-        document.body.style.fontSize = "";
-
-        document.body.classList.remove("invert-colors");
-        document.body.classList.add("disable-transition");
-
-        // Make sure these functions are defined elsewhere
-        updateFilter();
-        updateStyles();
-        updateContrast();
-        updateBrightness();
-
-        // Make sure closeAccessibilityDropup() is defined elsewhere
-        closeAccessibilityDropup();
-
-        setTimeout(function () {
-            document.body.classList.remove("disable-transition");
-        }, 1000);
-
-        // Log statements for debugging
-        console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-        console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
+        resetFont(); // Resets font sizes
+        // Here, add other reset actions (e.g., removing classes, resetting filters)
+        // Example: document.body.classList.remove('dark-mode', 'invert-colors');
+        // Reset global style adjustments if any
+        document.body.style.filter = '';
+        document.body.style.webkitFilter = '';
+        // Close the accessibility menu if you have a function to do so
+        // closeAccessibilityDropup(); // Uncomment if this function is defined
     }
 </script>
+
 
 
 
