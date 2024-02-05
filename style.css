@@ -19,8 +19,7 @@ html {
   position: sticky; /* Make the navigation bar fixed */
   top: 0;         /* Align the navigation bar at the top of the page */
   width: 100%;    /* Make the navigation bar span the full width of the page */
-  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */;
-
+  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */
 }
 
 
@@ -673,8 +672,101 @@ body.light-mode .cog-icon * {
   box-sizing: border-box;
 }
 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+  width:
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 
 
+
+
+
+.mySlides {
+    display: none; /* Hide slides initially */
+    position: relative; /* Position relative to its normal position */
+    text-align: center; /* Center the content inside each slide */
+    width: 70%; /* Full width of the container */;
+
+}
 
 .numbertext {
     color: #f2f2f2; /* Light-colored text */
@@ -746,6 +838,23 @@ body.light-mode .cog-icon * {
     margin-left: 250px; /* Adjust according to the width of your sidebar */
 }
 
+.mySlides {display: none;}
+       #mainContent {transition: margin-left .5s;}
+
+       .mySlides {display: none;}
+        #mainContent {transition: margin-left .5s;}
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #mySidebar {width: 100%; display: none;}
+            #mainContent {margin-left: 0;}
+            .w3-sidebar.w3-bar-block {float: none;}
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
         .welcome-container {
             height: 100%;
@@ -781,14 +890,14 @@ body.light-mode .cog-icon * {
             background-color: #0056b3;
         }
 
-
-
-
-        .content {
-            transition: margin-left 0.5s;
-            padding: 16px;
-            margin-left: 250px; /* Initial margin to accommodate sidebar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
+
+
+
 
         .content.small {
             margin-left: 0; /* Less margin when sidebar is collapsed */
@@ -804,7 +913,7 @@ body.light-mode .cog-icon * {
         .content {
             margin-left: 0;
             transition: margin-left 0.5s;
-            padding: 16px;
+
         }
 
         .sidebar-visible .sidebar {
@@ -817,6 +926,84 @@ body.light-mode .cog-icon * {
         /* Position the image container (needed to position the left and right arrows) */
         .container {
           position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
         }
 
 
@@ -894,24 +1081,20 @@ body.light-mode .cog-icon * {
 
 
 
-.opening-screen {
-    height: 100vh;
-    margin: -8%;
-    width: 102vw;
-    background: url('featured/p1.webp') no-repeat center center/cover;
-    background-color: black;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    margin-left:-3%; /* Center the element */
-    margin-right: -2%; /* Center the element */;
-
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .opening-screen {
+        width: 100%; /* Resets to full viewport width without exceeding it */
+        margin-top: 0; /* Removes negative top margin */
+        margin-left: 0;
+        margin-right: 0;
+        height: 50vh; /* Set a fixed height or max-height as preferred */
+        /* Alternative: You might use max-height if you want to ensure it doesn't exceed a certain height but can be shorter */
+        height: auto; /* Allows the height to adjust based on content */
+        min-height: 100vh; /* Ensures it's at least the full height of the viewport */
+    }
 }
+
 
 .welcome {
     font-size: 30px; /* Adjust the font size */
@@ -939,16 +1122,14 @@ body.light-mode .cog-icon * {
 /* Other styles remain unchanged */
 
 /* Responsive adjustments for small screens */
-@media (max-width: 800px) {
+@media (max-width: 720px) {
     .opening-screen p {
         font-size: 1rem;
         margin-bottom: 20px;
     }
     .opening-screen {
-      margin-left: -4%; /* Center the element */
-      margin-right: 2%; /* Center the element */;
-      margin-top:-27%;
-      
+
+
     }
     .opening-screen button {
         padding: 8px 16px;
@@ -957,19 +1138,19 @@ body.light-mode .cog-icon * {
     }
 }
 #about {
-    background-color: red; /* Adjusted background color */
+    background-color: grey; /* Adjusted background color */
     padding: 40px; /* Ample padding for spacing */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 100%; /* Ensure it fills the width */;
+    width: 100%; /* Ensure it fills the width */
     margin: 0; /* Remove default margins */
     /* Optional: Adjust height based on content or specific design needs */
     min-height: 200px; /* Example min-height, adjust as needed */;
-    margin-right: -20%:
+
 }
 
 
 #about h2 {
-    color: #007bff; /* A standout color for headings */
+    color: black; /* A standout color for headings */
     margin-bottom: 20px; /* Space below the heading */
     font-size: 28px; /* Slightly larger font size for headings */
 }
@@ -978,4 +1159,54 @@ body.light-mode .cog-icon * {
     font-size: 16px; /* Comfortable reading font size */
     line-height: 1.6; /* Increased line height for readability */
     color: #333; /* Dark color for contrast and readability */
+}
+
+.opening-screen {
+    height: 1200px; /* Fixed height for large screens */
+    margin-top: -8%;
+  width: calc(100%); /* Adds back the 5% margin from both sides */
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -14%;
+}
+
+/* Smaller devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .opening-screen {
+    height: 600px; /* Adjust height for smaller devices */
+    margin-top: -10;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .opening-screen {
+    height: 800px; /* Adjust height for medium-sized devices */
+  }
+}
+
+/* Large devices (desktops, but less than 1200px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .opening-screen {
+    height: 1000px; /* Adjust height for larger devices, but not the largest */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .opening-screen {
+    height: 1200px; /* Original height for the largest screens */
+  }
 }
