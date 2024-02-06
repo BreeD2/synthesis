@@ -303,6 +303,177 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
     <h2>What is Reminiscence Collection?</h2>
     <p>Explore the Reminiscence Collection universe, featuring details on over 170 video games. Sort through the collection using a variety of filters, including series, platforms, genres, and more.</p>
 </section>
+<div class="featured-games-title">
+  Featured Games
+</div>
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>  <a href="supermarioodyssey/index.html">
+      <img src="featured/supermarioodyssey.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>  <a href="tomodachilife/index.html">
+      <img src="featured/tomodachilife.jpg" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>  <a href="littlebigplanet/index.html">
+      <img src="featured/littlebigplanet.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+        <a href="nba2k22/index.html"><img src="featured/nba2k22.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+        <a href="midnightclub3dubedition/index.html"><img src="featured/midnightclub3dubedition.png" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <a href="frogger2swampysrevenge/index.html"><img src="featured/frogger2swampysrevenge.jpg" style="width:100%"></a>
+
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="featured/supermarioodyssey.png" style="width:100%" onclick="currentSlide(1)" alt="Super Mario Odyssey">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="featured/tomodachilife.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tomodachi Life">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="featured/littlebigplanet.png" style="width:100%" onclick="currentSlide(3)" alt="LittleBigPlanet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="featured/nba2k22.png" style="width:100%" onclick="currentSlide(4)" alt="NBA 2K22">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="featured/midnightclub3dubedition.png" style="width:100%" onclick="currentSlide(5)" alt="Midnight Club 3: Dub Edition">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="featured/frogger2swampysrevenge.jpg" style="width:100%" onclick="currentSlide(6)" alt="Frogger 2: Swampy's Revenge">
+    </div>
+  </div>
+</div>
+
+<section id="sort-section">
+  <h2>Sort Games</h2>
+  <select id="sortOptions" onchange="sortGames()">
+    <option value="alphabetically">Alphabetically</option>
+    <option value="publisher">Publisher</option>
+    <option value="developer">Developer</option>
+      <option value="series">Series</option>
+      <option value="developer">Platform</option>
+    <option value="release_date">Release Date</option>
+    <option value="genre">Genre</option>
+    <option value="mode">Mode</option>
+  </select>
+</section>
+
+<section id="sort-section">
+  <h2>Sort Games</h2>
+  <select id="mainCategory" onchange="updateSubCategory()">
+    <option value="genre">Genre</option>
+    <!-- Add more main categories if needed -->
+  </select>
+
+  <select id="subCategory" onchange="sortAndDisplayGames()">
+    <!-- Options will be filled based on the main category selection -->
+  </select>
+</section>
+
+<div id="games-list"></div>
+
+<script>
+  const genreCategories = {
+  "genre": ["Action", "Adventure","Art", "Comic", "Coming-Of-Age", "Drama", "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing","Role-playing", "Sandbox", "Shooter", "Simulation", "Sports",]
+  // Add other main categories and their subcategories as needed
+};
+
+function updateSubCategory() {
+  const mainCategory = document.getElementById('mainCategory').value;
+  const subCategoryDropdown = document.getElementById('subCategory');
+  subCategoryDropdown.innerHTML = ''; // Clear existing options
+
+  genreCategories[mainCategory].forEach(subCategory => {
+    const option = document.createElement('option');
+    option.value = subCategory;
+    option.textContent = subCategory;
+    subCategoryDropdown.appendChild(option);
+  });
+
+  sortAndDisplayGames(); // Automatically update games list based on new subcategory
+}
+
+// Call updateSubCategory once to fill in the subcategories on initial load
+document.addEventListener("DOMContentLoaded", updateSubCategory);
+</script>
+<script>
+  function sortAndDisplayGames() {
+  const selectedGenre = document.getElementById('subCategory').value;
+  const filteredGames = gamesData.filter(game => game.genre.includes(selectedGenre));
+
+  const gamesList = document.getElementById('games-list');
+  gamesList.innerHTML = ''; // Clear existing games list
+
+  filteredGames.forEach(game => {
+    const gameElement = document.createElement('div');
+    gameElement.textContent = game.title; // Display only the game name
+    gamesList.appendChild(gameElement);
+  });
+}
+</script>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+
+
 </div>
   <script>document.querySelector('.menu-toggle').addEventListener('click', function() {
     this.classList.toggle('active');

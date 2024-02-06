@@ -660,13 +660,6 @@ body.light-mode .cog-icon * {
 
 /* ... other styles remain the same ... */
 
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 768px) {
-    .prev, .next {
-        font-size: 12px; /* Smaller arrows */
-        padding: 10px; /* Smaller touch area */
-    }
-}
 
 * {
   box-sizing: border-box;
@@ -687,22 +680,6 @@ body.light-mode .cog-icon * {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
 
 /* Position the "next button" to the right */
 .next {
@@ -728,10 +705,11 @@ body.light-mode .cog-icon * {
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: white;
   padding: 2px 16px;
   color: white;
-  width:
+  width:50%;
+
 }
 
 .row:after {
@@ -756,15 +734,19 @@ body.light-mode .cog-icon * {
   opacity: 1;
 }
 
+.row {
+  width: 50%
+}
 
-
-
+#caption {
+  color:white
+}
 
 .mySlides {
     display: none; /* Hide slides initially */
     position: relative; /* Position relative to its normal position */
     text-align: center; /* Center the content inside each slide */
-    width: 70%; /* Full width of the container */;
+    width:50%; /* Full width of the container */;
 
 }
 
@@ -1209,4 +1191,310 @@ body.light-mode .cog-icon * {
   .opening-screen {
     height: 1200px; /* Original height for the largest screens */
   }
+}
+
+#featured-games-section {
+    margin-top: 20px;
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: black; /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Adjust based on your preference */
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Add a transition effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 0; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(314px); /* Move further left from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.next {
+  right: 20px; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(20px); /* Move further right from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 0 20px; /* Adds space above and below the title */
+  font-size: 20px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 10px;
+  border-radius: 5px; /* Adds rounded corners */
+
+
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */;
+  width: 100%;
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 20px 0 20px; /* Adds space above and below the title */
+  font-size: 23px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 1px;
+  border-radius: 5px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  width:50%;
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */
+}
+
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+    justify-content: center;
+}
+
+.game-item {
+    width: 200px; /* Adjust based on your design */
+    text-align: center;
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.game-title {
+    margin-top: 10px;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666; /* Adjust color based on your theme */;
+    width: 50%;
+
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    position: relative; /* For positioning the game-info */
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Defines a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintains a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    text-align: center; /* Centers the content within each game */
+}
+
+.game img {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images for aesthetics */
+}
+
+.game-info {
+    text-align: center; /* Ensures the game information text is centered */
+    color: #fff; /* Text color, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Adds padding around the text for spacing */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Optional: Adds rounded corners to the background of the text */
+    width: 100%; /* Ensures the text container matches the width of the image above */
+    box-sizing: border-box; /* Ensures the width calculation includes padding */
+}
+
+#featuredGameContainer {
+  margin-top: 20px;
+  text-align: center; /* Centers the image */
+}
+
+#featuredGameImage {
+  max-width: 600px; /* Adjust based on your design */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional styling */
+}
+
+.slideshow-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+.image-link .caption, .image-caption-wrapper .caption {
+  display: block;
+  text-align: center;
+  color: #000; /* Caption text color */
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 8px; /* Space between the image and caption */
+}
+
+
+.image-caption-wrapper {
+  text-align: center; /* Center the image and caption */
+}
+
+.caption-link {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #000; /* Or any color that fits your design */
+  text-decoration: none; /* Optional: removes the underline */;
+  background-color: white
+}
+
+.caption-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of children */
+    width: 100%; /* Adjust based on your layout */
+    margin: auto; /* Center the container */
+}
+
+/* Adjusted .prev and .next arrow styles */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 1; /* Ensure arrows are above the slides */
+    color: #ffffff; /* Arrow color */
+    font-size: 24px; /* Arrow size */
+    padding: 16px; /* Clickable area size */
+    user-select: none; /* Prevent text selection */
+}
+
+.prev { left: calc(25% - 44px); } /* Position the "previous" arrow taking into account 50% width of .mySlides */
+.next { right: calc(25% - 44px); } /* Position the "next" arrow similar to the "prev" but from the right */
+
+/* Additional hover effects for better UX */
+.prev:hover, .next:hover {
+    color: #dcdcdc; /* Lighten color on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+    .mySlides {
+        width: 100%; /* Increase width to occupy more space on smaller screens */
+    }
+    .prev {
+      left:5px
+    }
+    .next {
+      right:14px;
+    }
+
+    #sort-section {
+  text-align: center; /* Center-align the section */
+  margin: 20px 0; /* Add some space around the section */
+}
+
+#sort-section h2 {
+  margin-bottom: 10px; /* Space between the heading and the dropdown */
+}
+
+#sortOptions {
+  padding: 10px; /* Make the dropdown larger and easier to interact with */
+  font-size: 16px; /* Increase the font size for better readability */
 }
