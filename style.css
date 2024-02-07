@@ -439,7 +439,7 @@ body.dark-mode .cog-icon * {
 body.light-mode .dropup-content,
 body.light-mode .dropup-content * {
     color: black; /* Text color in light mode */
-    background-color: ghostwhite; /* Background color in light mode */
+    background-color: whitesmoke; /* Background color in light mode */
 }
 
 body.light-mode .dropup-content button {
@@ -604,17 +604,20 @@ body.light-mode .cog-icon * {
 
    }
    .menu-toggle {
-       cursor: pointer;
-       position: fixed;
-       left: 25px;
-       top: 73px;
-       z-index: 1;
-       font-size: 25px;
-       color: grey;
-       /* Optional: Default box-shadow for example */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    position: fixed; /* Keeps the element in the same place even when scrolling */
+    left: 25px; /* Distance from the left edge of the viewport */
+    top: 73px; /* Distance from the top edge of the viewport */
+    z-index: 1; /* Ensures the element stays on top of other content */
+    font-size: 25px; /* Size of the text or icon inside */
+    color: grey; /* Color of the text or icon */
 
-       transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and box-shadow */
-   }
+    /* Smooth transition effects for color and box-shadow when they change */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Optional: Default box-shadow for visual depth (example) */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
@@ -1157,6 +1160,7 @@ select:hover {
 
 
 
+
 #about p {
     font-size: 16px; /* Comfortable reading font size */
     line-height: 1.6; /* Increased line height for readability */
@@ -1548,6 +1552,7 @@ select:hover {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     cursor: pointer;
     font-weight: normal;
+    text-align: center;
   }
 
   /* The Modal (background) */
@@ -1584,11 +1589,7 @@ select:hover {
     cursor: pointer;
   }
 
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
+
 
   @keyframes zoom {
     from {transform:scale(0)}
@@ -1604,9 +1605,10 @@ select:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    padding: 10px 15px;
+    padding: 5px;
     margin: 5px;
     border-radius: 5px;
+    border:2px solid white
   }
 
   #zoomIn {
@@ -1618,9 +1620,202 @@ select:hover {
   }
 
   /* Caption Style */
-  #caption {
+  #pcaption {
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px ;
     font-size: 20px;
   }
+
+  .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+
+      background-color: black;
+      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+        color:white;
+    }
+    body.light-mode .footer, body.light-mode .footer * {
+        width: 100%;
+        background-color: #f1f1f1; /* Light grey background for the footer */
+        text-align: center;
+        padding: 20px;
+        color: #000; /* Dark text color for readability */
+        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+      }
+      body.dark-mode #sort-section, body.sort-section * {
+
+    background-color: #f1f1f1; /* Light grey background for the footer */
+
+    color: black; /* Dark text color for readability */
+
+  }
+  body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: black; /* Dark text color for readability */
+
+}
+
+body.light-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+body.light-mode #about h2 {
+color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+
+body.light-mode #sort-section, body.sort-section * {
+
+background-color: grey; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+.copy {
+  color:white
+}
+.sort {
+  font-size: 25px;
+  color:white
+}
+body.light-mode .sort {
+  color:white
+}
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+/* Style for .menu-toggle when active */
+body.light-mode .menu-toggle.active {
+    color: black; /* Change color when active */
+
+}
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}

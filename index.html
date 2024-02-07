@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<body>
 
 <!-- Navigation Bar with Logo and Website Name -->
  <div class="topnav">
@@ -300,7 +300,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
             </div>
   </div>
   <section id="about">
-    <h2>What is Reminiscence Collection?</h2>
+    <div class="what">What is Reminiscence Collection?</div>
     <p>Explore the Reminiscence Collection universe, featuring details on over 170 video games. Sort through the collection using a variety of filters, including series, platforms, genres, and more.</p>
 </section>
 <div class="featured-games-title">
@@ -392,27 +392,31 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 
 
 <section id="sort-section">
-  <h2>Sort Games</h2>
+  <div class="sort">Sort Games</div>
   <select id="mainCategory" onchange="updateSubCategory()">
-<option value="allgames">All Games</option>
-  <option value="publisher">Publisher</option>
+    <option value="" disabled selected hidden>Choose a category</option>
+    <option value="allgames">All Games</option>
+    <option value="publisher">Publisher</option>
     <option value="developer">Developer</option>
-      <option value="series">Series</option>
-        <option value="platform">Platform</option>
-        <option value="releasedDate">Released Dates</option>
-        <option value="genre">Genre</option>
-          <option value="mode">Mode</option>
+    <option value="series">Series</option>
+    <option value="platform">Platform</option>
+    <option value="releasedDate">Released Dates</option>
+    <option value="genre">Genre</option>
+    <option value="mode">Mode</option>
   </select>
-
-
 
   <select id="subCategory" onchange="sortAndDisplayGames()">
-    <!-- Options will be filled based on the main category selection -->
+    <option value="" disabled selected hidden>Select a subcategory</option>
+    <!-- Additional options will be dynamically filled based on the main category selection -->
   </select>
 
-
-<div id="games-list"></div>
+  <div id="games-list">Choose from the categories above</div>
 </section>
+
+<div class="footer">
+  <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
   const options = ["All Games", "Publisher", "Developer", "Series", "Platform", "Released Dates", "Genre", "Mode"];
@@ -502,6 +506,17 @@ function updateSubCategory() {
   const mainCategory = document.getElementById('mainCategory').value;
   const subCategoryDropdown = document.getElementById('subCategory');
   subCategoryDropdown.innerHTML = ''; // Clear existing options
+  console.log("Main category selected:", mainCategory); // Debugging line
+
+  // Clear previous subcategory options
+  subCategory.innerHTML = '<option value="" disabled selected hidden>Select a subcategory</option>';
+
+  // Example: Dummy data for demonstration
+  const optionsData = {
+    'publisher': ['Publisher 1', 'Publisher 2'],
+    'developer': ['Developer 1', 'Developer 2'],
+    // Add more categories as needed...
+  };
 
   const categoriesMap = {
      "publisher": publisherCategories.publisher,
@@ -661,13 +676,7 @@ function showSlides(n) {
   showSlide(0);
 
 </script>
-    <!-- Main Content Section -->
-    <main class="container">
-        <!-- Your existing content goes here -->
-        <!-- Header, Hero, Browse Section, Footer, etc. -->
-    </main>
-    <!-- JavaScript for Sidebar Toggle and Live Search -->
-    <!-- JavaScript for Sidebar Toggle and Live Search -->
+
 
     <script>
         function toggleSidebar() {
@@ -896,7 +905,7 @@ function showSlides(n) {
     }
   </script>
 
-<script
+
 <script>
   function invertColors() {
   document.body.classList.toggle('invert-colors');
@@ -1520,6 +1529,7 @@ document.getElementsByClassName("close")[0].onclick = function() {
   modal.style.display = "none";
 }
 </script>
+
 
   </body>
   </html>
