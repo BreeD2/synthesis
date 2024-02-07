@@ -756,7 +756,7 @@ body.light-mode .cog-icon * {
     padding: 8px 12px; /* Padding for spacing */
     position: absolute; /* Position it absolutely inside the slide */
     top: 0; /* At the top of the slide */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
     left: 0; /* Align to the left */
 }
 
@@ -930,7 +930,7 @@ body.light-mode .cog-icon * {
           padding: 16px;
           margin-top: -50px;
           color: white;
-          font-weight: bold;
+
           font-size: 20px;
           border-radius: 0 3px 3px 0;
           user-select: none;
@@ -987,6 +987,20 @@ body.light-mode .cog-icon * {
         .demo:hover {
           opacity: 1;
         }
+        select {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  width: 30%;
+  font-style: normal;
+
+
+}
+
+select:hover {
+  border-color: blue;
+  border: 2px solid blue
+}
 
 
 
@@ -1004,7 +1018,7 @@ body.light-mode .cog-icon * {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    background-color: red;
+    background-color: grey;
 }
 #enter-site-button {
     padding: 5px;
@@ -1022,7 +1036,7 @@ body.light-mode .cog-icon * {
 }
 
 #enter-site-button:hover, #enter-site-button:focus {
-    background-color: black; /* Slightly darker green on hover/focus */
+    background-color: dodgerblue;
     border-color: #fff; /* White border on hover/focus */
 }
 
@@ -1079,17 +1093,19 @@ body.light-mode .cog-icon * {
 
 
 .welcome {
-    font-size: 30px; /* Adjust the font size */
+    font-size: 35px; /* Adjust the font size */
     color: #fff; /* Text color */
-    background-color: grey; /* Background color */
+    background-color: black; /* Background color */
     padding: 20px; /* Padding inside the div */
     margin: 20px 0; /* Margin outside the div */
     border-radius: 10px; /* Rounded corners */
     text-align: center; /* Center the text */
     box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
     font-family: 'Arial', sans-serif; /* Specify a font-family */
-    border: 2px solid black; /* Optional: Add a border */;
+    border: 5px solid white; /* Optional: Add a border */;
     animation:fadeIn 2s;
+    font-weight: bold
+
 }
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -1099,6 +1115,7 @@ body.light-mode .cog-icon * {
 .underwelcome {
   color:white;
   font-size: 20px;
+  font-weight: normal;
 }
 
 /* Other styles remain unchanged */
@@ -1120,7 +1137,7 @@ body.light-mode .cog-icon * {
     }
 }
 #about {
-    background-color: grey; /* Adjusted background color */
+    background-color: black; /* Adjusted background color */
     padding: 40px; /* Ample padding for spacing */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     width: 100%; /* Ensure it fills the width */
@@ -1132,15 +1149,19 @@ body.light-mode .cog-icon * {
 
 
 #about h2 {
-    color: black; /* A standout color for headings */
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 28px; /* Slightly larger font size for headings */
+  margin-bottom: 20px; /* Space below the heading */;
+      color:white;
+    font-size: 28px; /* Slightly larger font size for headings */;
+    font-weight: bold;
 }
+
+
 
 #about p {
     font-size: 16px; /* Comfortable reading font size */
     line-height: 1.6; /* Increased line height for readability */
-    color: #333; /* Dark color for contrast and readability */
+    color: white; /* Dark color for contrast and readability */;
+    font-weight: normal;
 }
 
 .opening-screen {
@@ -1458,7 +1479,7 @@ body.light-mode .cog-icon * {
     position: absolute;
     top: 50%; /* Align vertically */
     transform: translateY(-50%); /* Center vertically */
-    z-index: 1; /* Ensure arrows are above the slides */
+    z-index: 0; /* Ensure arrows are above the slides */
     color: #ffffff; /* Arrow color */
     font-size: 24px; /* Arrow size */
     padding: 16px; /* Clickable area size */
@@ -1483,18 +1504,123 @@ body.light-mode .cog-icon * {
     }
     .next {
       right:14px;
-    }
+    }}
 
-    #sort-section {
-  text-align: center; /* Center-align the section */
-  margin: 20px 0; /* Add some space around the section */
-}
+    /* styles.css */
+  #games-list {
+    padding: 20px;
 
-#sort-section h2 {
-  margin-bottom: 10px; /* Space between the heading and the dropdown */
-}
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-top: 10px;
 
-#sortOptions {
-  padding: 10px; /* Make the dropdown larger and easier to interact with */
-  font-size: 16px; /* Increase the font size for better readability */
-}
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+    color:black;
+    font-weight: normal;
+    background-color:white
+
+  }
+  /* Style for the sort section */
+  #sort-section {
+    width:50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: red;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+  h2 {
+    color:white
+  }
+
+  /* Style for select dropdowns */
+  #mainCategory, #subCategory {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  #zoomIn {
+    right: 130px; /* Adjust based on your layout */
+  }
+
+  #zoomOut {
+    right: 80px; /* Adjust based on your layout */
+  }
+
+  /* Caption Style */
+  #caption {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+  }

@@ -17,832 +17,483 @@
 
 
 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Game Sorting</title>
+      <style>
+          .dropdown, #games-list {
+              margin: 10px 0;
+              padding: 5px;
+              border: 1px solid #ccc;
+          }
+
+          .dropdown-header, .dropdown-item {
+              padding: 10px;
+              background-color: #f9f9f9;
+              cursor: pointer;
+          }
+
+          .dropdown-list {
+              display: none;
+              background-color: #fff;
+          }
+
+          .dropdown-item:hover {
+              background-color: #f0f0f0;
+          }
+
+          .hidden {
+              display: none;
+          }
+      </style>
+  </head>
+  <body>
+  <section id="sort-section">
+      <h2>Sort Games</h2>
+      <div class="dropdown">
+          <div class="dropdown-header">Select Category</div>
+          <div class="dropdown-list hidden">
+              <!-- Dynamically filled with JavaScript -->
+          </div>
+      </div>
+      <div class="dropdown">
+          <div class="dropdown-header">Select SubCategory</div>
+          <div class="dropdown-list hidden" id="subCategoryList">
+              <!-- Dynamically filled with JavaScript based on main category selection -->
+          </div>
+      </div>
+      <div id="games-list"></div>
+  </section>
 
-  <div class="dropup">
-    <button class="dropbtn">Accessibility Options</button>
-    <div class="dropup-content">Accessibility Options
-        <button onclick="resetSettings()">Reset Settings</button>
-        <button onclick="increaseFont()">Increase Font Size</button>
-        <button onclick="decreaseFont()">Decrease Font Size</button>
-        <button onclick="invertColors()">Invert Colors</button>
-        <button onclick="toggleLightMode()">Toggle Light Mode</button>
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        <button onclick="increaseBrightness()">Increase Brightness</button>
-        <button onclick="decreaseBrightness()">Decrease Brightness</button>
-        <button onclick="increaseContrast()">Increase Contrast</button>
-        <button onclick="decreaseContrast()">Decrease Contrast</button>
-        <button onclick="adjustSaturation(10)">Increase Saturation</button>
-        <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-        <button onclick="applyRedFilter()">Apply Red Filter</button>
-        <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
-        <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-        <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-        <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-        <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-    </div>
-</div>
 
 
-    <script src="script.js"></script>
-    <script>
-    function toggleAccessibilityMenu() {
-  var dropup = document.getElementById('accessibility-dropup');
-  dropup.classList.toggle('show-dropup');
-}
-    </script>
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            var mainContent = document.querySelector('main');
 
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-                mainContent.style.marginLeft = '0px';
-            } else {
-                sidebar.style.left = '0px';
-                mainContent.style.marginLeft = '250px';
-            }
-        }
-
-        function liveSearch(query) {
-            var searchResultsContainer = document.getElementById('searchResults');
-            searchResultsContainer.innerHTML = ''; // Clear previous results
-
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var simulatedResults = [
-                'Game 1 Result',
-                'Game 2 Result',
-                'Another Game Result',
-                'Yet Another Result',
-                'Example Game Result'
-            ];
-
-            // Filter results based on the query
-            var filteredResults = simulatedResults.filter(function (result) {
-                return result.toLowerCase().includes(query.toLowerCase());
-            });
-
-            // Display filtered results in the sidebar
-            filteredResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality or other features
-            // ...
-        });
-    </script>
-
-
-
-    <!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality
-            // ...
-        });
-    </script>
-
-    <script>
-        function toggleDropdown() {
-            var dropdownContent = document.getElementById("dropdownContent");
-            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-        }
-    </script>
-
-    <script>
-    function toggleAccessibilityMenu() {
-        var accessibilityDropup = document.getElementById("accessibility-dropup");
-        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
-
-    // Add your functions for the accessibility options here
-    function increaseFont() {
-        // Add your code for increasing font size
-    }
-
-    function decreaseFont() {
-        // Add your code for decreasing font size
-    }
-
-    // Add other functions for the remaining accessibility options
-
-</script>
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-        // Set button styles explicitly for light mode
-        if (document.body.classList.contains('light-mode')) {
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
-            document.getElementById('accessibility-dropup').style.color = 'black';
-        } else {
-            // Set button styles explicitly for dark mode
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'dodgerblue';
-            document.getElementById('accessibility-dropup').style.color = 'white';
-        }
-    }
-</script>
-
-<!-- JavaScript -->
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Saturation, Contrast, and Sepia control scripts -->
-    <!-- Red-Green Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Grayscale Filter control scripts -->
-    <script>
-      var grayscaleFilter = false;
-
-      function updateFilter() {
-        document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
-      }
-
-      function toggleGrayscale() {
-        grayscaleFilter = !grayscaleFilter;
-        updateFilter();
-      }
-
-      function resetFilter() {
-        grayscaleFilter = false;
-        updateFilter();
-      }
-    </script>
-
-
-
-
-
-
-
-    <script>
-      var saturation = 100;
-      var contrast = 100;
-      var sepia = 0;
-
-      function updateStyles() {
-        document.body.style.filter = "saturate(" + saturation + "%) contrast(" + contrast + "%) sepia(" + sepia + "%)";
-      }
-
-      function toggleSepia() {
-        sepia = sepia === 0 ? 100 : 0;
-        updateStyles();
-      }
-
-      function adjustContrast(step) {
-        contrast += step;
-        updateStyles();
-      }
-
-      function adjustSaturation(step) {
-        saturation += step;
-        updateStyles();
-      }
-    </script>
-
-
-
-
-    <script>
-
-        function search() {
-            var searchInput = document.getElementById("searchInput").value;
-            var searchResults = document.getElementById("searchResults");
-
-            // Implement your search functionality here
-            // For simplicity, I'm just showing and hiding the search-results div in this example
-            if (searchInput.trim() !== "") {
-                searchResults.style.display = "block";
-                searchResults.innerHTML = "Search results for: " + searchInput;
-            } else {
-                searchResults.style.display = "none";
-            }
-        }
-    </script>
-    <script>
-    function toggleAccessibilityMenu() {
-      var accessibilityDropup = document.getElementById("accessibility-dropup");
-      accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
-
-    // Existing functions for accessibility options
-
-    function increaseFont() {
-      // Add your code for increasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
-    }
-
-    function decreaseFont() {
-      // Add your code for decreasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
-    }
-  </script>
-
-<script
-<script>
-  function invertColors() {
-  document.body.classList.toggle('invert-colors');
-}
-</script>
-<script>
-  // Brightness control variables
-  var brightness = 100;
-  var brightnessStep = 10;
-
-  // Brightness control functions
-  function increaseBrightness() {
-    brightness += brightnessStep;
-    updateBrightness();
-  }
-
-  function decreaseBrightness() {
-    brightness -= brightnessStep;
-    updateBrightness();
-  }
-
-  function updateBrightness() {
-    document.body.style.filter = "brightness(" + brightness + "%)";
-  }
-
-  // Add event listeners to brightness control buttons
-  document.getElementById("brightnessUpBtn").addEventListener("click", increaseBrightness);
-  document.getElementById("brightnessDownBtn").addEventListener("click", decreaseBrightness);
-</script>
-
-<!-- Contrast control script -->
-<script>
-  // Contrast control variables
-  var contrast = 100;
-  var contrastStep = 10;
-
-  // Contrast control functions
-  function increaseContrast() {
-    contrast += contrastStep;
-    updateContrast();
-  }
-
-  function decreaseContrast() {
-    contrast -= contrastStep;
-    updateContrast();
-  }
-
-  function updateContrast() {
-    document.body.style.filter = "contrast(" + contrast + "%)";
-  }
-</script>
-
-
-
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-
-    // Toggle dark mode on the navbar (assuming your navbar has a specific ID or class)
-    var navbar = document.getElementById("yourNavbarId"); // Replace "yourNavbarId" with the actual ID or class of your navbar
-    if (navbar) {
-      navbar.classList.toggle("dark-mode");
-    }
-  }
-</script>
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-
-    // You can add more elements to toggle dark mode if needed
-    var elementsToToggle = document.querySelectorAll(".dark-mode-toggle");
-    elementsToToggle.forEach(function (element) {
-      element.classList.toggle("dark-mode");
-    });
-  }
-</script>
-
-<script>
-    function toggleHighContrast() {
-        document.body.classList.toggle("high-contrast");
-        toggleAccessibilityMenu(); // Added to toggle the menu when changing contrast
-    }
-
-    function adjustFontSize(action) {
-        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-        var newSize;
-
-        if (action === 'increase') {
-            newSize = currentFontSize * 1.1 + 'px';
-        } else if (action === 'decrease') {
-            newSize = currentFontSize / 1.1 + 'px';
-        }
-
-        document.body.style.fontSize = newSize;
-        toggleAccessibilityMenu(); // Added to toggle the menu when changing font size
-    }
-
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        toggleAccessibilityMenu(); // Added to toggle the menu when changing dark mode
-    }
-
-    function toggleAccessibilityMenu() {
-        var accessibilityDropup = document.getElementById("accessibility-dropup");
-        accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-        darkModeToggle.addEventListener('click', function () {
-            toggleDarkMode();
-        });
-
-        const highContrastToggle = document.getElementById('high-contrast-toggle');
-
-        highContrastToggle.addEventListener('click', function () {
-            toggleHighContrast();
-        });
-
-        const accessibilityCogIcon = document.querySelector('.cog-icon');
-
-        accessibilityCogIcon.addEventListener('click', function () {
-            toggleAccessibilityMenu();
-        });
-
-        const increaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(2)');
-        const decreaseFontButton = document.querySelector('#accessibility-dropup button:nth-child(3)');
-
-        increaseFontButton.addEventListener('click', function () {
-            adjustFontSize('increase');
-        });
-
-        decreaseFontButton.addEventListener('click', function () {
-            adjustFontSize('decrease');
-        });
-    });
-</script>
-
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    function toggleDarkMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('light-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'dark-mode' class based on the current state
-        document.body.classList.toggle('dark-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-<!-- JavaScript -->
-
-
-
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
-
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
-
-    // Reset font size to default
-    document.body.style.fontSize = "";
-
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
-
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
-}
-
-console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-    // ... (existing code)
-    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality
-        // ...
-    });
-</script>
-
-<!-- JavaScript for Sidebar Toggle and Live Search -->
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the sidebar
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        var gameListContainer = document.getElementById('game-list');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the search results list
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-
-            // Update game list based on the query
-            gameListContainer.innerHTML = ''; // Clear previous game list
-
-            // Simulate updating the game list based on the search query
-            // Replace with your logic to filter and update game list
-            var filteredGames = [
-                'Animal Crossing: New Horizons',
-                'Animal Crossing: New Leaf',
-                'Another Game Title',
-                'Yet Another Game Title',
-                'Example Game Title'
-            ];
-
-            // Display filtered games in the game list
-            filteredGames.forEach(function (game) {
-                var gameLink = document.createElement('a');
-                gameLink.href = '#'; // Replace with actual link or action
-                gameLink.setAttribute('data-game', game);
-                gameLink.textContent = game;
-                gameListContainer.appendChild(gameLink);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
-<script>
-  function applyGreenRedFilter() {
-     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
-   }
-
-   function applyBlueYellowFilter() {
-     document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(240deg)";
-   }
-   function applyRedFilter() {
-      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
-    }
-
-</script>
-
-<script>
-  // Function to adjust font size (similar to the previous example)
-  function adjustFontSize(action) {
-      var currentSize = parseFloat(document.body.style.fontSize) || 16;
-
-      var newSize;
-      if (action === 'increase') {
-          newSize = currentSize * 1.2;
-      } else if (action === 'decrease') {
-          newSize = currentSize / 1.2;
-      }
-
-      document.body.style.fontSize = newSize + 'px';
-  }
-</script>
-<script>
-  function adjustFontSize(factor) {
-    // Adjust the font size of the body
-    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-    var newFontSize = currentFontSize * factor;
-    document.body.style.fontSize = newFontSize + 'px';
-
-    // Adjust the font size of the h1 element
-    var h1Element = document.querySelector('h3');
-    var currentH1Size = parseFloat(window.getComputedStyle(h1Element, null).getPropertyValue('font-size'));
-    var newH1Size = currentH1Size * factor;
-    h1Element.style.fontSize = newH1Size + 'px';
-}
-
-function increaseFont() {
-    adjustFontSize(1.1); // Increase font size by 10%
-}
-
-function decreaseFont() {
-    adjustFontSize(0.9); // Decrease font size by 10%
-}
-</script>
-<script>
-  function adjustFontSize(factor) {
-    // Adjust the font size of the body
-    var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-    var newFontSize = currentFontSize * factor;
-    document.body.style.fontSize = newFontSize + 'px';
-
-    // Adjust the font size of links (a elements)
-    var links = document.querySelectorAll('a');
-    links.forEach(function(link) {
-        var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
-        var newLinkSize = currentLinkSize * factor;
-        link.style.fontSize = newLinkSize + 'px';
-    });
-}
-
-function increaseFont() {
-    adjustFontSize(1.1); // Increase font size by 10%
-}
-
-function decreaseFont() {
-    adjustFontSize(0.9); // Decrease font size by 10%
-}
-</script>
 
   <script>
-    function decreaseFont() {
-        // Decrease the font size
-        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-        var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
-        document.body.style.fontSize = newFontSize + 'px';
+    document.addEventListener('DOMContentLoaded', function() {
+    const dropdownHeader = document.querySelector('.dropdown-header');
+    const dropdownList = document.querySelector('.dropdown-list');
+    const subCategoryDropdown = document.getElementById('subCategory');
 
-        // Adjust the sidebar size
-        var sidebar = document.querySelector('.sidebar');
-        var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
-        var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
-        sidebar.style.width = newSidebarWidth + 'px';
+    dropdownHeader.addEventListener('click', function() {
+      dropdownList.classList.toggle('hidden');
+    });
 
-        // Adjust other elements inside the sidebar if needed
-        var links = document.querySelectorAll('.sidebar a');
-        links.forEach(function(link) {
-            var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
-            var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
-            link.style.fontSize = newLinkSize + 'px';
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function() {
+        dropdownHeader.textContent = this.textContent; // Update header text
+        dropdownList.classList.add('hidden'); // Hide options list
+
+        const value = this.getAttribute('data-value');
+        // Simulate onChange event for mainCategory select
+        updateSubCategory(value);
+      });
+    });
+
+    function updateSubCategory(mainCategoryValue) {
+      // Logic to update subCategory based on mainCategoryValue
+      // This should mimic the logic you previously had in the `updateSubCategory()` function,
+      // but now directly using the `mainCategoryValue` to filter and populate `subCategoryDropdown`.
+    }
+  });
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const options = ["All Games", "Publisher", "Developer", "Series", "Platform", "Released Dates", "Genre", "Mode"];
+    const optionsContainer = document.querySelector('.options-container');
+    const selectedOption = document.querySelector('.selected-option');
+
+    options.forEach(option => {
+      const div = document.createElement('div');
+      div.textContent = option;
+      div.classList.add('option');
+      div.onclick = function() {
+        selectedOption.textContent = option;
+        optionsContainer.classList.add('hidden');
+      };
+      optionsContainer.appendChild(div);
+    });
+
+    selectedOption.onclick = function() {
+      optionsContainer.classList.toggle('hidden');
+    };
+  });
+  </script>
+
+  <script>
+    // Corrected Categories Data
+    const publisherCategories = {
+      "publisher": [
+        "2K", "Activision", "Activision Blizzard", "Aspyr", "BAM! Entertainment", "Bethesda Softworks", "Capcom", "ConcernedApe", "Crave Entertainment", "Crystal Dynamics",
+        "D3 Publisher", "Destination Software", "Disney Interactive Studios", "EA Sports", "EA Sports BIG", "EA Sports Freestyle", "Electronic Arts", "Empire Interactive",
+        "Engine Ignite", "Feral Interactive", "FromSoftware", "GameMill Entertainment", "Global Star Software", "Global VR", "Gun Media", "Hasbro Interactive",
+        "Infogrames", "Koei Tecmo", "Ludia Inc", "Midway Games", "Microsoft Studios", "Namco Bandai Games", "Nintendo", "Nordic Games Publishing", "Raw Thrills",
+        "Rockstar Games", "SCEA", "Sega", "Sony Computer Entertainment", "Spike", "Spike Chunsoft", "Square Enix", "Tencent Games", "THQ", "Ubisoft",
+        "Ubisoft Entertainment", "Viva Media", "Warner Bros. Games", "Warner Bros. Interactive", "Warner Bros. Interactive Entertainment", "Zoo Games"
+      ]
+    };
+
+    // Corrected: Removed the duplicated 'const developerCategories' declaration
+    const developerCategories = {
+      "developer": [
+        "1st Playable Productions-Eurocom Entertainment Software", "1-Up Studio", "7 Studios", "Activision", "Alawar", "AlphaDream", "Altron", "Angel Studio",
+        "Art Co., Ltd", "Arzest/Spike Chunsoft", "Asobo Studio", "Aspyr", "Avalanche Software", "AWE Games", "BANDAI NAMCO Studios Inc.", "Beenox",
+        "Behaviour Interactive", "Bethesda Game Studios", "BioWare", "Bizarre Creations", "Blind Squirrel Games", "Blitz Games", "Camelot Software Planning",
+        "Capcom", "CAProduction", "ConcernedApe", "Crawfish Interactive", "CRI Middleware", "Crystal Dynamics", "Deck Nine Games", "Disney Mobile Studios",
+        "Dontnod Entertainment", "DTR", "EA Black Box", "EA Canada", "EA Mobile", "EA Montreal", "EA Tiburon", "Edge of Reality", "Eurocom", "Eurofun",
+        "Extient Entertainment", "FarSight Studios", "Feral Interactive", "FreeStyleGames", "FromSoftware", "Game Titan", "Gameloft", "Griptonite",
+        "HB Studios", "Heavy Iron Studios", "Helixe", "High Impact Games", "High Moon Studios", "Hudson", "Hudson Soft", "Human Soft", "Idol Minds",
+        "IllFonic", "Imagineengine", "Incinerator Studios", "Insomniac Games", "Junction Point Studios", "KnowWonder", "Locomotive Games", "Ludia",
+        "Luxoflux", "Marvelous AQL", "Maxis", "Maxis Redwood Shores", "Media Molecule", "Mercenary Technology", "Monkey Bar Games", "Monster Games",
+        "n-Space", "Namco Bandai Games", "Namco Bandai Holdings", "Naughty Dog", "NDcube", "NetherRealm Studios", "Nevessoft", "Next Level Games",
+        "Nikitova Games", "Nintendo", "Nintendo EAD", "Nintendo EAD Tokyo", "Nintendo EPD", "Nintendo EPD Tokyo", "Nintendo European Research & Development",
+        "Nintendo Software Technology", "Nintendo SPD Group No.3", "Nintendo SPD Group No.4", "Nintendo SPD7", "NuFX", "Omega Force", "Pipeworks Software",
+        "Pocketeers", "Polyphony Digital", "QLOC S.A.", "Racjin", "Rainbow Studios", "Rebellion Developments", "Reflections Interactive", "Retro Studios",
+        "Rocksteady Studios", "Rockstar North", "Rockstar San Diego", "Rovio Mobile", "San Diego Studio"
+        // Removed the dangling comma here
+      ]
+    };
+
+  const seriesCategories = {
+    "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors", "EA Sports", "Epic Mickey", "FaceBreaker", "Fallout", "Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto ", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi Mansion: Dark Moon", "M&M", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Suoer Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawk's", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ] // Assuming "R" was a placeholder
+  };
+
+  const platformCategories = {
+    "platform": ["Amazon Luna", "Android", "Apple Arcade", "Apple ", "Arcade", "BlackBerry", "BlackBerry PlayBook", "Dreamcast", "Game Boy Advance", "Game Boy Color", "Google Stadia", "iOS", "Java ME", "Linux", "Mac OS", "Mac OS X", "Microsoft Windows","Mobile", "N-Gage 2.0.", "Nintendo DS", "Nintendo 3DS", "Nintendo GameCube","Nintendo Switch", "Nintendo Wii", "Nintendo Wii U", "Nvidia Shield", "PC", "PlayStation", "PlayStation 2", "PlayStation 3", "PlayStation 4", "PlayStation 5", "PlayStation Portable", "PlayStation Vita", "PlayStation VR", "Tapwave Zodiac", "Xbox", "Xbox 360", "Xbox One","Xbox Series X/S", "Windows Phone", "Zeebo", ]
+  };
+
+  const releasedDateCategories = {
+    "releasedDate": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]
+  };
+
+
+  const genreCategories = {
+    "genre": ["Action", "Adventure", "Art", "Comic", "Coming-Of-Age", "Drama", "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing", "Role-playing", "Sandbox", "Shooter", "Simulation", "Sports"]
+  };
+
+  const modeCategories = {
+    "mode": ["Single-player Only", "Multiplayer Only", "Single-player & Multiplayer"]
+  };
+
+  // Games Data
+  const gamesData = [
+    { title: "Animal Crossing: New Horizons", genre: "Simulation", publisher: "Nintendo", developer: "Nintendo EAD", series: "Animal Crossing", platform: "Nintendo Switch", releasedDate: "March 20, 2020", mode: "Single-player & Multiplayer" },
+    // Add more game objects as needed
+  ];
+
+  // Update SubCategory Function
+  function updateSubCategory() {
+    const mainCategory = document.getElementById('mainCategory').value;
+    const subCategoryDropdown = document.getElementById('subCategory');
+    subCategoryDropdown.innerHTML = ''; // Clear existing options
+
+    const categoriesMap = {
+       "publisher": publisherCategories.publisher,
+       "developer": developerCategories.developer,
+       "series": seriesCategories.series,
+       "platform": platformCategories.platform,
+       "releasedDate": releasedDateCategories.releasedDate, // Corrected to match the fixed variable name and key
+       "genre": genreCategories.genre,
+       "mode": modeCategories.mode
+     };
+
+    const options = categoriesMap[mainCategory] || [];
+
+    options.forEach(subCategory => {
+      const option = document.createElement('option');
+      option.value = subCategory;
+      option.textContent = subCategory;
+      subCategoryDropdown.appendChild(option);
+    });
+  }
+
+  // Sort and Display Games Function
+  function sortAndDisplayGames() {
+    const subCategory = document.getElementById('subCategory').value;
+    const mainCategory = document.getElementById('mainCategory').value;
+    const gamesList = document.getElementById('games-list');
+    gamesList.innerHTML = ''; // Clear existing games list
+
+    let filteredGames = gamesData.filter(game => game[mainCategory] === subCategory);
+
+    if (filteredGames.length > 0) {
+      filteredGames.forEach(game => {
+        const gameElement = document.createElement('div');
+        gameElement.textContent = game.title; // Display only the game title
+        gamesList.appendChild(gameElement);
+      });
+    } else {
+      gamesList.innerHTML = '<p>No games found in this category.</p>';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    updateSubCategory(); // To setup initial subcategory options based on the default or first category in the dropdown
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainCategories = ["All Games", "Publisher", "Developer", "Series", "Platform", "Released Dates", "Genre", "Mode"];
+    const dropdownHeader = document.querySelector('.dropdown-header');
+    const dropdownList = document.querySelector('.dropdown-list');
+    const subCategoryList = document.getElementById('subCategoryList');
+
+    // Populate main category dropdown
+    mainCategories.forEach(category => {
+        const item = document.createElement('div');
+        item.textContent = category;
+        item.classList.add('dropdown-item');
+        item.onclick = function() {
+            dropdownHeader.textContent = category; // Update header text
+            dropdownList.classList.add('hidden'); // Hide options list
+            updateSubCategory(category); // Update subcategories based on selection
+        };
+        dropdownList.appendChild(item);
+    });
+
+    // Toggle dropdown visibility
+    dropdownHeader.onclick = function() {
+        dropdownList.classList.toggle('hidden');
+    };
+
+    function updateSubCategory(mainCategory) {
+        // Example logic to update subCategoryList based on mainCategory
+        // This function should be adapted to match your data structure and needs
+        subCategoryList.innerHTML = ''; // Clear previous subcategory options
+        const subCategories = categoriesMap[mainCategory.toLowerCase()] || [];
+        subCategories.forEach(subCategory => {
+            const item = document.createElement('div');
+            item.textContent = subCategory;
+            item.classList.add('dropdown-item');
+            item.onclick = function() {
+                // Handle subcategory selection, e.g., display games
+                console.log(`Selected subcategory: ${subCategory}`); // Implement your logic here
+            };
+            subCategoryList.appendChild(item);
         });
-
-        // Adjust the top position of the sidebar to maintain its top position
-        var topnavHeight = document.querySelector('.topnav').offsetHeight;
-        sidebar.style.top = topnavHeight + 'px';
     }
 
-</script>
-<script>
+    // Example categoriesMap based on your corrected categories data
+    const categoriesMap = {
+        "publisher": publisherCategories.publisher,
+        "developer": developerCategories.developer,
+        "series": seriesCategories.series,
+        // Add other mappings here
+    };
 
-  function applyRedFilter() {
-    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(0deg)";
-  }
+    // Implement logic to display games based on subcategory selection
+    // This could involve filtering gamesData and updating the #games-list div
+});
 
-  function applyGreenRedFilter() {
-    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
-  }
+  </script>
+  <script>
+  // Define categories and their respective subcategories
+const categoriesMap = {
+    "Genre": ["Action", "Adventure", "Puzzle", "Role-Playing"],
+    "Platform": ["PC", "PlayStation 5", "Xbox Series X", "Nintendo Switch"],
+    "Publisher": ["Nintendo", "Electronic Arts", "Activision Blizzard", "Ubisoft"]
+};
 
-  function applyBlueYellowFilter() {
-    document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(180deg)";
-  }
-  function applyHueRotate() {
-   document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(45deg)"; // Set your desired hue-rotate value
- }
+// Function to update subcategories based on selected main category
+function updateSubCategory(mainCategory) {
+    const subCategories = categoriesMap[mainCategory];
+    const subCategoryDropdown = document.getElementById('subCategoryList'); // Assuming this is your subcategory list container
+    subCategoryDropdown.innerHTML = ''; // Clear existing subcategories
 
- function applySepia() {
-   document.body.style.filter = "sepia(80%) saturate(100%) hue-rotate(0deg)"; // Set your desired sepia value
- }
-</script>
-
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
-
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
-
-    // Reset font size to default
-    document.body.style.fontSize = "";
-
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
-
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Reset the font size of h3 elements
-    var h3Elements = document.querySelectorAll('h3');
-    h3Elements.forEach(function(h3) {
-        h3.style.fontSize = ""; // Reset to default or set your default size
-    });
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
+    if (subCategories) {
+        subCategories.forEach(subCategory => {
+            const item = document.createElement('div');
+            item.textContent = subCategory;
+            item.classList.add('dropdown-item');
+            item.onclick = function() {
+                // Here, you can define what happens when a subcategory is clicked
+                // For example, filter and display games that match the subcategory
+                console.log(`Selected subcategory: ${subCategory}`);
+                // Implement the display logic for the selected subcategory
+            };
+            subCategoryDropdown.appendChild(item);
+        });
+        // Show the subcategory dropdown list if it was previously hidden
+        subCategoryDropdown.classList.remove('hidden');
+    }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Populate main categories dropdown as before
+    // Add click event to main category items to call updateSubCategory
+});
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var searchInput = document.querySelector('.sidebar input[type="text"]');
-        var gameListContainer = document.querySelector('.sidebar #game-list');
+// Example games data
+const gamesData = [
+    { title: "Game A", genre: "Action", platform: "PC", publisher: "Ubisoft" },
+    { title: "Game B", genre: "Adventure", platform: "PlayStation 5", publisher: "Nintendo" },
+    // Add more games
+];
 
-        // Get all game links in the game list with data-game attribute
-        var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list [data-game]'));
-
-        searchInput.addEventListener('input', function () {
-            var searchTerm = this.value.toLowerCase();
-
-            // Filter game links based on an exact match with the data-game attribute
-            var filteredGames = gameLinks.filter(function (gameLink) {
-                return gameLink.getAttribute('data-game').toLowerCase().includes(searchTerm);
-            });
-
-            // Update game list based on the exact match with the data-game attribute
-            gameListContainer.innerHTML = '';
-            filteredGames.forEach(function (gameLink) {
-                var clonedLink = gameLink.cloneNode(true);
-                gameListContainer.appendChild(clonedLink);
-            });
-        });
+// Categories and their respective subcategories
+const categoriesMap = {
+    "Genre": ["Action", "Adventure"], // Example genres
+    "Platform": ["PC", "PlayStation 5"], // Example platforms
+    "Publisher": ["Ubisoft", "Nintendo"] // Example publishers
+};
+</script>
+<script>
+// Function to initialize the main category dropdown
+function initMainCategoryDropdown() {
+    const mainCategoryDropdown = document.querySelector('.dropdown-header');
+    Object.keys(categoriesMap).forEach(category => {
+        // Assuming dropdown-header is the clickable element to show options
+        // You might need a separate container to append these category options
+        const option = document.createElement('div');
+        option.textContent = category;
+        option.classList.add('dropdown-item');
+        option.addEventListener('click', () => updateSubCategoryDropdown(category));
+        mainCategoryDropdown.appendChild(option);
     });
+}
+
+// Function to update the subcategory dropdown based on the selected main category
+function updateSubCategoryDropdown(mainCategory) {
+    const subCategories = categoriesMap[mainCategory];
+    const subCategoryList = document.getElementById('subCategoryList'); // Your subcategory list container
+    subCategoryList.innerHTML = ''; // Clear previous subcategories
+
+    subCategories.forEach(subCategory => {
+        const item = document.createElement('div');
+        item.textContent = subCategory;
+        item.classList.add('dropdown-item');
+        item.addEventListener('click', () => displayGames(mainCategory, subCategory));
+        subCategoryList.appendChild(item);
+    });
+
+    // Show the updated subcategory list
+    subCategoryList.classList.remove('hidden');
+}
 </script>
-
-
 <script>
-  function toggleAccessibilityMenu() {
-      var dropup = document.getElementById('accessibility-dropup');
-      dropup.classList.toggle('show-dropup');
-  }
-
+document.addEventListener('DOMContentLoaded', function() {
+    initMainCategoryDropdown();
+});
 </script>
-</body>
-</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const genres = ["Action", "Adventure", "Puzzle", "Role-Playing"]; // Example genres
+    const gamesData = [
+        { title: "Game 1", genre: "Action" },
+        { title: "Game 2", genre: "Adventure" },
+        // Add more games
+    ];
+
+    const dropdownHeader = document.querySelector('.dropdown-header');
+    const dropdownList = document.querySelector('.dropdown-list');
+    const subCategoryList = document.getElementById('subCategoryList');
+
+    // Populate genres in the main category dropdown
+    genres.forEach(genre => {
+        const item = document.createElement('div');
+        item.textContent = genre;
+        item.classList.add('dropdown-item');
+        item.addEventListener('click', function() {
+            dropdownHeader.textContent = genre; // Update header text
+            dropdownList.classList.add('hidden'); // Hide dropdown list
+            displaySubcategoriesOrGames(genre); // Display games based on selected genre
+        });
+        dropdownList.appendChild(item);
+    });
+
+    // Toggle main category dropdown visibility
+    dropdownHeader.addEventListener('click', function() {
+        dropdownList.classList.toggle('hidden');
+    });
+
+    function displaySubcategoriesOrGames(selectedGenre) {
+        subCategoryList.innerHTML = ''; // Clear existing subcategories/games
+
+        const filteredGames = gamesData.filter(game => game.genre === selectedGenre);
+
+        filteredGames.forEach(game => {
+            const gameItem = document.createElement('div');
+            gameItem.textContent = game.title;
+            gameItem.classList.add('dropdown-item');
+            // Here you can add click event listeners to game items if needed
+            subCategoryList.appendChild(gameItem);
+        });
+
+        // Show the subcategory/games list if it was previously hidden
+        subCategoryList.classList.remove('hidden');
+    }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categories = {
+        "Publisher": ["Nintendo", "Ubisoft", "Electronic Arts", "Activision Blizzard"],
+        "Developer": ["Bungie", "Bethesda Game Studios", "Valve", "Rockstar Games"],
+        "Series": ["Animal Crossing", "Assassin's Creed", "The Legend of Zelda", "Call of Duty"]
+    };
+
+    const mainDropdownHeader = document.querySelector('.dropdown:nth-child(1) .dropdown-header');
+    const mainDropdownList = document.querySelector('.dropdown:nth-child(1) .dropdown-list');
+    const subDropdownHeader = document.querySelector('.dropdown:nth-child(2) .dropdown-header');
+    const subDropdownList = document.querySelector('.dropdown:nth-child(2) .dropdown-list');
+
+    // Populate main categories
+    Object.keys(categories).forEach(category => {
+        const item = document.createElement('div');
+        item.textContent = category;
+        item.className = 'dropdown-item'; // Ensure this matches your CSS class
+        item.onclick = () => selectMainCategory(category);
+        mainDropdownList.appendChild(item);
+    });
+
+    // Main category selection
+    function selectMainCategory(category) {
+        mainDropdownHeader.textContent = category; // Update header
+        mainDropdownList.classList.add('hidden'); // Hide list
+
+        // Populate subcategories
+        populateSubCategories(categories[category]);
+    }
+
+    // Populate subcategories
+    function populateSubCategories(subCategories) {
+        subDropdownList.innerHTML = ''; // Clear current subcategories
+        subCategories.forEach(subCategory => {
+            const item = document.createElement('div');
+            item.textContent = subCategory;
+            item.className = 'dropdown-item'; // Match your CSS
+            item.onclick = () => {
+                subDropdownHeader.textContent = subCategory; // Update header
+                subDropdownList.classList.add('hidden'); // Hide list
+                // Here you can add logic to display the games or further details
+            };
+            subDropdownList.appendChild(item);
+        });
+
+        // Show subcategory list
+        subDropdownHeader.textContent = 'Select SubCategory'; // Reset header text
+        subDropdownList.classList.remove('hidden'); // Make sure this properly shows the list
+    }
+
+    // Toggle main category list visibility
+    mainDropdownHeader.addEventListener('click', () => {
+        mainDropdownList.classList.toggle('hidden');
+    });
+
+    // Toggle subcategory list visibility (only if subcategories have been populated)
+    subDropdownHeader.addEventListener('click', () => {
+        if (subDropdownHeader.textContent !== 'Select SubCategory') {
+            subDropdownList.classList.toggle('hidden');
+        }
+    });
+});
+</script>
+
+  </body>
+  </html>

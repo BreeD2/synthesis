@@ -293,7 +293,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
         <div id="main-content" class="content">
           <!-- Container for the image gallery -->
           <div class="opening-screen">
-                <div class="welcome">Welcome to the Reminiscence Collection<b>
+                <div class="welcome">Welcome to Reminiscence Collection<b>
                 <div class="underwelcome">Explore the history and legacy of video games.</div>
                 <button id="enter-site-button" onclick="enterSite()">Enter</button>
 
@@ -310,33 +310,33 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 
   <!-- Full-width images with number text -->
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>  <a href="supermarioodyssey/index.html">
-      <img src="featured/supermarioodyssey.png" style="width:100%"></a>
+    <div class="numbertext">1 / 6</div>
+      <img src="featured/supermarioodyssey.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>  <a href="tomodachilife/index.html">
-      <img src="featured/tomodachilife.jpg" style="width:100%"></a>
+    <div class="numbertext">2 / 6</div>
+      <img src="featured/tomodachilife.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>  <a href="littlebigplanet/index.html">
-      <img src="featured/littlebigplanet.png" style="width:100%"></a>
+    <div class="numbertext">3 / 6</div>
+      <img src="featured/littlebigplanet.png" style="width:100%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">4 / 6</div>
-        <a href="nba2k22/index.html"><img src="featured/nba2k22.png" style="width:100%"></a>
+      <img src="featured/nba2k22.png" style="width:100%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">5 / 6</div>
-        <a href="midnightclub3dubedition/index.html"><img src="featured/midnightclub3dubedition.png" style="width:100%"></a>
+      <img src="featured/midnightclub3dubedition.png" style="width:100%">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">6 / 6</div>
-      <a href="frogger2swampysrevenge/index.html"><img src="featured/frogger2swampysrevenge.jpg" style="width:100%"></a>
+      <img src="featured/frogger2swampysrevenge.jpg" style="width:100%">
 
   </div>
 
@@ -372,73 +372,182 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
   </div>
 </div>
 
-<section id="sort-section">
-  <h2>Sort Games</h2>
-  <select id="sortOptions" onchange="sortGames()">
-    <option value="alphabetically">Alphabetically</option>
-    <option value="publisher">Publisher</option>
-    <option value="developer">Developer</option>
-      <option value="series">Series</option>
-      <option value="developer">Platform</option>
-    <option value="release_date">Release Date</option>
-    <option value="genre">Genre</option>
-    <option value="mode">Mode</option>
-  </select>
-</section>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Zoom In Button -->
+  <button id="zoomIn" class="zoom-btn">+</button>
+
+  <!-- Zoom Out Button -->
+  <button id="zoomOut" class="zoom-btn">-</button>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
 
 <section id="sort-section">
   <h2>Sort Games</h2>
   <select id="mainCategory" onchange="updateSubCategory()">
-    <option value="genre">Genre</option>
-    <!-- Add more main categories if needed -->
+<option value="allgames">All Games</option>
+  <option value="publisher">Publisher</option>
+    <option value="developer">Developer</option>
+      <option value="series">Series</option>
+        <option value="platform">Platform</option>
+        <option value="releasedDate">Released Dates</option>
+        <option value="genre">Genre</option>
+          <option value="mode">Mode</option>
   </select>
+
+
 
   <select id="subCategory" onchange="sortAndDisplayGames()">
     <!-- Options will be filled based on the main category selection -->
   </select>
-</section>
+
 
 <div id="games-list"></div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const options = ["All Games", "Publisher", "Developer", "Series", "Platform", "Released Dates", "Genre", "Mode"];
+  const optionsContainer = document.querySelector('.options-container');
+  const selectedOption = document.querySelector('.selected-option');
+
+  options.forEach(option => {
+    const div = document.createElement('div');
+    div.textContent = option;
+    div.classList.add('option');
+    div.onclick = function() {
+      selectedOption.textContent = option;
+      optionsContainer.classList.add('hidden');
+    };
+    optionsContainer.appendChild(div);
+  });
+
+  selectedOption.onclick = function() {
+    optionsContainer.classList.toggle('hidden');
+  };
+});
+</script>
 
 <script>
-  const genreCategories = {
-  "genre": ["Action", "Adventure","Art", "Comic", "Coming-Of-Age", "Drama", "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing","Role-playing", "Sandbox", "Shooter", "Simulation", "Sports",]
-  // Add other main categories and their subcategories as needed
+  // Corrected Categories Data
+  const publisherCategories = {
+    "publisher": [
+      "2K", "Activision", "Activision Blizzard", "Aspyr", "BAM! Entertainment", "Bethesda Softworks", "Capcom", "ConcernedApe", "Crave Entertainment", "Crystal Dynamics",
+      "D3 Publisher", "Destination Software", "Disney Interactive Studios", "EA Sports", "EA Sports BIG", "EA Sports Freestyle", "Electronic Arts", "Empire Interactive",
+      "Engine Ignite", "Feral Interactive", "FromSoftware", "GameMill Entertainment", "Global Star Software", "Global VR", "Gun Media", "Hasbro Interactive",
+      "Infogrames", "Koei Tecmo", "Ludia Inc", "Midway Games", "Microsoft Studios", "Namco Bandai Games", "Nintendo", "Nordic Games Publishing", "Raw Thrills",
+      "Rockstar Games", "SCEA", "Sega", "Sony Computer Entertainment", "Spike", "Spike Chunsoft", "Square Enix", "Tencent Games", "THQ", "Ubisoft",
+      "Ubisoft Entertainment", "Viva Media", "Warner Bros. Games", "Warner Bros. Interactive", "Warner Bros. Interactive Entertainment", "Zoo Games"
+    ]
+  };
+
+  // Corrected: Removed the duplicated 'const developerCategories' declaration
+  const developerCategories = {
+    "developer": [
+      "1st Playable Productions-Eurocom Entertainment Software", "1-Up Studio", "7 Studios", "Activision", "Alawar", "AlphaDream", "Altron", "Angel Studio",
+      "Art Co., Ltd", "Arzest/Spike Chunsoft", "Asobo Studio", "Aspyr", "Avalanche Software", "AWE Games", "BANDAI NAMCO Studios Inc.", "Beenox",
+      "Behaviour Interactive", "Bethesda Game Studios", "BioWare", "Bizarre Creations", "Blind Squirrel Games", "Blitz Games", "Camelot Software Planning",
+      "Capcom", "CAProduction", "ConcernedApe", "Crawfish Interactive", "CRI Middleware", "Crystal Dynamics", "Deck Nine Games", "Disney Mobile Studios",
+      "Dontnod Entertainment", "DTR", "EA Black Box", "EA Canada", "EA Mobile", "EA Montreal", "EA Tiburon", "Edge of Reality", "Eurocom", "Eurofun",
+      "Extient Entertainment", "FarSight Studios", "Feral Interactive", "FreeStyleGames", "FromSoftware", "Game Titan", "Gameloft", "Griptonite",
+      "HB Studios", "Heavy Iron Studios", "Helixe", "High Impact Games", "High Moon Studios", "Hudson", "Hudson Soft", "Human Soft", "Idol Minds",
+      "IllFonic", "Imagineengine", "Incinerator Studios", "Insomniac Games", "Junction Point Studios", "KnowWonder", "Locomotive Games", "Ludia",
+      "Luxoflux", "Marvelous AQL", "Maxis", "Maxis Redwood Shores", "Media Molecule", "Mercenary Technology", "Monkey Bar Games", "Monster Games",
+      "n-Space", "Namco Bandai Games", "Namco Bandai Holdings", "Naughty Dog", "NDcube", "NetherRealm Studios", "Nevessoft", "Next Level Games",
+      "Nikitova Games", "Nintendo", "Nintendo EAD", "Nintendo EAD Tokyo", "Nintendo EPD", "Nintendo EPD Tokyo", "Nintendo European Research & Development",
+      "Nintendo Software Technology", "Nintendo SPD Group No.3", "Nintendo SPD Group No.4", "Nintendo SPD7", "NuFX", "Omega Force", "Pipeworks Software",
+      "Pocketeers", "Polyphony Digital", "QLOC S.A.", "Racjin", "Rainbow Studios", "Rebellion Developments", "Reflections Interactive", "Retro Studios",
+      "Rocksteady Studios", "Rockstar North", "Rockstar San Diego", "Rovio Mobile", "San Diego Studio"
+      // Removed the dangling comma here
+    ]
+  };
+
+const seriesCategories = {
+  "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors", "EA Sports", "Epic Mickey", "FaceBreaker", "Fallout", "Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto ", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi Mansion: Dark Moon", "M&M", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Suoer Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawk's", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ] // Assuming "R" was a placeholder
 };
 
+const platformCategories = {
+  "platform": ["Amazon Luna", "Android", "Apple Arcade", "Apple ", "Arcade", "BlackBerry", "BlackBerry PlayBook", "Dreamcast", "Game Boy Advance", "Game Boy Color", "Google Stadia", "iOS", "Java ME", "Linux", "Mac OS", "Mac OS X", "Microsoft Windows","Mobile", "N-Gage 2.0.", "Nintendo DS", "Nintendo 3DS", "Nintendo GameCube","Nintendo Switch", "Nintendo Wii", "Nintendo Wii U", "Nvidia Shield", "PC", "PlayStation", "PlayStation 2", "PlayStation 3", "PlayStation 4", "PlayStation 5", "PlayStation Portable", "PlayStation Vita", "PlayStation VR", "Tapwave Zodiac", "Xbox", "Xbox 360", "Xbox One","Xbox Series X/S", "Windows Phone", "Zeebo", ]
+};
+
+const releasedDateCategories = {
+  "releasedDate": ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2008", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"]
+};
+
+
+const genreCategories = {
+  "genre": ["Action", "Adventure", "Art", "Comic", "Coming-Of-Age", "Drama", "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing", "Role-playing", "Sandbox", "Shooter", "Simulation", "Sports"]
+};
+
+const modeCategories = {
+  "mode": ["Single-player Only", "Multiplayer Only", "Single-player & Multiplayer"]
+};
+
+// Games Data
+const gamesData = [
+  { title: "Animal Crossing: New Horizons", genre: "Simulation", publisher: "Nintendo", developer: "Nintendo EAD", series: "Animal Crossing", platform: "Nintendo Switch", releasedDate: "March 20, 2020", mode: "Single-player & Multiplayer" },
+  // Add more game objects as needed
+];
+
+// Update SubCategory Function
 function updateSubCategory() {
   const mainCategory = document.getElementById('mainCategory').value;
   const subCategoryDropdown = document.getElementById('subCategory');
   subCategoryDropdown.innerHTML = ''; // Clear existing options
 
-  genreCategories[mainCategory].forEach(subCategory => {
+  const categoriesMap = {
+     "publisher": publisherCategories.publisher,
+     "developer": developerCategories.developer,
+     "series": seriesCategories.series,
+     "platform": platformCategories.platform,
+     "releasedDate": releasedDateCategories.releasedDate, // Corrected to match the fixed variable name and key
+     "genre": genreCategories.genre,
+     "mode": modeCategories.mode
+   };
+
+  const options = categoriesMap[mainCategory] || [];
+
+  options.forEach(subCategory => {
     const option = document.createElement('option');
     option.value = subCategory;
     option.textContent = subCategory;
     subCategoryDropdown.appendChild(option);
   });
-
-  sortAndDisplayGames(); // Automatically update games list based on new subcategory
 }
 
-// Call updateSubCategory once to fill in the subcategories on initial load
-document.addEventListener("DOMContentLoaded", updateSubCategory);
-</script>
-<script>
-  function sortAndDisplayGames() {
-  const selectedGenre = document.getElementById('subCategory').value;
-  const filteredGames = gamesData.filter(game => game.genre.includes(selectedGenre));
-
+// Sort and Display Games Function
+function sortAndDisplayGames() {
+  const subCategory = document.getElementById('subCategory').value;
+  const mainCategory = document.getElementById('mainCategory').value;
   const gamesList = document.getElementById('games-list');
   gamesList.innerHTML = ''; // Clear existing games list
 
-  filteredGames.forEach(game => {
-    const gameElement = document.createElement('div');
-    gameElement.textContent = game.title; // Display only the game name
-    gamesList.appendChild(gameElement);
-  });
+  let filteredGames = gamesData.filter(game => game[mainCategory] === subCategory);
+
+  if (filteredGames.length > 0) {
+    filteredGames.forEach(game => {
+      const gameElement = document.createElement('div');
+      gameElement.textContent = game.title; // Display only the game title
+      gamesList.appendChild(gameElement);
+    });
+  } else {
+    gamesList.innerHTML = '<p>No games found in this category.</p>';
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  updateSubCategory(); // To setup initial subcategory options based on the default or first category in the dropdown
+});
 </script>
+
 
 <script>
   let slideIndex = 1;
@@ -481,12 +590,6 @@ document.addEventListener("DOMContentLoaded", updateSubCategory);
 </script>
 
 
-<script>
-function enterSite() {
-    // Replace 'your_target_page.html' with the actual path to the page you want to navigate to
-    window.location.href = 'games/index.html';
-}
-</script>
 
         <script>
           let slideIndex = 1;
@@ -1349,9 +1452,74 @@ function decreaseFont() {
     }
 </script>
 
+<script>// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var images = document.querySelectorAll('.mySlides img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
 
+images.forEach(img => {
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt; // Or use any other attribute or fixed text
+  }
+});
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+<script>
+  // Get modal elements
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var zoomInButton = document.getElementById("zoomIn");
+var zoomOutButton = document.getElementById("zoomOut");
+
+// Initial zoom scale
+var imgZoom = 1;
+
+// Zoom in function
+function zoomIn() {
+  imgZoom += 0.1; // Increase zoom
+  modalImg.style.transform = `scale(${imgZoom})`;
+}
+
+// Zoom out function
+function zoomOut() {
+  imgZoom -= 0.1; // Decrease zoom
+  modalImg.style.transform = `scale(${imgZoom})`;
+}
+
+// Attach zoom event listeners
+zoomInButton.onclick = zoomIn;
+zoomOutButton.onclick = zoomOut;
+
+// Image click to open modal
+document.querySelectorAll('.mySlides img').forEach(img => {
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.getAttribute('data-caption'); // Assuming you use 'data-caption' attribute for captions
+    imgZoom = 1; // Reset zoom
+    modalImg.style.transform = `scale(${imgZoom})`; // Apply reset
+  }
+});
+
+// Close modal
+document.getElementsByClassName("close")[0].onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 
   </body>
   </html>
