@@ -312,12 +312,8 @@ body {
 
 
   }
-    #google_translate_element {
-      width: 50%;
-      } {
 
-.cog-icon i,  google_translate {
-
+.cog-icon i,
 .acc {
   font-family: 'arial', sans-serif; /* Add the desired font-family */;
 
@@ -1823,4 +1819,6 @@ body.dark-mode .next {
   color:white;
 
 
-}
+}  #google_translate_element {
+    width: 50%;
+    }
