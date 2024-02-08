@@ -259,7 +259,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
     </div>
 
     <!-- Accessibility dropup content -->
-    <div id="accessibility-dropup" class="dropup-content">  <div id="google_translate_element"style="width:100%"></div>
+    <div id="accessibility-dropup" class="dropup-content">  <div id="google_translate_element"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           <button onclick="resetSettings()">Reset Settings</button>
 
@@ -397,7 +397,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
   <div class="sort">Sort Games</div>
   <select id="mainCategory" onchange="updateSubCategory()">
     <option value="" disabled selected hidden>Choose a category</option>
-    <option value="allgames">All Games</option>
+
     <option value="publisher">Publisher</option>
     <option value="developer">Developer</option>
     <option value="series">Series</option>
@@ -471,7 +471,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
       "Nikitova Games", "Nintendo", "Nintendo EAD", "Nintendo EAD Tokyo", "Nintendo EPD", "Nintendo EPD Tokyo", "Nintendo European Research & Development",
       "Nintendo Software Technology", "Nintendo SPD Group No.3", "Nintendo SPD Group No.4", "Nintendo SPD7", "NuFX", "Omega Force", "Pipeworks Software",
       "Pocketeers", "Polyphony Digital", "QLOC S.A.", "Racjin", "Rainbow Studios", "Rebellion Developments", "Reflections Interactive", "Retro Studios",
-      "Rocksteady Studios", "Rockstar North", "Rockstar San Diego", "Rovio Mobile", "San Diego Studio"
+      "Rocksteady Studios", "Rockstar North", "Rockstar San Diego", "Rovio Mobile", "San Diego Studio", "Sega Sports R&D", "Shiver Entertainment", "Sonic Team", "Sora Ltd.", "Square Enix", "Sumo Digital", "SuperBot Entertainment", "SVG Distribution", "Team Fusion", "Terminal Reality", "Torus Games", "TOSE Software Co.","TransGaming", "Traveller's Tales", "TT Fusion","TT Games", "Ubisoft", "Ubisoft Montreal","Ubisoft Osaka","Ubisoft Quebec","Ubisoft Toronto","United Front Games","Vicarious Visions","Vicious Cycle Software","Virtual Toys","Visual Concepts", "WayFoward","WayFoward Technologies","Webfoot Technologies", "Zindagi Games"
       // Removed the dangling comma here
     ]
   };
@@ -497,11 +497,40 @@ const modeCategories = {
   "mode": ["Single-player Only", "Multiplayer Only", "Single-player & Multiplayer"]
 };
 
-// Games Data
 const gamesData = [
-  { title: "Animal Crossing: New Horizons", genre: "Simulation", publisher: "Nintendo", developer: "Nintendo EAD", series: "Animal Crossing", platform: "Nintendo Switch", releasedDate: "March 20, 2020", mode: "Single-player & Multiplayer" },
+  {
+    title: "Animal Crossing: New Horizons",
+    genre: "Simulation",
+    publisher: "Nintendo",
+    developer: "Nintendo EAD",
+    series: "Animal Crossing", // Assuming you meant to have a single series, not an array
+    platform: "Nintendo Switch",
+    releasedDate: "2020",
+    mode: "Single-player & Multiplayer"
+  },
+  {
+    title: "Animal Crossing: New Leaf",
+    genre: "Simulation",
+    publisher: "Nintendo",
+    developer: "Nintendo EAD",
+    series: "Animal Crossing",
+    platform: "Nintendo 3DS",
+    releasedDate: "2012",
+    mode: "Single-player & Multiplayer"
+  },
+  {
+    title: "Assassin’s Creed Odyssey",
+    genre: ["Action","Adventure"],
+    publisher: "Ubisoft",
+    developer: ["Ubisoft Montreal","Ubisoft Quebec"],
+    series: "Assassin's Creed",
+    platform: ["Amazon Luna","PC","PlayStation 4","Xbox One"],
+    releasedDate: "2018",
+    mode: "Single-player Only"
+  },
   // Add more game objects as needed
 ];
+
 
 // Update SubCategory Function
 function updateSubCategory() {
@@ -565,7 +594,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
 
+</script>
 <script>
   let slideIndex = 1;
   showSlides(slideIndex);
@@ -1228,7 +1259,7 @@ console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
             var filteredGames = [
                 'Animal Crossing: New Horizons',
                 'Animal Crossing: New Leaf',
-                'Another Game Title',
+                'Assassins Creed Odyssey',
                 'Yet Another Game Title',
                 'Example Game Title'
             ];
@@ -1537,6 +1568,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
+
 
   </body>
   </html>
