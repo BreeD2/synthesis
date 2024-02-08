@@ -310,9 +310,14 @@ body {
 
 
 
-  }
 
-.cog-icon i,
+  }
+    #google_translate_element {
+      width: 50%;
+      } {
+
+.cog-icon i,  google_translate {
+
 .acc {
   font-family: 'arial', sans-serif; /* Add the desired font-family */;
 
