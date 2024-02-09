@@ -1613,11 +1613,13 @@ select:hover {
   }
 
   #zoomIn {
-    right: 130px; /* Adjust based on your layout */
+    right: 130px; /* Adjust based on your layout */;
+    z-index:2
   }
 
   #zoomOut {
-    right: 80px; /* Adjust based on your layout */
+    right: 80px; /* Adjust based on your layout */;
+      z-index:2
   }
 
   /* Caption Style */
