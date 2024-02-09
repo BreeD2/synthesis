@@ -475,7 +475,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
   };
 
 const seriesCategories = {
-  "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors", "EA Sports", "Epic Mickey", "FaceBreaker", "Fallout", "Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto ", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi Mansion: Dark Moon", "M&M", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Suoer Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawk's", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ] // Assuming "R" was a placeholder
+  "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors", "EA Sports", "Epic Mickey", "FaceBreaker", "Fallout", "Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto ", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi Mansion: Dark Moon", "M&M", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Suoer Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawk's", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ]
 };
 
 const platformCategories = {
@@ -501,7 +501,7 @@ const gamesData = [
     genre: "Simulation",
     publisher: "Nintendo",
     developer: "Nintendo EAD",
-    series: "Animal Crossing", // Assuming you meant to have a single series, not an array
+    series: "Animal Crossing",
     platform: "Nintendo Switch",
     releasedDate: "2020",
     mode: "Single-player & Multiplayer"
@@ -513,19 +513,160 @@ const gamesData = [
     developer: "Nintendo EAD",
     series: "Animal Crossing",
     platform: "Nintendo 3DS",
-    releasedDate: "2012",
+    releasedDate: ["2012","2013"],
     mode: "Single-player & Multiplayer"
   },
   {
     title: "Assassin’s Creed Odyssey",
-    genre: ["Action","Adventure"],
+    genre: ["Action", "Adventure"],
     publisher: "Ubisoft",
-    developer: ["Ubisoft Montreal","Ubisoft Quebec"],
+    developer: ["Ubisoft Montreal", "Ubisoft Quebec"],
     series: "Assassin's Creed",
-    platform: ["Amazon Luna","PC","PlayStation 4","Xbox One"],
+    platform: ["Amazon Luna", "PC", "PlayStation 4", "Xbox One"],
     releasedDate: "2018",
     mode: "Single-player Only"
   },
+  {
+  title: "Batman: Arkham City",
+  genre: ["Action", "Adventure"],
+  publisher: "Warner Bros. Interactive Entertainment",
+  developer: ["Rocksteady Studios"],series: "Batman: Arkham", // Corrected series name to match the game
+  platform: [
+    "Mac OS X",
+    "Microsoft Windows",
+    "Nintendo Wii U",
+    "PlayStation 3",
+    "PlayStation 4",
+    "Xbox 360",
+    "Xbox One",
+    "Nintendo Switch"],
+  releasedDate: ["2011","2012","2016"],
+  mode: "Single-player Only"
+},
+{
+  title: "Big Brain Academy: Wii Degree",
+  genre: "Education",
+  publisher: "Nintendo",
+  developer: "Nintendo EAD", // Corrected developer
+  series: "Big Brain Academy",
+  platform: "Nintendo Wii",
+  releasedDate: ["2007","2008"],
+  mode: "Single-player & Multiplayer"
+},
+{
+title: "Blur",
+genre: ["Racing"],
+publisher: "Activision",
+developer: ["Bizarre Creations"],series: "Blur", // Corrected series name to match the game
+platform: [
+  "Microsoft Windows",
+  "PlayStation 3",
+  "Xbox 360"],
+releasedDate: "2010",
+mode: "Single-player & Multiplayer"
+},
+{
+title: "Cars",
+genre: ["Adventure","Racing"],
+publisher: "THQ",
+developer: ["Beenox",
+"Helixe",
+"Incinerator Studios",
+"Locomotive Games",
+"Rainbow Studios",
+],series: "Cars", // Corrected series name to match the game
+platform: [
+  "Game Boy Advance",
+"Microsoft Windows",
+"Nintendo DS",
+"Nintendo GameCube",
+"Nintendo Wii",
+"PlayStation 2",
+"PlayStation Portable",
+"Xbox",
+"Xbox 360"],
+releasedDate: "2006",
+mode: "Single-player & Multiplayer"
+},
+{
+title: "Dark Souls Remastered",
+genre: ["Action","Role-playing"],
+publisher: ["FromSoftware","Namco Bandai"],
+developer: "FromSoftware",series: "Dark Souls", // Corrected series name to match the game
+platform: [
+"Microsoft Windows",
+"Nintendo Switch",
+"PlayStation 2",
+"PlayStation 4",
+"Xbox One"],
+releasedDate: "2018",
+mode: "Single-player & Multiplayer"
+},
+{
+title: "Deadpool",
+genre: ["Action","Adventure", "Hack and slash"],
+publisher: "Activision",
+developer: ["High Moon Studios", "Mercenary Technology"],series: "Deadpool", // Corrected series name to match the game
+platform: [
+"Microsoft Windows",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360",
+"Xbox One"],
+releasedDate: ["2013","2015"],
+mode: "Single-player Only"
+},
+{
+title: "Despicable Me: Minion Mayhem",
+genre: ["Action","Adventure", "Hack and slash"],
+publisher: "D3 Publisher",
+developer: ["Wayforward Technologies", "Vicious Cycle Software"],series: "Despicable Me", // Corrected series name to match the game
+platform: [
+"PlayStation 2",
+"PlayStation Portable",
+"Nintendo Wii",
+"Nintendo DS"],
+releasedDate: "2010",
+mode: "Single-player Only"
+},
+{
+title: "Disney Infinity 1.0.",
+genre: ["Action","Adventure"],
+publisher: ["D3 Publisher", "Disney Interactive Studios"],
+developer: ["Altron",
+"Avalanche Software",
+"Heavy Iron Studios"],series: "Disney Infinity", // Corrected series name to match the game
+platform: [
+"iOS",
+"Nintendo 3DS",
+"Nintendo Wii",
+"Nintendo Wii U",
+"Microsoft Windows",
+"PlayStation 3",
+"Xbox 360"],
+releasedDate: ["2013","2016"],
+mode: "Single-player & Multiplayer"
+},
+{
+title: "Disney Infinity 1.0.",
+genre: ["Action","Adventure"],
+publisher: ["D3 Publisher", "Disney Interactive Studios"],
+developer: ["Altron",
+"Avalanche Software",
+"Heavy Iron Studios"],series: "Disney Infinity", // Corrected series name to match the game
+platform: [
+"Android",
+"Apple TV",
+"iOS",
+"Microsoft Windows",
+"Nintendo Wii U",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360",
+"Xbox One"],
+releasedDate: "2015",
+mode: "Single-player & Multiplayer"
+},
   // Add more game objects as needed
 ];
 
@@ -567,15 +708,24 @@ function updateSubCategory() {
   });
 }
 
-// Sort and Display Games Function
 function sortAndDisplayGames() {
   const subCategory = document.getElementById('subCategory').value;
   const mainCategory = document.getElementById('mainCategory').value;
   const gamesList = document.getElementById('games-list');
   gamesList.innerHTML = ''; // Clear existing games list
 
-  let filteredGames = gamesData.filter(game => game[mainCategory] === subCategory);
+  // Filter games based on the mainCategory and subCategory
+  let filteredGames = gamesData.filter(game => {
+    // Check if the property is an array and use `includes` for array properties
+    if (Array.isArray(game[mainCategory])) {
+      return game[mainCategory].includes(subCategory);
+    } else {
+      // Direct comparison for non-array properties
+      return game[mainCategory] === subCategory;
+    }
+  });
 
+  // Display filtered games or a 'no games found' message
   if (filteredGames.length > 0) {
     filteredGames.forEach(game => {
       const gameElement = document.createElement('div');
