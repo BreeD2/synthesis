@@ -10,8 +10,30 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* Your CSS styles */
+    .shape-memory-loader {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db; /* Choose your color */
+      margin: 50px auto;
+      border-radius: 50%; /* Starts as a circle */
+      animation: shapeMemory 2s infinite;
+    }
+
+    @keyframes shapeMemory {
+      0%, 100% {
+        border-radius: 50%; /* Circle */
+        transform: scaleY(1); /* Original state */
+      }
+      50% {
+        border-radius: 0%; /* Square */
+        transform: scaleY(1.5); /* Stretched vertically */
+      }
+    }
+
+
     </style>
+    <div class="shape-memory-loader"></div>
+
 </head>
 <body>
 
@@ -20,52 +42,13 @@
   <!DOCTYPE html>
   <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <title>Game Sorting</title>
-      <style>
-          .dropdown, #games-list {
-              margin: 10px 0;
-              padding: 5px;
-              border: 1px solid #ccc;
-          }
+    <div class="parallax-container">
+    <div class="parallax-background" style="background-image: url('background1.jpg');"></div>
+    <div class="content">Your content here</div>
+    <div class="parallax-background" style="background-image: url('background2.jpg');"></div>
+    <div class="content">More content here</div>
+</div>
 
-          .dropdown-header, .dropdown-item {
-              padding: 10px;
-              background-color: #f9f9f9;
-              cursor: pointer;
-          }
-
-          .dropdown-list {
-              display: none;
-              background-color: #fff;
-          }
-
-          .dropdown-item:hover {
-              background-color: #f0f0f0;
-          }
-
-          .hidden {
-              display: none;
-          }
-      </style>
-  </head>
-  <body>
-  <section id="sort-section">
-      <h2>Sort Games</h2>
-      <div class="dropdown">
-          <div class="dropdown-header">Select Category</div>
-          <div class="dropdown-list hidden">
-              <!-- Dynamically filled with JavaScript -->
-          </div>
-      </div>
-      <div class="dropdown">
-          <div class="dropdown-header">Select SubCategory</div>
-          <div class="dropdown-list hidden" id="subCategoryList">
-              <!-- Dynamically filled with JavaScript based on main category selection -->
-          </div>
-      </div>
-      <div id="games-list"></div>
-  </section>
 
 
 

@@ -1,22 +1,24 @@
-
-/* Style the dropup container */
-.dropup {
+.parallax-container {
     position: relative;
-    display: inline-block;
-    margin-top: 46%;
-    margin-right: 40%;
+    overflow: hidden;
 }
 
-/* Style the button used to open the dropup content */
-.dropbtn {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.parallax-background {
+    /* Adjust the height as needed */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-
+.content {
+    /* Content styling */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
 }
 
 /* Dropup content (hidden by default) */
