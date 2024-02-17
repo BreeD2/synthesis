@@ -9,6 +9,7 @@ body {
 
 
 }
+
 html {
   font-family: arial;
 }
@@ -365,20 +366,24 @@ body {
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
 color:red;
+font-size: 15px
 
 
 }
 /* Style the search input */
 input[type=text] {
-  padding: 10px; /* Add padding */
+  padding: 5px; /* Add padding */
 
   border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Add border radius for rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
   outline: none; /* Remove default outline */;
   font-family: arial;
+  font-size: 15px;
+
 
 }
+
 
 /* Style the placeholder text */
 input[type=text]::placeholder {
@@ -559,6 +564,7 @@ body.light-mode .cog-icon * {
        font-size: 14px;
        color: white;
        display: block;
+       font-size: 15px
 
    }
    .sidebar a:focus {
@@ -1512,27 +1518,50 @@ select:hover {
     }}
 
     /* styles.css */
-  #games-list {
-    padding: 20px;
+    #games-list {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      background-color: white;
+      font-size: 15px;
+      width: 80%;
+      padding: 5px;
+      border: 2px solid white
 
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    margin-top: 10px;
+    }
+    /* Additional styles for lists within #games-list */
+    #games-list ul, #games-list ol {
+      padding-left: 20px; /* Standard indentation for lists */
+    }
 
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
-    color:black;
-    font-weight: normal;
-    background-color:white
+    #games-list ul {
+      list-style-type: disc; /* Bullet points for unordered lists */
+    }
 
-  }
+    #games-list ol {
+      list-style-type: decimal; /* Numbers for ordered lists */
+    }
+
+    /* Style for list items */
+    #games-list li {
+      margin-bottom: 10px; /* Adds space between list items */
+      color: #333; /* Optionally, make text color slightly lighter than black for readability */
+    }
+
+
+
+
+
   /* Style for the sort section */
   #sort-section {
-    width:50%;
+    width:100%;
     margin: 20px auto;
-    padding: 20px;
-    background-color: red;
+
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -1544,8 +1573,8 @@ select:hover {
 
   /* Style for select dropdowns */
   #mainCategory, #subCategory {
-    width: 100%;
-    padding: 10px;
+    width: 80%;
+    font-size: 15px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -1554,7 +1583,14 @@ select:hover {
     cursor: pointer;
     font-weight: normal;
     text-align: center;
+    padding: 5px
   }
+
+
+  #filterCheckbox {
+    margin-top: 10px;
+}
+
 
   /* The Modal (background) */
   .modal {
@@ -1734,6 +1770,13 @@ color: white;
 body.light-mode #sort-section, body.sort-section * {
 
 background-color: grey; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #sort-section, body.sort-section * {
+
+background-color: black; /* Light grey background for the footer */
 
 color: white; /* Dark text color for readability */
 

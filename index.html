@@ -2,7 +2,7 @@
 <html lang="en-US">
 <html>
  <head>
-   <title>Synthesis</title>
+   <title>Reminiscence Collection</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
    <center>
 
@@ -41,34 +41,59 @@
 
 <aside class="sidebar">
     <h3>All Games</h3>
-    <input type="text" placeholder="Search..">
+<input type="text" placeholder="Search..">
+<br>
+    <label><input type="checkbox" id="filterCheckbox"> Sort</label>
+
+<div id="filterOptions" style="display: none;">
+    <select id="mainCategory" onchange="updateSubCategory()">
+        <option value="" disabled selected hidden>Choose a category</option>
+        <option value="publisher">Publisher</option>
+        <option value="developer">Developer</option>
+        <option value="series">Series</option>
+        <option value="platform">Platform</option>
+        <option value="releasedDate">Released Dates</option>
+        <option value="genre">Genre</option>
+        <option value="mode">Mode</option>
+    </select>
+
+    <select id="subCategory" onchange="sortAndDisplayGames()">
+        <option value="" disabled selected hidden>Select a subcategory</option>
+        <!-- Additional options will be dynamically filled based on the main category selection -->
+    </select>
+      <div id="games-list">Choose from the categories above</div>
+</div>
+
+
+
+
      <ul class="search-results" id="searchResults"></ul>
-    <div id="game-list">
+    <div id="game-list2">
 <a href="animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
-">Animal Crossing: New Horizons</a>
+">Animal Crossing: <br>New Horizons</a>
 <a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
-">Animal Crossing: New Leaf</a>
+">Animal Crossing: <br>New Leaf</a>
 <a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
-<a href="bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: Wii Degree</a>
+<a href="bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
 <a href="blur/index.html" data-game="Blur">Blur</a>
 <a href="cars/index.html" data-game="Cars">Cars</a>
-<a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls Remastered</a>
+<a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls<br>Remastered</a>
 <a href="deadpool/index.html" data-game="Deadpool">Deadpool</a>
-<a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: Minion Mayhem
+<a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: <br>Minion Mayhem
 </a>
 <a href="disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
 <a href="disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
 <a href="disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
 <a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
 <a href="donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
-">Donkey Kong Country Returns</a>
+">Donkey Kong <br>Country Returns</a>
 <a href="dragonageinquisition/index.html" data-game="Dragon Age Inquisition
-">Dragon Age Inquisition</a>
-<a href="dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: Dark Arisen</a>
+">Dragon Age <br>Inquisition</a>
+<a href="dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: <br>Dark Arisen</a>
 <a href="driven/index.html" data-game="Driven
 ">Driven</a>
-<a href="easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: Personal Trainer</a>
-<a href="epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: The Power of Two
+<a href="easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: <br> Personal Trainer</a>
+<a href="epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: <br>The Power of Two
 </a>
 <a href="espnnba2K5/index.html" data-game="ESPN NBA 2K5">ESPN NBA 2K5</a>
 <a href="facebreakerkoparty/index.html" data-game="FaceBreaker K.O. Party">FaceBreaker K.O. Party</a>
@@ -76,54 +101,54 @@
 <a href="fallout4/index.html" data-game="Fallout 4">Fallout 4</a>
 <a href="fortunestreet/index.html" data-game="Fortune Street">Fortune Street</a>
 <a href="fridaythe13ththegame
-/index.html" data-game="Friday the 13th: The Game">Friday the 13th: The Game</a>
-<a href="frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: Swampy’s Revenge</a>
+/index.html" data-game="Friday the 13th: The Game">Friday the 13th: <br>The Game</a>
+<a href="frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: <br>Swampy’s Revenge</a>
 <a href="gameparty/index.html" data-game="Game Party">Game Party</a>
 <a href="granturismo/index.html" data-game="Gran Turismo">Gran Turismo</a>
 <a href="grandtheftautoiv/index.html" data-game="Grand Theft Auto IV">Grand Theft Auto IV</a>
 <a href="grandtheftautov/index.html" data-game="Grand Theft Auto V">Grand Theft Auto V
 </a>
 <a href="hellskitchenthegame
-/index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen: The Game</a>
-<a href="hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty: Big City Dreams
+/index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen:<br> The Game</a>
+<a href="hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty:<br> Big City Dreams
 </a>
 <a href="hoteltransylvania/index.html" data-game="Hotel Transylvania">Hotel Transylvania
 </a>
 <a href="hyrulewarriorsageofcalamity
-/index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors: Age of Calamity</a>
-<a href="injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: Gods Among Us</a>
+/index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors:<br> Age of Calamity</a>
+<a href="injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: <br>Gods Among Us</a>
 <a href="injustice2/index.html" data-game="Injustice 2">Injustice 2</a>
 <a href="legobatman2dcsuperheroes
-/index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2: DC Super Heroes
+/index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2:<br> DC Super Heroes
 </a>
 <a href="legobatman3beyondgotham
-/index.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3: Beyond Gotham</a>
-<a href="legocityundercover/index.html" data-game="Lego City Undercover">Lego City Undercover</a>
-<a href="legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC Super Villains</a>
+/index.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3:<br> Beyond Gotham</a>
+<a href="legocityundercover/index.html" data-game="Lego City Undercover">Lego City <br>Undercover</a>
+<a href="legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC <br>Super Villains</a>
 <a href="legojurassicworld/index.html" data-game="Lego Jurassic World">Lego Jurassic World
 </a>
-<a href="legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel Super Heroes</a>
+<a href="legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel <br>Super Heroes</a>
 <a href="legomarvelsuperheroes2/index.html" data-game="Lego Marvel Super Heroes 2
-">Lego Marvel Super Heroes 2</a>
-<a href="legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s Avengers</a>
+">Lego Marvel <br>Super Heroes 2</a>
+<a href="legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s<br> Avengers</a>
 <a href="legopiratesoftheCaribbean
-index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribbean</a>
+index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Caribbean</a>
 <a href="legostarwarstheforceawakens
-/index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: The Force Awakens</a>
+/index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: <br>The Force Awakens</a>
 <a href="legotheincredibles
 /index.html" data-game="Lego The Incredibles
-">Lego The Incredibles</a>
+">Lego <br>The Incredibles</a>
 <a href="lifeisstrange/index.html" data-game="Life is Strange">Life is Strange</a>
 <a href="lifeisstrange2/index.html" data-game="Life is Strange 2">Life is Strange 2</a>
-<a href="lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: Before the Storm</a>
-<a href="lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: True Colors</a>
+<a href="lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: <br>Before the Storm</a>
+<a href="lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: <br>True Colors</a>
 <a href="littlebigplanet/index.html" data-game="LittleBigPlanet">LittleBigPlanet</a>
 <a href="littlebigplanet2/index.html" data-game="LittleBigPlanet 2">LittleBigPlanet 2</a>
 <a href="littlebigplanet3/index.html" data-game="LittleBigPlanet 3">LittleBigPlanet 3</a>
-<a href="littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet Karting</a>
-<a href="luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion: Dark Moon</a>
+<a href="littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet <br>Karting</a>
+<a href="luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion:<br> Dark Moon</a>
 <a href="mandmsadventure/index.html" data-game="M&M’s Adventure">M&M’s Adventure</a>
-<a href="madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: The Video Game</a>
+<a href="madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: <br>The Video Game</a>
 <a href="maddennfl07/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
 <a href="Madden NFL 09/index.html" data-game="Madden NFL 09">Madden NFL 09</a>
 <a href="maddennfl12/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
@@ -135,14 +160,14 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 <a href="maddennfl19/index.html" data-game="Madden NFL 19">Madden NFL 19</a>
 <a href="maddennfl20/index.html" data-game="Madden NFL 20">Madden NFL 20</a>
 <a href="maddennfl25/index.html" data-game="Madden NFL 25">Madden NFL 25</a>
-<a href="marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi: Bowser's Inside Story</a>
-<a href="marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic at the Olympic Games</a>
-<a href="marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic at the London 2012 Olympic Games</a>
+<a href="marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi:<br> Bowser's Inside Story</a>
+<a href="marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic<br> at the Olympic Games</a>
+<a href="marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic <br>at the London 2012<br> Olympic Games</a>
 <a href="marioandsonicattherio2016olympicgames
-/index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic at the Rio 2016 Olympic Games</a>
+/index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic<br> at the Rio 2016 <br>Olympic Games</a>
 <a href="mariokart7/index.html" data-game="Mario Kart 7">Mario Kart 7</a>
 <a href="mariokart8/index.html" data-game="Mario Kart 8">Mario Kart 8</a>
-<a href="mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</a>
+<a href="mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 <br>Deluxe</a>
 <a href="mariokartds/index.html" data-game="Mario Kart DS">Mario Kart DS</a>
 <a href="mariokartwii/index.html" data-game="Mario Kart Wii">Mario Kart Wii</a>
 <a href="marioparty8/index.html" data-game="Mario Party 8">Mario Party 8</a>
@@ -151,16 +176,16 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 <a href="mariopowertennis/index.html" data-game="Mario Power Tennis">Mario Power Tennis</a>
 <a href="mariosportsmix/index.html" data-game="Mario Sports Mix">Mario Sports Mix</a>
 <a href="mariosupersluggers/index.html" data-game="Mario Super Sluggers">Mario Super Sluggers</a>
-<a href="mariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis: Ultra Smash</a>
-<a href="mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: Mini-Land</a>
+<a href="mariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis:<br> Ultra Smash</a>
+<a href="mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: <br>Mini-Land</a>
 <a href="marvelsavenger/index.html" data-game="Marvel’s Avenger">Marvel’s Avenger</a>
 <a href="marvelsspiderman/index.html" data-game="Marvel’s Spider-Man">Marvel’s Spider-Man</a>
-<a href="masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect Legendary Edition</a>
-<a href="midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club: Street Racing</a>
-<a href="midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3: Dub Edition</a>
-<a href="mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11: Aftermath</a>
+<a href="masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect<br> Legendary Edition</a>
+<a href="midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club:<br> Street Racing</a>
+<a href="midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3:<br> Dub Edition</a>
+<a href="mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11:<br> Aftermath</a>
 <a href="mystreet/index.html" data-game="My Street">My Street</a>
-<a href="mysterymastersmysteriesofthe heartcollection20games inallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game</a>
+<a href="mysterymastersmysteriesofthe heartcollection20games inallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters <br>MYSTERIES OF THE HEART<br> COLLECTION 20 GAMES <br>IN ALL Hidden Object <br>PC Game</a>
 <a href="nba08/index.html" data-game="NBA 08">NBA 08</a>
 <a href="nba2k8/index.html" data-game="NBA 2K8
 ">NBA 2K8</a>
@@ -179,65 +204,65 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 <a href="nba2k22/index.html" data-game="NBA 2K22">NBA 2K22</a>
 <a href="NBAlive08/index.html" data-game="NBA Live 08">NBA Live 08</a>
 <a href="nbastreet/index.html" data-game="NBA Street">NBA Street</a>
-<a href="needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed: Carbon</a>
-<a href="newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super Mario Bros.</a>
-<a href="newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super Mario Bros. 2</a>
-<a href="newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super Mario Bros. U</a>
-<a href="newxupermariobroswii/index.html" data-game="New Super Mario Bros. Wii">New Super Mario Bros. Wi</a>
+<a href="needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed:<br> Carbon</a>
+<a href="newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super <br>Mario Bros.</a>
+<a href="newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super <br>Mario Bros. 2</a>
+<a href="newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super <br>Mario Bros. U</a>
+<a href="newxupermariobroswii/index.html" data-game="New Super Mario Bros. Wii">New Super <br>Mario Bros. Wi</a>
 <a href="nhl2k10/index.html" data-game="NHL 2K10">NHL 2K10</a>
 <a href="nintendoland/index.html" data-game="Nintendo Land">Nintendo Land</a>
-<a href="phineasandferbacrossthe 2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb: Across the 2nd Dimension</a>
-<a href="pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s Party</a>
+<a href="phineasandferbacrossthe 2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb:<br> Across the 2nd Dimension</a>
+<a href="pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s <br>Party</a>
 <a href="playStationallstarsbattleroyale
-/index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars Battle Royale</a>
+/index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars<br>Battle Royale</a>
 <a href="rio/index.html" data-game="Rio">Rio</a>
 <a href="shrekforeverafter/index.html" data-game="Shrek Forever After">Shrek Forever After</a>
 <a href="skateit/index.html" data-game="Skate It">Skate It</a>
-<a href="sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega All-Stars Racing</a>
-<a href="sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: Zero Gravity</a>
+<a href="sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega <br>All-Stars Racing</a>
+<a href="sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: <br>Zero Gravity</a>
 <a href="spongebobsquigglepants/index.html" data-game="SpongeBob Squigglepants">SpongeBob Squigglepants</a>
 <a href="sportschampions/index.html" data-game="Sports Champions">Sports Champions</a>
 <a href="stardewvalley/index.html" data-game="Stardew Valley">Stardew Valley</a>
 <a href="stuntman/index.html" data-game="Stuntman">Stuntman</a>
 <a href="sunsetoverdrive/index.html" data-game="Sunset Overdrive">Sunset Overdrive</a>
-<a href="supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario 3D All-Stars</a>
-<a href="supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario 3D Land</a>
-<a href="supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario 3D World</a>
-<a href="supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario Galaxy 2</a>
+<a href="supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario <br>3D All-Stars</a>
+<a href="supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario <br>3D Land</a>
+<a href="supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario <br>3D World</a>
+<a href="supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario <br>Galaxy 2</a>
 <a href="supermariomaker/index.html" data-game="Super Mario Maker">Super Mario Maker</a>
 <a href="supermariomaker2/index.html" data-game="Super Mario Maker 2">Super Mario Maker 2</a>
 <a href="supermarioodyssey/index.html" data-game="Super Mario Odyssey">Super Mario Odyssey</a>
-<a href="supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros. Wonder</a>
-<a href="supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. for Nintendo 3DS</a>
-<a href="supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros. for Wii U</a>
+<a href="supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros.<br> Wonder</a>
+<a href="supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. <br>for Nintendo 3DS</a>
+<a href="supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros.<br> for Wii U</a>
 <a href="theamazingrace/index.html" data-game="The Amazing Race">The Amazing Race</a>
-<a href="The Amazing Spider-Man 2/index.html" data-game="The Amazing Spider-Man 2">The Amazing Spider-Man 2</a>
-<a href="theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures of Captain Spirit</a>
-<a href="theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: Skyrim</a>
+<a href="The Amazing Spider-Man 2/index.html" data-game="The Amazing Spider-Man 2">The Amazing <br>Spider-Man 2</a>
+<a href="theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures <br>of Captain Spirit</a>
+<a href="theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: <br>Skyrim</a>
 <a href="thefairlyoddparentsshadowshowdown/index.html" data-game="The Fairly OddParents: Shadow Showdown
-">The Fairly OddParents: Shadow Showdown</a>
+">The Fairly OddParents:<br> Shadow Showdown</a>
 <a href="theincredibles/index.html" data-game="The Incredibles">The Incredibles</a>
-<a href="thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: Breath of the Wild</a>
-<a href="thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie Videogame</a>
+<a href="thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: <br>Breath of the Wild</a>
+<a href="thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie <br>Videogame</a>
 <a href="theoregontrail/index.html" data-game="The Oregon Trail">The Oregon Trail</a>
 <a href="thesims3/index.html" data-game="The Sims 3">The Sims 3</a>
-<a href="thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3: Starter Pack</a>
+<a href="thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3:<br> Starter Pack</a>
 <a href="thesims4/index.html" data-game="The Sims 4">The Sims 4</a>
 <a href="thesmurfs/index.html" data-game="The Smurfs">The Smurfs</a>
 <a href="thesmurfs2/index.html" data-game="The Smurfs 2">The Smurfs 2</a>
-<a href="thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The SpongeBob SquarePants Movie</a>
-<a href="thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: Survival Instinct</a>
+<a href="thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The <br>SpongeBob SquarePants Movie</a>
+<a href="thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: <br>Survival Instinct</a>
 <a href="tomodachilife/index.html" data-game="Tomodachi Life">Tomodachi Life</a>
-<a href="tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s Pro Skater 4</a>
+<a href="tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s <br>Pro Skater 4</a>
 <a href="toystory3/index.html" data-game="Toy Story 3">Toy Story 3</a>
-<a href="transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers: Rise of the Dark Spark</a>
+<a href="transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers:<br> Rise of the Dark Spark</a>
 <a href="udrawstudio/index.html" data-game="uDraw Studio">uDraw Studio</a>
 <a href="ultimatenesremix/index.html" data-game="Ultimate NES Remix">Ultimate NES Remix</a>
-<a href="uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted: Drake’s Fortune</a>
-<a href="uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: A Thief’s End</a>
+<a href="uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted:<br> Drake’s Fortune</a>
+<a href="uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: <br>A Thief’s End</a>
 <a href="watchdogs/index.html" data-game="Watch Dogs">Watch Dogs</a>
 <a href="watchdogs2/index.html" data-game="Watch Dogs 2">Watch Dogs 2</a>
-<a href="watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: Legion</a>
+<a href="watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: <br>Legion</a>
 <a href="wiiplay/index.html" data-game="Wii Play">Wii Play</a>
 <a href="wiisports/index.html" data-game="Wii Sports">Wii Sports</a>
 <a href="wipeout/index.html" data-game="Wipeout">Wipeout</a>
@@ -248,9 +273,13 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 
 <!-- Sidebar Toggle Button -->
 <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
+
 <div id="searchResults">
 
+
+
     </div>
+
 
     <div class="cog-icon">
         <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
@@ -391,27 +420,6 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
 </div>
 
 
-<section id="sort-section">
-  <div class="sort">Sort Games</div>
-  <select id="mainCategory" onchange="updateSubCategory()">
-    <option value="" disabled selected hidden>Choose a category</option>
-
-    <option value="publisher">Publisher</option>
-    <option value="developer">Developer</option>
-    <option value="series">Series</option>
-    <option value="platform">Platform</option>
-    <option value="releasedDate">Released Dates</option>
-    <option value="genre">Genre</option>
-    <option value="mode">Mode</option>
-  </select>
-
-  <select id="subCategory" onchange="sortAndDisplayGames()">
-    <option value="" disabled selected hidden>Select a subcategory</option>
-    <!-- Additional options will be dynamically filled based on the main category selection -->
-  </select>
-
-  <div id="games-list">Choose from the categories above</div>
-</section>
 
 <div class="footer">
   <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
@@ -475,7 +483,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego Pirates of the Caribb
   };
 
 const seriesCategories = {
-  "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors","EA Sports", "Epic Mickey", "FaceBreaker", "Fallout","Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi's Mansion: Dark Moon", "M&M's", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Super Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawk's", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ]
+  "series": ["Animal Crossing", "Assassin's Creed", "Batman: Arkham", "Big Brain Academy", "Blur", "Cars", "Dark Souls", "Deadpool", "Despicable Me", "Disney Infinity", "Disney Universe", "DJ Hero", "Donkey Kong","Dragon Age", "Dragon Dogma", "Driven", "Dynasty Warriors","EA Sports", "Epic Mickey", "FaceBreaker", "Fallout","Fortune Street", "Friday the 13th", "Frogger", "Game Party", "Gran Turismo", "Grand Theft Auto", "Hell's Kitchen", "Hello Kitty", "Hotel Transylvania", "Injustice", "Lego Batman", "Lego City Undercover", "Lego DC Super Villains" ,"Lego Jurassic World", "Lego Pirates of the Carribbean", "Lego Star Wars: The Force Awakens", "Lego The Incredibles", "Life is Strange", "LittleBigPlanet", "Luigi's Mansion", "M&Ms", "Madagascar", "Madden NFL", "Mario & Luigi", "Mario & Sonic", "Mario Kart", "Mario Party","Mario Tennis", "Mario Sports", "Mario Baseball", "Mario Tennis", "Mario vs. Donkey Kong", "Marvel's Avengers", "Marvel's Spider-Man", "Mass Effect", "Midnight Club", "Mortal Kombat", "My Little Pony", "My Street", "Mystery Masters", "NBA", "NBA 2K", "NBA Live", "NBA Street","Need for Speed", "NES Remix", "Nintendo Land","Phineas and Ferb", "PlayStation All-Stars","Rio", "Sega All-Stars", "Shrek", "Six Flags", "Skate", "Sonic the Hedgehog", "SpongeBob SquarePants", "Sports Champions", "Stardew Valley", "Stuntman", "Sunset Overdrive", "Super Mario", "Super Smash Bros.", "The Amazing Race", "The Amazing Spider-Man", "The Elder Scrolls", "The Fairly OddParents", "The Incredibles", "The Legend of Zelda", "The Lego Movie Videogame", "The Oregon Trail", "The Sims", "The Smurfs", "The Walking Dead", "Tomodachi Life", "Tony Hawks", "Toy Story", "Transformers", "uDraw", "Uncharted", "Watch Dogs", "Wii", "Wipeout" ]
 };
 
 const platformCategories = {
@@ -488,7 +496,7 @@ const releasedDateCategories = {
 
 
 const genreCategories = {
-  "genre": ["Action", "Adventure", "Art", "Comic", "Coming-Of-Age", "Drama", "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing", "Role-playing", "Sandbox", "Shooter", "Simulation", "Sports"]
+  "genre": ["Action", "Adventure", "Art", "Comic", "Coming-Of-Age",  "Education", "Fighting", "Hack and Slash", "Horror", "Level editor", "Minigame", "Music", "Party", "Platformer", "Puzzle", "Racing", "Role-playing", "Sandbox", "Shooter", "Simulation", "Sports"]
 };
 
 const modeCategories = {
@@ -764,17 +772,7 @@ platform: ["Nintendo Wii",
 releasedDate: ["2009"],
 mode: "Single-player & Multiplayer"},
 
-{
-title: "Driven",
-genre: ["Racing"],
-publisher: "BAM! Entertainment",
-developer: ["Crawfish Interactive"],series: "Driven", // Corrected series name to match the game
-platform: ["Game Boy Advance",
-"Nintendo GameCube",
-"PlayStation 2",
-],
-releasedDate: ["2001","2002"],
-mode: "Single-player & Multiplayer"},
+
 {
   title: "Epic Mickey 2: The Power of Two",
   genre: ["Action", "Adventure"],
@@ -1330,8 +1328,1714 @@ mode: "Single-player & Multiplayer"},
     genre: ["Action","Adventure"],
   mode: "Single-player & Multiplayer",
 },
-];
+{
+  title: "M&M’s Adventure",
+  publisher: [
+"Zoo Games"],
+  developer: ["Nikitova Games"],
+  series: ["M&Ms"],
+  platform: ["Nintendo DS",
+"Nintendo Wii"],
+  releasedDate: ["2007", "2008"],
+    genre: ["Action","Adventure"],
+  mode: "Single-player Only",
+},
+{
+  title: "Madagascar 3: The Video Game",
+  publisher: [
+"D3 Publisher"],
+  developer: ["Monkey Bar Games","Torus Games"],
+  series: ["Madagascar"],
+  platform: ["PlayStation 3",
+"Xbox 360",
+"Nintendo Wii",
+"Nintendo DS",
+"Nintendo 3DS"
+],
+  releasedDate: ["2012", "2013"],
+    genre: ["Action","Adventure"],
+  mode: "Single-player & Multiplayer",
+},
 
+{
+  title: "Madden NFL 07",
+  publisher: [
+"Electronic Arts"],
+  developer: ["EA Canada","EA Tiburon","Exient Entertainment"],
+  series: ["Madden NFL"],
+  platform: ["PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox",
+"Xbox 360",
+"Microsoft Windows",
+"Nintendo DS",
+"Game Boy Advance",
+"Nintendo Wii",
+"Nintendo GameCube"
+],
+  releasedDate: ["2006", "2007"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+
+{
+  title: "Madden NFL 09",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: ["Mobile",
+"Nintendo Wii",
+"Nintendo DS",
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox",
+"Xbox 360"
+],
+  releasedDate: ["2008"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+
+{
+  title: "Madden NFL 12",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: ["Android",
+"BlackBerry PlayBook","iOS","Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox 360"
+],
+  releasedDate: ["2011"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+
+{
+  title: "Madden NFL 15",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: [
+"PlayStation 3","PlayStation 4",
+"Xbox 360","Xbox One"
+],
+  releasedDate: ["2014"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 16",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: [
+"PlayStation 3","PlayStation 4",
+"Xbox 360","Xbox One"
+],
+  releasedDate: ["2015"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 17",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: [
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360","Xbox One"
+],
+  releasedDate: ["2016"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 18",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: [
+"PlayStation 4",
+"Xbox One"
+],
+  releasedDate: ["2017"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 19",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: ["Microsoft Windows",
+"PlayStation 4",
+"Xbox One"
+],
+  releasedDate: ["2018"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 20",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+  series: ["Madden NFL"],
+  platform: ["Microsoft Windows",
+"PlayStation 4",
+"Xbox One"
+],
+  releasedDate: ["2019"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Madden NFL 25",
+  publisher: [
+"EA Sports"],
+  developer: ["EA Tiburon"],
+    series: ["Madden NFL"],
+  platform: ["Android",
+"iOS",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360",
+"Xbox One"
+],
+  releasedDate: ["2013"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario & Luigi: Bowser's Inside Story",
+  publisher: [
+"Nintendo"],
+  developer: ["AlphaDream",
+"Nintendo SPD Group No.4"],
+  series: ["Mario & Luigi"
+],
+platform: [
+"Nintendo DS"
+],
+  releasedDate: ["2009"],
+    genre: ["Role-playing"],
+  mode: "Single-player Only",
+},
+
+{
+  title: "Mario & Sonic at the Olympic Games",
+  publisher: [
+"Nintendo","Sega"],
+  developer: ["Sega Sports R&D"],
+  series: ["Mario & Sonic"
+],
+platform: [
+"Nintendo DS","Nintendo Wii"
+],
+  releasedDate: ["2007","2008"],
+    genre: ["Party","Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario & Sonic at the London 2012 Olympic Games",
+  publisher: [
+"Nintendo","Sega"],
+  developer: ["Sega Sports R&D","Racjin"],
+  series: ["Mario & Sonic"],
+platform: [
+"Nintendo Wii","Nintendo 3DS"
+],
+  releasedDate: ["2011","2012"],
+    genre: ["Party","Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario & Sonic at the Rio 2016 Olympic Games",
+  publisher: [
+"Nintendo"],
+  developer: ["Arzest","Sega Sports R&D","Spike Chunsoft"],
+  series: ["Mario & Sonic"],
+platform: ["Arcade","Nintendo 3DS","Nintendo Wii U"
+],
+  releasedDate: ["2016"],
+    genre: ["Party","Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Kart 7",
+  publisher: [
+"Nintendo"],
+  developer: ["Nintendo EAD",
+"Retro Studios"],
+  series: ["Mario Kart"],
+platform: ["Nintendo 3DS",
+],
+  releasedDate: ["2011"],
+    genre: ["Racing"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Kart 8",
+  publisher: [
+"Nintendo"],
+  developer: ["Namco Bandai Holdings","Nintendo EAD"],
+  series: ["Mario Kart"],
+platform: ["Nintendo Wii U",
+],
+  releasedDate: ["2014"],
+    genre: ["Racing"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Kart 8 Deluxe",
+  publisher: [
+"Nintendo","Tencent Games"],
+  developer: ["BANDAI NAMCO Studios Inc.","Nintendo EAD"],
+  series: ["Mario Kart"],
+platform: ["Nintendo Wii U",
+],
+  releasedDate: ["2017"],
+    genre: ["Racing"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Kart DS",
+  publisher: [
+"Nintendo"],
+  developer: ["Nintendo EAD"],
+  series: ["Mario Kart"],
+platform: ["Nintendo DS","Nintendo Wii U",
+],
+  releasedDate: ["2005"],
+    genre: ["Racing"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Kart Wii",
+  publisher: [
+"Nintendo"],
+  developer: ["Nintendo EAD"],
+  series: ["Mario Kart"],
+platform: ["Nintendo Wii",
+],
+  releasedDate: ["2008"],
+    genre: ["Racing"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Party 8",
+  publisher: [
+"Nintendo"],
+  developer: ["CAProduction",
+"Hudson",
+"Nintendo SPD Group No.4"],
+  series: ["Mario Party"],
+platform: ["Nintendo Wii",
+],
+  releasedDate: ["2007"],
+    genre: ["Party"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Party 10",
+  publisher: [
+"Nintendo"],
+  developer: ["NDcube",
+"CAProduction",
+"Nintendo SPD Group No.4"],
+  series: ["Mario Party"],
+platform: ["Nintendo Wii U",
+],
+  releasedDate: ["2015","2016"],
+    genre: ["Party"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Party DS",
+  publisher: [
+"Nintendo"],
+  developer: ["Hudson Soft",
+"Nintendo SPD Group No.4"],
+  series: ["Mario Party"],
+platform: ["Nintendo DS",
+],
+  releasedDate: ["2007"],
+    genre: ["Party"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Power Tennis",
+  publisher: [
+"Nintendo"],
+  developer: ["Camelot Software Planning","Nintendo SPD Group No.4"],
+  series: ["Mario Tennis"],
+platform: ["Nintendo GameCube",
+"Nintendo Wii",
+],
+  releasedDate: ["2007"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Sports Mix",
+  publisher: [
+"Nintendo"],
+  developer: ["Nintendo SPD Group No.4","Square Enix"],
+  series: ["Mario Sports"],
+platform: ["Nintendo Wii",
+"Nintendo Wii U",
+],
+  releasedDate: ["2010","2011","2015","2016"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Super Sluggers",
+  publisher: [
+"Nintendo"],
+  developer: ["Namco Bandai Games","Nintendo SPD Group No.4"],
+  series: ["Mario Baseball"],
+platform: ["Nintendo Wii",
+"Nintendo Wii U",
+],
+  releasedDate: ["2008","2011","2016"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario Tennis: Ultra Smash",
+  publisher: [
+"Nintendo"],
+  developer: ["Camelot Software Planning",
+"Nintendo"],
+  series: ["Mario Tennis"],
+platform: [
+"Nintendo Wii U",
+],
+  releasedDate: ["2015","2016"],
+    genre: ["Sports"],
+  mode: "Single-player & Multiplayer",
+},
+{
+  title: "Mario vs. Donkey Kong: Mini-Land",
+  publisher: [
+"Nintendo"],
+  developer: ["Nintendo Software Technology"],
+  series: ["Mario vs. Donkey Kong"],
+platform: [
+"Nintendo DS",
+],
+  releasedDate: ["2010","2011"],
+    genre: ["Puzzle"],
+  mode: "Single-player Only",
+},
+{
+  title: "Marvel’s Avengers",
+  publisher: [
+"Square Enix","Crystal Dynamics"],
+  developer: ["Crystal Dynamics"],
+  series: ["Marvel's Avengers"],
+platform: [
+"Google Stadia",
+"Microsoft Windows",
+"PlayStation 4",
+"PlayStation 5",
+"Xbox One",
+"Xbox Series X/S",
+],
+  releasedDate: ["2020","2021"],
+    genre: ["Action",
+"Adventure",
+"Fighting"],
+  mode: "Single-player & Multiplayer",
+},
+{
+title: "Marvel’s Spider-Man",
+publisher: [
+"Sony Interactive Entertainment"],
+developer: ["Insomniac Games"],
+series: ["Marvel's Spider-Man"],
+platform: [
+"Microsoft Windows",
+"PlayStation 4",
+"PlayStation 5",
+],
+releasedDate: ["2018","2020","2022"],
+  genre: ["Action",
+"Adventure"],
+mode: "Single-player Only",
+},
+{
+title: "Mass Effect Legendary Edition",
+publisher: [
+"Electronic Arts"],
+developer: ["BioWare"],
+series: ["Mass Effect"],
+platform: [
+"Microsoft Windows",
+"PlayStation 4",
+"Xbox One",
+],
+releasedDate: ["2021"],
+  genre: ["Action",
+"Role-playing","Shooter"],
+mode: "Single-player Only",
+},
+
+{
+title: "Midnight Club: Street Racing",
+publisher: [
+"Destination Software","Rockstar Games"],
+developer: ["Angel Studios","Rebellion Developments"],
+series: ["Midnight Club"],
+platform: [
+"Game Boy Advance",
+"PlayStation 2",
+],
+releasedDate: ["2000","2001","2002"],
+  genre: ["Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Midnight Club 3: Dub Edition",
+publisher: ["Rockstar Games"],
+developer: ["Rockstar San Diego"],
+series: ["Midnight Club"],
+platform: [
+"PlayStation 2",
+"PlayStation Portable",
+"Xbox",
+],
+releasedDate: ["2005","2006"],
+  genre: ["Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Mortal Kombat 11: Aftermath",
+publisher: ["Warner Bros. Interactive Entertainment"],
+developer: ["NetherRealm Studios",
+"QLOC S.A.",
+"Shiver Entertainment"],
+series: ["Mortal Kombat"],
+platform: [
+"Google Stadia",
+"Microsoft Windows",
+"Nintendo Switch",
+"PlayStation 4",
+"PlayStation 5",
+"Xbox One",
+"Xbox Series X/S",
+],
+releasedDate: ["2019","2020"],
+  genre: ["Fighting"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "My Street",
+publisher: ["SCEA"],
+developer: ["Idol Minds"],
+series: ["Midnight Club"],
+platform: [
+"PlayStation 2",
+],
+releasedDate: ["2003"],
+  genre: ["Minigame",
+"Party"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Mystery Masters MAZE OF MYSTERY COLLECTION 20 Hidden Object Games",
+publisher: ["Viva Media"],
+developer: ["Alawar"],
+series: ["Mystery Masters"],
+platform: [
+"PC",
+],
+releasedDate: ["2014"],
+  genre: ["Puzzle"],
+mode: "Single-player Only",
+},
+{
+title: "NBA 08",
+publisher: ["Sony Computer Entertainment"],
+developer: ["San Diego Studio"],
+series: ["NBA"],
+platform: [
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+],
+releasedDate: ["2007","2008"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K8",
+publisher: ["2K","Spike"],
+developer: ["Visual Concepts"],
+series: ["NBA"],
+platform: [
+"PlayStation 2",
+"PlayStation 3",
+"Xbox 360",
+],
+releasedDate: ["2007","2008"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K9",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Microsoft Windows",
+"PlayStation 2",
+"PlayStation 3",
+"Xbox 360",
+],
+releasedDate: ["2008"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K10",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Microsoft Windows",
+"Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3",
+"Xbox 360",
+],
+releasedDate: ["2009"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K11",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Microsoft Windows","Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3","PlayStation Portable",
+"Xbox 360",
+],
+releasedDate: ["2010"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K12",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["iOS","Microsoft Windows","Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3","PlayStation Portable",
+"Xbox 360",
+],
+releasedDate: ["2011"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K14",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Android","iOS","Microsoft Windows",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360","Xbox One"
+],
+releasedDate: ["2013"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K15",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Android","iOS","Microsoft Windows",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360","Xbox One"
+],
+releasedDate: ["2014"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K18",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Android","iOS","Microsoft Windows","Nintendo Switch",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360","Xbox One"
+],
+releasedDate: ["2017"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K19",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Android","iOS","Microsoft Windows","Nintendo Switch",
+"PlayStation 4","Xbox One"
+],
+releasedDate: ["2018"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K20",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Android","Google Stadia","iOS","Microsoft Windows","Nintendo Switch",
+"PlayStation 4",
+"Xbox One"
+],
+releasedDate: ["2019"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K21",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Apple Arcade",
+"Google Stadia",
+"Microsoft Windows",
+"macOS",
+"Nintendo Switch",
+"PlayStation 4",
+"PlayStation 5",
+"Xbox One",
+"Xbox Series X/S"
+],
+releasedDate: ["2020","2021"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA 2K22",
+publisher: ["2K",],
+developer: ["Visual Concepts"],
+series: ["NBA 2K"],
+platform: ["Apple Arcade",
+"Microsoft Windows",
+"Nintendo Switch",
+"PlayStation 4",
+"PlayStation 5",
+"Xbox One",
+"Xbox Series X/S"
+],
+releasedDate: ["2021"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA Live 08",
+publisher: ["EA Sports",],
+developer: ["EA Canada",
+"HB Studios"],
+series: ["NBA Live"],
+platform: ["Microsoft Windows",
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox 360"
+],
+releasedDate: ["2007"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA Live 18",
+publisher: ["EA Sports","Engine Ignite"],
+developer: ["EA Tiburon"],
+series: ["NBA Live"],
+platform: [
+"PlayStation 4",
+"Xbox One"
+],
+releasedDate: ["2017"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "NBA Street",
+publisher: ["EA Sports BIG"],
+developer: ["EA Canada",
+"NuFX"],
+series: ["NBA Street"],
+platform: ["Nintendo GameCube",
+"PlayStation 2",
+
+],
+releasedDate: ["2001","2002"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Need for Speed: Carbon",
+publisher: ["Electronic Arts",
+"Global VR"],
+developer: ["EA Black Box",
+"Exient Entertainment",
+"Global VR",
+"Pocketeers",
+"Rovio Mobile",
+"Team Fusion",
+"TransGaming"],
+series: ["Need for Speed"],
+platform: ["Arcade",
+"Game Boy Advance",
+"Mac OS X",
+"Microsoft Windows",
+"Mobile",
+"Nintendo DS",
+"Nintendo GameCube",
+"Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox",
+"Xbox 360",
+"Zeebo",
+],
+releasedDate: ["2006","2007","2008"],
+  genre: ["Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+    title: "New Super Mario Bros. 2",
+    publisher: ["Nintendo"],
+    developer: ["Nintendo EAD"],
+    series: ["Super Mario"],
+    platform: ["Nintendo 3DS"],
+    releasedDate: ["2012"],
+    genre: ["Platformer"],
+    mode: "Single-player & Multiplayer"
+  },
+  {
+    title: "New Super Mario Bros. Wii",
+    publisher: ["Nintendo"],
+    developer: ["Nintendo EAD"],
+    series: ["Super Mario"],
+    platform: ["Nintendo Wii", "Nintendo Wii U", "Nvidia Shield"],
+    releasedDate: ["2009", "2010", "2014", "2015", "2016", "2017"],
+    genre: ["Platformer"],
+    mode: "Single-player & Multiplayer"
+  },
+{
+title: "Nintendo Land",
+publisher: ["Nintendo"],
+developer: ["Nintendo EAD"],
+series: ["Nintendo Land"],
+platform: ["Nintendo Wii U",
+],
+releasedDate: ["2012"],
+  genre: ["Party","Adventure"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Phineas and Ferb: Across the 2nd Dimension",
+publisher: ["Disney Interactive Studios",
+"Sony Computer Entertainment"],
+developer: ["Altron",
+"High Impact Games",
+"Virtual Toys"],
+series: ["Phineas and Ferb"],
+platform: ["Nintendo DS",
+"Nintendo Wii",
+"PlayStation 3",
+"PlayStation Portable",
+],
+releasedDate: ["2011","2012"],
+  genre: ["Action","Adventure","Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Pinkie Pie’s Party",
+publisher: ["THQ"],
+developer: ["Webfoot Technologies"],
+series: ["My Little Pony"],
+platform: ["Nintendo DS",
+
+],
+releasedDate: ["2008"],
+  genre: ["Adventure",],
+mode: "Single-player Only",
+},
+{
+title: "PlayStation All-Stars Battle Royale",
+publisher: ["Sony Computer Entertainment"],
+developer: ["SuperBot Entertainment"],
+series: ["PlayStation All-Stars"],
+platform: ["PlayStation 3",
+"PlayStation Vita",
+
+],
+releasedDate: ["2012"],
+  genre: ["Fighting",],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Rio",
+publisher: ["Nordic Games Publishing",
+"THQ"],
+developer: ["1st Playable Productions-Eurocom Entertainment Software"],
+series: ["Rio"],
+platform: ["PlayStation 3",
+"Nintendo Wii","Xbox 360"
+
+],
+releasedDate: ["2011"],
+  genre: ["Minigame","Party"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Shrek 2",
+publisher: ["Activision",
+"THQ"],
+developer: ["Aspyr",
+"Beenox",
+"Eurofun & DTR",
+"KnowWonder",
+"Luxoflux",
+"Vicarious Visions"],
+series: ["Shrek"],
+platform: ["Game Boy Advance",
+"Mac OS X",
+"Microsoft Windows",
+"Mobile",
+"Nintendo GameCube",
+"PlayStation 2",
+"Xbox"
+],
+releasedDate: ["2004"],
+  genre: ["Minigame","Party"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Shrek Forever After",
+publisher: ["Activision",
+"THQ"],
+developer: ["XPEC Entertainment","Gameloft","Griptonite"],
+series: ["Shrek"],
+platform: ["iOS",
+"Microsoft Windows",
+"Mobile",
+"Nintendo DS",
+"Nintendo Wii",
+"PlayStation 3",
+"Xbox 360"
+],
+releasedDate: ["2010"],
+  genre: ["Action",
+"Adventure",
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Six Flags Fun Park",
+publisher: ["Ubisoft Entertainment"],
+developer: ["7 Studios"],
+series: ["Six Flags"],
+platform: [
+"Nintendo DS",
+"Nintendo Wii","PC",
+"PlayStation 2",
+],
+releasedDate: ["2008","2009"],
+  genre: ["Party",
+"Platformer"],
+mode: "Single-player Only",
+},
+{
+title: "Skate It",
+publisher: ["Electronic Arts"],
+developer: ["EA Black Box",
+"EA Montreal",
+"Exient Entertainment"],
+series: ["Skate"],
+platform: ["iOS",
+"Nintendo DS",
+"Nintendo Wii"
+],
+releasedDate: ["2008","2009"],
+  genre: ["Sports"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Sonic & Sega All-Stars Racing",
+publisher: ["Sega"],
+developer: ["Sumo Digital",
+"Exient Entertainment"],
+series: ["Sega All-Stars"],
+platform: ["Android",
+"Arcade",
+"BlackBerry",
+"iOS",
+"Java ME",
+"Mac OS X",
+"Microsoft Windows",
+"Nintendo DS",
+"Nintendo Wii",
+"PlayStation 3",
+"Xbox 360"
+],
+releasedDate: ["2010"],
+  genre: ["Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Sonic Riders: Zero Gravity",
+publisher: ["Sega"],
+developer: ["Sonic Team",
+"CRI Middleware"],
+series: ["Sonic the Hedgehog"],
+platform: ["Nintendo Wii",
+"Nintendo Wii U",
+"PlayStation 2",
+"PlayStation 3"
+],
+releasedDate: ["2008"],
+  genre: ["Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "SpongeBob Squigglepants",
+publisher: ["THQ"],
+developer: ["WayForward Technologies"],
+series: ["SpongeBob SquarePants"],
+platform: ["Nintendo Wii",
+"Nintendo 3DS",
+
+],
+releasedDate: ["2011"],
+  genre: ["Action"],
+mode: "Single-player Only",
+},
+{
+title: "Sports Champions",
+publisher: ["Sony Computer Entertainment"],
+developer: ["San Diego Studio",
+"Zindagi Games"],
+series: ["Sports Champions"],
+platform: ["PlayStation 3",
+
+],
+releasedDate: ["2010"],
+  genre: ["Action"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Stardew Valley",
+publisher: ["ConcernedApe"],
+developer: ["ConcernedApe"],
+series: ["Stardew Valley"],
+platform: ["Android",
+"iOS",
+"Linux",
+"macOS",
+"Microsoft Windows",
+"Nintendo Switch",
+"PlayStation 4",
+"PlayStation Vita",
+"Xbox One",
+
+],
+releasedDate: ["2016","2017","2018","2019"],
+  genre: ["Role-playing","Simulation"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Stuntman",
+publisher: ["Infogrames"],
+developer: ["Reflections Interactive"],
+series: ["Stuntman"],
+platform: ["PlayStation 2",
+"Game Boy Advance",
+
+],
+releasedDate: ["2002","2003"],
+  genre: ["Action","Adventure","Racing"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Sunset Overdrive",
+publisher: ["Microsoft Studios"],
+developer: ["Blind Squirrel Games",
+"Insomniac Games"],
+series: ["Sunset Overdrive"],
+platform: ["Microsoft Windows",
+"Xbox One",
+
+],
+releasedDate: ["2014","2018"],
+  genre: ["Shooter"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario 3D All-Stars",
+publisher: ["Microsoft Studios"],
+developer: ["1-Up Studio",
+"Nintendo EPD",
+"Nintendo European Research & Development"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Switch",
+
+],
+releasedDate: ["2020"],
+  genre: ["Action",
+"Adventure",
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario 3D Land",
+publisher: ["Nintendo"],
+developer: ["Nintendo EAD Tokyo"
+],
+series: ["Super Mario"],
+platform: ["Nintendo 3DS",
+
+],
+releasedDate: ["2011"],
+  genre: [
+"Platformer"],
+mode: "Single-player Only",
+},
+{
+title: "Super Mario 3D World",
+publisher: ["Nintendo"],
+developer: ["Nintendo EAD Tokyo"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Switch","Nintendo Wii U"
+
+],
+releasedDate: ["2013","2021"],
+  genre: [
+"Platformer"],
+mode: "Single-player Only",
+},
+{
+title: "Super Mario Galaxy 2",
+publisher: ["Nintendo"],
+developer: ["Nintendo EAD Tokyo"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Wii"
+
+],
+releasedDate: ["2010"],
+  genre: [
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario Maker",
+publisher: ["Nintendo"],
+developer: ["Nintendo EAD Group No. 4"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Wii U"
+
+],
+releasedDate: ["2015"],
+  genre: ["Level editor",
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario Maker 2",
+publisher: ["Nintendo"],
+developer: ["Nintendo"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Switch"
+
+],
+releasedDate: ["2019"],
+  genre: ["Level editor",
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario Odyssey",
+publisher: ["Nintendo","Tencent Games"],
+developer: ["1-UP Studio",
+"Nintendo EPD Tokyo"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Switch"
+
+],
+releasedDate: ["2017","2020"],
+  genre: ["Action","Adventure",
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Mario Bros. Wonder",
+publisher: ["Nintendo"],
+developer: ["Nintendo EPD"
+],
+series: ["Super Mario"],
+platform: ["Nintendo Switch"
+
+],
+releasedDate: ["2023"],
+  genre: [
+"Platformer"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "Super Smash Bros. for Nintendo 3DS and Wii U",
+publisher: ["Nintendo"],
+developer: ["Bandai Namco Studios Inc",
+"Sora Ltd."
+],
+series: ["Super Smash Bros."],
+platform: ["Nintendo 3DS","Nintendo Wii U"
+
+],
+releasedDate: ["2014"],
+  genre: [
+"Fighting"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "The Amazing Race",
+publisher: ["Ludia Inc"],
+developer: ["Ubisoft",
+],
+series: ["The Amazing Race"],
+platform: ["Nintendo 3DS","Nintendo Wii U"
+
+],
+releasedDate: ["2010"],
+  genre: [
+"Adventure"],
+mode: "Single-player & Multiplayer",
+},
+{
+title: "The Amazing Spider-Man 2",
+publisher: ["Activision",
+"Square Enix"],
+developer: ["Beenox",
+],
+series: ["The Amazing Spider-Man"],
+platform: ["Android",
+"iOS",
+"Microsoft Windows",
+"Nintendo 3DS",
+"PlayStation 3",
+"PlayStation 4",
+"Nintendo Wii U",
+"Xbox 360",
+"Xbox One"
+
+],
+releasedDate: ["2014"],
+  genre: ["Action",
+"Adventure"],
+mode: "Single-player Only",
+},
+{
+title: "The Awesome Adventures of Captain Spirit",
+publisher: ["Square Enix"],
+developer: ["Dontnod Entertainment",
+],
+series: ["Life is Strange"],
+platform: ["Microsoft Windows",
+"PlayStation 4",
+"Xbox One"
+
+],
+releasedDate: ["2018"],
+  genre: [
+"Adventure"],
+mode: "Single-player Only",
+},
+{
+  title: "The Elder Scrolls V: Skyrim",
+  publisher: ["Bethesda Softworks"],
+  developer: ["Bethesda Game Studios"],
+  series: "The Elder Scrolls", // Removed the line break and array notation for a single item
+  platform: [
+    "Nintendo Switch",
+    "PC",
+    "PlayStation 3",
+    "PlayStation 4",
+    "PlayStation 5",
+    "PlayStation VR",
+    "Xbox 360",
+    "Xbox One",
+    "Xbox Series X/S"
+  ], // Removed the trailing comma and fixed the closing bracket
+  releasedDate: ["2011", "2016", "2017", "2021"],
+  genre: ["Action", "Role-playing"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Fairly OddParents: Shadow Showdown",
+  publisher: ["THQ"],
+  developer: ["Imaginengine",
+"Blitz Games",
+"Helixe"],
+  series: "The Fairly OddParents", // Removed the line break and array notation for a single item
+  platform: [
+    "Game Boy Advance",
+"Microsoft Windows",
+"Nintendo GameCube",
+"PlayStation 2"
+  ], // Removed the trailing comma and fixed the closing bracket
+  releasedDate: ["2004", "2005"],
+  genre: ["Platformer"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Incredibles",
+  publisher: ["THQ"],
+  developer: ["Heavy Iron Studios",
+"Helixe"],
+  series: "The Incredibles", // Removed the line break and array notation for a single item
+  platform: [
+    "Game Boy Advance",
+"Mac OS X",
+"Microsoft Windows",
+"Nintendo GameCube",
+"PlayStation 2",
+"Xbox"
+  ], // Removed the trailing comma and fixed the closing bracket
+  releasedDate: ["2004",],
+  genre: ["Action","Adventure",
+"Fighting"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Legend of Zelda: Breath of the Wild",
+  publisher: ["Nintendo"],
+  developer: ["Nintendo EPD"],
+  series: "The Legend of Zelda", // Removed the line break and array notation for a single item
+  platform: [
+    "Nintendo Switch","Nintendo Wii U"
+  ], // Removed the trailing comma and fixed the closing bracket
+  releasedDate: ["2017",],
+  genre: ["Action","Adventure"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Lego Movie Videogame",
+  publisher: ["Feral Interactive", "Warner Bros. Interactive Entertainment"],
+  developer: ["TT Fusion"], // Fixed the line break in the developer field
+  series: "The Lego Movie Videogame", // This was already correctly formatted
+  platform: [
+    "Android",
+    "iOS",
+    "Mac OS X",
+    "Microsoft Windows",
+    "Nintendo 3DS",
+    "Nintendo Wii U",
+    "PlayStation 3",
+    "PlayStation 4",
+    "PlayStation Vita",
+    "Xbox 360",
+    "Xbox One"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2014", "2015", "2016"],
+  genre: ["Action", "Adventure", "Comic"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "The Oregon Trail",
+  publisher: ["Crave Entertainment"],
+  developer: ["SVG Distribution"], // Fixed the line break in the developer field
+  series: "The Oregon Trail", // Fixed missing comma after the series field
+  platform: [
+    "Nintendo Wii", "Nintendo 3DS"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2011"],
+  genre: ["Education"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Sims 3",
+  publisher: ["Electronic Arts"],
+  developer: ["Maxis Redwood Shores",
+"EA Mobile","Edge of Reality"], // Fixed the line break in the developer field
+  series: "The Sims", // Fixed missing comma after the series field
+  platform: [
+
+"Android",
+"BlackBerry OS",
+"iOS",
+"Mac OS X",
+"Microsoft Windows",
+"N-Gage 2.0",
+"Nintendo DS",
+"Nintendo 3DS",
+"Nintendo Wii",
+"PlayStation 3",
+"Windows Phone"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2009"],
+  genre: ["Simulation"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Sims 3: Starter Pack",
+  publisher: ["Electronic Arts"],
+  developer: ["Maxis"], // Fixed the line break in the developer field
+  series: "The Sims", // Fixed missing comma after the series field
+  platform: [
+
+"Mac","PC"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2013"],
+  genre: ["Simulation"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Sims 4",
+  publisher: ["Electronic Arts"],
+  developer: ["Maxis"], // Fixed the line break in the developer field
+  series: "The Sims", // Fixed missing comma after the series field
+  platform: [
+
+"Mac OS X",
+"Microsoft Windows",
+"PlayStation 4",
+"Xbox One"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2014","2015","2017"],
+  genre: ["Simulation"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Smurfs",
+  publisher: ["Ubisoft"],
+  developer: ["Art Co., Ltd",
+"Ubisoft Osaka"], // Fixed the line break in the developer field
+  series: "The Smurfs", // Fixed missing comma after the series field
+  platform: [
+
+"Nintendo DS"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2011"],
+  genre: ["Minigame"],
+  mode: "Single-player Only"
+},
+{
+  title: "The Smurfs 2",
+  publisher: ["Ubisoft"],
+  developer: ["WayForward"], // Fixed the line break in the developer field
+  series: "The Smurfs", // Fixed missing comma after the series field
+  platform: [
+
+"Nintendo DS",
+"Nintendo Wii",
+"Nintendo Wii U",
+"PlayStation 3",
+"Xbox 360"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2013"],
+  genre: ["Minigame"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "The SpongeBob SquarePants Movie",
+  publisher: ["THQ", "Aspyr"],
+  developer: ["AWE Games", "Aspyr", "Heavy Iron Studios", "WayForward Technologies"],
+  series: "SpongeBob SquarePants",
+  platform: [
+    "Game Boy Advance",
+    "Mac OS X",
+    "Mobile",
+    "Microsoft Windows",
+    "Nintendo GameCube",
+    "PlayStation 2",
+    "Xbox"
+  ],
+  releasedDate: ["2004", "2005"],
+  genre: ["Platformer", "Adventure"], // Fixed the line break in the genre field
+  mode: "Single-player Only"
+},
+
+{
+  title: "The Walking Dead: Survival Instinct",
+  publisher: ["Activision"],
+  developer: ["Terminal Reality",], // Fixed the line break in the developer field
+  series: "The Walking Dead", // Fixed missing comma after the series field
+  platform: [
+"Microsoft Windows",
+"Nintendo Wii U",
+"PlayStation 3",
+"Xbox 360"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2013"],
+  genre: ["Shooter",
+"Survival"],
+  mode: "Single-player Only"
+},
+{
+  title: "Tomodachi Life",
+  publisher: ["Nintendo"],
+  developer: ["Nintendo SPD7",], // Fixed the line break in the developer field
+  series: "Tomodachi Life", // Fixed missing comma after the series field
+  platform: [
+"Nintendo 3DS"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2013","2014"],
+  genre: ["Simulation"],
+  mode: "Single-player Only"
+},
+{
+  title: "Tony Hawk’s Pro Skater 4",
+  publisher: ["Activision"],
+  developer: ["Neversoft",], // Fixed the line break in the developer field
+  series: "Tony Hawks", // Fixed missing comma after the series field
+  platform: [
+"Game Boy Advance",
+"PlayStation",
+"PlayStation 2",
+"Mac OS X",
+"Microsoft Windows",
+"Nintendo GameCube",
+"Tapwave Zodiac",
+"Xbox"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2002","2003","2004"],
+  genre: ["Sports"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Toy Story 3",
+  publisher: ["Disney Interactive Studios",
+"Disney Mobile Studios"],
+  developer: ["Asobo Studio",
+"Avalanche Software",
+"Disney Mobile Studios",
+"n-Space",
+"TransGaming",], // Fixed the line break in the developer field
+  series: "Toy Story", // Fixed missing comma after the series field
+  platform: [
+"iOS",
+"Mac OS X",
+"Microsoft Windows",
+"Nintendo DS",
+"Nintendo Wii",
+"PlayStation 2",
+"PlayStation 3",
+"PlayStation Portable",
+"Xbox 360"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2010"],
+  genre: ["Platformer"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Transformers: Rise of the Dark Spark",
+  publisher: ["Activision"],
+  developer: ["Edge of Reality",
+"WayForward Technologies",], // Fixed the line break in the developer field
+  series: "Transformers", // Fixed missing comma after the series field
+  platform: [
+"Microsoft Windows",
+"Nintendo 3DS",
+"Nintendo Wii U",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360",
+"Xbox One"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2014"],
+  genre: ["Shooter","Role-playing"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "uDraw Studio",
+  publisher: ["THQ"],
+  developer: ["Pipeworks Software",], // Fixed the line break in the developer field
+  series: "uDraw", // Fixed missing comma after the series field
+  platform: [
+"Nintendo Wii"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2010","2011"],
+  genre: ["Art"],
+  mode: "Single-player Only"
+},
+{
+  title: "Ultimate NES Remix",
+  publisher: ["Nintendo"],
+  developer: ["Nintendo EAD Tokyo",], // Fixed the line break in the developer field
+  series: "NES Remix", // Fixed missing comma after the series field
+  platform: [
+"Nintendo 3DS"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2014","2015","2018"],
+  genre: ["Minigame"],
+  mode: "Single-player Only"
+},
+{
+  title: "Uncharted: Drake’s Fortune",
+  publisher: ["Sony Computer Entertainment"],
+  developer: ["Naughty Dog",], // Fixed the line break in the developer field
+  series: "Uncharted", // Fixed missing comma after the series field
+  platform: [
+"PlayStation 3"
+  ], // Removed comment about trailing comma as there wasn't one
+  releasedDate: ["2007"],
+  genre: ["Action","Adventure","Shooter"],
+  mode: "Single-player Only"
+},
+{
+  title: "Uncharted 4: A Thief’s End",
+  publisher: ["Sony Computer Entertainment"],
+  developer: ["Naughty Dog",], // Fixed the line break in the developer field
+  series: "Uncharted", // Fixed missing comma after the series field
+  platform: [
+"Microsoft Windows",
+"PlayStation 4",
+"PlayStation 5"
+  ],
+  releasedDate: ["2016","2022"],
+  genre: ["Action","Adventure","Shooter"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Watch Dogs",
+  publisher: ["Ubisoft"],
+  developer: ["Ubisoft Montreal",], // Fixed the line break in the developer field
+  series: "Watch Dogs", // Fixed missing comma after the series field
+  platform: [
+"Microsoft Windows",
+"Nintendo Wii U",
+"PlayStation 3",
+"PlayStation 4",
+"Xbox 360",
+"Xbox One"
+  ],
+  releasedDate: ["2014"],
+  genre: ["Action","Adventure","Shooter"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Watch Dogs 2",
+  publisher: ["Ubisoft"],
+  developer: ["Ubisoft Montreal",], // Fixed the line break in the developer field
+  series: "Watch Dogs", // Fixed missing comma after the series field
+  platform: [
+"Microsoft Windows",
+"PlayStation 4",
+"Xbox One"
+  ],
+  releasedDate: ["2016"],
+  genre: ["Action","Adventure","Shooter"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Watch Dogs: Legion",
+  publisher: ["Ubisoft"],
+  developer: ["Ubisoft Toronto",], // Fixed the line break in the developer field
+  series: "Watch Dogs", // Fixed missing comma after the series field
+  platform: [
+"Google Stadia",
+"Microsoft Windows",
+"PlayStation 4",
+"PlayStation 5",
+"Xbox One",
+"Xbox Series X/S"
+  ],
+  releasedDate: ["2020"],
+  genre: ["Action","Adventure","Shooter"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Wii Play",
+  publisher: ["Nintendo"],
+  developer: ["Nintendo EAD",], // Fixed the line break in the developer field
+  series: "Wii", // Fixed missing comma after the series field
+  platform: [
+"Nintendo Wii"
+  ],
+  releasedDate: ["2006","2007"],
+  genre: ["Party"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Wii Sports",
+  publisher: ["Nintendo"],
+  developer: ["Nintendo EAD",], // Fixed the line break in the developer field
+  series: "Wii", // Fixed missing comma after the series field
+  platform: [
+"Nintendo Wii"
+  ],
+  releasedDate: ["2006"],
+  genre: ["Sports"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Wipeout",
+  publisher: ["Activision"],
+  developer: ["Activision",], // Fixed the line break in the developer field
+  series: "Wipeout", // Fixed missing comma after the series field
+  platform: [
+"iOS",
+"Nintendo DS",
+"Nintendo Wii"
+  ],
+  releasedDate: ["2012"],
+  genre: ["Party",
+"Platformer"],
+  mode: "Single-player & Multiplayer"
+},
+{
+  title: "Wipeout 2",
+  publisher: ["Activision","Activision Blizzard"],
+  developer: ["Behaviour Interactive",], // Fixed the line break in the developer field
+  series: "Wipeout", // Fixed missing comma after the series field
+  platform: [
+"iOS",
+"Nintendo 3DS",
+"Nintendo Wii",
+"Nintendo DS",
+"PlayStation 3",
+"Xbox 360"
+  ],
+  releasedDate: ["2014"],
+  genre: ["Party",
+"Platformer"],
+  mode: "Single-player & Multiplayer"
+},
+]
 // Update SubCategory Function
 function updateSubCategory() {
   const mainCategory = document.getElementById('mainCategory').value;
@@ -2045,7 +3749,7 @@ console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
 
     async function liveSearch(query) {
         var searchResultsContainer = document.getElementById('searchResults');
-        var gameListContainer = document.getElementById('game-list');
+        var gameListContainer = document.getElementById('game-list2');
         searchResultsContainer.innerHTML = ''; // Clear previous results
 
         try {
@@ -2203,10 +3907,10 @@ function decreaseFont() {
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var searchInput = document.querySelector('.sidebar input[type="text"]');
-        var gameListContainer = document.querySelector('.sidebar #game-list');
+        var gameListContainer = document.querySelector('.sidebar #game-list2');
 
         // Get all game links in the game list with data-game attribute
-        var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list [data-game]'));
+        var gameLinks = Array.from(document.querySelectorAll('.sidebar #game-list2 [data-game]'));
 
         searchInput.addEventListener('input', function () {
             var searchTerm = this.value.toLowerCase();
@@ -2377,7 +4081,16 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
-
+<script>
+document.getElementById('filterCheckbox').addEventListener('change', function() {
+    var filterOptionsDiv = document.getElementById('filterOptions');
+    if (this.checked) {
+        filterOptionsDiv.style.display = 'block';
+    } else {
+        filterOptionsDiv.style.display = 'none';
+    }
+});
+</script>
 
   </body>
   </html>
