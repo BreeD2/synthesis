@@ -1583,7 +1583,7 @@ select:hover {
     cursor: pointer;
     font-weight: normal;
     text-align: center;
-    padding: 5px
+
   }
 
 
@@ -1866,4 +1866,30 @@ body.dark-mode .next {
 
 }  #google_translate_element {
     width: 100%;
+    }
+
+    .game-container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .game-cover {
+        width: 10%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .game-title {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .game-info {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
     }

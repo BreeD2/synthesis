@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-US">
+<html>
+ <head>
+   <title>Reminiscence Collection</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+   <center>
+
+   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet"href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+
+  <script src="accessibility/index.html"></script>
+  <script src="script.js"></script>
+<style>
+</style>
+</head>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation Bar with Logo and Website Name -->
+ <div class="topnav">
+   <!-- Logo and Website Name -->
+   <a href="index.html">
+     <img src="r.png" alt="Logo" style="height: 20px;"> <!-- Adjust the path and style as needed -->
+     Reminiscence Collection
+   </a>
+
+   <!-- Navigation Links -->
+   <a class="active" href="index.html">Home</a>
+    <a href="games/index.html">Games</a>
+   <a href="about/index.html">About</a>
+   <a href="contact/index.html">Contact</a>
+    <a href="login/index.html">Login</a>
+     <a href="signup/index.html">Signup</a>
+
+   <!-- Search Input -->
+   <input type="text" placeholder="Search..">
+ </div>
+
+ <div class="game-container">
+       <img src="animalcrossingnewhorizons.png" alt="Animal Crossing: New Horizons" class="game-cover"download="Animal Crossing New Horizons">
+       <h1 class="game-title">Animal Crossing: New Horizons</h1>
+       <button id="likeButton" class="icon-button"><i class="far fa-thumbs-up"></i> Like</button>
+    <button id="commentButton" class="icon-button"><i class="far fa-comment"></i> Comment</button>
+       <p class="game-info"><strong>Developer:</strong><br>Nintendo EPD</p>
+       <p class="game-info"><strong>Publisher:</strong><br>Nintendo</p>
+       <p class="game-info"><strong>Series:</strong><br>Animal Crossing</p>
+       <p class="game-info"><strong>Platforms:</strong><br>Nintendo Switch</p>
+       <p class="game-info"><strong>Released Date(s):</strong><br>March 20, 2020</p>
+       <p class="game-info"><strong>Genre(s):</strong><br>Simulation</p>
+       <p class="game-info"><strong>Mode(s):</strong> Single-player & Multiplayer</p>
+
+       <p class="game-info">
+     <strong>My Review:</strong><br><span class="star-rating">
+         <i class="fas fa-star"></i> <!-- 1st star -->
+         <i class="fas fa-star"></i> <!-- 2nd star -->
+         <i class="fas fa-star"></i> <!-- 3rd star -->
+         <i class="fas fa-star"></i> <!-- 4th star -->
+         <i class="far fa-star"></i> <!-- 5th star (empty) -->
+     </span>
+     <br> After experiencing my first foray into the Animal Crossing universe with "New Leaf," I've become quite the enthusiast. "Animal Crossing: New Horizons" elevates the series with its expansive customization options, allowing for a level of personal expression I hadn't encountered before in gaming. For the first time, I was able to craft a character who truly mirrored my appearance, adding a personal touch to my virtual escapade. The game's landscaping possibilities are impressive, offering endless creativity in designing one's island paradise. The ability to design and share unique clothing, hats, and art enhances this further, although I'm less thrilled about the restriction of one island per console — a limitation that feels unnecessarily binding without investing in additional hardware. While I yearn for richer dialogues from the animal inhabitants to enrich the world further, my overall experience has been profoundly positive. Acquiring the game in March 2020, amid the pandemic, it provided not just a delightful escape but a means to connect and share moments with others during isolation.
+
+ </p>
+
+   </div>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Control Buttons -->
+    <div class="modal-footer">
+      <!-- Zoom In Button -->
+      <button id="zoomIn" class="zoom-btn">+</button>
+
+      <!-- Zoom Out Button -->
+      <button id="zoomOut" class="zoom-btn">-</button>
+        <a href="animalcrossingnewhorizons.png" download="Animal Crossing New Horizons">
+          <button id="downloadButton">Download</button>
+
+        </a>
+    </div>
+</div>
+
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal
+var img = document.querySelector(".game-cover");
+var modalImg = document.getElementById("img01");
+img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span>, close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Zoom functionality
+var zoomLevel = 1;
+var zoomStep = 0.1;
+
+document.getElementById("zoomIn").addEventListener("click", function() {
+    zoomLevel += zoomStep;
+    modalImg.style.transform = "scale(" + zoomLevel + ")";
+});
+
+document.getElementById("zoomOut").addEventListener("click", function() {
+    if (zoomLevel > zoomStep) {
+        zoomLevel -= zoomStep;
+        modalImg.style.transform = "scale(" + zoomLevel + ")";
+    }
+});
+</script>
+
+<script>
+  document.getElementById("likeButton").addEventListener("click", function() {
+    if (isUserSignedIn()) {
+        // Logic to handle liking the game
+        alert("Liked!");
+    } else {
+        alert("Please sign in to like this game.");
+    }
+});
+
+document.getElementById("commentButton").addEventListener("click", function() {
+    if (isUserSignedIn()) {
+        // Logic to handle commenting on the game
+        alert("Opening comment box..."); // Placeholder action
+    } else {
+        alert("Please sign in to comment on this game.");
+    }
+});
+
+function isUserSignedIn() {
+    // Placeholder function: Implement your authentication check here
+    // Return true if user is signed in, false otherwise
+    return false; // Change this based on actual sign-in status
+}
+</script>
+
+ </body>
