@@ -1872,7 +1872,7 @@ body.dark-mode .next {
     .game-container {
         max-width: 800px;
         margin: auto;
-        background-color: #fff;
+        background-color: lightgrey;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -2034,4 +2034,29 @@ button {
 
 .icon-button.selected {
   color: orange;
+}
+.dark-mode .game-container{
+  background-color: dimgrey;
+  color:white
+}
+
+.light-mode .game-container{
+  background-color: whitesmoke;
+  color:white
+}
+
+.dark-mode .game-title {
+  color:white
+}
+
+.dark-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: white;
+    background-color:  #222;
+
+}
+
+.dark-mode .game-info {
+  color:white;
+  background-color: #222;
 }
