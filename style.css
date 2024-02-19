@@ -628,7 +628,8 @@ body.light-mode .cog-icon * {
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
-       color: white; /* Change color when active */
+       color: white; /* Change color when active */;
+       background-color: transparent
 
    }
 
@@ -734,97 +735,6 @@ body.light-mode .cog-icon * {
   width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-.row {
-  width: 50%
-}
-
-#caption {
-  color:white
-}
-
-.mySlides {
-    display: none; /* Hide slides initially */
-    position: relative; /* Position relative to its normal position */
-    text-align: center; /* Center the content inside each slide */
-    width:50%; /* Full width of the container */;
-
-}
-
-.numbertext {
-    color: #f2f2f2; /* Light-colored text */
-    font-size: 12px; /* Small font size for the number text */
-    padding: 8px 12px; /* Padding for spacing */
-    position: absolute; /* Position it absolutely inside the slide */
-    top: 0; /* At the top of the slide */
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    left: 0; /* Align to the left */
-}
-
-.mySlides img {
-    width: 100%; /* Full width of the slide */
-    height: auto; /* Maintain aspect ratio */
-}
-
-#slideshow {
-    width: 100%;
-    position: relative;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.prev, .next {
-    /* common styles for navigation buttons */
-}
-
-/* Horizontal layout for larger screens */
-@media (min-width: 768px) {
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-}
-
-/* Vertical layout for smaller screens */
-@media (max-width: 767px) {
-    #slideshow {
-        height: 300px; /* adjust as needed */
-        overflow: hidden;
-    }
-
-    .slide {
-        display: block;
-        height: 300px; /* adjust as needed */
-    }
-
-    .prev, .next {
-        position: static;
-        width: 100%;
-        text-align: center;
-        border-radius: 0;
-    }
-
-    .next {
-        border-radius: 0;
-    }
-}
 
 .sidebar-open .container {
     margin-left: 250px; /* Adjust according to the width of your sidebar */
@@ -1251,6 +1161,7 @@ select:hover {
   position: relative;
   max-width: 1000px; /* Adjust based on your preference */
   margin: auto;
+
 }
 
 /* Hide the images by default */
@@ -1306,35 +1217,97 @@ select:hover {
 
 .featured-games-title {
   text-align: center;
-  margin: 0 20px; /* Adds space above and below the title */
-  font-size: 20px; /* Adjust font size as needed */
-  color: #ffffff; /* Change color as needed */
-  font-weight: bold;
-  background-color: red; /* Background color to make it stand out */
-  padding: 10px;
-  border-radius: 5px; /* Adds rounded corners */
-
-
-  margin-left: auto; /* Centers the title */
-  margin-right: auto; /* Centers the title */;
-  width: 100%;
-}
-
-.featured-games-title {
-  text-align: center;
   margin: 20px 0 20px; /* Adds space above and below the title */
-  font-size: 23px; /* Adjust font size as needed */
+  font-size: 25px; /* Adjust font size as needed */
   color: #ffffff; /* Change color as needed */
   font-weight: bold;
   background-color: red; /* Background color to make it stand out */
-  padding: 1px;
+  padding: 5px;
   border-radius: 5px; /* Adds rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
-  width:50%;
+  width:60%;
   margin-left: auto; /* Centers the title */
   margin-right: auto; /* Centers the title */
 }
 
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Maximum width of the slideshow */
+  margin: auto; /* Center the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* Position the buttons in the middle vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Rounded corners for the left side */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Rounded corners for the right side */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Full-width images within slides */
+.mySlides img {
+  display: block; /* Ensures the image is block level to take the width properly */
+  margin: auto; /* Centers the image */
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintains the aspect ratio */
+}
 
 
 .games-grid {
@@ -1484,38 +1457,10 @@ select:hover {
     margin: auto; /* Center the container */
 }
 
-/* Adjusted .prev and .next arrow styles */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%; /* Align vertically */
-    transform: translateY(-50%); /* Center vertically */
-    z-index: 0; /* Ensure arrows are above the slides */
-    color: #ffffff; /* Arrow color */
-    font-size: 24px; /* Arrow size */
-    padding: 16px; /* Clickable area size */
-    user-select: none; /* Prevent text selection */
-}
 
-.prev { left: calc(25% - 44px); } /* Position the "previous" arrow taking into account 50% width of .mySlides */
-.next { right: calc(25% - 44px); } /* Position the "next" arrow similar to the "prev" but from the right */
 
-/* Additional hover effects for better UX */
-.prev:hover, .next:hover {
-    color: #dcdcdc; /* Lighten color on hover */
-}
 
-/* Responsive adjustments */
-@media screen and (max-width: 500px) {
-    .mySlides {
-        width: 100%; /* Increase width to occupy more space on smaller screens */
-    }
-    .prev {
-      left:5px
-    }
-    .next {
-      right:14px;
-    }}
+
 
     /* styles.css */
     #games-list {
@@ -1624,6 +1569,7 @@ select:hover {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 2
   }
 
 
@@ -1665,6 +1611,8 @@ select:hover {
     padding: 10px ;
     font-size: 20px;
   }
+
+
 
   .footer {
       width: 100%;
@@ -1781,6 +1729,94 @@ background-color: black; /* Light grey background for the footer */
 color: white; /* Dark text color for readability */
 
 }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 body.dark-mode #about {
 background-color: black;
 }
@@ -1794,6 +1830,8 @@ color:white
 .sort {
   font-size: 25px;
   color:white
+
+
 }
 body.light-mode .sort {
   color:white
@@ -1867,3 +1905,124 @@ body.dark-mode .next {
 }  #google_translate_element {
     width: 100%;
     }
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}

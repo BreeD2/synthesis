@@ -325,7 +325,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
         <div id="main-content" class="content">
           <!-- Container for the image gallery -->
           <div class="opening-screen">
-                <div class="welcome">Welcome to Reminiscence Collection<b>
+                <div class="welcome">Welcome to Reminiscence Collection
                 <div class="underwelcome">Explore the history and legacy of video games.</div>
                 <button id="enter-site-button" onclick="enterSite()">Enter</button>
 
@@ -335,92 +335,98 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
     <div class="what">What is Reminiscence Collection?</div>
     <p>Explore the Reminiscence Collection universe, featuring details on over 170 video games. Sort through the collection using a variety of filters, including series, platforms, genres, and more. This website has many accessibility options at the top right where they can change the page look. Users can also sign in to save games and can write how they feel about the games.</p>
 </section>
-<div class="featured-games-title">
-  Featured Games
-</div>
-<div class="container">
 
-  <!-- Full-width images with number text -->
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-      <img src="featured/supermarioodyssey.png" style="width:100%">
-  </div>
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-      <img src="featured/tomodachilife.jpg" style="width:100%">
-  </div>
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-      <img src="featured/littlebigplanet.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-      <img src="featured/nba2k22.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-      <img src="featured/midnightclub3dubedition.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-      <img src="featured/frogger2swampysrevenge.jpg" style="width:100%">
-
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="featured/supermarioodyssey.png" style="width:100%" onclick="currentSlide(1)" alt="Super Mario Odyssey">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="featured/tomodachilife.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tomodachi Life">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="featured/littlebigplanet.png" style="width:100%" onclick="currentSlide(3)" alt="LittleBigPlanet">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="featured/nba2k22.png" style="width:100%" onclick="currentSlide(4)" alt="NBA 2K22">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="featured/midnightclub3dubedition.png" style="width:100%" onclick="currentSlide(5)" alt="Midnight Club 3: Dub Edition">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="featured/frogger2swampysrevenge.jpg" style="width:100%" onclick="currentSlide(6)" alt="Frogger 2: Swampy's Revenge">
-    </div>
-  </div>
-</div>
-
-<!-- The Modal -->
+<!-- The Modal (separate from the slideshow navigation) -->
 <div id="myModal" class="modal">
-  <!-- The Close Button -->
   <span class="close">&times;</span>
-
-  <!-- Zoom In Button -->
   <button id="zoomIn" class="zoom-btn">+</button>
-
-  <!-- Zoom Out Button -->
   <button id="zoomOut" class="zoom-btn">-</button>
-
-  <!-- Modal Content (The Image) -->
   <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
+  
 </div>
+
+<section id="featured-games">
+  <div class="featured-games-title">
+    Featured Games
+  </div>
+  <div class="games-carousel">
+    <div class="game-card" id="animal-crossing-new-horizons">
+      <img src="featured/supermarioodyssey.png" alt="Animal Crossing: New Horizons Cover">
+      <div class="game-info">
+        <h3 class="game-title">Super Mario Odyssey</h3>
+        <p><strong>Developer(s):</strong><br> 1-UP Studio<br>
+Nintendo EPD Tokyo
+</p>
+        <p><strong>Publisher(s):</strong><br>Nintendo<br>
+Tencent Games (China)
+</p>
+        <p><strong>Series:</strong> <br>Super Mario</p>
+        <p><strong>Platform(s):</strong> <br>Nintendo Switch</p>
+        <p><strong>Released Date(s):</strong> <br>Japan: October 27, 2017<br>
+USA: October 27, 2017<br>
+Mexico: October 27, 2017<br>
+Europe: October 27, 2017<br>
+Australia: October 27, 2017<br>
+Hong Kong: October 27, 2017<br>
+South Korea: December 1, 2017<br>
+Republic of China: December 1, 2017<br>
+China: March 16, 2020
+</p>
+        <p><strong>Genre(s):</strong> <br>Action<br>
+Adventure<br>
+Platformer
+</p>
+        <p><strong>Mode(s):</strong> <br>Single-player & Multiplayer</p>
+      </div>
+    </div>
+    <div class="games-carousel">
+      <div class="game-card" id="animal-crossing-new-horizons">
+        <img src="featured/midnightclub3dubedition.png" alt="Cover art of Midnight Club 3: Dub Edtion">
+        <div class="game-info">
+          <h3 class="game-title">Midnight Club 3: Dub Edition</h3>
+          <p><strong>Developer(s):</strong><br> Rockstar San Diego</p>
+          <p><strong>Publisher(s):</strong><br> Rockstar Games</p>
+          <p><strong>Series:</strong> <br>Animal Crossing</p>
+          <p><strong>Platform(s):</strong> <br>PlayStation 2<br>
+PlayStation Portable<br>
+Xbox
+</p>
+          <p><strong>Released Date(s):</strong> <br>PlayStation 2, Xbox<br>
+North America: April 12, 2005<br>
+Phase Alternating Line: April 15, 2005<br>
+PlayStation Portable<br>
+North America: June 28, 2005<br>
+Phase Alternating Line: September 1, 2005<br>
+Remix<br>
+North America: March 13, 2006<br>
+Europe: March 17, 2006
+</p>
+          <p><strong>Genre(s):</strong> <br>Racing</p>
+          <p><strong>Mode(s):</strong> <br>Single-player & Multiplayer</p>
+        </div>
+      </div>
+      <div class="games-carousel">
+        <div class="game-card" id="animal-crossing-new-horizons">
+          <img src="featured/supermarioodyssey.png" alt="Animal Crossing: New Horizons Cover">
+          <div class="game-info">
+            <h3 class="game-title">Animal Crossing: New Horizons</h3>
+            <p><strong>Developer(s):</strong><br> Nintendo EPD</p>
+            <p><strong>Publisher(s):</strong><br> Nintendo</p>
+            <p><strong>Series:</strong> <br>Animal Crossing</p>
+            <p><strong>Platform(s):</strong> <br>Nintendo Switch</p>
+            <p><strong>Released Date(s):</strong> <br>March 20, 2020</p>
+            <p><strong>Genre(s):</strong> <br>Simulation</p>
+            <p><strong>Mode(s):</strong>
+              <br>Single-player & Multiplayer</p>
+          </div>
+        </div>
+
+
+  </div>
+</section>
+
 
 
 
@@ -1569,7 +1575,7 @@ platform: [
   title: "Mario & Sonic at the Rio 2016 Olympic Games",
   publisher: [
 "Nintendo"],
-  developer: ["Arzest","Sega Sports R&D","Spike Chunsoft"],
+  developer: ["Arzest/Spike Chunsoft","Sega Sports R&D","Spike Chunsoft"],
   series: ["Mario & Sonic"],
 platform: ["Arcade","Nintendo 3DS","Nintendo Wii U"
 ],
@@ -3156,7 +3162,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         <script>
-          let slideIndex = 1;
+        let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -3172,8 +3178,7 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -3184,8 +3189,8 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}</script>
+}
+        </script>
 
 <script>
   document.querySelector('.menu-toggle').addEventListener('click', function() {
@@ -4093,6 +4098,25 @@ document.getElementById('filterCheckbox').addEventListener('change', function() 
         filterOptionsDiv.style.display = 'none';
     }
 });
+</script>
+
+<script>
+fetch('/api/featured-games')
+  .then(response => response.json())
+  .then(games => {
+    const carousel = document.querySelector('.games-carousel');
+    games.forEach(game => {
+      const card = document.createElement('div');
+      card.className = 'game-card';
+      card.innerHTML = `
+        <img src="${game.coverImage}" alt="${game.title}">
+        <p class="game-title">${game.title}</p>
+        <!-- Add more details as needed -->
+      `;
+      carousel.appendChild(card);
+    });
+  })
+  .catch(error => console.error('Error fetching featured games:', error));
 </script>
 
   </body>

@@ -1118,7 +1118,7 @@ select:hover {
     font-weight: bold
 
 }
-@keyframes fadeIn {
+frames fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
@@ -1591,6 +1591,8 @@ select:hover {
   #filterCheckbox {
     margin-top: 10px;
 }
+
+
 
 
   /* The Modal (background) */
