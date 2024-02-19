@@ -2099,3 +2099,16 @@ button {
   color:white;
   background-color: #222;
 }
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}

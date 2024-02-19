@@ -1574,10 +1574,6 @@ select:hover {
 
 
 
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
 
   /* Zoom Buttons */
   .zoom-btn {
@@ -2025,4 +2021,101 @@ p {
     font-size: 15px; /* Adjust font size as needed */;
     padding: 20px
 
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Zoom buttons */
+.zoom-btn {
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+.platform {
+  margin-bottom: 10px; /* Creates space between each platform */
+  /* Additional styling can be applied here */
 }

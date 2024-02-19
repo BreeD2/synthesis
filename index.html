@@ -336,97 +336,50 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
     <p>Explore the Reminiscence Collection universe, featuring details on over 170 video games. Sort through the collection using a variety of filters, including series, platforms, genres, and more. This website has many accessibility options at the top right where they can change the page look. Users can also sign in to save games and can write how they feel about the games.</p>
 </section>
 
-
-
-<!-- The Modal (separate from the slideshow navigation) -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <button id="zoomIn" class="zoom-btn">+</button>
-  <button id="zoomOut" class="zoom-btn">-</button>
-  <img class="modal-content" id="img01">
-  
-</div>
-
 <section id="featured-games">
-  <div class="featured-games-title">
-    Featured Games
-  </div>
+  <div class="featured-games-title">Featured Games</div>
   <div class="games-carousel">
-    <div class="game-card" id="animal-crossing-new-horizons">
-      <img src="featured/supermarioodyssey.png" alt="Animal Crossing: New Horizons Cover">
-      <div class="game-info">
-        <h3 class="game-title">Super Mario Odyssey</h3>
-        <p><strong>Developer(s):</strong><br> 1-UP Studio<br>
-Nintendo EPD Tokyo
-</p>
-        <p><strong>Publisher(s):</strong><br>Nintendo<br>
-Tencent Games (China)
-</p>
-        <p><strong>Series:</strong> <br>Super Mario</p>
-        <p><strong>Platform(s):</strong> <br>Nintendo Switch</p>
-        <p><strong>Released Date(s):</strong> <br>Japan: October 27, 2017<br>
-USA: October 27, 2017<br>
-Mexico: October 27, 2017<br>
-Europe: October 27, 2017<br>
-Australia: October 27, 2017<br>
-Hong Kong: October 27, 2017<br>
-South Korea: December 1, 2017<br>
-Republic of China: December 1, 2017<br>
-China: March 16, 2020
-</p>
-        <p><strong>Genre(s):</strong> <br>Action<br>
-Adventure<br>
-Platformer
-</p>
-        <p><strong>Mode(s):</strong> <br>Single-player & Multiplayer</p>
+    <!-- Game Card: Super Mario Odyssey -->
+    <div class="game-card">
+      <img src="featured/supermarioodyssey.png" alt="Super Mario Odyssey Cover" class="game-cover">
+      <div class="game-info" id="game1-info">
+        <!-- Game details will be inserted here -->
       </div>
     </div>
-    <div class="games-carousel">
-      <div class="game-card" id="animal-crossing-new-horizons">
-        <img src="featured/midnightclub3dubedition.png" alt="Cover art of Midnight Club 3: Dub Edtion">
-        <div class="game-info">
-          <h3 class="game-title">Midnight Club 3: Dub Edition</h3>
-          <p><strong>Developer(s):</strong><br> Rockstar San Diego</p>
-          <p><strong>Publisher(s):</strong><br> Rockstar Games</p>
-          <p><strong>Series:</strong> <br>Animal Crossing</p>
-          <p><strong>Platform(s):</strong> <br>PlayStation 2<br>
-PlayStation Portable<br>
-Xbox
-</p>
-          <p><strong>Released Date(s):</strong> <br>PlayStation 2, Xbox<br>
-North America: April 12, 2005<br>
-Phase Alternating Line: April 15, 2005<br>
-PlayStation Portable<br>
-North America: June 28, 2005<br>
-Phase Alternating Line: September 1, 2005<br>
-Remix<br>
-North America: March 13, 2006<br>
-Europe: March 17, 2006
-</p>
-          <p><strong>Genre(s):</strong> <br>Racing</p>
-          <p><strong>Mode(s):</strong> <br>Single-player & Multiplayer</p>
-        </div>
+
+    <!-- Game Card: Midnight Club 3: Dub Edition -->
+    <div class="game-card">
+      <img src="featured/midnightclub3dubedition.png" alt="Cover art of Midnight Club 3: Dub Edition" class="game-cover">
+      <div class="game-info" id="game2-info">
+        <!-- Game details will be inserted here -->
       </div>
-      <div class="games-carousel">
-        <div class="game-card" id="animal-crossing-new-horizons">
-          <img src="featured/supermarioodyssey.png" alt="Animal Crossing: New Horizons Cover">
-          <div class="game-info">
-            <h3 class="game-title">Animal Crossing: New Horizons</h3>
-            <p><strong>Developer(s):</strong><br> Nintendo EPD</p>
-            <p><strong>Publisher(s):</strong><br> Nintendo</p>
-            <p><strong>Series:</strong> <br>Animal Crossing</p>
-            <p><strong>Platform(s):</strong> <br>Nintendo Switch</p>
-            <p><strong>Released Date(s):</strong> <br>March 20, 2020</p>
-            <p><strong>Genre(s):</strong> <br>Simulation</p>
-            <p><strong>Mode(s):</strong>
-              <br>Single-player & Multiplayer</p>
-          </div>
-        </div>
+    </div>
 
-
+    <!-- Game Card: Animal Crossing: New Horizons -->
+    <div class="game-card">
+      <img src="featured/animalcrossingnewhorizons.png" alt="Animal Crossing: New Horizons Cover" class="game-cover">
+      <div class="game-info" id="game3-info">
+        <!-- Game details will be inserted here -->
+      </div>
+    </div>
   </div>
 </section>
 
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div class="modal-footer">
+
+    <button id="zoomIn" class="zoom-btn">+</button>
+    <button id="zoomOut" class="zoom-btn">-</button>
+    <!-- The Download button is dynamic based on the image shown, so it's moved to JavaScript -->
+
+
+  </div>
+</div>
 
 
 
@@ -4117,6 +4070,251 @@ fetch('/api/featured-games')
     });
   })
   .catch(error => console.error('Error fetching featured games:', error));
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get all images that will open the modal and insert them inside the modal when clicked
+  var imgs = document.querySelectorAll(".game-cover");
+  var modalImg = document.getElementById("img01");
+
+  // Attach onclick event to each image
+  imgs.forEach(img => {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  });
+
+  // Get the <span> element that closes the modal and close it when clicked
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Zoom functionality
+  var zoomLevel = 1;
+  var zoomStep = 0.1;
+
+  document.getElementById("zoomIn").addEventListener("click", function() {
+    zoomLevel += zoomStep;
+    modalImg.style.transform = "scale(" + zoomLevel + ")";
+  });
+
+  document.getElementById("zoomOut").addEventListener("click", function() {
+    if (zoomLevel > 1) { // Ensure zoom level does not go below 1
+      zoomLevel -= zoomStep;
+      modalImg.style.transform = "scale(" + zoomLevel + ")";
+    }
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const gameDetails = [
+    [
+      // Details for game slot 1
+      {
+        title: "Super Mario Odyssey",
+        developer: "1-UP Studio, Nintendo EPD Tokyo",
+        publisher: "Nintendo, Tencent Games (China)",
+        series: "Super Mario",
+        platform: "Nintendo Switch",
+        releaseDates: [
+      "Japan: October 27, 2017",
+"<br>USA: October 27, 2017",
+"<br>Mexico: October 27, 2017",
+"<br>Europe: October 27, 2017",
+"<br>Australia: October 27, 2017",
+"<br>Hong Kong: October 27, 2017",
+"<br>South Korea: December 1, 2017",
+"<br>Republic of China: December 1, 2017",
+"<br>China: March 16, 2020"
+      ],
+        genres:
+        [
+      "Action",
+      "<br>Adventure","<br>Platformer"
+
+      ],
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/supermarioodyssey.png",
+        imgAlt: "Cover art of Super Mario Odyssey"
+      },
+      {
+        title: "NBA 2K22",
+        developer: "Visual Concepts",
+        publisher: "2K",
+        series: "NBA 2K",
+        platform: [
+    "Apple Arcade (Arcade Edition)",
+    "<br>Microsoft Windows",
+    "<br>Nintendo Switch",
+    "<br>PlayStation 4",
+    "<br>PlayStation 5",
+    "<br>Xbox One",
+    "<br>Xbox Series X/S"
+  ],
+  releaseDates: [
+"Worldwide: September 10, 2021",
+"<br>Arcade Edition",
+"<br>Worldwide: October 19, 2021"
+],
+        genres: "Sports",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/nba2k22.png",
+        imgAlt: "Cover art of NBA 2K22"
+      },
+    ],
+    [
+      // Details for game slot 2
+      {
+        title: "Midnight Club 3: Dub Edition",
+        developer: "Rockstar San Diego",
+        publisher: "Rockstar Games",
+        series: "Midnight Club",
+        platform: [
+      "PlayStation 2",
+"<br>PlayStation Portable",
+"<br>Xbox"
+      ],
+        releaseDates: [
+      "PlayStation 2", "<br>Xbox",
+"<br>North America: April 12, 2005",
+"<br>Phase Alternating Line: April 15, 2005",
+"<br>PlayStation Portable",
+"<br>North America: June 28, 2005",
+"<br>Phase Alternating Line: September 1, 2005",
+"<br>Remix",
+"<br>North America: March 13, 2006",
+"<br>Europe: March 17, 2006"
+      ],
+        genres: "Racing",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/midnightclub3dubedition.png",
+        imgAlt: "Cover art of Midnight Club 3: Dub Edition"
+      },
+      // Details for game slot 2
+      {
+        title: "Frogger 2: Swampy’s Revenge",
+        developer: [
+      "Blitz Games (PlayStation, Dreamcast, Microsoft Windows)",
+"<br>Game Titan (Game Boy Color)"
+      ],
+        publisher: "Frogger",
+        series: "Frogger",
+        platform: [
+      "Dreamcast",
+"<br>Game Boy Color",
+"<br>Microsoft Windows",
+"PlayStation"
+      ],
+        releaseDates: [
+      "North America: September 21, 2000",
+"<br>Europe: October 13, 2000 (PC, PlayStation)",
+"<br>Dreamcast",
+"<br>North America: October 13, 2000"
+      ],
+        genres: "Action",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/frogger2swampysrevenge.jpg",
+        imgAlt: "Cover art of Frogger 2: Swampy’s Revenge"
+      },
+    ],
+    [
+      // Details for game slot 3
+      {
+        title: "LittleBigPlanet",
+        developer:
+      "Media Molecule",
+        publisher: "Sony Computer Entertainment",
+        series: "LittleBigPlanet",
+        platform:
+      "PlayStation 3",
+
+        releaseDates: [
+      "October 27, 2008",
+"<br>North America: October 27, 2008",
+"<br>Europe: November 5, 2008",
+"<br>Australia: November 7, 2008",
+"<br>Game of the Year Edition",
+"<br>North America: September 8, 2009",
+"<br>United Kingdom: April 16, 2010",
+      ],
+        genres:[
+      "Platformer",
+"<br>Sandbox",
+
+
+      ],
+        modes:
+      "Single-player & Multiplayer",
+
+        imgSrc: "featured/littlebigplanet.png",
+        imgAlt: "LittleBigPlanet",
+      },
+      {
+        title: "Super Mario Odyssey",
+        developer: "1-UP Studio, Nintendo EPD Tokyo",
+        publisher: "Nintendo, Tencent Games (China)",
+        series: "Super Mario",
+        platform: "Nintendo Switch",
+        releaseDates: [
+      "Japan: October 27, 2017",
+"<br>USA: October 27, 2017",
+"<br>Mexico: October 27, 2017",
+"<br>Europe: October 27, 2017",
+"<br>Australia: October 27, 2017",
+"<br>Hong Kong: October 27, 2017",
+"<br>South Korea: December 1, 2017",
+"<br>Republic of China: December 1, 2017",
+"<br>China: March 16, 2020"
+      ],
+        genres:
+        [
+      "Action",
+      "<br>Adventure","<br>Platformer"
+
+      ],
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/supermarioodyssey.png",
+        imgAlt: "Cover art of Super Mario Odyssey"
+      },
+    ]
+  ];
+
+  function updateGameInfo(slotIndex) {
+    const slot = gameDetails[slotIndex];
+    const currentGame = slot[Math.floor(Math.random() * slot.length)];
+    const gameCard = document.querySelector(`#game${slotIndex + 1}-info`).parentNode;
+    gameCard.querySelector('.game-cover').src = currentGame.imgSrc;
+    gameCard.querySelector('.game-cover').alt = currentGame.imgAlt;
+
+    // For releaseDates, assuming it's a string. Adding a <br> for an additional line space
+      const releaseDatesString = `<br>${currentGame.releaseDates}`;
+
+    const gameInfo = gameCard.querySelector('.game-info');
+    gameInfo.innerHTML = `<h3 class="game-title">${currentGame.title}</h3>
+                          <p><strong>Developer(s):</strong><br>${currentGame.developer}</p>
+                          <p><strong>Publisher(s):</strong><br>${currentGame.publisher}</p>
+                          <p><strong>Series:</strong><br>${currentGame.series}</p>
+                          <p><strong>Platform(s):</strong><br>${currentGame.platform}</p>
+                          <p><strong>Released Date(s):</strong><br>${currentGame.releaseDates}</p>
+                          <p><strong>Genre(s):</strong><br>${currentGame.genres}</p>
+                          <p><strong>Mode(s):</strong><br>${currentGame.modes}</p>`;
+  }
+
+  // Initial update
+  gameDetails.forEach((_, index) => updateGameInfo(index));
+
+  // Schedule updates (e.g., every 2 minutes = 120000 milliseconds)
+  setInterval(() => {
+    gameDetails.forEach((_, index) => updateGameInfo(index));
+  }, 10000);
+});
+
 </script>
 
   </body>
