@@ -2115,7 +2115,11 @@ p {
       background-color: red
 }
 
-.platform {
-  margin-bottom: 10px; /* Creates space between each platform */
-  /* Additional styling can be applied here */
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 20px
+}
+
+#zoomOut {
+font-size: 20px
+}
 }
