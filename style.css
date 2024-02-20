@@ -299,7 +299,7 @@ body {
   /* Change background color of the icon container */
   .cog-icon {
       background-color: dodgerblue; /* Change to your desired background color */
-      margin-left:75%; /* Adjust margin for better alignment */;
+      margin-left:77%; /* Adjust margin for better alignment */;
       border-radius: 5px;
       width: 18%; /* Adjust width for consistency with other elements */;
       position: relative;
@@ -445,18 +445,18 @@ body.dark-mode .cog-icon * {
 body.light-mode .dropup-content,
 body.light-mode .dropup-content * {
     color: black; /* Text color in light mode */
-    background-color: whitesmoke; /* Background color in light mode */
+    background-color: ghostwhite; /* Background color in light mode */
 }
 
 body.light-mode .dropup-content button {
     color: black; /* Button text color in light mode */
-    background-color: ghostwhite; /* Button background color in light mode */
+    background-color: whitesmoke; /* Button background color in light mode */
 }
 
 body.light-mode .cog-icon,
 body.light-mode .cog-icon * {
     color: black; /* Icon color in light mode */
-    background-color: white; /* Icon background color in light mode */
+    background-color: whitesmoke; /* Icon background color in light mode */
 }
 
 /* Add your existing styles here */
@@ -1044,7 +1044,7 @@ select:hover {
 @media (max-width: 720px) {
     .opening-screen p {
         font-size: 1rem;
-        margin-bottom: 20px;
+
     }
     .opening-screen {
 
@@ -1108,9 +1108,10 @@ select:hover {
 @media (max-width: 768px) {
   .opening-screen {
     height: 600px; /* Adjust height for smaller devices */
-    margin-top: -10;
+    margin-top: -18%;
     margin-left: 0;
     margin-right: 0;
+
   }
 }
 
@@ -2122,4 +2123,49 @@ p {
 #zoomOut {
 font-size: 20px
 }
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
 }
