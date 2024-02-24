@@ -51,10 +51,37 @@
      <!-- Search Input -->
      <input type="text" placeholder="Search..">
 
-     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-   </div>
+     <!-- Accessibility Button and Dropdown -->
+     <div class="dropdown">
+       <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
+       <div class="dropdown-content">
+         <div id="google_translate_element"></div>
+         <button onclick="resetSettings()">Reset Settings</button>
+         <button onclick="increaseFont()">Increase Font Size</button>
+         <button onclick="decreaseFont()">Decrease Font Size</button>
+         <button onclick="invertColors()">Invert Colors</button>
+         <button onclick="toggleLightMode()">Toggle Light Mode</button>
+         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+         <button onclick="increaseBrightness()">Increase Brightness</button>
+         <button onclick="decreaseBrightness()">Decrease Brightness</button>
+         <button onclick="increaseContrast()">Increase Contrast</button>
+         <button onclick="decreaseContrast()">Decrease Contrast</button>
+         <button onclick="adjustSaturation(10)">Increase Saturation</button>
+         <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+
+         <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+         <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+         <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
+         <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+       </div>
+     </div>
+
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+ </a>
+
+</div>
 
 
  <aside class="sidebar">
@@ -301,37 +328,8 @@
      </div>
 
 
-     <div class="cog-icon">
-         <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
-     </div>
-
-     <!-- Accessibility dropup content -->
-     <div id="accessibility-dropup" class="dropup-content">  <div id="google_translate_element"></div>
- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-           <button onclick="resetSettings()">Reset Settings</button>
-
-           <button onclick="increaseFont()">Increase Font Size</button>
-         <button onclick="decreaseFont()">Decrease Font Size</button>
-         <button onclick="invertColors()">Invert Colors</button>
-         <button onclick="toggleLightMode()">Toggle Light Mode</button>
-         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-         <button onclick="increaseBrightness()">Increase Brightness</button>
-           <button onclick="decreaseBrightness()">Decrease Brightness</button>
-         <button onclick="increaseContrast()">Increase Contrast</button>
-           <button onclick="decreaseContrast()">Decrease Contrast</button>
-         <button onclick="adjustSaturation(10)">Increase Saturation</button>
-         <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-         <button onclick="applyRedFilter()">Apply Red Filter</button>
-         <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
-       <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-       <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-   <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-         <button onclick="toggleGrayscale()">Toggle Grayscale</button>
 
 
-
-         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
-     </div>
 
      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width:200px;" id="mySidebar">
          <button onclick="toggleSidebar()" class="w3-bar-item w3-button w3-large">Close &times;</button>
@@ -4016,7 +4014,7 @@ function decreaseFont() {
 
     // Store the original font sizes
     function storeOriginalFontSizes() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .game-container, .game-title,#h1,.opening-screen button,.game-container,.game-info,#likeButton,.footer, #commentButton, #rateButton,.game-title, #enter-site-button';
+        const selector = '.sidebar *,  .welcome, .underwelcome, .game-container, .game-title,#h1,.opening-screen button,.game-container,.game-info,#likeButton,.footer, #commentButton, #rateButton,.game-title, #enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
         });
@@ -4032,17 +4030,17 @@ function decreaseFont() {
 
     // Increase font size
     function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
+        adjustFontSize(1.1, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
     }
 
     // Decrease font size
     function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
+        adjustFontSize(0.9, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
     }
 
     // Reset font sizes to their original values
     function resetFont() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button';
+        const selector = '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             const originalFontSize = element.getAttribute('data-original-font-size');
             if (originalFontSize) element.style.fontSize = originalFontSize;
@@ -4156,5 +4154,76 @@ function myFunction() {
     x.className = "topnav";
   }
 }</script>
+
+<script>
+
+</script>
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+
+    // Get all elements with the 'dropdown-content' class within the topnav
+    var dropdowns = x.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+        if (x.className.includes("responsive")) {
+            dropdowns[i].style.display = "none";
+        } else {
+            // Reset style in case it was previously modified
+            dropdowns[i].style.display = "";
+        }
+    }
+}
+
+// This part is to ensure the dropdown content does not display in responsive mode
+// You may need to add an event listener or modify existing ones for dropdown buttons
+// to control their display property separately if they should be visible in responsive mode.
+
+</script>
+
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
 
  </body>
