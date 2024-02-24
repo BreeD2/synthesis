@@ -1,164 +1,75 @@
-.parallax-container {
-    position: relative;
+.topnav {
     overflow: hidden;
-}
-
-.parallax-background {
-    /* Adjust the height as needed */
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.content {
-    /* Content styling */
-    height: 500px;
+    background-color: #333;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
 }
 
-/* Dropup content (hidden by default) */
-.dropup-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9; /* Light grey background */
-    min-width: 160px;
-    bottom: 100%; /* Position it above the button */
-    z-index: 1; /* Make sure it appears on top */;
-
-
-
-}
-
-/* Style for individual buttons inside the dropup content */
-.dropup-content button {
-    color: black; /* Black text */
-    padding: 12px 16px;
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    display: block;
-    width: 100%; /* Full width */
-    border: none;
-    background-color: transparent; /* Transparent background */;
-
-
-
 }
 
-/* Change the background color of the buttons on hover */
-.dropup-content button:hover {
-    background-color: #ddd;
-
-
-}
-
-/* Show the dropup menu on hover */
-.dropup:hover .dropup-content {
-    display: block;
-      margin-top: 35%;
-
-}
-
-/* Change background color of the dropbtn on hover */
-.dropup:hover .dropbtn {
-    background-color: #3e8e41;
-      margin-top: 35%;
-
-}
-
-
-/* Style the dropup container */
-.dropup {
+.topnav-right {
     position: relative;
-    display: inline-block; /* Keeps the dropup container inline */
-    margin-top: 2%; /* Adjust top margin as needed */
-    /* Remove or adjust margins/paddings if necessary */
 }
 
-/* Style the button used to open the dropup content */
-.dropbtn {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 15px; /* Adjust padding as needed */
-    font-size: 16px;
+.menu-toggle {
+    background-color: #333;
     border: none;
+    color: white;
+    padding: 14px 16px;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners for the button */
-    /* Remove default margin and padding */
-    margin: 0;
-    padding: 10px 20px; /* Adjust as per design needs */
 }
 
-/* Dropup content (hidden by default) */
-.dropup-content {
+.menu-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9; /* Light grey background */
-    min-width: 160px; /* Minimum width of the dropup content */;
-
-    bottom: 58%; /* Position it above the button */
-    left: 0; /* Align with the left edge of the dropup button */
-    border-radius: 5px; /* Rounded corners for the content */
+    background-color: #333;
+    right: 0;
+    min-width: 160px;
     z-index: 1;
 }
 
-/* Style for individual buttons inside the dropup content */
-.dropup-content button {
-    color: black; /* Black text */
-    padding: 10px 15px; /* Adjust padding as needed */
+.menu-content a {
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    width: 100%; /* Full width */
-    border: none;
-    background-color: transparent; /* Transparent background */
-    text-align: left; /* Left align text */
+    text-align: left;
 }
 
-/* Change the background color of the buttons on hover */
-.dropup-content button:hover {
+.menu-content a:hover {
     background-color: #ddd;
+    color: black;
 }
 
-/* Show the dropup menu on hover */
-.dropup:hover .dropup-content {
+.menu-toggle:focus + .menu-content {
     display: block;
 }
 
-/* Change background color of the dropbtn on hover */
-.dropup:hover .dropbtn {
-    background-color: #3e8e41; /* Darker green */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Ensure .dropdown can be positioned absolutely relative to this */
 }
 
-.custom-dropdown, #games-list {
-    margin: 10px 0;
-    padding: 5px;
-    border: 1px solid #ccc;
+.dropdown {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%; /* Adjust as necessary */
 }
 
-.selected-option {
-    padding: 10px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-}
-
-.options-container {
-    display: none;
-    background-color: #fff;
-}
-
-.options-container .option {
-    padding: 10px;
-    cursor: pointer;
-    border-top: 1px solid #eee;
-}
-
-.options-container .option:hover {
-    background-color: #f0f0f0;
-}
-
-.hidden {
-    display: none;
+/* Ensure the dropdown is not affected by responsive menu toggling */
+@media screen and (max-width: 600px) {
+  .dropdown {
+    position: absolute; /* Keep it positioned absolutely even in mobile view */
+  }
 }

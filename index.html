@@ -4,6 +4,13 @@
  <head>
    <title>Reminiscence Collection</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
    <center>
 
    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
@@ -21,26 +28,60 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
+  <!-- Navigation Bar with Logo and Website Name -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="logo">
+      <img src="rpa.png" alt="Reminiscence Collection" style="height: 23px;"> Reminiscence Collection
+    </a>
 
-<!-- Navigation Bar with Logo and Website Name -->
- <div class="topnav">
-   <!-- Logo and Website Name -->
-   <a href="index.html">
-     <img src="r.png" alt="Logo" style="height: 20px;"> <!-- Adjust the path and style as needed -->
-     Reminiscence Collection
-   </a>
+    <!-- Menu Toggle Icon -->
 
-   <!-- Navigation Links -->
-   <a class="active" href="index.html">Home</a>
+
+    <!-- Navigation Links -->
+    <a class="active" href="index.html">Home</a>
     <a href="games/index.html">Games</a>
-   <a href="about/index.html">About</a>
-   <a href="contact/index.html">Contact</a>
+    <a href="about/index.html">About</a>
+    <a href="contact/index.html">Contact</a>
     <a href="login/index.html">Login</a>
-     <a href="signup/index.html">Signup</a>
+    <a href="signup/index.html">Signup</a>
 
-   <!-- Search Input -->
-   <input type="text" placeholder="Search..">
- </div>
+    <!-- Search Input -->
+    <input type="text" placeholder="Search..">
+
+
+        <!-- Accessibility Button and Dropdown -->
+        <div class="dropdown">
+          <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <div id="google_translate_element"></div>
+            <button onclick="resetSettings()">Reset Settings</button>
+            <button onclick="increaseFont()">Increase Font Size</button>
+            <button onclick="decreaseFont()">Decrease Font Size</button>
+            <button onclick="invertColors()">Invert Colors</button>
+            <button onclick="toggleLightMode()">Toggle Light Mode</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button onclick="increaseBrightness()">Increase Brightness</button>
+            <button onclick="decreaseBrightness()">Decrease Brightness</button>
+            <button onclick="increaseContrast()">Increase Contrast</button>
+            <button onclick="decreaseContrast()">Decrease Contrast</button>
+            <button onclick="adjustSaturation(10)">Increase Saturation</button>
+            <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+            <button onclick="applyRedFilter()">Apply Red Filter</button>
+            <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
+            <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+            <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+            <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
+            <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+            <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+          </div>
+        </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+  </div>
+
 
 <aside class="sidebar">
     <h3>All Games</h3>
@@ -275,7 +316,9 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
 </aside>
 
 <!-- Sidebar Toggle Button -->
-<div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
+<div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+  <i class="fa fa-gamepad"></i><br>
+</div>
 
 <div id="searchResults">
 
@@ -284,37 +327,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
     </div>
 
 
-    <div class="cog-icon">
-        <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
-    </div>
 
-    <!-- Accessibility dropup content -->
-    <div id="accessibility-dropup" class="dropup-content">  <div id="google_translate_element"></div>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-          <button onclick="resetSettings()">Reset Settings</button>
-
-          <button onclick="increaseFont()">Increase Font Size</button>
-        <button onclick="decreaseFont()">Decrease Font Size</button>
-        <button onclick="invertColors()">Invert Colors</button>
-        <button onclick="toggleLightMode()">Toggle Light Mode</button>
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-        <button onclick="increaseBrightness()">Increase Brightness</button>
-          <button onclick="decreaseBrightness()">Decrease Brightness</button>
-        <button onclick="increaseContrast()">Increase Contrast</button>
-          <button onclick="decreaseContrast()">Decrease Contrast</button>
-        <button onclick="adjustSaturation(10)">Increase Saturation</button>
-        <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-        <button onclick="applyRedFilter()">Apply Red Filter</button>
-        <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
-      <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-      <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-  <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-        <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-
-
-
-        <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
-    </div>
 
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width:200px;" id="mySidebar">
         <button onclick="toggleSidebar()" class="w3-bar-item w3-button w3-large">Close &times;</button>
@@ -3263,56 +3276,20 @@ function showSlides(n) {
         document.body.classList.toggle('light-mode');
         // Set button styles explicitly for light mode
         if (document.body.classList.contains('light-mode')) {
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
-            document.getElementById('accessibility-dropup').style.color = 'black';
+            document.getElementById('.accessibility-dropup').style.backgroundColor = 'white';
+            document.getElementById('.accessibility-dropup').style.color = 'black';
         } else {
             // Set button styles explicitly for dark mode
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'dodgerblue';
-            document.getElementById('accessibility-dropup').style.color = 'white';
+            document.getElementById('.accessibility-dropup').style.backgroundColor = 'dodgerblue';
+            document.getElementById('.accessibility-dropup').style.color = 'white';
         }
     }
 </script>
 
 <!-- JavaScript -->
 <!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
 
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
 
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
 
 
     <!-- Contrast and Sepia control scripts -->
@@ -3393,7 +3370,7 @@ function showSlides(n) {
     </script>
     <script>
     function toggleAccessibilityMenu() {
-      var accessibilityDropup = document.getElementById("accessibility-dropup");
+      var accessibilityDropup = document.getElementById(".accessibility-dropup");
       accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
     }
 
@@ -3516,7 +3493,7 @@ function showSlides(n) {
     }
 
     function toggleAccessibilityMenu() {
-        var accessibilityDropup = document.getElementById("accessibility-dropup");
+        var accessibilityDropup = document.getElementById(".accessibility-dropup");
         accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
     }
 
@@ -3550,39 +3527,6 @@ function showSlides(n) {
             adjustFontSize('decrease');
         });
     });
-</script>
-
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    function toggleDarkMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('light-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'dark-mode' class based on the current state
-        document.body.classList.toggle('dark-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
 </script>
 
 <!-- JavaScript -->
@@ -3912,7 +3856,6 @@ function decreaseFont() {
     }
 
 </script>
-
 <script>
     // Called once the DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function () {
@@ -3922,7 +3865,7 @@ function decreaseFont() {
 
     // Store the original font sizes
     function storeOriginalFontSizes() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,p,featured-games,.featured-games-title, .footer,#enter-site-button';
+        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,p,.featured-games,.featured-games-title, .footer,#enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
         });
@@ -3955,11 +3898,25 @@ function decreaseFont() {
         });
     }
 
+    // New functions for toggling visual modes
+    function invertColors() {
+        document.body.classList.toggle('invert-colors');
+    }
+
+    function toggleLightMode() {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    }
+
     // Reset settings including font sizes and other visual modifications
     function resetSettings() {
         resetFont(); // Resets font sizes
-        // Here, add other reset actions (e.g., removing classes, resetting filters)
-        // Example: document.body.classList.remove('dark-mode', 'invert-colors');
+        document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode'); // Resets visual modes
         // Reset global style adjustments if any
         document.body.style.filter = '';
         document.body.style.webkitFilter = '';
@@ -3967,6 +3924,7 @@ function decreaseFont() {
         // closeAccessibilityDropup(); // Uncomment if this function is defined
     }
 </script>
+
 
 <script>// Get the modal
 var modal = document.getElementById("myModal");
@@ -4496,6 +4454,61 @@ imgAlt: "Cover art of Uncharted 4: A Thief’s End"
 });
 
 </script>
+
+<script>
+function myFunction() {
+  // Toggle the responsive class on the navbar
+  var navbar = document.getElementById("myTopnav");
+  navbar.classList.toggle("responsive");
+
+  // Explicitly toggle display for navigation links and search input only
+  var navItems = navbar.querySelectorAll('a:not(.icon):not(.logo), input[type="text"]');
+  navItems.forEach(function(item) {
+    if (item.style.display === "block") {
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+    }
+  });
+
+  // Prevent the dropdown (accessibility button and its content) from being toggled
+  var dropdown = navbar.querySelector('.accessibility-button');
+  if (dropdown) {
+    dropdown.style.display = "block"; // Keep it always visible
+  }
+}
+
+</script>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+
+    // Get all elements with the 'dropdown-content' class within the topnav
+    var dropdowns = x.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+        if (x.className.includes("responsive")) {
+            dropdowns[i].style.display = "none";
+        } else {
+            // Reset style in case it was previously modified
+            dropdowns[i].style.display = "";
+        }
+    }
+}
+
+// This part is to ensure the dropdown content does not display in responsive mode
+// You may need to add an event listener or modify existing ones for dropdown buttons
+// to control their display property separately if they should be visible in responsive mode.
+
+</script>
+
+
 
   </body>
   </html>
