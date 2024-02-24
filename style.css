@@ -2425,16 +2425,6 @@ font-size: 20px
   background-color: red;
 }
 
-.dropdown-content {
-  display: block;
-  margin-bottom: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: 'arial', sans-serif;
-  font-size: 15px;
-
-}
 
 .dropdown-content a {
   float: none;
@@ -2489,6 +2479,25 @@ font-size: 20px
 .dropdown {
   float: left;
   overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
 }
 
 
@@ -2507,7 +2516,7 @@ font-size: 20px
   border: none;
   cursor: pointer;
   font-family: 'arial', sans-serif;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 
@@ -2613,7 +2622,7 @@ font-size: 20px
   border: none;
   cursor: pointer;
   font-family: 'arial', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /* Show the dropdown menu */

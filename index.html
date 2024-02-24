@@ -66,8 +66,7 @@
             <button onclick="decreaseContrast()">Decrease Contrast</button>
             <button onclick="adjustSaturation(10)">Increase Saturation</button>
             <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-            <button onclick="applyRedFilter()">Apply Red Filter</button>
-            <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
+          
             <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
             <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
             <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
@@ -3881,17 +3880,17 @@ function decreaseFont() {
 
     // Increase font size
     function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,p,.featured-games-title,.footer,featured-games, #enter-site-button');
+        adjustFontSize(1.1, '.sidebar *, .welcome, .underwelcome, .opening-screen button,p,.featured-games-title,.footer,featured-games, .dropdown-content, #enter-site-button');
     }
 
     // Decrease font size
     function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button');
+        adjustFontSize(0.9, '.sidebar *, .welcome, .underwelcome, .dropdown-content,.dropdown, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button');
     }
 
     // Reset font sizes to their original values
     function resetFont() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button';
+        const selector = '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             const originalFontSize = element.getAttribute('data-original-font-size');
             if (originalFontSize) element.style.fontSize = originalFontSize;
@@ -4455,30 +4454,7 @@ imgAlt: "Cover art of Uncharted 4: A Thief’s End"
 
 </script>
 
-<script>
-function myFunction() {
-  // Toggle the responsive class on the navbar
-  var navbar = document.getElementById("myTopnav");
-  navbar.classList.toggle("responsive");
 
-  // Explicitly toggle display for navigation links and search input only
-  var navItems = navbar.querySelectorAll('a:not(.icon):not(.logo), input[type="text"]');
-  navItems.forEach(function(item) {
-    if (item.style.display === "block") {
-      item.style.display = "none";
-    } else {
-      item.style.display = "block";
-    }
-  });
-
-  // Prevent the dropdown (accessibility button and its content) from being toggled
-  var dropdown = navbar.querySelector('.accessibility-button');
-  if (dropdown) {
-    dropdown.style.display = "block"; // Keep it always visible
-  }
-}
-
-</script>
 
 <script>
 function myFunction() {
@@ -4508,6 +4484,25 @@ function myFunction() {
 
 </script>
 
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
 
 
   </body>

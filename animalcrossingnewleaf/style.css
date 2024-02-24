@@ -612,25 +612,7 @@ body.light-mode .cog-icon * {
        color: #f1f1f1;
 
    }
-   .menu-toggle {
-    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
-    position: fixed; /* Keeps the element in the same place even when scrolling */
-    left: 25px; /* Distance from the left edge of the viewport */
-    top: 78px; /* Distance from the top edge of the viewport */
-    z-index: 1; /* Ensures the element stays on top of other content */
-    font-size: 25px; /* Size of the text or icon inside */
-    color: grey; /* Color of the text or icon */;
-    background-color: black;
-    padding-right:5px;
-        padding-left:5px;
 
-
-    /* Smooth transition effects for color and box-shadow when they change */
-    transition: color 0.3s ease, box-shadow 0.3s ease;
-
-    /* Optional: Default box-shadow for visual depth (example) */
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
-}
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
@@ -671,24 +653,6 @@ body.light-mode .cog-icon * {
        }
 
 
-   }
-
-
-   @media screen and (max-width: 1085px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-
-   @media screen and (max-width: 785px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-   @media screen and (max-width: 750px) {
-     .menu-toggle {
-       top: 120px;
-     }
    }
 
 
