@@ -31,300 +31,302 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-<!-- Navigation Bar with Logo and Website Name -->
- <div class="topnav">
-   <!-- Logo and Website Name -->
-   <a href="index.html">
-     <img src="r.png" alt="Logo" style="height: 20px;"> <!-- Adjust the path and style as needed -->
-     Reminiscence Collection
-   </a>
-
-   <!-- Navigation Links -->
-
-    <a href="..//index.html">Home</a>
-    <a class="active" href="index.html">Games</a>
-   <a href="about/index.html">About</a>
-   <a href="contact/index.html">Contact</a>
-    <a href="login/index.html">Login</a>
-     <a href="signup/index.html">Signup</a>
-
-   <!-- Search Input -->
-   <input type="text" placeholder="Search..">
- </div>
-
- <aside class="sidebar">
-     <h3>All Games</h3>
- <input type="text" placeholder="Search..">
- <br>
-     <label><input type="checkbox" id="filterCheckbox"> Sort</label>
-
- <div id="filterOptions" style="display: none;">
-     <select id="mainCategory" onchange="updateSubCategory()">
-         <option value="" disabled selected hidden>Choose a category</option>
-         <option value="publisher">Publisher</option>
-         <option value="developer">Developer</option>
-         <option value="series">Series</option>
-         <option value="platform">Platform</option>
-         <option value="releasedDate">Released Dates</option>
-         <option value="genre">Genre</option>
-         <option value="mode">Mode</option>
-     </select>
-
-     <select id="subCategory" onchange="sortAndDisplayGames()">
-         <option value="" disabled selected hidden>Select a subcategory</option>
-         <!-- Additional options will be dynamically filled based on the main category selection -->
-     </select>
-       <div id="games-list">Choose from the categories above</div>
- </div>
 
 
 
+     <!-- Navigation Bar with Logo and Website Name -->
+      <div class="topnav"id="myTopnav">
+        <!-- Logo and Website Name -->
+        <a href="..//index.html">
+          <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;Reminiscence&ensp;Collection
+     </a>
 
-      <ul class="search-results" id="searchResults"></ul>
-     <div id="game-list2">
-       <a href="..//animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons
-       ">Animal Crossing: <br>New Horizons</a>
- <a href="index.html" data-game="Animal Crossing: New Leaf
- ">Animal Crossing: <br>New Leaf</a>
- <a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
- <a href="bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
- <a href="blur/index.html" data-game="Blur">Blur</a>
- <a href="cars/index.html" data-game="Cars">Cars</a>
- <a href="darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls<br>Remastered</a>
- <a href="deadpool/index.html" data-game="Deadpool">Deadpool</a>
- <a href="despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: <br>Minion Mayhem
- </a>
- <a href="disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
- <a href="disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
- <a href="disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
- <a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
- <a href="donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
- ">Donkey Kong <br>Country Returns</a>
- <a href="dragonageinquisition/index.html" data-game="Dragon Age Inquisition
- ">Dragon Age <br>Inquisition</a>
- <a href="dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: <br>Dark Arisen</a>
- <a href="driven/index.html" data-game="Driven
- ">Driven</a>
- <a href="easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: <br> Personal Trainer</a>
- <a href="epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: <br>The Power of Two
- </a>
- <a href="espnnba2K5/index.html" data-game="ESPN NBA 2K5">ESPN NBA 2K5</a>
- <a href="facebreakerkoparty/index.html" data-game="FaceBreaker K.O. Party">FaceBreaker K.O. Party</a>
- <a href="fallout3/index.html" data-game="Fallout 3">Fallout 3</a>
- <a href="fallout4/index.html" data-game="Fallout 4">Fallout 4</a>
- <a href="fortunestreet/index.html" data-game="Fortune Street">Fortune Street</a>
- <a href="fridaythe13ththegame
- /index.html" data-game="Friday the 13th: The Game">Friday the 13th: <br>The Game</a>
- <a href="frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: <br>Swampy’s Revenge</a>
- <a href="gameparty/index.html" data-game="Game Party">Game Party</a>
- <a href="granturismo/index.html" data-game="Gran Turismo">Gran Turismo</a>
- <a href="grandtheftautoiv/index.html" data-game="Grand Theft Auto IV">Grand Theft Auto IV</a>
- <a href="grandtheftautov/index.html" data-game="Grand Theft Auto V">Grand Theft Auto V
- </a>
- <a href="hellskitchenthegame
- /index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen:<br> The Game</a>
- <a href="hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty:<br> Big City Dreams
- </a>
- <a href="hoteltransylvania/index.html" data-game="Hotel Transylvania">Hotel Transylvania
- </a>
- <a href="hyrulewarriorsageofcalamity
- /index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors:<br> Age of Calamity</a>
- <a href="injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: <br>Gods Among Us</a>
- <a href="injustice2/index.html" data-game="Injustice 2">Injustice 2</a>
- <a href="legobatman2dcsuperheroes
- /index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2:<br> DC Super Heroes
- </a>
- <a href="legobatman3beyondgotham
- /index.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3:<br> Beyond Gotham</a>
- <a href="legocityundercover/index.html" data-game="Lego City Undercover">Lego City <br>Undercover</a>
- <a href="legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC <br>Super Villains</a>
- <a href="legojurassicworld/index.html" data-game="Lego Jurassic World">Lego Jurassic World
- </a>
- <a href="legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel <br>Super Heroes</a>
- <a href="legomarvelsuperheroes2/index.html" data-game="Lego Marvel Super Heroes 2
- ">Lego Marvel <br>Super Heroes 2</a>
- <a href="legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s<br> Avengers</a>
- <a href="legopiratesoftheCaribbean
- index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Caribbean</a>
- <a href="legostarwarstheforceawakens
- /index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: <br>The Force Awakens</a>
- <a href="legotheincredibles
- /index.html" data-game="Lego The Incredibles
- ">Lego <br>The Incredibles</a>
- <a href="lifeisstrange/index.html" data-game="Life is Strange">Life is Strange</a>
- <a href="lifeisstrange2/index.html" data-game="Life is Strange 2">Life is Strange 2</a>
- <a href="lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: <br>Before the Storm</a>
- <a href="lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: <br>True Colors</a>
- <a href="littlebigplanet/index.html" data-game="LittleBigPlanet">LittleBigPlanet</a>
- <a href="littlebigplanet2/index.html" data-game="LittleBigPlanet 2">LittleBigPlanet 2</a>
- <a href="littlebigplanet3/index.html" data-game="LittleBigPlanet 3">LittleBigPlanet 3</a>
- <a href="littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet <br>Karting</a>
- <a href="luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion:<br> Dark Moon</a>
- <a href="mandmsadventure/index.html" data-game="M&M’s Adventure">M&M’s Adventure</a>
- <a href="madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: <br>The Video Game</a>
- <a href="maddennfl07/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
- <a href="Madden NFL 09/index.html" data-game="Madden NFL 09">Madden NFL 09</a>
- <a href="maddennfl12/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
- <a href="maddennfl12/index.html" data-game="Madden NFL 12">Madden NFL 12</a>
- <a href="maddennfl15/index.html" data-game="Madden NFL 15">Madden NFL 15</a>
- <a href="maddennfl16/index.html" data-game="Madden NFL 16">Madden NFL 16</a>
- <a href="maddennfl17/index.html" data-game="Madden NFL 17">Madden NFL 17</a>
- <a href="maddennfl18/index.html" data-game="Madden NFL 18">Madden NFL 18</a>
- <a href="maddennfl19/index.html" data-game="Madden NFL 19">Madden NFL 19</a>
- <a href="maddennfl20/index.html" data-game="Madden NFL 20">Madden NFL 20</a>
- <a href="maddennfl25/index.html" data-game="Madden NFL 25">Madden NFL 25</a>
- <a href="marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi:<br> Bowser's Inside Story</a>
- <a href="marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic<br> at the Olympic Games</a>
- <a href="marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic <br>at the London 2012<br> Olympic Games</a>
- <a href="marioandsonicattherio2016olympicgames
- /index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic<br> at the Rio 2016 <br>Olympic Games</a>
- <a href="mariokart7/index.html" data-game="Mario Kart 7">Mario Kart 7</a>
- <a href="mariokart8/index.html" data-game="Mario Kart 8">Mario Kart 8</a>
- <a href="mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 <br>Deluxe</a>
- <a href="mariokartds/index.html" data-game="Mario Kart DS">Mario Kart DS</a>
- <a href="mariokartwii/index.html" data-game="Mario Kart Wii">Mario Kart Wii</a>
- <a href="marioparty8/index.html" data-game="Mario Party 8">Mario Party 8</a>
- <a href="marioparty10/index.html" data-game="Mario Party 10">Mario Party 10</a>
- <a href="mariopartyds/index.html" data-game="Mario Party DS">Mario Party DS</a>
- <a href="mariopowertennis/index.html" data-game="Mario Power Tennis">Mario Power Tennis</a>
- <a href="mariosportsmix/index.html" data-game="Mario Sports Mix">Mario Sports Mix</a>
- <a href="mariosupersluggers/index.html" data-game="Mario Super Sluggers">Mario Super Sluggers</a>
- <a href="mariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis:<br> Ultra Smash</a>
- <a href="mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: <br>Mini-Land</a>
- <a href="marvelsavenger/index.html" data-game="Marvel’s Avenger">Marvel’s Avenger</a>
- <a href="marvelsspiderman/index.html" data-game="Marvel’s Spider-Man">Marvel’s Spider-Man</a>
- <a href="masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect<br> Legendary Edition</a>
- <a href="midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club:<br> Street Racing</a>
- <a href="midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3:<br> Dub Edition</a>
- <a href="mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11:<br> Aftermath</a>
- <a href="mystreet/index.html" data-game="My Street">My Street</a>
- <a href="mysterymastersmysteriesofthe heartcollection20games inallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters <br>MYSTERIES OF THE HEART<br> COLLECTION 20 GAMES <br>IN ALL Hidden Object <br>PC Game</a>
- <a href="nba08/index.html" data-game="NBA 08">NBA 08</a>
- <a href="nba2k8/index.html" data-game="NBA 2K8
- ">NBA 2K8</a>
- <a href="nba2k9/index.html" data-game="NBA 2K9">NBA 2K9</a>
- <a href="nba2k10/index.html" data-game="NBA 2K10">NBA 2K10</a>
- <a href="nba2k11/index.html" data-game="NBA 2K11">NBA 2K11</a>
- <a href="nba2k12/index.html" data-game="NBA 2K12">NBA 2K12</a>
- <a href="nba2k14/index.html" data-game="NBA 2K14">NBA 2K14</a>
- <a href="nba2k15/index.html" data-game="NBA 2K15">NBA 2K15</a>
- <a href="nba2k16/index.html" data-game="NBA 2K16">NBA 2K16</a>
- <a href="nba2k17/index.html" data-game="NBA 2K17">NBA 2K17</a>
- <a href="nba2k18/index.html" data-game="NBA 2K18">NBA 2K18</a>
- <a href="nba2k19/index.html" data-game="NBA 2K19">NBA 2K19</a>
- <a href="nba2k20/index.html" data-game="NBA 2K20">NBA 2K20</a>
- <a href="nba2k21/index.html" data-game="NBA 2K21">NBA 2K21</a>
- <a href="nba2k22/index.html" data-game="NBA 2K22">NBA 2K22</a>
- <a href="NBAlive08/index.html" data-game="NBA Live 08">NBA Live 08</a>
- <a href="nbastreet/index.html" data-game="NBA Street">NBA Street</a>
- <a href="needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed:<br> Carbon</a>
- <a href="newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super <br>Mario Bros.</a>
- <a href="newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super <br>Mario Bros. 2</a>
- <a href="newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super <br>Mario Bros. U</a>
- <a href="newxupermariobroswii/index.html" data-game="New Super Mario Bros. Wii">New Super <br>Mario Bros. Wi</a>
- <a href="nhl2k10/index.html" data-game="NHL 2K10">NHL 2K10</a>
- <a href="nintendoland/index.html" data-game="Nintendo Land">Nintendo Land</a>
- <a href="phineasandferbacrossthe 2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb:<br> Across the 2nd Dimension</a>
- <a href="pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s <br>Party</a>
- <a href="playStationallstarsbattleroyale
- /index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars<br>Battle Royale</a>
- <a href="rio/index.html" data-game="Rio">Rio</a>
- <a href="shrekforeverafter/index.html" data-game="Shrek Forever After">Shrek Forever After</a>
- <a href="skateit/index.html" data-game="Skate It">Skate It</a>
- <a href="sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega <br>All-Stars Racing</a>
- <a href="sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: <br>Zero Gravity</a>
- <a href="spongebobsquigglepants/index.html" data-game="SpongeBob Squigglepants">SpongeBob Squigglepants</a>
- <a href="sportschampions/index.html" data-game="Sports Champions">Sports Champions</a>
- <a href="stardewvalley/index.html" data-game="Stardew Valley">Stardew Valley</a>
- <a href="stuntman/index.html" data-game="Stuntman">Stuntman</a>
- <a href="sunsetoverdrive/index.html" data-game="Sunset Overdrive">Sunset Overdrive</a>
- <a href="supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario <br>3D All-Stars</a>
- <a href="supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario <br>3D Land</a>
- <a href="supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario <br>3D World</a>
- <a href="supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario <br>Galaxy 2</a>
- <a href="supermariomaker/index.html" data-game="Super Mario Maker">Super Mario Maker</a>
- <a href="supermariomaker2/index.html" data-game="Super Mario Maker 2">Super Mario Maker 2</a>
- <a href="supermarioodyssey/index.html" data-game="Super Mario Odyssey">Super Mario Odyssey</a>
- <a href="supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros.<br> Wonder</a>
- <a href="supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. <br>for Nintendo 3DS</a>
- <a href="supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros.<br> for Wii U</a>
- <a href="theamazingrace/index.html" data-game="The Amazing Race">The Amazing Race</a>
- <a href="The Amazing Spider-Man 2/index.html" data-game="The Amazing Spider-Man 2">The Amazing <br>Spider-Man 2</a>
- <a href="theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures <br>of Captain Spirit</a>
- <a href="theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: <br>Skyrim</a>
- <a href="thefairlyoddparentsshadowshowdown/index.html" data-game="The Fairly OddParents: Shadow Showdown
- ">The Fairly OddParents:<br> Shadow Showdown</a>
- <a href="theincredibles/index.html" data-game="The Incredibles">The Incredibles</a>
- <a href="thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: <br>Breath of the Wild</a>
- <a href="thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie <br>Videogame</a>
- <a href="theoregontrail/index.html" data-game="The Oregon Trail">The Oregon Trail</a>
- <a href="thesims3/index.html" data-game="The Sims 3">The Sims 3</a>
- <a href="thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3:<br> Starter Pack</a>
- <a href="thesims4/index.html" data-game="The Sims 4">The Sims 4</a>
- <a href="thesmurfs/index.html" data-game="The Smurfs">The Smurfs</a>
- <a href="thesmurfs2/index.html" data-game="The Smurfs 2">The Smurfs 2</a>
- <a href="thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The <br>SpongeBob SquarePants Movie</a>
- <a href="thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: <br>Survival Instinct</a>
- <a href="tomodachilife/index.html" data-game="Tomodachi Life">Tomodachi Life</a>
- <a href="tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s <br>Pro Skater 4</a>
- <a href="toystory3/index.html" data-game="Toy Story 3">Toy Story 3</a>
- <a href="transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers:<br> Rise of the Dark Spark</a>
- <a href="udrawstudio/index.html" data-game="uDraw Studio">uDraw Studio</a>
- <a href="ultimatenesremix/index.html" data-game="Ultimate NES Remix">Ultimate NES Remix</a>
- <a href="uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted:<br> Drake’s Fortune</a>
- <a href="uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: <br>A Thief’s End</a>
- <a href="watchdogs/index.html" data-game="Watch Dogs">Watch Dogs</a>
- <a href="watchdogs2/index.html" data-game="Watch Dogs 2">Watch Dogs 2</a>
- <a href="watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: <br>Legion</a>
- <a href="wiiplay/index.html" data-game="Wii Play">Wii Play</a>
- <a href="wiisports/index.html" data-game="Wii Sports">Wii Sports</a>
- <a href="wipeout/index.html" data-game="Wipeout">Wipeout</a>
- <a href="wipeout2/index.html" data-game="Wipeout 2">Wipeout 2</a>
- <br><br><br>
-     </div>
- </aside>
+        <!-- Navigation Links -->
+        <a class="active" href="..//index.html">Home</a>
+         <a href="..//games/index.html">Games</a>
+        <a href="..//about/index.html">About</a>
+        <a href="contact/index.html">Contact</a>
+         <a href="login/index.html">Login</a>
+          <a href="signup/index.html">Signup</a>
 
- <!-- Sidebar Toggle Button -->
- <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">&#9776;<br></div>
+        <!-- Search Input -->
+        <input type="text" placeholder="Search..">
 
- <div id="searchResults">
+        <!-- Accessibility Button and Dropdown -->
+        <div class="dropdown">
+          <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <div id="google_translate_element"></div>
+            <button onclick="resetSettings()">Reset Settings</button>
+            <button onclick="increaseFont()">Increase Font Size</button>
+            <button onclick="decreaseFont()">Decrease Font Size</button>
+            <button onclick="invertColors()">Invert Colors</button>
+            <button onclick="toggleLightMode()">Toggle Light Mode</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button onclick="increaseBrightness()">Increase Brightness</button>
+            <button onclick="decreaseBrightness()">Decrease Brightness</button>
+            <button onclick="increaseContrast()">Increase Contrast</button>
+            <button onclick="decreaseContrast()">Decrease Contrast</button>
+            <button onclick="adjustSaturation(10)">Increase Saturation</button>
+            <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+
+            <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
+            <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
+            <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
+            <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+            <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+          </div>
+        </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+   </div>
+
+
+    <aside class="sidebar">
+        <h3>All Games</h3>
+    <input type="text" placeholder="Search..">
+    <br>
+        <label><input type="checkbox" id="filterCheckbox"> Sort</label>
+
+    <div id="filterOptions" style="display: none;">
+        <select id="mainCategory" onchange="updateSubCategory()">
+            <option value="" disabled selected hidden>Choose a category</option>
+            <option value="publisher">Publisher</option>
+            <option value="developer">Developer</option>
+            <option value="series">Series</option>
+            <option value="platform">Platform</option>
+            <option value="releasedDate">Released Dates</option>
+            <option value="genre">Genre</option>
+            <option value="mode">Mode</option>
+        </select>
+
+        <select id="subCategory" onchange="sortAndDisplayGames()">
+            <option value="" disabled selected hidden>Select a subcategory</option>
+            <!-- Additional options will be dynamically filled based on the main category selection -->
+        </select>
+          <div id="games-list">Choose from the categories above</div>
+    </div>
 
 
 
-     </div>
+
+         <ul class="search-results" id="searchResults"></ul>
+        <div id="game-list2">
+          <a href="index.html" data-game="Animal Crossing: New Horizons
+          ">Animal Crossing: <br>New Horizons</a>
+    <a href="..//animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
+    ">Animal Crossing: <br>New Leaf</a>
+    <a href="..//assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
+    <a href="..//bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
+    <a href="..//blur/index.html" data-game="Blur">Blur</a>
+    <a href="..//cars/index.html" data-game="Cars">Cars</a>
+    <a href="..//darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls<br>Remastered</a>
+    <a href="..//deadpool/index.html" data-game="Deadpool">Deadpool</a>
+    <a href="..//despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: <br>Minion Mayhem
+    </a>
+    <a href="..//disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
+    <a href="..//disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
+    <a href="..//disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
+    <a href="djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+    <a href="..//donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns
+    ">Donkey Kong <br>Country Returns</a>
+    <a href="..//dragonageinquisition/index.html" data-game="Dragon Age Inquisition
+    ">Dragon Age <br>Inquisition</a>
+    <a href="..//dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: <br>Dark Arisen</a>
+    <a href="..//driven/index.html" data-game="Driven
+    ">Driven</a>
+    <a href="..//easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: <br> Personal Trainer</a>
+    <a href="..//epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: <br>The Power of Two
+    </a>
+    <a href="..//espnnba2K5/index.html" data-game="ESPN NBA 2K5">ESPN NBA 2K5</a>
+    <a href="..//facebreakerkoparty/index.html" data-game="FaceBreaker K.O. Party">FaceBreaker K.O. Party</a>
+    <a href="..//fallout3/index.html" data-game="Fallout 3">Fallout 3</a>
+    <a href="..//fallout4/index.html" data-game="Fallout 4">Fallout 4</a>
+    <a href="..//fortunestreet/index.html" data-game="Fortune Street">Fortune Street</a>
+    <a href="..//fridaythe13ththegame
+    /index.html" data-game="Friday the 13th: The Game">Friday the 13th: <br>The Game</a>
+    <a href="..//frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: <br>Swampy’s Revenge</a>
+    <a href="..//gameparty/index.html" data-game="Game Party">Game Party</a>
+    <a href="..//granturismo/index.html" data-game="Gran Turismo">Gran Turismo</a>
+    <a href="..//grandtheftautoiv/index.html" data-game="Grand Theft Auto IV">Grand Theft Auto IV</a>
+    <a href="..//grandtheftautov/index.html" data-game="Grand Theft Auto V">Grand Theft Auto V
+    </a>
+    <a href="..//hellskitchenthegame
+    /index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen:<br> The Game</a>
+    <a href="..//hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty:<br> Big City Dreams
+    </a>
+    <a href="..//hoteltransylvania/index.html" data-game="Hotel Transylvania">Hotel Transylvania
+    </a>
+    <a href="..//hyrulewarriorsageofcalamity
+    /index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors:<br> Age of Calamity</a>
+    <a href="..//injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: <br>Gods Among Us</a>
+    <a href="..//injustice2/index.html" data-game="Injustice 2">Injustice 2</a>
+    <a href="..//legobatman2dcsuperheroes
+    /index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2:<br> DC Super Heroes
+    </a>
+    <a href="..//legobatman3beyondgotham
+    /index.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3:<br> Beyond Gotham</a>
+    <a href="..//legocityundercover/index.html" data-game="Lego City Undercover">Lego City <br>Undercover</a>
+    <a href="..//legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC <br>Super Villains</a>
+    <a href="..//legojurassicworld/index.html" data-game="Lego Jurassic World">Lego Jurassic World
+    </a>
+    <a href="..//legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel <br>Super Heroes</a>
+    <a href="..//legomarvelsuperheroes2/index.html" data-game="Lego Marvel Super Heroes 2
+    ">Lego Marvel <br>Super Heroes 2</a>
+    <a href="..//legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s<br> Avengers</a>
+    <a href="..//legopiratesoftheCaribbean
+    index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Caribbean</a>
+    <a href="..//legostarwarstheforceawakens
+    /index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: <br>The Force Awakens</a>
+    <a href="..//legotheincredibles
+    /index.html" data-game="Lego The Incredibles
+    ">Lego <br>The Incredibles</a>
+    <a href="..//lifeisstrange/index.html" data-game="Life is Strange">Life is Strange</a>
+    <a href="..//lifeisstrange2/index.html" data-game="Life is Strange 2">Life is Strange 2</a>
+    <a href="..//lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: <br>Before the Storm</a>
+    <a href="..//lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: <br>True Colors</a>
+    <a href="..//littlebigplanet/index.html" data-game="LittleBigPlanet">LittleBigPlanet</a>
+    <a href="..//littlebigplanet2/index.html" data-game="LittleBigPlanet 2">LittleBigPlanet 2</a>
+    <a href="..//littlebigplanet3/index.html" data-game="LittleBigPlanet 3">LittleBigPlanet 3</a>
+    <a href="..//littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet <br>Karting</a>
+    <a href="..//luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion:<br> Dark Moon</a>
+    <a href="..//mandmsadventure/index.html" data-game="M&M’s Adventure">M&M’s Adventure</a>
+    <a href="..//madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: <br>The Video Game</a>
+    <a href="..//maddennfl07/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
+    <a href="maddennfl09/index.html" data-game="Madden NFL 09">Madden NFL 09</a>
+    <a href="..//maddennfl12/index.html" data-game="Madden NFL 12">Madden NFL 12</a>
+    <a href="..//maddennfl15/index.html" data-game="Madden NFL 15">Madden NFL 15</a>
+    <a href="..//maddennfl16/index.html" data-game="Madden NFL 16">Madden NFL 16</a>
+    <a href="..//maddennfl17/index.html" data-game="Madden NFL 17">Madden NFL 17</a>
+    <a href="..//maddennfl18/index.html" data-game="Madden NFL 18">Madden NFL 18</a>
+    <a href="..//maddennfl19/index.html" data-game="Madden NFL 19">Madden NFL 19</a>
+    <a href="..//maddennfl20/index.html" data-game="Madden NFL 20">Madden NFL 20</a>
+    <a href="..//maddennfl25/index.html" data-game="Madden NFL 25">Madden NFL 25</a>
+    <a href="..//marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi:<br> Bowser's Inside Story</a>
+    <a href="..//marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic<br> at the Olympic Games</a>
+    <a href="..//marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic <br>at the London 2012<br> Olympic Games</a>
+    <a href="..//marioandsonicattherio2016olympicgames
+    /index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic<br> at the Rio 2016 <br>Olympic Games</a>
+    <a href="..//mariokart7/index.html" data-game="Mario Kart 7">Mario Kart 7</a>
+    <a href="..//mariokart8/index.html" data-game="Mario Kart 8">Mario Kart 8</a>
+    <a href="..//mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 <br>Deluxe</a>
+    <a href="..//mariokartds/index.html" data-game="Mario Kart DS">Mario Kart DS</a>
+    <a href="..//mariokartwii/index.html" data-game="Mario Kart Wii">Mario Kart Wii</a>
+    <a href="..//marioparty8/index.html" data-game="Mario Party 8">Mario Party 8</a>
+    <a href="..//marioparty10/index.html" data-game="Mario Party 10">Mario Party 10</a>
+    <a href="..//mariopartyds/index.html" data-game="Mario Party DS">Mario Party DS</a>
+    <a href="..//mariopowertennis/index.html" data-game="Mario Power Tennis">Mario Power Tennis</a>
+    <a href="..//mariosportsmix/index.html" data-game="Mario Sports Mix">Mario Sports Mix</a>
+    <a href="..//mariosupersluggers/index.html" data-game="Mario Super Sluggers">Mario Super Sluggers</a>
+    <a href="..//scriptsrcmariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis:<br> Ultra Smash</a>
+    <a href="..//mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: <br>Mini-Land</a>
+    <a href="..//marvelsavenger/index.html" data-game="Marvel’s Avenger">Marvel’s Avenger</a>
+    <a href="..//marvelsspiderman/index.html" data-game="Marvel’s Spider-Man">Marvel’s Spider-Man</a>
+    <a href="..//masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect<br> Legendary Edition</a>
+    <a href="..//midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club:<br> Street Racing</a>
+    <a href="..//midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3:<br> Dub Edition</a>
+    <a href="..//mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11:<br> Aftermath</a>
+    <a href="..//mystreet/index.html" data-game="My Street">My Street</a>
+    <a href="..//mysterymastersmysteriesofthe heartcollection20games inallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters <br>MYSTERIES OF THE HEART<br> COLLECTION 20 GAMES <br>IN ALL Hidden Object <br>PC Game</a>
+    <a href="..//nba08/index.html" data-game="NBA 08">NBA 08</a>
+    <a href="..//nba2k8/index.html" data-game="NBA 2K8
+    ">NBA 2K8</a>
+    <a href="..//nba2k9/index.html" data-game="NBA 2K9">NBA 2K9</a>
+    <a href="nba2k10/index.html" data-game="NBA 2K10">NBA 2K10</a>
+    <a href="..//nba2k11/index.html" data-game="NBA 2K11">NBA 2K11</a>
+    <a href="..//nba2k12/index.html" data-game="NBA 2K12">NBA 2K12</a>
+    <a href="..//nba2k14/index.html" data-game="NBA 2K14">NBA 2K14</a>
+    <a href="..//nba2k15/index.html" data-game="NBA 2K15">NBA 2K15</a>
+    <a href="..//nba2k16/index.html" data-game="NBA 2K16">NBA 2K16</a>
+    <a href="..//nba2k17/index.html" data-game="NBA 2K17">NBA 2K17</a>
+    <a href="..//nba2k18/index.html" data-game="NBA 2K18">NBA 2K18</a>
+    <a href="..//nba2k19/index.html" data-game="NBA 2K19">NBA 2K19</a>
+    <a href="..//nba2k20/index.html" data-game="NBA 2K20">NBA 2K20</a>
+    <a href="..//nba2k21/index.html" data-game="NBA 2K21">NBA 2K21</a>
+    <a href="..//nba2k22/index.html" data-game="NBA 2K22">NBA 2K22</a>
+    <a href="..//nbalive08/index.html" data-game="NBA Live 08">NBA Live 08</a>
+    <a href="..//nbastreet/index.html" data-game="NBA Street">NBA Street</a>
+    <a href="..//needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed:<br> Carbon</a>
+    <a href="..//newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super <br>Mario Bros.</a>
+    <a href="..//newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super <br>Mario Bros. 2</a>
+    <a href="..//newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super <br>Mario Bros. U</a>
+    <a href="newsupermariobroswii/index.html" data-game="New Super Mario Bros. Wii">New Super <br>Mario Bros. Wi</a>
+    <a href="..//nhl2k10/index.html" data-game="NHL 2K10">NHL 2K10</a>
+    <a href="..//nintendoland/index.html" data-game="Nintendo Land">Nintendo Land</a>
+    <a href="..//phineasandferbacrossthe 2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb:<br> Across the 2nd Dimension</a>
+    <a href="..//pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s <br>Party</a>
+    <a href="..//playstationallstarsbattleroyale
+    /index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars<br>Battle Royale</a>
+    <a href="..//rio/index.html" data-game="Rio">Rio</a>
+    <a href="..//shrekforeverafter/index.html" data-game="Shrek Forever After">Shrek Forever After</a>
+    <a href="..//skateit/index.html" data-game="Skate It">Skate It</a>
+    <a href="..//sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega <br>All-Stars Racing</a>
+    <a href="..//sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: <br>Zero Gravity</a>
+    <a href="..//spongebobsquigglepants/index.html" data-game="SpongeBob Squigglepants">SpongeBob Squigglepants</a>
+    <a href="..//sportschampions/index.html" data-game="Sports Champions">Sports Champions</a>
+    <a href="..//stardewvalley/index.html" data-game="Stardew Valley">Stardew Valley</a>
+    <a href="..//stuntman/index.html" data-game="Stuntman">Stuntman</a>
+    <a href="..//sunsetoverdrive/index.html" data-game="Sunset Overdrive">Sunset Overdrive</a>
+    <a href="..//supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario <br>3D All-Stars</a>
+    <a href="..//supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario <br>3D Land</a>
+    <a href="..//supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario <br>3D World</a>
+    <a href="..//supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario <br>Galaxy 2</a>
+    <a href="..//supermariomaker/index.html" data-game="Super Mario Maker">Super Mario Maker</a>
+    <a href="..//supermariomaker2/index.html" data-game="Super Mario Maker 2">Super Mario Maker 2</a>
+    <a href="..//supermarioodyssey/index.html" data-game="Super Mario Odyssey">Super Mario Odyssey</a>
+    <a href="..//supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros.<br> Wonder</a>
+    <a href="..//supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. <br>for Nintendo 3DS</a>
+    <a href="..//supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros.<br> for Wii U</a>
+    <a href="..//theamazingrace/index.html" data-game="The Amazing Race">The Amazing Race</a>
+    <a href="..//theamazingspiderman2/index.html" data-game="The Amazing Spider-Man 2">The Amazing <br>Spider-Man 2</a>
+    <a href="..//theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures <br>of Captain Spirit</a>
+    <a href="..//theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: <br>Skyrim</a>
+    <a href="..//thefairlyoddparentsshadowshowdown/index.html" data-game="The Fairly OddParents: Shadow Showdown
+    ">The Fairly OddParents:<br> Shadow Showdown</a>
+    <a href="..//theincredibles/index.html" data-game="The Incredibles">The Incredibles</a>
+    <a href="..//thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: <br>Breath of the Wild</a>
+    <a href="..//thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie <br>Videogame</a>
+    <a href="..//theoregontrail/index.html" data-game="The Oregon Trail">The Oregon Trail</a>
+    <a href="..//thesims3/index.html" data-game="The Sims 3">The Sims 3</a>
+    <a href="..//thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3:<br> Starter Pack</a>
+    <a href="..//thesims4/index.html" data-game="The Sims 4">The Sims 4</a>
+    <a href="..//thesmurfs/index.html" data-game="The Smurfs">The Smurfs</a>
+    <a href="..//thesmurfs2/index.html" data-game="The Smurfs 2">The Smurfs 2</a>
+    <a href="..//thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The <br>SpongeBob SquarePants Movie</a>
+    <a href="..//thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: <br>Survival Instinct</a>
+    <a href="..//tomodachilife/index.html" data-game="Tomodachi Life">Tomodachi Life</a>
+    <a href="..//tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s <br>Pro Skater 4</a>
+    <a href="..//toystory3/index.html" data-game="Toy Story 3">Toy Story 3</a>
+    <a href="..//transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers:<br> Rise of the Dark Spark</a>
+    <a href="..//udrawstudio/index.html" data-game="uDraw Studio">uDraw Studio</a>
+    <a href="..//ultimatenesremix/index.html" data-game="Ultimate NES Remix">Ultimate NES Remix</a>
+    <a href="..//uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted:<br> Drake’s Fortune</a>
+    <a href="..//uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: <br>A Thief’s End</a>
+    <a href="..//watchdogs/index.html" data-game="Watch Dogs">Watch Dogs</a>
+    <a href="..//watchdogs2/index.html" data-game="Watch Dogs 2">Watch Dogs 2</a>
+    <a href="..//watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: <br>Legion</a>
+    <a href="..//wiiplay/index.html" data-game="Wii Play">Wii Play</a>
+    <a href="..//wiisports/index.html" data-game="Wii Sports">Wii Sports</a>
+    <a href="..//wipeout/index.html" data-game="Wipeout">Wipeout</a>
+    <a href="..//wipeout2/index.html" data-game="Wipeout 2">Wipeout 2</a>
+    <br><br><br>
+        </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <!-- Sidebar Toggle Button -->
+    <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+      <i class="fa fa-gamepad"></i><br>
+    </div>
+
+    <div id="searchResults">
 
 
-     <div class="cog-icon">
-         <div class="fa fa-gear" aria-hidden="true" onclick="toggleAccessibilityMenu()"> <div class="acc">Accessibility</div></div>
-     </div>
 
-     <!-- Accessibility dropup content -->
-     <div id="accessibility-dropup" class="dropup-content">  <div id="google_translate_element"></div>
- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-           <button onclick="resetSettings()">Reset Settings</button>
-
-           <button onclick="increaseFont()">Increase Font Size</button>
-         <button onclick="decreaseFont()">Decrease Font Size</button>
-         <button onclick="invertColors()">Invert Colors</button>
-         <button onclick="toggleLightMode()">Toggle Light Mode</button>
-         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-         <button onclick="increaseBrightness()">Increase Brightness</button>
-           <button onclick="decreaseBrightness()">Decrease Brightness</button>
-         <button onclick="increaseContrast()">Increase Contrast</button>
-           <button onclick="decreaseContrast()">Decrease Contrast</button>
-         <button onclick="adjustSaturation(10)">Increase Saturation</button>
-         <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-         <button onclick="applyRedFilter()">Apply Red Filter</button>
-         <button onclick="applyGreenRedFilter()">Apply Green-Red Filter</button>
-       <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-       <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-   <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-         <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-
-
-
-         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
-     </div>
+        </div>
 
      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width:200px;" id="mySidebar">
          <button onclick="toggleSidebar()" class="w3-bar-item w3-button w3-large">Close &times;</button>
@@ -400,6 +402,7 @@ Australia: June 15, 2013
         </a>
     </div>
 </div>
+
 <script>
   document.getElementById("rateButton").addEventListener("click", function() {
    var ratingContainer = document.getElementById("ratingContainer");
@@ -3528,26 +3531,7 @@ function showSlides(n) {
             }
         }
     </script>
-    <script>
-    function toggleAccessibilityMenu() {
-      var accessibilityDropup = document.getElementById("accessibility-dropup");
-      accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
 
-    // Existing functions for accessibility options
-
-    function increaseFont() {
-      // Add your code for increasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
-    }
-
-    function decreaseFont() {
-      // Add your code for decreasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
-    }
-  </script>
 
 
 <script>
@@ -3948,33 +3932,7 @@ function decreaseFont() {
 }
 </script>
 
-  <script>
-    function decreaseFont() {
-        // Decrease the font size
-        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-        var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
-        document.body.style.fontSize = newFontSize + 'px';
 
-        // Adjust the sidebar size
-        var sidebar = document.querySelector('.sidebar');
-        var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
-        var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
-        sidebar.style.width = newSidebarWidth + 'px';
-
-        // Adjust other elements inside the sidebar if needed
-        var links = document.querySelectorAll('.sidebar a');
-        links.forEach(function(link) {
-            var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
-            var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
-            link.style.fontSize = newLinkSize + 'px';
-        });
-
-        // Adjust the top position of the sidebar to maintain its top position
-        var topnavHeight = document.querySelector('.topnav').offsetHeight;
-        sidebar.style.top = topnavHeight + 'px';
-    }
-
-</script>
 <script>
 
   function applyRedFilter() {
@@ -4059,7 +4017,7 @@ function decreaseFont() {
 
     // Store the original font sizes
     function storeOriginalFontSizes() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .game-container, .game-title,#h1,.opening-screen button,.game-container,.game-info,#likeButton,.footer, #commentButton, #rateButton,.game-title, #enter-site-button';
+        const selector = '.sidebar *,  .welcome, .underwelcome, .game-container, .game-title,#h1,.opening-screen button,.game-container,.game-info,#likeButton,.footer, #commentButton, #rateButton,.game-title, #enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
         });
@@ -4075,17 +4033,17 @@ function decreaseFont() {
 
     // Increase font size
     function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
+        adjustFontSize(1.1, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
     }
 
     // Decrease font size
     function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
+        adjustFontSize(0.9, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
     }
 
     // Reset font sizes to their original values
     function resetFont() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button';
+        const selector = '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button';
         document.querySelectorAll(selector).forEach(element => {
             const originalFontSize = element.getAttribute('data-original-font-size');
             if (originalFontSize) element.style.fontSize = originalFontSize;
@@ -4190,4 +4148,131 @@ document.getElementById('filterCheckbox').addEventListener('change', function() 
 });
 </script>
 
- </body>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}</script>
+
+<script>
+
+</script>
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+
+    // Get all elements with the 'dropdown-content' class within the topnav
+    var dropdowns = x.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+        if (x.className.includes("responsive")) {
+            dropdowns[i].style.display = "none";
+        } else {
+            // Reset style in case it was previously modified
+            dropdowns[i].style.display = "";
+        }
+    }
+}
+
+// This part is to ensure the dropdown content does not display in responsive mode
+// You may need to add an event listener or modify existing ones for dropdown buttons
+// to control their display property separately if they should be visible in responsive mode.
+
+</script>
+
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
+
+
+<script>
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
+
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+
+    // Close the dropup after the action
+    closeAccessibilityDropup();
+
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
+
+console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
+    // ... (existing code)
+    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
+</script>
+
+
+</body>

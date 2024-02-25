@@ -34,11 +34,9 @@
   <!-- Navigation Bar with Logo and Website Name -->
    <div class="topnav"id="myTopnav">
      <!-- Logo and Website Name -->
-     <a href="index.html">
-       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;"> Reminiscence Collection    <!-- Adjust the path and style as needed -->
-
-
-     </a>
+     <a href="..//index.html">
+       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;Reminiscence&ensp;Collection
+  </a>
 
      <!-- Navigation Links -->
      <a class="active" href="..//index.html">Home</a>
@@ -4225,5 +4223,52 @@ function myFunction() {
     }
   };
 </script>
+
+
+<script>
+  function resetSettings() {
+    // Remove other classes that might affect the background
+    document.body.classList.remove('dark-mode');
+    document.body.classList.remove('invert-colors');
+    document.body.classList.remove('light-mode');
+
+    // Reset other variables if needed
+    grayscaleFilter = false;
+    redGreenFilter = 0;
+    saturation = 100;
+    contrast = 100;
+    sepia = 0;
+    brightness = 100;
+
+    // Reset font size to default
+    document.body.style.fontSize = "";
+
+    // Reset invert colors
+    document.body.classList.remove("invert-colors");
+
+    // Temporarily disable transitions during reset
+    document.body.classList.add("disable-transition");
+
+    // Update the styles to reflect the default settings
+    updateFilter();
+    updateStyles();
+    updateContrast();
+    updateBrightness();
+
+    // Close the dropup after the action
+    closeAccessibilityDropup();
+
+    // Enable transitions after the reset
+    setTimeout(function () {
+        document.body.classList.remove("disable-transition");
+    }, 1000); // Adjust the timeout value based on your transition duration
+}
+
+console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
+    // ... (existing code)
+    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
+</script>
+
+
 
  </body>

@@ -716,7 +716,7 @@ body.light-mode .cog-icon * {
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
-       color: white; /* Change color when active */;
+       color: blue; /* Change color when active */;
        background-color: transparent
 
    }
@@ -1734,12 +1734,14 @@ select:hover {
 
   #zoomIn {
     right: 130px; /* Adjust based on your layout */;
-    z-index:2
+    z-index:2;
+    top:80px
   }
 
   #zoomOut {
     right: 80px; /* Adjust based on your layout */;
-      z-index:2
+      z-index:2;
+        top:80px
   }
 
   /* Caption Style */
@@ -2020,11 +2022,7 @@ body.dark-mode #enter-site-button:hover {
     color:white
 }
 
-/* Style for .menu-toggle when active */
-body.light-mode .menu-toggle.active {
-    color: black; /* Change color when active */
 
-}
 body.light-mode .caption-container {
 
   background-color: grey
@@ -2206,19 +2204,14 @@ p {
 .close {
   position: absolute;
   top: 15px;
-  right: 35px;
+  right: 50px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  top:40px
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* Zoom buttons */
 .zoom-btn {
@@ -2258,11 +2251,16 @@ p {
 }
 
   @media screen and (max-width: 585px) {#zoomIn {
-  font-size: 20px
+  font-size: 15px;
+  top:37px;
+  padding: 5px
 }
 
 #zoomOut {
-font-size: 20px
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+
 }
 }
 
@@ -2419,7 +2417,7 @@ font-size: 20px
 }
 
 /* Styles for active/clicked state */
-.accessibility-button:active {
+.accessibility-button.active {
   background-color: dodgerblue; /* Darken button further when clicked */
 }
 
@@ -2429,7 +2427,7 @@ font-size: 20px
 }
 
 /* Styles for active/clicked state */
-.dark-mode .accessibility-button:active {
+.dark-mode .accessibility-button.active {
   background-color: dimgrey; /* Darken button further when clicked */
 }
 
@@ -2440,7 +2438,7 @@ font-size: 20px
 }
 
 /* Styles for active/clicked state */
-.light-mode .accessibility-button:active {
+.light-mode .accessibility-button.active {
   background-color: grey; /* Darken button further when clicked */;
   color:white
 }
@@ -2545,16 +2543,14 @@ background-color: blue
 
 
 
-/* Style the dropdown content (hidden by default) */
-.light-mode .dropdown-content:hover {
-  background-color: grey
-}
+
 
 
 
 /* Style the dropdown content (hidden by default) */
-.light-mode .dropdown:active {
-  background-color: grey
+.light-mode .dropdown.active {
+  background-color: grey;
+  color:white
 }
 
 
@@ -2570,7 +2566,8 @@ background-color: blue
 /* Dark Mode styles for dropdown and its content */
 .light-mode .dropdown-content,
 .light-mode .dropdown:hover {
-  background-color: grey; /* Dark Mode background color */
+  background-color: grey; /* Dark Mode background color */;
+  color:white
 }
 
 
@@ -2583,11 +2580,33 @@ color: black;
 
 
 
+
 }
-.light-mode .accessibility-button:active {
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
 
 
-background-color: grey
+
+}
+.light-mode .accessibility-button.active {
+
+
+background-color: grey;
+color:white
 
 
 }
@@ -2596,14 +2615,16 @@ background-color: grey
 .light-mode .accessibility-button:hover {
 
 
-background-color: grey
+background-color: grey;
+color:white
 
 
 }
 /* Dark Mode styles for dropdown and its content */
 .dark-mode .dropdown-content,
 .dark-mode .dropdown:hover {
-  background-color: dimgrey; /* Dark Mode background color */
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
 }
 
 
@@ -2703,4 +2724,39 @@ background-color: grey
   .dropdown-content {
     width: 100%; /* Adjusted width for medium-sized screens */
   }
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad.active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
 }
