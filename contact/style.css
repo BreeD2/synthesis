@@ -5193,3 +5193,25 @@
         button[type="submit"]:hover {
             background-color: #004494;
         }
+
+        @media (max-width: 768px) {
+            .dropdown-content,
+            .navigation-links,
+            input[type="text"] {
+                width: 100%; /* Make elements full-width */
+                font-size: 16px; /* Increase font size for readability */
+            }
+
+            .dropdown-content {
+                position: static; /* Adjust positioning for mobile */
+            }
+
+            /* Collapse navigation links into a dropdown or "hamburger" menu */
+            .navigation-links {
+                display: none; /* Hide by default */
+            }
+
+            .icon {
+                display: block; /* Show menu toggle icon */
+            }
+        }
