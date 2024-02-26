@@ -42,9 +42,9 @@
      <a class="active" href="..//index.html">Home</a>
       <a href="..//games/index.html">Games</a>
      <a href="..//about/index.html">About</a>
-     <a href="contact/index.html">Contact</a>
-      <a href="login/index.html">Login</a>
-       <a href="signup/index.html">Signup</a>
+     <a href="..//contact/index.html">Contact</a>
+      <a href="..//login/index.html">Login</a>
+       <a href="..//signup/index.html">Signup</a>
 
      <!-- Search Input -->
      <input type="text" placeholder="Search..">
@@ -71,7 +71,7 @@
          <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
          <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
          <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-         <button class="close-button" onclick="toggleAccessibilityMenu()">Close </button>
+
        </div>
      </div>
 
@@ -3422,10 +3422,10 @@ function showSlides(n) {
         closeAccessibilityDropup();
     }
 
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
+    // JavaScript function as shown above
+    function closeAccessibilityMenu() {
+        var dropdownContent = document.querySelector('.dropdown .dropdown-content');
+        dropdownContent.style.display = 'none';
     }
 </script>
 
