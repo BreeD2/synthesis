@@ -340,6 +340,12 @@ body {
 
   }
 
+  /* Add styling for font awesome icon */
+  .light-mode .fa {
+      cursor: pointer;
+      color: black; /* Change font color to white */
+
+  }
 
 
 
@@ -1063,6 +1069,7 @@ select:hover {
 .welcome {
   color:white;
   font-size: 40px;
+  font-weight: bolder;
 }
 .dark-mode .welcome {
   background-color: black;
@@ -1117,7 +1124,7 @@ select:hover {
     font-family: 'Arial', sans-serif; /* Specify a font-family */
     border: 5px solid white; /* Optional: Add a border */;
     animation:fadeIn 2s;
-    font-weight: bold
+    font-weight: bolder
 
 }
 
@@ -1131,13 +1138,32 @@ select:hover {
 }
 
 /* Further adjustments for very small screens, like smartphones */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
     .welcome {
-        font-size: 20px; /* Even smaller font size for very small screens */
+        font-size: 25px; /* Even smaller font size for very small screens */
         padding: 10px; /* Less padding to save space */
         margin: 10px 0; /* Adjusted margin */
     }
+    /* Styling for the heading within the about section */
+#about .what {
+  color: white; /* Dark grey for readability */
+  font-size: 25px; /* Larger font size for heading */
+
+
 }
+
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 780px) {
+
+    .what {
+      color:white;
+      font-size:10px
+    }
+
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -1182,7 +1208,7 @@ select:hover {
   margin-bottom: 20px; /* Space below the heading */;
       color:white;
     font-size: 28px; /* Slightly larger font size for headings */;
-    font-weight: bold;
+
 }
 
 
@@ -1810,7 +1836,8 @@ body.light-mode #about p {
 }
 .what {
   color:white;
-  font-size:30px
+  font-size:30px;
+  font-weight: 500; /* Bold font weight for emphasis */
 }
 body.light-mode .what {
   color:black;
@@ -1977,9 +2004,24 @@ color:white
 
 
 }
-body.light-mode .sort {
+
+
+
+.dark-mode .sort {
+
   color:white
+
+
 }
+
+.light-mode .sort {
+
+  color:black
+
+
+}
+
+
 
 body.light-mode .prev {
   background-color: grey;
@@ -2415,6 +2457,7 @@ p {
 
 }
 
+
 /* Styles for hover state */
 .accessibility-button:hover {
   background-color: dodgerblue; /* Darken button slightly on hover */
@@ -2640,7 +2683,7 @@ color:white
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .light-mode .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: grey;
   color: white;
 }
 
@@ -2860,9 +2903,44 @@ color:black;
   border-radius: 4px; /* Optional: for rounded corners */
 }
 
+/* Create a custom checkbox */
+.dark-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Create a custom checkbox */
+.light-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */;
+  border: 1px solid #ccc;
+}
+
 /* When the checkbox is checked, add a blue background */
 .custom-checkbox input:checked ~ .checkmark {
   background-color: red;
+}
+
+/* When the checkbox is checked, add a blue background */
+.light-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.dark-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: black;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -2888,6 +2966,28 @@ color:black;
   transform: rotate(45deg);
 }
 
+/* Style the checkmark/indicator */
+.light-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.dark-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
@@ -2903,11 +3003,15 @@ color:black;
        font-size: 10px;
     }
 
-   .sidebar input[type="text"], #mainCategory, #subCategory, #games-list, .sort, label {
+   .sidebar input[type="text"], #mainCategory, #subCategory, #games-list,  label {
          font-size: 10px;
     }
       .sidebar h3 {
         font-size:15px
+      }
+      .sort {
+        font-size: 10px;
+        margin:5%
       }
 
     input[type="checkbox"] {
