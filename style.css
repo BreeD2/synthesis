@@ -3053,11 +3053,5 @@ color:black;
 }
 
 #google_translate_element {
-  /* Add your styles here */
-  background-color: #f0f0f0; /* Light grey background */
-  padding: 10px; /* Padding around the content */
-  border-radius: 5px; /* Rounded corners */
-  width: auto; /* Adjust width as needed */
-  margin: 20px 0; /* Margin on top and bottom */
-  text-align: center; /* Center the content */
-}
+    width: 100%;
+    }
