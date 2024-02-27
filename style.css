@@ -2898,87 +2898,36 @@ color:black;
     .sidebar-visible .content {
         margin-left: 150px; /* Adjust content margin to match the reduced sidebar width */
     }
-     .sidebar a {
-       font-size: 10px
-     }
-     .sidebar h3 {
-         font-size: 15px
 
-     }
+    .sidebar a {
+       font-size: 10px;
+    }
 
+   .sidebar input[type="text"], #mainCategory, #subCategory, #games-list, .sort, label {
+         font-size: 10px;
+    }
+      .sidebar h3 {
+        font-size:15px
+      }
 
-     label {
-font-size:10px;
+    input[type="checkbox"] {
+        font-size: 15px;
+        margin-bottom: 50%;
+    }
 
-  /* Add more styles as needed */;
+    .fa.fa-gamepad {
+      font-size: 15px;
+    }
 
+    .menu-toggle {
+      left: 5px;
+      top: 70px;
+      padding-bottom: 1px;
+      padding-top: 1px;
+    }
 
-
-}
-
-/* Style to simulate a checkmark inside the .checkmark span when the checkbox is checked */
-
-
-input[type="checkbox"] {
-font-size: 15px;
-margin-bottom: 55%;
-margin-bottom: 50%;
-
-
-}
-.sort {
-  margin: 10%;
-  font-size: 10px
-}
-
-/* Ensure the text aligns with the checkbox visually */
-.custom-checkbox-label span + span {
-  vertical-align: left; /* Adjust as necessary for alignment */
-}
-
-/* Style for select dropdowns */
-#mainCategory {
-    width: 80%; /* Adjusted width for better fit */
-
-    font-size: 10px; /* Increased font size for better readability */
-    padding: 2px; /* Adjusted padding for better touch target size */
-}
-
-#subCategory {
-    width: 80%; /* Adjusted to match the main category for consistency */
-    font-size: 10px; /* Increased font size for readability */
-
-    padding: 2px; /* Added padding for consistency and usability */
-}
-
-#games-list {
-    width: 80%; /* Adjusted to match the main category for consistency */
-    font-size: 10px; /* Increased font size for readability */
-
-    padding: 2px; /* Added padding for consistency and usability */
-}
-.fa.fa-gamepad {
-  font-size: 15px;
-
-}
-.menu-toggle {
-  left: 5px;
-  top:70px;
-    padding-bottom: 1px;
-    padding-top: 1px;
-
-
-}
-
-
-.sidebar input[type="text"] {
-
-  font-size: 10px;
-
-
-
-
-
-
-}
+    /* Adjust as necessary for alignment */
+    .custom-checkbox-label span + span {
+      vertical-align: middle; /* Corrected alignment */
+    }
 }
