@@ -44,6 +44,9 @@
     <a href="..//contact/index.html">Contact</a>
     <a class="active" href="login/index.html">Login</a>
        <a href="..//signup/index.html">Signup</a>
+    
+
+<!-- Rest of your navigation and content goes here -->
 
 
     <!-- Search Input -->
@@ -4462,6 +4465,21 @@ function myFunction() {
       }
     }
   };
+</script>
+
+<script>
+function updateNavigationForLoggedInUser(userName, profileImagePath) {
+  const profileSection = document.querySelector('.profile-section');
+  profileSection.querySelector('.profile-name').textContent = userName;
+  profileSection.querySelector('.profile-icon').src = profileImagePath;
+
+  // Hide the login and signup links
+  document.querySelector('a[href="login/index.html"]').style.display = 'none';
+  document.querySelector('a[href="..//signup/index.html"]').style.display = 'none';
+
+  // Show the profile section
+  profileSection.style.display = 'flex';
+}
 </script>
 
 
