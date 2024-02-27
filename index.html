@@ -13,7 +13,8 @@
   <meta name="theme-color" content="#ffffff">
    <center>
 
-   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,18 +32,20 @@
   <!-- Navigation Bar with Logo and Website Name -->
   <div class="topnav" id="myTopnav">
     <a href="index.html" class="logo">
-      <img src="rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;Reminiscence&ensp;Collection
+      <img src="rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
+
  </a>
 
     <!-- Menu Toggle Icon -->
 
     <!-- Navigation Links -->
     <a class="active" href="index.html">Home</a>
-
+  <a href="games/index.html">Games</a>
     <a href="about/index.html">About</a>
     <a href="contact/index.html">Contact</a>
-    <a href="login/index.html">Login</a>
-  
+    <a href="login/index.html">Login/Signup</a>
+
+
 
     <!-- Search Input -->
     <input type="text" placeholder="Search..">
@@ -50,7 +53,11 @@
 
         <!-- Accessibility Button and Dropdown -->
         <div class="dropdown">
-          <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
+          <button class="accessibility-button">
+    <span class="accessibility-text">Accessibility</span>
+    <i class="fa fa-caret-down"></i>
+  </button>
+
           <div class="dropdown-content">
             <div id="google_translate_element"></div>
             <button onclick="resetSettings()">Reset Settings</button>
@@ -85,7 +92,11 @@
     <h3>All Games</h3>
 <input type="text" placeholder="Search..">
 <br>
-    <label><input type="checkbox" id="filterCheckbox"> Sort</label>
+<label class="custom-checkbox">
+<input type="checkbox" id="filterCheckbox" hidden>
+<span class="checkmark"></span><div class=sort>Sort</div>
+</label>
+
 
 <div id="filterOptions" style="display: none;">
     <select id="mainCategory" onchange="updateSubCategory()">
@@ -100,7 +111,7 @@
     </select>
 
     <select id="subCategory" onchange="sortAndDisplayGames()">
-        <option value="" disabled selected hidden>Select a subcategory</option>
+        <option value="" disabled selected hidden>Choose a subcategory</option>
         <!-- Additional options will be dynamically filled based on the main category selection -->
     </select>
       <div id="games-list">Choose from the categories above</div>
@@ -3017,7 +3028,7 @@ function updateSubCategory() {
   console.log("Main category selected:", mainCategory); // Debugging line
 
   // Clear previous subcategory options
-  subCategory.innerHTML = '<option value="" disabled selected hidden>Select a subcategory</option>';
+  subCategory.innerHTML = '<option value="" disabled selected hidden>Choose a subcategory</option>';
 
   // Example: Dummy data for demonstration
   const optionsData = {
@@ -4502,6 +4513,51 @@ function myFunction() {
     }
   };
 </script>
+
+<script>
+function toggleSidebar() {
+  const sidebar = document.getElementById('.sidebar');
+  sidebar.classList.toggle('open');
+
+  // Optionally, adjust the toggle button appearance or aria-label if needed
+}
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const accessibilityButton = document.querySelector('.accessibility-button');
+  const iconSpan = document.createElement('span');
+  iconSpan.innerHTML = '<i class="fa fa-cog" style="display:none;"></i>'; // Gear icon is hidden by default
+  accessibilityButton.appendChild(iconSpan); // Add the gear icon span to the button
+
+  // Function to update the icon based on screen width
+  function updateIcon() {
+    if (window.innerWidth <= 600) {
+      // Small screens: show gear icon, hide caret-down
+      accessibilityButton.querySelector('.fa-cog').style.display = 'inline-block';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'none';
+    } else {
+      // Larger screens: show caret-down, hide gear icon
+      accessibilityButton.querySelector('.fa-cog').style.display = 'none';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'inline-block';
+    }
+  }
+
+  // Add search input to the designated container
+  const searchContainer = document.querySelector('.search-container');
+  if (searchContainer) {
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search..';
+    searchContainer.appendChild(searchInput);
+  }
+
+  window.addEventListener('resize', updateIcon);
+  updateIcon(); // Call once on load
+});
+</script>
+
 
 
   </body>

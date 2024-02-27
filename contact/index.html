@@ -13,9 +13,12 @@
  <meta name="theme-color" content="#ffffff">
    <center>
 
-   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
 
@@ -54,7 +57,10 @@
 
         <!-- Accessibility Button and Dropdown -->
         <div class="dropdown">
-          <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
+          <button class="accessibility-button">
+  <span class="accessibility-text">Accessibility</span>
+  <i class="fa fa-caret-down"></i>
+</button>
           <div class="dropdown-content">
             <div id="google_translate_element"></div>
             <button onclick="resetSettings()">Reset Settings</button>
@@ -340,7 +346,7 @@
 
           <div id="main-content" class="content">
 
-        </div>
+
 
 
 
@@ -380,7 +386,7 @@
    <div class="footer">
      <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
    </div>
-
+    </div>
 
    <script>
      document.addEventListener('DOMContentLoaded', function() {
@@ -4486,6 +4492,52 @@
        }
      };
    </script>
+
+   <script>
+     document.addEventListener('DOMContentLoaded', function() {
+       function toggleIcon() {
+         const screenWidth = window.innerWidth;
+         const accessibilityButton = document.querySelector('.accessibility-button i');
+         if (screenWidth <= 600) {
+           // Change to gear icon for screens smaller than or equal to 600px
+           accessibilityButton.classList.remove('fa-caret-down');
+           accessibilityButton.classList.add('fa-cog');
+         } else {
+           // Revert to caret-down icon for screens larger than 600px
+           accessibilityButton.classList.remove('fa-cog');
+           accessibilityButton.classList.add('fa-caret-down');
+         }
+       }
+
+       // Call toggleIcon on page load and window resize
+       toggleIcon();
+       window.addEventListener('resize', toggleIcon);
+     });
+   </script>
+
+   <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const accessibilityButton = document.querySelector('.accessibility-button');
+    const iconSpan = document.createElement('span');
+    iconSpan.innerHTML = '<i class="fa fa-cog" style="display:none;"></i>'; // Gear icon is hidden by default
+    accessibilityButton.appendChild(iconSpan); // Add the gear icon span to the button
+
+    function updateIcon() {
+      if (window.innerWidth <= 600) {
+        // Small screens: show gear icon, hide caret-down
+        accessibilityButton.querySelector('.fa-cog').style.display = 'inline-block';
+        accessibilityButton.querySelector('.fa-caret-down').style.display = 'none';
+      } else {
+        // Larger screens: show caret-down, hide gear icon
+        accessibilityButton.querySelector('.fa-cog').style.display = 'none';
+        accessibilityButton.querySelector('.fa-caret-down').style.display = 'inline-block';
+      }
+    }
+
+    window.addEventListener('resize', updateIcon);
+    updateIcon(); // Call once on load
+  });
+</script>
 
 
      </body>

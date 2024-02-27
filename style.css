@@ -707,6 +707,7 @@ body.light-mode .cog-icon * {
         padding-left:5px;
 
 
+
     /* Smooth transition effects for color and box-shadow when they change */
     transition: color 0.3s ease, box-shadow 0.3s ease;
 
@@ -1673,10 +1674,13 @@ select:hover {
 
   }
 
+  #filterOptions {
+      margin-top: 15px; /* Adjust the value as needed */
+  }
 
-  #filterCheckbox {
-    margin-top: 10px;
-}
+
+
+
 
 
   /* The Modal (background) */
@@ -2328,7 +2332,7 @@ p {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -2343,7 +2347,7 @@ p {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1060px) {
   .topnav a:not(:first-child), .topnav input[type="text"] {
     display: none; /* Hide all a elements that are not the first child and the search input by default */
   }
@@ -2646,7 +2650,7 @@ color:white
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1060px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
@@ -2657,7 +2661,7 @@ color:white
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1060px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -2668,6 +2672,7 @@ color:white
     float: none;
     display: block;
     text-align: left;
+
   }
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
@@ -2675,6 +2680,7 @@ color:white
     display: block;
     width: 100%;
     text-align: left;
+
   }
 }
 
@@ -2759,4 +2765,219 @@ color:black;
   color:black;
   box-shadow: none;
     box-shadow: 0px 2px 5px whitesmoke;
+}
+@media screen and (max-width: 600px) {
+  .accessibility-text {
+    display: none; /* Hides the "Accessibility" text */
+  }
+  .accessibility-button i {
+    /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
+    display: none; /* Hide the caret-down icon */;
+
+  }
+  .accessibility-button .fa-cog {
+    display: inline-block; /* Make sure the gear icon is visible */;
+
+  }
+}
+
+.title-text {
+  font-size: 16px; /* Default font size */
+}
+
+.sort {
+  margin: 1%;
+  font-size: 15px
+}
+
+@media screen and (max-width: 300px) {
+  .title-text {
+    font-size: 11px; /* Smaller font size on screens less than or equal to 600px wide */;
+    margin: 0;
+  }
+}
+
+.topnav .search-input {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+
+
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1060px) {
+    .topnav .search-input {
+        float: none;
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust as needed */
+    }
+}
+
+/* Base styles */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Sidebar starts off-screen */
+    width: 250px; /* Default sidebar width */
+    transition: left 0.5s; /* Smooth transition for sidebar */
+}
+
+.content {
+    margin-left: 0; /* Content starts with no left margin */
+    transition: margin-left 0.5s; /* Smooth transition for content margin */
+}
+
+/* When the sidebar is visible */
+.sidebar-visible .sidebar {
+    left: 0; /* Bring sidebar into view */
+}
+
+.sidebar-visible .content {
+    margin-left: 250px; /* Push content to the right to make space for the sidebar */
+}
+
+.custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  top:10px;
+  position: relative;
+  padding-left: 25px; /* Space for the custom checkbox */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: red;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 150px; /* Reduce sidebar width on smaller screens */
+    }
+
+    .sidebar-visible .content {
+        margin-left: 150px; /* Adjust content margin to match the reduced sidebar width */
+    }
+     .sidebar a {
+       font-size: 10px
+     }
+     .sidebar h3 {
+         font-size: 15px
+
+     }
+
+
+     label {
+font-size:10px;
+
+  /* Add more styles as needed */;
+
+
+
+}
+
+/* Style to simulate a checkmark inside the .checkmark span when the checkbox is checked */
+
+
+input[type="checkbox"] {
+font-size: 15px;
+margin-bottom: 55%;
+margin-bottom: 50%;
+
+
+}
+.sort {
+  margin: 10%;
+  font-size: 10px
+}
+
+/* Ensure the text aligns with the checkbox visually */
+.custom-checkbox-label span + span {
+  vertical-align: left; /* Adjust as necessary for alignment */
+}
+
+/* Style for select dropdowns */
+#mainCategory {
+    width: 80%; /* Adjusted width for better fit */
+
+    font-size: 10px; /* Increased font size for better readability */
+    padding: 2px; /* Adjusted padding for better touch target size */
+}
+
+#subCategory {
+    width: 80%; /* Adjusted to match the main category for consistency */
+    font-size: 10px; /* Increased font size for readability */
+
+    padding: 2px; /* Added padding for consistency and usability */
+}
+
+#games-list {
+    width: 80%; /* Adjusted to match the main category for consistency */
+    font-size: 10px; /* Increased font size for readability */
+
+    padding: 2px; /* Added padding for consistency and usability */
+}
+.fa.fa-gamepad {
+  font-size: 15px;
+
+}
+.menu-toggle {
+  left: 5px;
+  top:70px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+
+
+}
+
+
+.sidebar input[type="text"] {
+
+  font-size: 10px;
+
+
+
+
+
+
 }

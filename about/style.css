@@ -20,8 +20,27 @@ html {
   position: sticky; /* Make the navigation bar fixed */
   top: 0;         /* Align the navigation bar at the top of the page */
   width: 100%;    /* Make the navigation bar span the full width of the page */
-  z-index: 1;     /* Ensure the navigation bar stays on top of other elements */
+  z-index: 3;     /* Ensure the navigation bar stays on top of other elements */;
+  font-size: 15px
 }
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 14px;
+  padding-right: 16px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 3;
+
+
+}
+
 
 
 /* Style the links inside the navigation bar */
@@ -33,14 +52,14 @@ html {
   padding: 14px 16px;
   text-decoration: none;
 
-
   font-family: arial;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: lightgrey;
-  color: black;
+  background-color: grey;
+  color: white;
+
 
 }
 
@@ -59,6 +78,9 @@ html {
   margin-right: 2%;
 
 }
+
+
+
 /* Dark mode styles for the "active" element */
 body.light-mode .topnav a.active {
   background-color: grey;;
@@ -71,6 +93,34 @@ body.dark-mode .topnav a.active {
   color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .topnav .title, .topnav .icon {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .accessibility-button {
+    position: static;
+    transform: none;
+    order: -1; /* Ensures the button stays in the middle */
+    flex-basis: 100%; /* Take full width to maintain order */
+  }
+
+  /* Additional adjustments for mobile view */
+  .topnav .title {
+    order: -2; /* Title comes first */
+  }
+
+  .topnav .icon {
+    /* Last in order, no need to set explicitly */
+  }
+}
+
+
 
 /* Style the search box inside the navigation bar */
 .topnav input[type=text] {
@@ -80,7 +130,7 @@ body.dark-mode .topnav a.active {
   margin-top: 8px;
   margin-right: 2.6%;
 
-  width: 20%;
+  width: 18%;
 }
 
 
@@ -201,11 +251,7 @@ body {
 
 
 
-/* Light mode styles */
-body.light-mode {
-  background-color: white;
-  color: #000;
-}
+
 
 
 body.light-mode .topnav a {
@@ -227,6 +273,9 @@ body.dark-mode .topnav {
 body.dark-mode .topnav a {
   color: #fff; /* White font color for the links in the navbar in dark mode */
 }
+
+
+
 
 /* Normal mode styles */
 body {
@@ -271,7 +320,7 @@ body {
 
       background-color: dodgerblue; /* Change background color to red */
       position: fixed;
-      width: 20%;
+      width: 18%;
   padding: 5px; /* Add padding for better visual appearance */
 
       color: white;
@@ -299,15 +348,23 @@ body {
   /* Change background color of the icon container */
   .cog-icon {
       background-color: dodgerblue; /* Change to your desired background color */
-      margin-left:75%; /* Adjust margin for better alignment */;
+      margin-left:77%; /* Adjust margin for better alignment */;
       border-radius: 5px;
-      width: 20%; /* Adjust width for consistency with other elements */;
+      width: 18%; /* Adjust width for consistency with other elements */;
       position: relative;
       padding: 5px; /* Add padding for better visual appearance */;
       font-family: 'arial', sans-serif;
       font-size: 15px;
       margin-top: 0%;
       margin-bottom: 0%;
+      position: fixed; /* Keeps the element in the same place even when scrolling */
+      left: 25px; /* Distance from the left edge of the viewport */
+      top: 78px; /* Distance from the top edge of the viewport */
+      z-index: 1; /* Ensures the element stays on top of other content */
+
+      color: grey; /* Color of the text or icon */;
+
+
 
 
 
@@ -359,6 +416,30 @@ body {
     }
 }
 
+/* Base styles */
+.cog-icon .fa-gear {
+    cursor: pointer;
+    /* Ensure there's enough padding for easy tapping on touch devices */
+    padding: 5px;
+}
+
+.acc {
+    display: inline; /* Or 'block', depending on your layout */
+}
+
+/* Hide the Accessibility text on smaller screens */
+@media (max-width: 600px) {
+    .acc {
+        display: none;
+    }
+
+    /* Optionally, increase the size of the icon for easier interaction on touch devices */
+    .cog-icon .fa-gear {
+        font-size: 15px; /* Adjust based on your design */
+    }
+}
+
+
 
 body {
   background-color: ghostwhite;
@@ -406,11 +487,11 @@ input[type=text]:focus {
 .dropup-content {
     display: none;
     position: absolute;
-    width: 20%;
+    width: 18%;
     padding: 5px;
     border-radius: 5px;
     margin: 0%;
-    margin-left: 77.5%;
+    margin-left: 79.5%;
     margin-top: 0%;
 }
 
@@ -429,34 +510,37 @@ body.light-mode .topnav {
 
 }
 
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav #button.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+
 
 body.dark-mode .cog-icon,
 body.dark-mode .cog-icon * {
     color: white; /* Icon color in dark mode */
     background-color: dimgrey; /* Icon background color in dark mode */
 }
-body.dark-mode .cog-icon,
-body.dark-mode .cog-icon * {
-    color: white; /* Icon color in dark mode */
-    background-color: dimgrey; /* Icon background color in dark mode */
-}
+
 
 /* Light mode styles */
 body.light-mode .dropup-content,
 body.light-mode .dropup-content * {
     color: black; /* Text color in light mode */
-    background-color: whitesmoke; /* Background color in light mode */
+
 }
 
 body.light-mode .dropup-content button {
     color: black; /* Button text color in light mode */
-    background-color: ghostwhite; /* Button background color in light mode */
+    background-color: whitesmoke; /* Button background color in light mode */
 }
 
 body.light-mode .cog-icon,
 body.light-mode .cog-icon * {
     color: black; /* Icon color in light mode */
-    background-color: white; /* Icon background color in light mode */
+    background-color: whitesmoke; /* Icon background color in light mode */
 }
 
 /* Add your existing styles here */
@@ -614,21 +698,26 @@ body.light-mode .cog-icon * {
     cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
     position: fixed; /* Keeps the element in the same place even when scrolling */
     left: 25px; /* Distance from the left edge of the viewport */
-    top: 73px; /* Distance from the top edge of the viewport */
+    top: 78px; /* Distance from the top edge of the viewport */
     z-index: 1; /* Ensures the element stays on top of other content */
     font-size: 25px; /* Size of the text or icon inside */
-    color: grey; /* Color of the text or icon */
+    color: grey; /* Color of the text or icon */;
+    background-color: black;
+    padding-right:5px;
+        padding-left:5px;
+
 
     /* Smooth transition effects for color and box-shadow when they change */
     transition: color 0.3s ease, box-shadow 0.3s ease;
 
     /* Optional: Default box-shadow for visual depth (example) */
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
 }
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
-       color: white; /* Change color when active */
+       color: blue; /* Change color when active */;
+       background-color: transparent
 
    }
 
@@ -642,6 +731,30 @@ body.light-mode .cog-icon * {
        padding: 16px; /* Adjust padding to your needs */
    }
 
+
+
+   @media screen and (max-width: 1085px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+
+   @media screen and (max-width: 785px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+   @media screen and (max-width: 750px) {
+     .menu-toggle {
+       top: 120px;
+     }
+   }
+
+
+
+
+
+
    @media screen and (max-width: 585px) {
        .sidebar {
 
@@ -652,19 +765,8 @@ body.light-mode .cog-icon * {
        }
 
            .menu-toggle {
-             top:118px;
+             top:80px;
            }
-   }
-
-   @media screen and (max-width: 585px) {
-       .cog-icon {
-
-
-       }
-
-       }
-
-
    }
 
 
@@ -734,97 +836,6 @@ body.light-mode .cog-icon * {
   width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-.row {
-  width: 50%
-}
-
-#caption {
-  color:white
-}
-
-.mySlides {
-    display: none; /* Hide slides initially */
-    position: relative; /* Position relative to its normal position */
-    text-align: center; /* Center the content inside each slide */
-    width:50%; /* Full width of the container */;
-
-}
-
-.numbertext {
-    color: #f2f2f2; /* Light-colored text */
-    font-size: 12px; /* Small font size for the number text */
-    padding: 8px 12px; /* Padding for spacing */
-    position: absolute; /* Position it absolutely inside the slide */
-    top: 0; /* At the top of the slide */
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    left: 0; /* Align to the left */
-}
-
-.mySlides img {
-    width: 100%; /* Full width of the slide */
-    height: auto; /* Maintain aspect ratio */
-}
-
-#slideshow {
-    width: 100%;
-    position: relative;
-}
-
-.slide {
-    display: none;
-    width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.prev, .next {
-    /* common styles for navigation buttons */
-}
-
-/* Horizontal layout for larger screens */
-@media (min-width: 768px) {
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-}
-
-/* Vertical layout for smaller screens */
-@media (max-width: 767px) {
-    #slideshow {
-        height: 300px; /* adjust as needed */
-        overflow: hidden;
-    }
-
-    .slide {
-        display: block;
-        height: 300px; /* adjust as needed */
-    }
-
-    .prev, .next {
-        position: static;
-        width: 100%;
-        text-align: center;
-        border-radius: 0;
-    }
-
-    .next {
-        border-radius: 0;
-    }
-}
 
 .sidebar-open .container {
     margin-left: 250px; /* Adjust according to the width of your sidebar */
@@ -848,15 +859,6 @@ body.light-mode .cog-icon * {
             font-family: Arial, sans-serif;
         }
 
-        .welcome-container {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        }
 
         h1 {
             margin: 0.5em 0;
@@ -1117,6 +1119,24 @@ select:hover {
     font-weight: bold
 
 }
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 28px; /* Slightly smaller font size */
+        padding: 15px; /* Slightly less padding */
+        margin: 15px 0; /* Adjusted margin */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    .welcome {
+        font-size: 20px; /* Even smaller font size for very small screens */
+        padding: 10px; /* Less padding to save space */
+        margin: 10px 0; /* Adjusted margin */
+    }
+}
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -1133,11 +1153,10 @@ select:hover {
 /* Responsive adjustments for small screens */
 @media (max-width: 720px) {
     .opening-screen p {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 30px;
+
     }
     .opening-screen {
-
 
     }
     .opening-screen button {
@@ -1175,6 +1194,38 @@ select:hover {
     font-weight: normal;
 }
 
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+
+    #about p {
+        font-size: 14px; /* Smaller font size for comfortable reading */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #about h2 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    #about p {
+        font-size: 12px; /* Even smaller font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for compactness */
+    }
+}
+
+
 .opening-screen {
     height: 1200px; /* Fixed height for large screens */
     margin-top: -8%;
@@ -1198,9 +1249,10 @@ select:hover {
 @media (max-width: 768px) {
   .opening-screen {
     height: 600px; /* Adjust height for smaller devices */
-    margin-top: -10;
+    margin-top: -18%;
     margin-left: 0;
     margin-right: 0;
+
   }
 }
 
@@ -1251,6 +1303,7 @@ select:hover {
   position: relative;
   max-width: 1000px; /* Adjust based on your preference */
   margin: auto;
+
 }
 
 /* Hide the images by default */
@@ -1306,35 +1359,97 @@ select:hover {
 
 .featured-games-title {
   text-align: center;
-  margin: 0 20px; /* Adds space above and below the title */
-  font-size: 20px; /* Adjust font size as needed */
-  color: #ffffff; /* Change color as needed */
-  font-weight: bold;
-  background-color: red; /* Background color to make it stand out */
-  padding: 10px;
-  border-radius: 5px; /* Adds rounded corners */
-
-
-  margin-left: auto; /* Centers the title */
-  margin-right: auto; /* Centers the title */;
-  width: 100%;
-}
-
-.featured-games-title {
-  text-align: center;
   margin: 20px 0 20px; /* Adds space above and below the title */
-  font-size: 23px; /* Adjust font size as needed */
+  font-size: 25px; /* Adjust font size as needed */
   color: #ffffff; /* Change color as needed */
   font-weight: bold;
   background-color: red; /* Background color to make it stand out */
-  padding: 1px;
+  padding: 5px;
   border-radius: 5px; /* Adds rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
-  width:50%;
+  width:60%;
   margin-left: auto; /* Centers the title */
   margin-right: auto; /* Centers the title */
 }
 
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Maximum width of the slideshow */
+  margin: auto; /* Center the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* Position the buttons in the middle vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Rounded corners for the left side */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Rounded corners for the right side */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Full-width images within slides */
+.mySlides img {
+  display: block; /* Ensures the image is block level to take the width properly */
+  margin: auto; /* Centers the image */
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintains the aspect ratio */
+}
 
 
 .games-grid {
@@ -1484,38 +1599,10 @@ select:hover {
     margin: auto; /* Center the container */
 }
 
-/* Adjusted .prev and .next arrow styles */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%; /* Align vertically */
-    transform: translateY(-50%); /* Center vertically */
-    z-index: 0; /* Ensure arrows are above the slides */
-    color: #ffffff; /* Arrow color */
-    font-size: 24px; /* Arrow size */
-    padding: 16px; /* Clickable area size */
-    user-select: none; /* Prevent text selection */
-}
 
-.prev { left: calc(25% - 44px); } /* Position the "previous" arrow taking into account 50% width of .mySlides */
-.next { right: calc(25% - 44px); } /* Position the "next" arrow similar to the "prev" but from the right */
 
-/* Additional hover effects for better UX */
-.prev:hover, .next:hover {
-    color: #dcdcdc; /* Lighten color on hover */
-}
 
-/* Responsive adjustments */
-@media screen and (max-width: 500px) {
-    .mySlides {
-        width: 100%; /* Increase width to occupy more space on smaller screens */
-    }
-    .prev {
-      left:5px
-    }
-    .next {
-      right:14px;
-    }}
+
 
     /* styles.css */
     #games-list {
@@ -1624,14 +1711,11 @@ select:hover {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 2
   }
 
 
 
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
 
   /* Zoom Buttons */
   .zoom-btn {
@@ -1650,12 +1734,14 @@ select:hover {
 
   #zoomIn {
     right: 130px; /* Adjust based on your layout */;
-    z-index:2
+    z-index:2;
+    top:80px
   }
 
   #zoomOut {
     right: 80px; /* Adjust based on your layout */;
-      z-index:2
+      z-index:2;
+        top:80px
   }
 
   /* Caption Style */
@@ -1665,6 +1751,8 @@ select:hover {
     padding: 10px ;
     font-size: 20px;
   }
+
+
 
   .footer {
       width: 100%;
@@ -1781,6 +1869,94 @@ background-color: black; /* Light grey background for the footer */
 color: white; /* Dark text color for readability */
 
 }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 body.dark-mode #about {
 background-color: black;
 }
@@ -1794,6 +1970,8 @@ color:white
 .sort {
   font-size: 25px;
   color:white
+
+
 }
 body.light-mode .sort {
   color:white
@@ -1844,11 +2022,7 @@ body.dark-mode #enter-site-button:hover {
     color:white
 }
 
-/* Style for .menu-toggle when active */
-body.light-mode .menu-toggle.active {
-    color: black; /* Change color when active */
 
-}
 body.light-mode .caption-container {
 
   background-color: grey
@@ -1867,3 +2041,741 @@ body.dark-mode .next {
 }  #google_translate_element {
     width: 100%;
     }
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  top:40px
+}
+
+
+/* Zoom buttons */
+.zoom-btn {
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+}
+
+#zoomOut {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+
+}
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
+}
+
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+.cog-icon {
+    cursor: pointer;
+    /* Additional styling */
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+
+}
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button.active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.dark-mode .accessibility-button:hover {
+  background-color: dimgrey; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.dark-mode .accessibility-button.active {
+  background-color: dimgrey; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.light-mode .accessibility-button:hover {
+  background-color: grey; /* Darken button slightly on hover */;
+  color:white
+}
+
+/* Styles for active/clicked state */
+.light-mode .accessibility-button.active {
+  background-color: grey; /* Darken button further when clicked */;
+  color:white
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  scroll-behavior: auto;
+
+  width: 9.8%;
+  max-width: 140px;
+  min-width: 140px;
+
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown.active {
+  background-color: grey;
+  color:white
+}
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown {
+  color: black
+}
+
+
+
+
+/* Dark Mode styles for dropdown and its content */
+.light-mode .dropdown-content,
+.light-mode .dropdown:hover {
+  background-color: grey; /* Dark Mode background color */;
+  color:white
+}
+
+
+
+
+
+.light-mode .accessibility-button {
+
+color: black;
+
+
+
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
+
+
+
+}
+.light-mode .accessibility-button.active {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+}
+.light-mode .accessibility-button:hover {
+
+
+background-color: grey;
+color:white
+
+
+}
+/* Dark Mode styles for dropdown and its content */
+.dark-mode .dropdown-content,
+.dark-mode .dropdown:hover {
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.light-mode .topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
+/* Style for dropdown links */
+.dropdown-content button {
+  display: block;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+}
+
+/* Show the dropdown menu */
+.show {display: block;}
+
+/* Accessibility button styles */
+
+}
+
+/* Adjust width for screens within the range of 685px to 1024px */
+@media screen and (min-width: 290px) and (max-width: 3000px) {
+  .dropdown-content {
+    width: 100%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad.active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+
+.about-archive, .development-story, .research-focus {
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .about-archive, .development-story, .research-focus {
+        padding: 20px;
+    }
+}
+
+.header1 {
+
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 30px
+}
