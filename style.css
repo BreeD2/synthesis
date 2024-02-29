@@ -846,7 +846,7 @@ body.light-mode .cog-icon * {
 
 
 .sidebar-open .container {
-    margin-left: 250px; /* Adjust according to the width of your sidebar */
+    margin-left: 200px; /* Adjust according to the width of your sidebar */
 }
 
 .mySlides {display: none;}
@@ -923,7 +923,7 @@ body.light-mode .cog-icon * {
         }
 
         .sidebar-visible .content {
-            margin-left: 250px;
+            margin-left: 200px;
         }
         /* Position the image container (needed to position the left and right arrows) */
         .container {
@@ -2734,8 +2734,8 @@ color:black;
 /* Base styles */
 .sidebar {
     position: fixed;
-    left: -250px; /* Sidebar starts off-screen */
-    width: 250px; /* Default sidebar width */
+    left: -200px; /* Sidebar starts off-screen */
+    width: 200px; /* Default sidebar width */
     transition: left 0.5s; /* Smooth transition for sidebar */
 }
 
@@ -2744,13 +2744,17 @@ color:black;
     transition: margin-left 0.5s; /* Smooth transition for content margin */
 }
 
+.featured-games-title {
+  font-size:20px
+}
+
 /* When the sidebar is visible */
 .sidebar-visible .sidebar {
     left: 0; /* Bring sidebar into view */
 }
 
 .sidebar-visible .content {
-    margin-left: 250px; /* Push content to the right to make space for the sidebar */
+    margin-left: 200px; /* Push content to the right to make space for the sidebar */
 }
 
 .custom-checkbox {
@@ -2862,23 +2866,6 @@ color:black;
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
-    .sidebar {
-        width: 200px; /* Reduce sidebar width on smaller screens */;
-
-
-
-
-
-
-    }
-
-
-
-    .sidebar-visible .content {
-        margin-left: 200px; /* Adjust content margin to match the reduced sidebar width */;
-          top:20px;
-
-    }
 
     .sidebar a {
        font-size: 13px;
@@ -2904,7 +2891,6 @@ color:black;
     .fa.fa-gamepad {
       font-size: 20px;
     }
-
 
 
 
@@ -2945,16 +2931,3 @@ color:black;
     }
 
     /* Default sidebar styles */
-
-
-    /* Active state for sidebar to slide in */
-    .sidebar.active {
-        left: 0;
-    }
-
-    /* Responsive adjustments for small screens */
-    @media (max-width: 768px) {
-        .sidebar {
-          top:50px
-        }
-    }
