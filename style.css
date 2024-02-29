@@ -286,7 +286,7 @@ body {
 body .topnav {
   background-color: red; /* Red background for the navbar in normal mode */
   color: #fff; /* White font color for the navbar in normal mode */;
-  position: fixed
+  position: sticky
 
 }
 
@@ -701,26 +701,21 @@ body.light-mode .cog-icon * {
        color: #f1f1f1;
 
    }
-   .menu-toggle {
+ .menu-toggle {
     cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
     position: fixed; /* Keeps the element in the same place even when scrolling */
-    left: 25px; /* Distance from the left edge of the viewport */
-    top: 78px; /* Distance from the top edge of the viewport */
+    left: 14px; /* Distance from the left edge of the viewport */
+
     z-index: 1; /* Ensures the element stays on top of other content */
     font-size: 25px; /* Size of the text or icon inside */
     color: grey; /* Color of the text or icon */;
     background-color: black;
     padding-right:5px;
         padding-left:5px;
-
-
-
-    /* Smooth transition effects for color and box-shadow when they change */
-    transition: color 0.3s ease, box-shadow 0.3s ease;
-
-    /* Optional: Default box-shadow for visual depth (example) */
+          top: 74px;
+    transition: color 0.3s ease; box-shadow 0.3s ease;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
-}
+}}
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
@@ -741,22 +736,6 @@ body.light-mode .cog-icon * {
 
 
 
-   @media screen and (max-width: 1085px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-
-   @media screen and (max-width: 785px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-   @media screen and (max-width: 750px) {
-     .menu-toggle {
-       top: 120px;
-     }
-   }
 
 
 
@@ -773,7 +752,7 @@ body.light-mode .cog-icon * {
        }
 
            .menu-toggle {
-             top:80px;
+             top: 74px;
            }
    }
 
@@ -923,7 +902,7 @@ body.light-mode .cog-icon * {
         }
 
         .sidebar-visible .content {
-            margin-left: 200px;
+            margin-left: 250px;
         }
         /* Position the image container (needed to position the left and right arrows) */
         .container {
@@ -2255,6 +2234,7 @@ p {
     right: 0;
     top: 0;
 
+
   }
   .topnav.responsive a {
     float: none;
@@ -2406,6 +2386,7 @@ p {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+
 }
 
 
@@ -2413,6 +2394,7 @@ p {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+
 }
 
 /* Dropdown container - needed to position the dropdown content */
@@ -2734,8 +2716,8 @@ color:black;
 /* Base styles */
 .sidebar {
     position: fixed;
-    left: -200px; /* Sidebar starts off-screen */
-    width: 200px; /* Default sidebar width */
+    left: -240px; /* Sidebar starts off-screen */
+    width: 240px; /* Default sidebar width */
     transition: left 0.5s; /* Smooth transition for sidebar */
 }
 
@@ -2894,12 +2876,10 @@ color:black;
 
 
 
-    .menu-toggle {
-      left: 10px;
-      top: 76px;
-      padding-bottom: 1px;
-      padding-top: 1px;
 
+
+    .sidebar {
+      width:200px
     }
 
     /* Adjust as necessary for alignment */
@@ -2930,4 +2910,6 @@ color:black;
     width: 100%;
     }
 
-    /* Default sidebar styles */
+
+
+}
