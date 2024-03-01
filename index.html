@@ -29,6 +29,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
+
+  <div class="read-aloud">
   <!-- Navigation Bar with Logo and Website Name -->
   <div class="topnav" id="myTopnav">
     <a href="index.html" class="logo">
@@ -401,6 +403,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
 
 <div class="footer">
   <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
+</div>
 </div>
 
 <script>
@@ -3183,7 +3186,26 @@ function showSlides(n) {
 
 </script>
 
+<script>
+function speakText() {
+    // Check if speech synthesis is supported
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance();
+        let textToRead = '';
+        document.querySelectorAll('.read-aloud').forEach(element => {
+            textToRead += element.textContent + ' ';
+        });
+        msg.text = textToRead;
+        window.speechSynthesis.speak(msg);
 
+        // Optional: Highlight text as it's being read
+        // This part is more complex and requires tracking the speechSynthesis progress.
+        // It's not directly supported, but you can approximate by dividing the text and triggering separate utterances for segments.
+    } else {
+        console.log('Text-to-Speech not supported.');
+    }
+}
+</script>
 
 
 
@@ -4280,26 +4302,7 @@ function toggleFocusHighlight() {
 }
 </script>
 
-<script>
-function speakText() {
-    // Check if speech synthesis is supported
-    if ('speechSynthesis' in window) {
-        const msg = new SpeechSynthesisUtterance();
-        let textToRead = '';
-        document.querySelectorAll('.read-aloud').forEach(element => {
-            textToRead += element.textContent + ' ';
-        });
-        msg.text = textToRead;
-        window.speechSynthesis.speak(msg);
 
-        // Optional: Highlight text as it's being read
-        // This part is more complex and requires tracking the speechSynthesis progress.
-        // It's not directly supported, but you can approximate by dividing the text and triggering separate utterances for segments.
-    } else {
-        console.log('Text-to-Speech not supported.');
-    }
-}
-</script>
 
   </body>
   </html>
