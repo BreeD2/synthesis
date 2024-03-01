@@ -104,7 +104,7 @@ body.dark-mode .topnav a.active {
   }
 
   .accessibility-button {
-    position: static;
+    position: sticky;
     transform: none;
     order: -1; /* Ensures the button stays in the middle */
     flex-basis: 100%; /* Take full width to maintain order */
@@ -364,7 +364,7 @@ body {
       font-size: 15px;
       margin-top: 0%;
       margin-bottom: 0%;
-      position: fixed; /* Keeps the element in the same place even when scrolling */
+      position: sticky; /* Keeps the element in the same place even when scrolling */
       left: 25px; /* Distance from the left edge of the viewport */
       top: 78px; /* Distance from the top edge of the viewport */
       z-index: 1; /* Ensures the element stays on top of other content */
@@ -388,7 +388,7 @@ body {
 
   /* Accessibility button styles */
   #accessibility-button {
-    position: fixed;
+    position: sticky;
     margin-top: 40%;
     margin-left: 30%;
     width: 80%;
@@ -2230,7 +2230,7 @@ p {
 @media screen and (max-width: 1000px) {
   .topnav.responsive {position: fixed;}
   .topnav.responsive a.icon {
-    position: fixed;
+    position: sti;
     right: 0;
     top: 0;
 
@@ -2305,6 +2305,7 @@ p {
   background-color: inherit;
   font-family: arial;
   margin: 0;
+  position: sticky;
 
 }
 
@@ -2664,15 +2665,18 @@ color:black;
 }
 @media screen and (max-width: 600px) {
   .accessibility-text {
-    display: none; /* Hides the "Accessibility" text */
+    display: none; /* Hides the "Accessibility" text */;
+  position: sticky
   }
   .accessibility-button i {
     /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
     display: none; /* Hide the caret-down icon */;
+      position: sticky
 
   }
   .accessibility-button .fa-cog {
     display: inline-block; /* Make sure the gear icon is visible */;
+    position: sticky;
 
   }
 }
