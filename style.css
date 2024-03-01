@@ -209,12 +209,6 @@ body {
 
 
 
-/* Light mode styles */
-body {
-  background-color: #fff;
-  color: #000;
-    font-family:   'arial', sans-serif; /* Add the desired font-family */
-}
 
 /* Dark mode styles */
 body.dark-mode {
@@ -316,7 +310,7 @@ body {
     color: #000;
   }
 
-  /* Change background color to red */
+
   .dropup-content {
 
       background-color: dodgerblue; /* Change background color to red */
@@ -562,31 +556,22 @@ body.light-mode .cog-icon * {
 
 
 
-
-/* Sidebar Styles */
+/* Refined Sidebar Styles */
 .sidebar {
-
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    height: 100vh;
-    transition: none;
-    background-color: #1a1a1a;
-      overflow-x: hidden;
-    padding-top: 20px;
-    scroll-behavior: auto;
-      overflow-y: auto;
-      top:50px;
-      z-index: 1;
-
-      left: -250px;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
-      color: white;
-      transition: left 0.5s;
-
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Sidebar position fixed to the viewport */
+    top: 50px; /* Distance from the top of the viewport */
+    left: -250px; /* Initially positioned off-screen to the left */
+    height: 100%; /* Full viewport height */
+    padding-top: 20px; /* Padding at the top inside the sidebar */
+    background-color: #111; /* Sidebar background color */
+    color: white; /* Text color */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    transition: left 0.5s; /* Smooth transition for toggling visibility */
+    z-index: 1; /* Ensure sidebar is above other content but below modals/popups */
 }
+
 .sidebar::-webkit-scrollbar {
     width: 15px;
     background: #e0e0e0;
@@ -902,7 +887,7 @@ body.light-mode .cog-icon * {
         }
 
         .sidebar-visible .content {
-            margin-left: 250px;
+            margin-left: 240px;
         }
         /* Position the image container (needed to position the left and right arrows) */
         .container {
@@ -2666,7 +2651,7 @@ color:black;
 @media screen and (max-width: 600px) {
   .accessibility-text {
     display: none; /* Hides the "Accessibility" text */;
-  position: sticky
+  position: fixed
   }
   .accessibility-button i {
     /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
@@ -2717,13 +2702,7 @@ color:black;
     }
 }
 
-/* Base styles */
-.sidebar {
-    position: fixed;
-    left: -240px; /* Sidebar starts off-screen */
-    width: 240px; /* Default sidebar width */
-    transition: left 0.5s; /* Smooth transition for sidebar */
-}
+
 
 .content {
     margin-left: 0; /* Content starts with no left margin */
@@ -2909,6 +2888,14 @@ color:black;
   font-size: 16px; /* Adjust as needed */
   color: #fff; /* Adjust based on your theme */
 }
+
+
+
+:focus {
+  outline: 2px solid yellow; /* Customizable: change color and style */
+}
+
+
 
 #google_translate_element {
     width: 100%;

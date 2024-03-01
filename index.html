@@ -63,20 +63,14 @@
             <button onclick="resetSettings()">Reset Settings</button>
             <button onclick="increaseFont()">Increase Font Size</button>
             <button onclick="decreaseFont()">Decrease Font Size</button>
-            <button onclick="invertColors()">Invert Colors</button>
+
             <button onclick="toggleLightMode()">Toggle Light Mode</button>
             <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-            <button onclick="increaseBrightness()">Increase Brightness</button>
-            <button onclick="decreaseBrightness()">Decrease Brightness</button>
-            <button onclick="increaseContrast()">Increase Contrast</button>
-            <button onclick="decreaseContrast()">Decrease Contrast</button>
-            <button onclick="adjustSaturation(10)">Increase Saturation</button>
-            <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
+            <button onclick="toggleTextToSpeech()">Toggle Text-to-Speech</button>
+            <button onclick="toggleFocusHighlight()">Toggle Focus Highlight</button>
 
-            <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-            <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-            <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-            <button onclick="toggleGrayscale()">Toggle Grayscale</button>
+
+
 
           </div>
         </div>
@@ -126,7 +120,7 @@
 ">Animal Crossing: <br>New Horizons</a>
 <a href="animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
 ">Animal Crossing: <br>New Leaf</a>
-<a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
+<a href="assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed <br>Odyssey</a>
 <a href="bigbrainacademywiidegree/index.htl" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
 <a href="blur/index.html" data-game="Blur">Blur</a>
 <a href="cars/index.html" data-game="Cars">Cars</a>
@@ -3167,23 +3161,6 @@ function showSlides(n) {
 }
         </script>
 
-<script>
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-      var sidebar = document.getElementById('sidebar');
-      var content = document.getElementById('main-content');
-      var isSmallScreen = window.innerWidth < 768;
-
-      // Toggle sidebar visibility and adjust content size
-      if (sidebar.style.left === '-250px') {
-          sidebar.style.left = '0px';
-          content.classList.add(isSmallScreen ? 'small-screen' : 'big-screen');
-      } else {
-          sidebar.style.left = '-250px';
-          content.classList.remove(isSmallScreen ? 'small-screen' : 'big-screen');
-      }
-  });
-
-</script>
     <script>
       document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.body.classList.toggle('sidebar-visible');
@@ -3207,66 +3184,10 @@ function showSlides(n) {
 </script>
 
 
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            var mainContent = document.querySelector('main');
-
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-                mainContent.style.marginLeft = '0px';
-            } else {
-                sidebar.style.left = '0px';
-                mainContent.style.marginLeft = '250px';
-            }
-        }
-
-        function liveSearch(query) {
-            var searchResultsContainer = document.getElementById('searchResults');
-            searchResultsContainer.innerHTML = ''; // Clear previous results
-
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var simulatedResults = [
-                'Game 1 Result',
-                'Game 2 Result',
-                'Another Game Result',
-                'Yet Another Result',
-                'Example Game Result'
-            ];
-
-            // Filter results based on the query
-            var filteredResults = simulatedResults.filter(function (result) {
-                return result.toLowerCase().includes(query.toLowerCase());
-            });
-
-            // Display filtered results in the sidebar
-            filteredResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality or other features
-            // ...
-        });
-    </script>
 
 
 
-    <!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
-        }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality
-            // ...
-        });
-    </script>
 
     <script>
         function toggleDropdown() {
@@ -3295,37 +3216,6 @@ function showSlides(n) {
     }
 </script>
 
-<!-- JavaScript -->
-<!-- JavaScript -->
-
-
-
-
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Saturation, Contrast, and Sepia control scripts -->
-    <!-- Red-Green Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Grayscale Filter control scripts -->
-    <script>
-      var grayscaleFilter = false;
-
-      function updateFilter() {
-        document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
-      }
-
-      function toggleGrayscale() {
-        grayscaleFilter = !grayscaleFilter;
-        updateFilter();
-      }
-
-      function resetFilter() {
-        grayscaleFilter = false;
-        updateFilter();
-      }
-    </script>
 
 
 
@@ -3377,26 +3267,7 @@ function showSlides(n) {
             }
         }
     </script>
-    <script>
-    function toggleAccessibilityMenu() {
-      var accessibilityDropup = document.getElementById("accessibility-dropup");
-      accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
-    }
 
-    // Existing functions for accessibility options
-
-    function increaseFont() {
-      // Add your code for increasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize * 1.1) + 'px';
-    }
-
-    function decreaseFont() {
-      // Add your code for decreasing font size
-      var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
-      document.body.style.fontSize = (currentFontSize / 1.1) + 'px';
-    }
-  </script>
 
 
 <script>
@@ -3542,173 +3413,11 @@ function showSlides(n) {
 
 
 
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
 
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
 
-    // Reset font size to default
-    document.body.style.fontSize = "";
 
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
 
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
 
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
-}
-
-console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-    // ... (existing code)
-    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality
-        // ...
-    });
-</script>
-
-<!-- JavaScript for Sidebar Toggle and Live Search -->
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the sidebar
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        var gameListContainer = document.getElementById('game-list2');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the search results list
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-
-            // Update game list based on the query
-            gameListContainer.innerHTML = ''; // Clear previous game list
-
-            // Simulate updating the game list based on the search query
-            // Replace with your logic to filter and update game list
-            var filteredGames = [
-                'Animal Crossing: New Horizons',
-                'Animal Crossing: New Leaf',
-                'Assassins Creed Odyssey',
-                'Yet Another Game Title',
-                'Example Game Title'
-            ];
-
-            // Display filtered games in the game list
-            filteredGames.forEach(function (game) {
-                var gameLink = document.createElement('a');
-                gameLink.href = '#'; // Replace with actual link or action
-                gameLink.setAttribute('data-game', game);
-                gameLink.textContent = game;
-                gameListContainer.appendChild(gameLink);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
 <script>
   function applyGreenRedFilter() {
      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
@@ -3911,6 +3620,10 @@ function decreaseFont() {
     function invertColors() {
         document.body.classList.toggle('invert-colors');
     }
+    // Stop any ongoing speech synthesis
+  if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+  }
 
     function toggleLightMode() {
         document.body.classList.add('light-mode');
@@ -4514,15 +4227,7 @@ function myFunction() {
   };
 </script>
 
-<script>
-function toggleSidebar() {
-  const sidebar = document.getElementById('.sidebar');
-  sidebar.classList.toggle('open');
 
-  // Optionally, adjust the toggle button appearance or aria-label if needed
-}
-
-</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -4558,7 +4263,43 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+function toggleFocusHighlight() {
+  var styleElement = document.getElementById('focus-highlight-style');
 
+  if (styleElement) {
+    // If the style element exists, remove it to disable focus highlight
+    styleElement.remove();
+  } else {
+    // Create a new style element to add focus highlight styles
+    styleElement = document.createElement('style');
+    styleElement.id = 'focus-highlight-style';
+    styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+    document.head.appendChild(styleElement);
+  }
+}
+</script>
+
+<script>
+function speakText() {
+    // Check if speech synthesis is supported
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance();
+        let textToRead = '';
+        document.querySelectorAll('.read-aloud').forEach(element => {
+            textToRead += element.textContent + ' ';
+        });
+        msg.text = textToRead;
+        window.speechSynthesis.speak(msg);
+
+        // Optional: Highlight text as it's being read
+        // This part is more complex and requires tracking the speechSynthesis progress.
+        // It's not directly supported, but you can approximate by dividing the text and triggering separate utterances for segments.
+    } else {
+        console.log('Text-to-Speech not supported.');
+    }
+}
+</script>
 
   </body>
   </html>
