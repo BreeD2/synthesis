@@ -2678,8 +2678,11 @@ color:black;
 
 @media screen and (max-width: 300px) {
   .title-text {
-    font-size: 11px; /* Smaller font size on screens less than or equal to 600px wide */;
+    font-size: 10px; /* Smaller font size on screens less than or equal to 600px wide */;
     margin: 0;
+  }
+  img {
+    display: none
   }
 }
 
@@ -3235,20 +3238,30 @@ form p {
 /* Larger Screens */
 @media (min-width: 0px) and (max-width: 300px){
 
-.user-icon {
+  .user-icon {
+         margin-left: -50px; /* Your specific margin adjustment */
+         /* Change the icon to a person icon */
+     }
+     .user-icon img {
+         display: none; /* Hide the image */;
+         width: 15px
+     }
+     .user-icon::before {
+         content: "\f007"; /* Font Awesome person icon unicode */
+         font-family: "Font Awesome 5 Free"; /* Adjust based on the version of Font Awesome you're using */
+         font-weight: 900; /* Necessary for solid icons */
+         display: inline-block; /* Display the pseudo-element as an inline block */;
+         font-size: 13px
 
-  margin-left:-60px;
+     }
 
-
-}
-.user-icon img {
-    width: 10px; /* Width as specified */;
-
-}
 .accessibility-button {
 
-font-size:5px;
-margin-left: 10px
+font-size:15px;
+margin-left: -10px
 
+}
+.topnav a.icon  {
+  font-size: 15px
 }
 }
