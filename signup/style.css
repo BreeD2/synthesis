@@ -465,7 +465,6 @@ input[type=text] {
   font-size: 15px;
 
 
-
 }
 
 
@@ -2232,7 +2231,7 @@ p {
 }
 
 
-@media screen and (max-width: px) {
+@media screen and (max-width: 1060px) {
   .topnav a:not(:first-child), .topnav input[type="text"] {
     display: none; /* Hide all a elements that are not the first child and the search input by default */
   }
@@ -2696,7 +2695,6 @@ color:black;
     font-size: 17px;
 
 
-
 }
 
 /* Responsive adjustments */
@@ -3066,6 +3064,14 @@ rgb(146, 172, 67)
 
 
 
+.form input {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
 
 .form button {
     width: 100%;
@@ -3092,7 +3098,11 @@ rgb(146, 172, 67)
     width: 50px; /* Adjust size as needed */
 }
 
-
+#signupForm, #loginForm {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
 
 #toggleForms {
     cursor: pointer;
@@ -3116,20 +3126,17 @@ form p {
         .dropdown2 .user-icon {
             display: inline-block; /* Show dropdown toggle icon */
             cursor: pointer;
-            font-size: 10px;
-
 
 
         }
 
         .dropdown-content2 a {
             color: black;
-            padding: 12px;
+            padding: 12px 16px;
             text-decoration: none;
             display: block;
               background-color: red;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-              font-size: 10px;
         }
 
         .dropdown-content2 {
@@ -3202,7 +3209,6 @@ form p {
 .user-info {
     position: fixed;
     display: inline-block;
-    margin-right: 10px
 }
 
 
@@ -3212,20 +3218,20 @@ form p {
     position: absolute;
     background-color: dimgrey;
 
-    min-width: 100px;
+    min-width: 160px;
     right: 0;
     z-index: 1;
     top:53.5px;
-
+    font-size: 15px
 }
 
 .dropdown-content2 div {
     color: white;
-    padding: 12px ;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
     cursor: pointer;
-    font-size: 13px
+    font-size: 15px
 
 }
 }
@@ -3233,17 +3239,9 @@ form p {
 @media (min-width: 0px) and (max-width: 300px){
 
   .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
-  }
+         margin-left: -50px; /* Your specific margin adjustment */
+         /* Change the icon to a person icon */
+     }
      .user-icon img {
          display: none; /* Hide the image */;
          width: 15px
@@ -3268,36 +3266,23 @@ margin-left: -10px
 }
 }
 
-
-#formsContainer {
-    background-color: #fff;
+#signupContainer {
+    max-width: 400px;
+    margin: auto;
     padding: 20px;
+    background-color: #f4f4f4;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
-
 }
 
-h2 {
-    color: #333;
-    text-align: center;
-}
-
-form {
-    margin-top: 20px;
-}
-
-form input[type="text"],
-form input[type="password"] {
-    width: 100%;
+#signupForm input {
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
-form button[type="submit"] {
+#signupForm button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -3305,123 +3290,8 @@ form button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-form button[type="submit"]:hover {
+#signupForm button:hover {
     background-color: #0056b3;
-}
-
-p {
-    text-align: center;
-    margin-top: 20px;
-}
-
-p a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    #formsContainer {
-        width: 90%;
-        margin: 20px;
-    }
-}
-
-.user-icon {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 15px;
-    font-size: 10px;
-    margin-right: 15px;
-}
-
-
-/* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
-.user-icon:focus {
-    outline: none;
-}
-
-/* Rest of the styles remain unchanged */
-@media (min-width: 300px) and (max-width: 600px){
-
-
-  .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
-  }
-
-
-  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
-  .user-icon:focus {
-      outline: none;
-  }
-}
-/* Rest of the styles remain unchanged */
-@media (min-width: 600px) and (max-width: 1060px){
-
-
-  .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
-  }
-
-
-  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
-  .user-icon:focus {
-      outline: none;
-  }
-}
-
-@media screen and (max-width: 1060px) {
-  .topnav a:not(:first-child), .topnav input[type="text"] {
-    display: none; /* Hide all a elements that are not the first child and the search input by default */
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a,
-  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive input[type="text"] {
-    margin: 10px 15px; /* Add some margin for visual separation */
-    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
-  }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Signup</title>
 </head>
 <body>
   <!doctype html>
@@ -59,9 +59,8 @@
 
 
 
-
-        <input type="text" placeholder="Search.." name="search">
-
+    <!-- Search Input -->
+    <input type="text" placeholder="Search..">
 
 
         <!-- Accessibility Button and Dropdown -->
@@ -93,21 +92,34 @@
         </div>
         <div class="user-info">
             <div class="dropdown2">
-                <button class="user-icon" onclick="toggleDropdown2()">
+                <a href="#" class="user-icon" onclick="toggleDropdown2()">
                     <img src="../icon.png" alt="User icon">
                     <i class="fa fa-caret-down"></i>
-                </button>
+                </a>
                 <!-- Dropdown Menu -->
                 <div class="dropdown-content2" style="display: none;">
-                    <div onclick="window.location.href='index.html';">Login</div>
-                    <div onclick="window.location.href='../signup/index.html';">Signup</div>
-                </div>
+      <div onclick="..//login/index.html">Login</div>
+      <div onclick="index.html">Signup</div>
+  </div>
+
             </div>
             <div class="logged-in-toolbar" style="display: none;">
-                <img src="user-icon.png" alt="User icon">
+                <a href="#" class="user-icon">
+                    <img src="user-icon.png" alt="User icon">
+                </a>
                 <span>Welcome, User!</span>
-                <button onclick="logOut()">Log out</button>
+                <a href="#" onclick="logOut()">Log out</a>
             </div>
+
+
+
+
+
+
+
+
+
+
 
   </div>
 
@@ -115,6 +127,9 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
+
+
+
 
  </div>
 
@@ -375,17 +390,16 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
 
 
         <div id="main-content" class="content">
-          <div id="formsContainer">
-        <div id="loginSection">
-            <h2>Login</h2>
-            <form id="loginForm">
-                Username: <input type="text" id="loginUsername" required><br>
-                Password: <input type="password" id="loginPassword" required><br>
-                <button type="submit">Login</button>
-            </form>
-            <p>Need an account? <a href="..//signup/index.html">Signup</a></p>
-        </div>
-    </div>
+          <div id="signupContainer">
+    <h2>Signup</h2>
+    <form id="signupForm">
+        Email: <input type="email" id="signupEmail" required><br>
+        Username: <input type="text" id="signupUsername" required><br>
+        Password: <input type="password" id="signupPassword" required><br>
+        <button type="button" onclick="submitSignup()">Signup</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
 
 
 
@@ -4735,23 +4749,19 @@ window.onclick = function(event) {
 }
 </script>
 <script>
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting in the traditional way
+function submitSignup() {
+    var email = document.getElementById('signupEmail').value;
+    var username = document.getElementById('signupUsername').value;
+    var password = document.getElementById('signupPassword').value;
 
-    // Simulated login process
-    var username = document.getElementById('loginUsername').value;
-    var password = document.getElementById('loginPassword').value;
+    // Simulate a signup process
+    console.log('Signing up with:', email, username, password);
+    alert('Signup successful! Redirecting to login page...');
 
-    // Example: Check if username and password match a predefined set
-    if(username === "user" && password === "pass") {
-        alert("Login successful!");
-        // Redirect to another page upon successful login
-        window.location.href = "welcome.html"; // Change "welcome.html" to your actual page
-    } else {
-        alert("Login failed. Please check your username and password.");
-    }
-});</script>
-
+    // Redirect to login page (replace 'login.html' with your actual login page URL)
+    window.location.href = 'login.html';
+}
+</script>
 
 
 </body>
