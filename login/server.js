@@ -60,3 +60,36 @@ app.post('/login', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+require('dotenv').config();
+const express = require('express');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const cors = require('cors');
+
+const app = express();
+app.use(express.json());
+app.use(cors()); // Enable CORS
+
+const users = []; // This would be a database in a real app
+const JWT_SECRET = process.env.JWT_SECRET || 'secret';
+
+app.post('/signup', async (req, res) => {
+  const { username, password, name } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const user = { username, password: hashedPassword, name };
+  users.push(user); // You would save the user in your database
+  res.status(201).send('User created');
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u => u.username === username); // This would be a database lookup
+  if (user && await bcrypt.compare(password, user.password)) {
+    const token = jwt.sign({ username: user.username }, JWT_SECRET, { expiresIn: '2h' });
+    res.json({ token, name: user.name });
+  } else {
+    res.status(401).send('Invalid credentials');
+  }
+});
+
+app.listen(3000, () => console.log('Server running on https://breed2.github.io/synthesis/'));

@@ -45,7 +45,7 @@
   <a href="games/index.html">Games</a>
     <a href="about/index.html">About</a>
     <a href="contact/index.html">Contact</a>
-    <a href="login/index.html">Login/Signup</a>
+
 
 
 
@@ -80,12 +80,43 @@
 
           </div>
         </div>
+        <div class="user-info">
+      <div class="dropdown2">
+          <a href="#" class="user-icon" onclick="toggleDropdown2()">
+              <img src="../icon.png" alt="User icon" style="width:23px;">
+              <i class="fa fa-caret-down"></i>
+          </a>
+          <!-- Dropdown Menu -->
+          <div class="dropdown-content2" style="display: none;">
+              <a href="login.html">Login</a>
+              <a href="signup.html">Signup</a>
+          </div>
+      </div>
+      <div class="logged-in-toolbar" style="display: none;">
+          <a href="#" class="user-icon">
+              <img src="user-icon.png" alt="User icon">
+          </a>
+          <span>Welcome, User!</span>
+          <a href="#" onclick="logOut()">Log out</a>
+      </div>
+  </div>
+
+
+
+
+
+
+  </div>
+
 
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
 
-  </div>
+
+ </div>
+
+ </div>
 
 
 <aside class="sidebar">
@@ -4389,6 +4420,7 @@ app.post('/login', async (req, res) => {
 });
 </script>
 
+
 <script>
 app.get('/profile', async (req, res) => {
   if (!req.session.userId) {
@@ -4400,27 +4432,103 @@ app.get('/profile', async (req, res) => {
 });
 </script>
 
+
 <script>
-function UserProfile() {
-  const [user, setUser] = useState(null);
+document.addEventListener('DOMContentLoaded', () => {
+  const signInButton = document.getElementById('signInButton');
+  const userProfile = document.querySelector('.user-profile');
+  const userNameDiv = document.querySelector('.user-name');
 
-  useEffect(() => {
-    fetch('/profile')
-      .then(response => response.json())
-      .then(data => setUser(data))
-      .catch(error => console.error('Error fetching profile:', error));
-  }, []);
+  signInButton.addEventListener('click', () => {
+    // Simulate sign in process
+    signInButton.style.display = 'none'; // Hide sign in button
+    userProfile.style.display = 'flex'; // Show user profile
+  });
 
-  if (!user) {
-    return <div>Loading...</div>;
-  }
+  userNameDiv.addEventListener('click', () => {
+    const newName = prompt('Enter new name:');
+    if (newName) {
+      userNameDiv.textContent = newName;
+    }
+  });
+});
+</script>
 
-  return (
-    <div>
-      <img src={user.profileImageUrl} alt="Profile" />
-      <h3>{user.username}</h3>
-    </div>
-  );
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loginButton = document.getElementById('loginButton');
+  const logoutButton = document.getElementById('logoutButton');
+  const userProfile = document.getElementById('userProfile');
+  const userName = document.getElementById('userName');
+  const userIcon = document.getElementById('userIcon');
+
+  // Simulate a user sign-in process
+  loginButton.addEventListener('click', () => {
+    // Here, you would replace these values with those from your sign-in process
+    const exampleUser = {
+      name: 'John Doe',
+      icon: 'path/to/user-icon.jpg' // Use a real image path
+    };
+    // Display user information
+    userName.textContent = exampleUser.name;
+    userIcon.src = exampleUser.icon;
+
+    // Update UI
+    loginButton.style.display = 'none';
+    userProfile.style.display = 'flex';
+  });
+
+  // Simulate user sign-out
+  logoutButton.addEventListener('click', () => {
+    // Hide user info and show login button
+    userProfile.style.display = 'none';
+    loginButton.style.display = 'block';
+  });
+});
+
+
+</script>
+
+<script>
+// Simulate checking login status on page load
+document.addEventListener('DOMContentLoaded', () => {
+    checkLoginStatus();
+});
+
+function logIn() {
+    // Here you would have your actual login logic
+    localStorage.setItem('isLoggedIn', 'true');
+    checkLoginStatus();
+}
+
+function logOut() {
+    localStorage.removeItem('isLoggedIn');
+    checkLoginStatus();
+}
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
+    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
+}
+</script>
+<script>
+function toggleDropdown2() {
+    const dropdown = document.querySelector('.dropdown-content2');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
 }
 </script>
 

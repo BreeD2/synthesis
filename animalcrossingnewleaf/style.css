@@ -1216,17 +1216,6 @@ select:hover {
     border-radius: 10px; /* Optional: Adds rounded corners to the images */
 }
 
-.game-info {
-    /* No need for position: absolute; */
-    text-align: center;
-    color: #fff; /* Text color */
-    background-color: black; /* Optional: Adds a semi-transparent background for readability */
-    padding: 10px 0; /* Padding for the info */
-    margin-top: 10px; /* Adds space between the image and the description */
-    border-radius: 10px; /* Rounded corners */
-    width: calc(100% - 20px); /* Adjust width to account for padding */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-}
 
 .slideshow-container {
   position: relative;
@@ -2229,7 +2218,7 @@ background-color: blue
 
 
 /* Style the dropdown content (hidden by default) */
-.dropdown-content {
+.dropdown-content2 {
   position: fixed;
   scroll-behavior: auto;
 
@@ -2247,7 +2236,29 @@ background-color: blue
 }
 
 
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
 }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
 
 
 
