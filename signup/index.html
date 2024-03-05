@@ -391,15 +391,16 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
 
         <div id="main-content" class="content">
           <div id="signupContainer">
-    <h2>Signup</h2>
-    <form id="signupForm">
-        Email: <input type="email" id="signupEmail" required><br>
-        Username: <input type="text" id="signupUsername" required><br>
-        Password: <input type="password" id="signupPassword" required><br>
-        <button type="button" onclick="submitSignup()">Signup</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
-</div>
+      <h2>Signup</h2>
+      <form id="signupForm" action="signup_process.php" method="POST">
+          Email: <input type="email" name="signupEmail" id="signupEmail" required><br>
+          Username: <input type="text" name="signupUsername" id="signupUsername" required><br>
+          Password: <input type="password" name="signupPassword" id="signupPassword" required><br>
+          <button type="submit">Signup</button>
+      </form>
+      <p>Already have an account? <a href="..//login.html">Login</a></p>
+  </div>
+
 
 
 
@@ -4749,18 +4750,36 @@ window.onclick = function(event) {
 }
 </script>
 <script>
-function submitSignup() {
-    var email = document.getElementById('signupEmail').value;
-    var username = document.getElementById('signupUsername').value;
-    var password = document.getElementById('signupPassword').value;
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect and sanitize input
+    $email = filter_var($_POST['signupEmail'], FILTER_SANITIZE_EMAIL);
+    $username = filter_var($_POST['signupUsername'], FILTER_SANITIZE_STRING);
+    $password = $_POST['signupPassword']; // In a real application, ensure to hash the password
 
-    // Simulate a signup process
-    console.log('Signing up with:', email, username, password);
-    alert('Signup successful! Redirecting to login page...');
+    // Validate input
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+    } elseif (empty($username)) {
+        echo "Username is required";
+    } elseif (empty($password)) {
+        echo "Password is required";
+    } else {
+        // Here, you would typically insert the data into a database
+        // For demonstration, we'll just display a success message
+        echo "Signup successful!";
 
-    // Redirect to login page (replace 'login.html' with your actual login page URL)
-    window.location.href = 'login.html';
+        // Redirect to login page
+        header("Location: login.html");
+        exit();
+    }
+} else {
+    // Not a POST request, redirect back to the signup form
+    header("Location: signup.html");
+    exit();
 }
+?>
+
 </script>
 
 
