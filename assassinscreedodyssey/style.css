@@ -1,0 +1,8489 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+
+
+
+
+}
+
+
+html {
+  font-family: arial;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: sticky; /* Make the navigation bar fixed */
+  top: 0;         /* Align the navigation bar at the top of the page */
+  width: 100%;    /* Make the navigation bar span the full width of the page */
+  z-index: 3;     /* Ensure the navigation bar stays on top of other elements */
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+
+  font-family: arial;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightgrey;
+  color: black;
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #1a1a1a;;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2%;
+
+}
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: dimgrey;
+  color: #ffffff;
+}
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2.6%;
+
+  width: 18%;
+}
+
+
+
+
+
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
+
+
+:focus {
+    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
+}
+
+}
+
+body.increase-contrast {
+  filter: contrast(110%) sepia(0%);
+}
+
+body.decrease-contrast {
+  filter: contrast(90%) sepia(0%);
+}
+
+body.sepia-effect {
+  filter: contrast(100%) sepia(100%);
+}
+/* CSS for sepia and contrast adjustments */
+
+
+.sepia-effect {
+  filter: sepia(100%);
+}
+
+.increase-contrast {
+  filter: contrast(110%);
+}
+
+.decrease-contrast {
+  filter: contrast(90%);
+}
+/* Light mode styles */
+body {
+  background-color: #fff; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+
+
+
+
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #000;
+    font-family:   'arial', sans-serif; /* Add the desired font-family */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
+
+
+
+/* Light mode styles */
+body.light-mode {
+  background-color: white;
+  color: #000;
+}
+
+
+body.light-mode .topnav a {
+  color: #000; /* Black font color for the links in the navbar */;
+
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+body.dark-mode .topnav a {
+  color: #fff; /* White font color for the links in the navbar in dark mode */
+}
+
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+body .topnav a {
+  color: #fff; /* White font color for the links in the navbar in normal mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: #ff0000;
+  color: #000;
+}
+
+
+
+  .dropup-hidden {
+    display: none; /* Hide the dropdown when the dropup-hidden class is present */
+  }
+
+
+
+
+  /* Normal mode styles */
+  body {
+    background-color: white;
+    color: #000;
+  }
+
+  /* Change background color to red */
+  .dropup-content {
+
+      background-color: dodgerblue; /* Change background color to red */
+      position: fixed;
+      width: 20%;
+  padding: 5px; /* Add padding for better visual appearance */
+
+      color: white;
+
+  }
+
+
+
+  button {
+    color:white
+  }
+
+  /* Add styling for font awesome icon */
+  .fa {
+      cursor: pointer;
+      color: white; /* Change font color to white */
+
+  }
+
+
+
+
+
+
+  /* Change background color of the icon container */
+  .cog-icon {
+      background-color: dodgerblue; /* Change to your desired background color */
+      margin-left:77%; /* Adjust margin for better alignment */;
+      border-radius: 5px;
+      width: 18%; /* Adjust width for consistency with other elements */;
+      position: relative;
+      padding: 5px; /* Add padding for better visual appearance */;
+      font-family: 'arial', sans-serif;
+      font-size: 15px;
+      margin-top: 0%;
+      margin-bottom: 0%;
+
+
+
+
+  }
+
+.cog-icon i,
+.acc {
+  font-family: 'arial', sans-serif; /* Add the desired font-family */;
+
+}
+
+  /* Adjust other styles as needed */
+
+  /* Accessibility button styles */
+  #accessibility-button {
+    position: fixed;
+    margin-top: 40%;
+    margin-left: 30%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+  }
+
+
+  #accessibility-dropup button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+
+  }
+  @media screen and (max-width: 585px) {
+    .cog-icon {
+
+    }
+
+    .up-content {
+
+    }
+}
+
+
+body {
+  background-color: ghostwhite;
+  font-family: 'arial', sans-serif;
+}
+#searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
+color:red;
+font-size: 15px
+
+
+}
+/* Style the search input */
+input[type=text] {
+  padding: 5px; /* Add padding */
+
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  outline: none; /* Remove default outline */;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+
+/* Style the placeholder text */
+input[type=text]::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
+/* Optional: Style on focus */
+input[type=text]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on focus */
+}
+
+/* Default values */
+:root {
+  --dropup-bg-light: grey;
+  --dropup-bg-dark: grey; /* Change to your desired dark mode background color */
+}
+
+/* Common styles for both light and dark modes */
+.dropup-content {
+    display: none;
+    position: absolute;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0%;
+    margin-left: 79.5%;
+    margin-top: 0%;
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode .dropup-content,
+body.dark-mode .dropup-content * {
+    color: white; /* Text color in dark mode */
+    background-color: dimgrey; /* Background color in dark mode */
+}
+body.light-mode .topnav {
+  background-color: whitesmoke;
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+
+/* Light mode styles */
+body.light-mode .dropup-content,
+body.light-mode .dropup-content * {
+    color: black; /* Text color in light mode */
+    background-color: whitesmoke; /* Background color in light mode */
+}
+
+body.light-mode .dropup-content button {
+    color: black; /* Button text color in light mode */
+    background-color: ghostwhite; /* Button background color in light mode */
+}
+
+body.light-mode .cog-icon,
+body.light-mode .cog-icon * {
+    color: black; /* Icon color in light mode */
+    background-color: whitesmoke; /* Icon background color in light mode */
+}
+
+/* Add your existing styles here */
+
+
+}
+
+/* Hide the welcome message by default */
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    transition: none;
+    background-color: #1a1a1a;
+      overflow-x: hidden;
+    padding-top: 20px;
+    scroll-behavior: auto;
+      overflow-y: auto;
+
+      z-index: 1;
+
+      left: -250px;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      color: white;
+      transition: left 0.5s;
+
+}
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Light Mode Styles */
+.light-mode .sidebar {
+    background-color: #f0f0f0; /* Light background for light mode */
+}
+
+.light-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.light-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #a0a0a0 #e0e0e0;
+}
+
+/* Dark Mode Styles */
+.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+}
+
+.dark-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #2c2c2c;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dark-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #555 #2c2c2c;
+}
+
+
+   .sidebar a {
+       padding: 8px 8px 8px 16px;
+       text-decoration: none;
+       font-size: 14px;
+       color: white;
+       display: block;
+       font-size: 15px
+
+   }
+   .sidebar a:focus {
+    outline: 2px solid dimgrey; /* Customize as needed */
+}
+
+   /* Light mode styles */
+   body.light-mode .sidebar,
+   body.light-mode .sidebar * {
+       color: black; /* Text color in light mode */;
+       background-color: whitesmoke; /* Background color in light mode */;
+
+   }
+
+   /* Search Input Styles */
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 2px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+
+
+   .sidebar a:hover {
+       color: grey;
+   }
+
+
+
+
+
+   .sidebar h3 {
+       color: #f1f1f1;
+
+   }
+   .menu-toggle {
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    position: fixed; /* Keeps the element in the same place even when scrolling */
+    left: 25px; /* Distance from the left edge of the viewport */
+    top: 78px; /* Distance from the top edge of the viewport */
+    z-index: 1; /* Ensures the element stays on top of other content */
+    font-size: 25px; /* Size of the text or icon inside */
+    color: grey; /* Color of the text or icon */;
+    background-color: black;
+    padding-right:5px;
+        padding-left:5px;
+
+
+    /* Smooth transition effects for color and box-shadow when they change */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Optional: Default box-shadow for visual depth (example) */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}
+
+   /* Style for .menu-toggle when active */
+   .menu-toggle.active {
+       color: white; /* Change color when active */
+
+   }
+
+
+
+
+   /* Main Content Section */
+   main {
+       margin-left: 0;
+
+       padding: 16px; /* Adjust padding to your needs */
+   }
+
+   @media screen and (max-width: 585px) {
+       .sidebar {
+
+       }
+
+       main {
+           padding-top: 60px;
+       }
+
+           .menu-toggle {
+             top:118px;
+           }
+   }
+
+   @media screen and (max-width: 585px) {
+       .cog-icon {
+
+
+       }
+
+       }
+
+
+   }
+
+   @media screen and (max-width: 1085px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+
+   @media screen and (max-width: 785px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+   @media screen and (max-width: 750px) {
+     .menu-toggle {
+       top: 120px;
+     }
+   }
+
+
+   @media screen and (max-width: 585px) {
+       .sidebar {
+
+       }
+
+       main {
+           padding-top: 60px;
+       }
+
+           .menu-toggle {
+             top:80px;
+           }
+   }
+
+
+/* ... other styles remain the same ... */
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: white;
+  width:50%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.row {
+  width: 50%
+}
+
+#caption {
+  color:white
+}
+
+.mySlides {
+    display: none; /* Hide slides initially */
+    position: relative; /* Position relative to its normal position */
+    text-align: center; /* Center the content inside each slide */
+    width:50%; /* Full width of the container */;
+
+}
+
+.numbertext {
+    color: #f2f2f2; /* Light-colored text */
+    font-size: 12px; /* Small font size for the number text */
+    padding: 8px 12px; /* Padding for spacing */
+    position: absolute; /* Position it absolutely inside the slide */
+    top: 0; /* At the top of the slide */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    left: 0; /* Align to the left */
+}
+
+.mySlides img {
+    width: 100%; /* Full width of the slide */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#slideshow {
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    /* common styles for navigation buttons */
+}
+
+/* Horizontal layout for larger screens */
+@media (min-width: 768px) {
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+}
+
+/* Vertical layout for smaller screens */
+@media (max-width: 767px) {
+    #slideshow {
+        height: 300px; /* adjust as needed */
+        overflow: hidden;
+    }
+
+    .slide {
+        display: block;
+        height: 300px; /* adjust as needed */
+    }
+
+    .prev, .next {
+        position: static;
+        width: 100%;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    .next {
+        border-radius: 0;
+    }
+}
+
+.sidebar-open .container {
+    margin-left: 250px; /* Adjust according to the width of your sidebar */
+}
+
+.mySlides {display: none;}
+       #mainContent {transition: margin-left .5s;}
+
+       .mySlides {display: none;}
+        #mainContent {transition: margin-left .5s;}
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #mySidebar {width: 100%; display: none;}
+            #mainContent {margin-left: 0;}
+            .w3-sidebar.w3-bar-block {float: none;}
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .welcome-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        h1 {
+            margin: 0.5em 0;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+
+        .content.small {
+            margin-left: 0; /* Less margin when sidebar is collapsed */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.5s;
+
+        }
+
+        .sidebar-visible .sidebar {
+            left: 0;
+        }
+
+        .sidebar-visible .content {
+            margin-left: 250px;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        select {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  width: 30%;
+  font-style: normal;
+
+
+}
+
+select:hover {
+  border-color: blue;
+  border: 2px solid blue
+}
+
+
+
+
+
+.opening-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.opening-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: grey;
+}
+#enter-site-button {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Make the text bold */;
+    border-color: #fff; /* White border on hover/focus */
+
+}
+
+#enter-site-button:hover, #enter-site-button:focus {
+    background-color: dodgerblue;
+    border-color: #fff; /* White border on hover/focus */
+}
+
+#enter-site-button:active {
+    background-color: #3e8e41; /* Even darker green when active/clicked */
+    transform: translateY(2px); /* Mimic button press */
+}
+
+
+
+.welcome {
+  color:white;
+  font-size: 40px;
+}
+.dark-mode .welcome {
+  background-color: black;
+  color: white;
+}
+
+
+
+.light-mode .opening-screen button {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-mode .opening-screen button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.dark-mode .opening-screen button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .opening-screen {
+        width: 100%; /* Resets to full viewport width without exceeding it */
+        margin-top: 0; /* Removes negative top margin */
+        margin-left: 0;
+        margin-right: 0;
+        height: 50vh; /* Set a fixed height or max-height as preferred */
+        /* Alternative: You might use max-height if you want to ensure it doesn't exceed a certain height but can be shorter */
+        height: auto; /* Allows the height to adjust based on content */
+        min-height: 100vh; /* Ensures it's at least the full height of the viewport */
+    }
+}
+
+
+.welcome {
+    font-size: 35px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    background-color: black; /* Background color */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px 0; /* Margin outside the div */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-family: 'Arial', sans-serif; /* Specify a font-family */
+    border: 5px solid white; /* Optional: Add a border */;
+    animation:fadeIn 2s;
+    font-weight: bold
+
+}
+frames fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.underwelcome {
+  color:white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Other styles remain unchanged */
+
+/* Responsive adjustments for small screens */
+@media (max-width: 720px) {
+    .opening-screen p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .opening-screen {
+
+
+    }
+    .opening-screen button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+}
+#about {
+    background-color: black; /* Adjusted background color */
+    padding: 40px; /* Ample padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Ensure it fills the width */
+    margin: 0; /* Remove default margins */
+    /* Optional: Adjust height based on content or specific design needs */
+    min-height: 200px; /* Example min-height, adjust as needed */;
+
+}
+
+
+#about h2 {
+  margin-bottom: 20px; /* Space below the heading */;
+      color:white;
+    font-size: 28px; /* Slightly larger font size for headings */;
+    font-weight: bold;
+}
+
+
+
+
+#about p {
+    font-size: 16px; /* Comfortable reading font size */
+    line-height: 1.6; /* Increased line height for readability */
+    color: white; /* Dark color for contrast and readability */;
+    font-weight: normal;
+}
+
+.opening-screen {
+    height: 1200px; /* Fixed height for large screens */
+    margin-top: -8%;
+  width: calc(100%); /* Adds back the 5% margin from both sides */
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -14%;
+}
+
+/* Smaller devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .opening-screen {
+    height: 600px; /* Adjust height for smaller devices */
+    margin-top: -10;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .opening-screen {
+    height: 800px; /* Adjust height for medium-sized devices */
+  }
+}
+
+/* Large devices (desktops, but less than 1200px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .opening-screen {
+    height: 1000px; /* Adjust height for larger devices, but not the largest */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .opening-screen {
+    height: 1200px; /* Original height for the largest screens */
+  }
+}
+
+#featured-games-section {
+    margin-top: 20px;
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: black; /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Adjust based on your preference */
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Add a transition effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 0; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(314px); /* Move further left from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.next {
+  right: 20px; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(20px); /* Move further right from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 0 20px; /* Adds space above and below the title */
+  font-size: 20px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 10px;
+  border-radius: 5px; /* Adds rounded corners */
+
+
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */;
+  width: 100%;
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 20px 0 20px; /* Adds space above and below the title */
+  font-size: 23px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 1px;
+  border-radius: 5px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  width:50%;
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */
+}
+
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+    justify-content: center;
+}
+
+.game-item {
+    width: 200px; /* Adjust based on your design */
+    text-align: center;
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.game-title {
+    margin-top: 10px;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666; /* Adjust color based on your theme */;
+    width: 50%;
+
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    position: relative; /* For positioning the game-info */
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Defines a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintains a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    text-align: center; /* Centers the content within each game */
+}
+
+.game img {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images for aesthetics */
+}
+
+.game-info {
+    text-align: center; /* Ensures the game information text is centered */
+    color: #fff; /* Text color, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Adds padding around the text for spacing */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Optional: Adds rounded corners to the background of the text */
+    width: 100%; /* Ensures the text container matches the width of the image above */
+    box-sizing: border-box; /* Ensures the width calculation includes padding */
+}
+
+#featuredGameContainer {
+  margin-top: 20px;
+  text-align: center; /* Centers the image */
+}
+
+#featuredGameImage {
+  max-width: 600px; /* Adjust based on your design */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional styling */
+}
+
+.slideshow-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+.image-link .caption, .image-caption-wrapper .caption {
+  display: block;
+  text-align: center;
+  color: #000; /* Caption text color */
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 8px; /* Space between the image and caption */
+}
+
+
+.image-caption-wrapper {
+  text-align: center; /* Center the image and caption */
+}
+
+.caption-link {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #000; /* Or any color that fits your design */
+  text-decoration: none; /* Optional: removes the underline */;
+  background-color: white
+}
+
+.caption-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of children */
+    width: 100%; /* Adjust based on your layout */
+    margin: auto; /* Center the container */
+}
+
+/* Adjusted .prev and .next arrow styles */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 0; /* Ensure arrows are above the slides */
+    color: #ffffff; /* Arrow color */
+    font-size: 24px; /* Arrow size */
+    padding: 16px; /* Clickable area size */
+    user-select: none; /* Prevent text selection */
+}
+
+.prev { left: calc(25% - 44px); } /* Position the "previous" arrow taking into account 50% width of .mySlides */
+.next { right: calc(25% - 44px); } /* Position the "next" arrow similar to the "prev" but from the right */
+
+/* Additional hover effects for better UX */
+.prev:hover, .next:hover {
+    color: #dcdcdc; /* Lighten color on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+    .mySlides {
+        width: 100%; /* Increase width to occupy more space on smaller screens */
+    }
+    .prev {
+      left:5px
+    }
+    .next {
+      right:14px;
+    }}
+
+    /* styles.css */
+    #games-list {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      background-color: white;
+      font-size: 15px;
+      width: 80%;
+      padding: 5px;
+      border: 2px solid white
+
+    }
+    /* Additional styles for lists within #games-list */
+    #games-list ul, #games-list ol {
+      padding-left: 20px; /* Standard indentation for lists */
+    }
+
+    #games-list ul {
+      list-style-type: disc; /* Bullet points for unordered lists */
+    }
+
+    #games-list ol {
+      list-style-type: decimal; /* Numbers for ordered lists */
+    }
+
+    /* Style for list items */
+    #games-list li {
+      margin-bottom: 10px; /* Adds space between list items */
+      color: #333; /* Optionally, make text color slightly lighter than black for readability */
+    }
+
+
+
+
+
+  /* Style for the sort section */
+  #sort-section {
+    width:100%;
+    margin: 20px auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+  h2 {
+    color:white
+  }
+
+  /* Style for select dropdowns */
+  #mainCategory, #subCategory {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+
+  }
+
+
+  #filterCheckbox {
+    margin-top: 10px;
+}
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white
+  }
+
+  #zoomIn {
+    right: 130px; /* Adjust based on your layout */;
+    z-index:2
+  }
+
+  #zoomOut {
+    right: 80px; /* Adjust based on your layout */;
+      z-index:2
+  }
+
+  /* Caption Style */
+  #pcaption {
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+  }
+
+  .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+
+      background-color: black;
+      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+        color:white;
+    }
+    body.light-mode .footer, body.light-mode .footer * {
+        width: 100%;
+        background-color: #f1f1f1; /* Light grey background for the footer */
+        text-align: center;
+        padding: 20px;
+        color: #000; /* Dark text color for readability */
+        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+      }
+      body.dark-mode #sort-section, body.sort-section * {
+
+    background-color: #f1f1f1; /* Light grey background for the footer */
+
+    color: black; /* Dark text color for readability */
+
+  }
+  body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: black; /* Dark text color for readability */
+
+}
+
+body.light-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+body.light-mode #about h2 {
+color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+
+body.light-mode #sort-section, body.sort-section * {
+
+background-color: grey; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #sort-section, body.sort-section * {
+
+background-color: black; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+.copy {
+  color:white
+}
+.sort {
+  font-size: 25px;
+  color:white
+}
+body.light-mode .sort {
+  color:white
+}
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+/* Style for .menu-toggle when active */
+body.light-mode .menu-toggle.active {
+    color: black; /* Change color when active */
+
+}
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}  #google_translate_element {
+    width: 100%;
+    }
+
+    .game-container {
+        max-width: 800px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .light-mode .game-container {
+
+        background-color: whitesmoke;
+
+    }
+
+    .game-cover {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .game-title {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .game-info {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+    }
+
+
+    /* Existing CSS for game-container */
+.game-cover {
+    cursor: pointer;
+}
+
+/* Modal CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-footer {
+    text-align: center;
+    padding: 20px;
+}
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+button {
+  background-color: red
+}
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+#likeButton, #commentButton, #rateButton {
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-info .star-rating .fas,
+.game-info .star-rating .far {
+    color: #ffc107; /* Gold color for stars */
+    vertical-align: middle;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+.game-title {
+    font-size: 30px; /* Default font size */
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .game-title {
+        font-size: 25px; /* Smaller font size on small screens */
+    }
+
+}
+.star {
+    cursor: pointer;
+    color: grey;
+    font-size: 24px;
+}
+.star.hover {
+    cursor: pointer;
+    color: gold;
+    font-size: 24px;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.icon-button {
+  cursor: pointer;
+  color: gray;
+}
+
+.icon-button.hovered {
+  color: orange;
+  background-color: yellow
+}
+
+.icon-button.selected {
+  color: orange;
+}
+
+.light-mode #zoomIn {
+background-color: white;
+color: black;
+  border-color: black
+}
+
+.light-mode #zoomOut {
+  background-color: white;
+  color: black;
+  border-color: black
+}
+.light-mode #downloadButton {
+  background-color: white;
+  color: black;
+  border-color: black
+}
+.dark-mode #zoomOut {
+  background-color: black;
+  color: white;
+  border-color: white
+}
+.dark-mode #zoomIn {
+  background-color: black;
+  color: white;
+  border-color: white
+}
+.dark-mode #downloadButton {
+  background-color: black;
+  color: white;
+  border:2px solid white
+}
+
+.dark-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: white;
+    background-color:  #222;
+
+}
+
+.light-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: black;
+    background-color:  white;
+
+}
+.dark-mode .game-container{
+  background-color: dimgrey;
+  color:white
+}
+
+.dark-mode .game-container{
+  background-color: dimgrey;
+  color:white
+}
+
+.light-mode .game-container{
+  background-color: whitesmoke;
+  color:white
+}
+
+.dark-mode .game-title {
+  color:white
+}
+
+.dark-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: white;
+    background-color:  #222;
+
+}
+.light-mode #likeButton,.light-mode  #commentButton, .light-mode #rateButton {
+
+    color: black;
+    background-color:  white;
+
+}
+
+.dark-mode .game-info {
+  color:white;
+  background-color: #222;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  scroll-behavior: auto;
+
+  width: 9.8%;
+  max-width: 140px;
+  min-width: 140px;
+
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 10px;
+}
+
+
+}
+
+
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
+/* Style for dropdown links */
+.dropdown-content button {
+  display: block;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+}
+
+/* Show the dropdown menu */
+.show {display: block;}
+
+/* Accessibility button styles */
+
+}
+
+/* Adjust width for screens within the range of 685px to 1024px */
+@media screen and (min-width: 290px) and (max-width: 3000px) {
+  .dropdown-content {
+    width: 100%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+
+}
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button:active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+
+
+
+
+}
+
+html {
+  font-family: arial;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: sticky; /* Make the navigation bar fixed */
+  top: 0;         /* Align the navigation bar at the top of the page */
+  width: 100%;    /* Make the navigation bar span the full width of the page */
+  z-index: 3;     /* Ensure the navigation bar stays on top of other elements */;
+  font-size: 15px
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 14px;
+  padding-right: 16px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 3;
+
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  font-family: arial;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: grey;
+  color: white;
+
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #1a1a1a;;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2%;
+
+}
+
+
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: dimgrey;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .topnav .title, .topnav .icon {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .accessibility-button {
+    position: static;
+    transform: none;
+    order: -1; /* Ensures the button stays in the middle */
+    flex-basis: 100%; /* Take full width to maintain order */
+  }
+
+  /* Additional adjustments for mobile view */
+  .topnav .title {
+    order: -2; /* Title comes first */
+  }
+
+  .topnav .icon {
+    /* Last in order, no need to set explicitly */
+  }
+}
+
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2.6%;
+
+  width: 18%;
+}
+
+
+
+
+
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
+
+
+:focus {
+    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
+}
+
+}
+
+body.increase-contrast {
+  filter: contrast(110%) sepia(0%);
+}
+
+body.decrease-contrast {
+  filter: contrast(90%) sepia(0%);
+}
+
+body.sepia-effect {
+  filter: contrast(100%) sepia(100%);
+}
+/* CSS for sepia and contrast adjustments */
+
+
+.sepia-effect {
+  filter: sepia(100%);
+}
+
+.increase-contrast {
+  filter: contrast(110%);
+}
+
+.decrease-contrast {
+  filter: contrast(90%);
+}
+/* Light mode styles */
+body {
+  background-color: #fff; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+
+
+
+
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #000;
+    font-family:   'arial', sans-serif; /* Add the desired font-family */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
+
+
+
+
+
+
+body.light-mode .topnav a {
+  color: #000; /* Black font color for the links in the navbar */;
+
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+body.dark-mode .topnav a {
+  color: #fff; /* White font color for the links in the navbar in dark mode */
+}
+
+
+
+
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+body .topnav a {
+  color: #fff; /* White font color for the links in the navbar in normal mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: #ff0000;
+  color: #000;
+}
+
+
+
+  .dropup-hidden {
+    display: none; /* Hide the dropdown when the dropup-hidden class is present */
+  }
+
+
+
+
+  /* Normal mode styles */
+  body {
+    background-color: white;
+    color: #000;
+  }
+
+  /* Change background color to red */
+  .dropup-content {
+
+      background-color: dodgerblue; /* Change background color to red */
+      position: fixed;
+      width: 18%;
+  padding: 5px; /* Add padding for better visual appearance */
+
+      color: white;
+
+  }
+
+
+
+  button {
+    color:white
+  }
+
+  /* Add styling for font awesome icon */
+  .fa {
+      cursor: pointer;
+      color: white; /* Change font color to white */
+
+  }
+
+
+
+
+
+
+  /* Change background color of the icon container */
+  .cog-icon {
+      background-color: dodgerblue; /* Change to your desired background color */
+      margin-left:77%; /* Adjust margin for better alignment */;
+      border-radius: 5px;
+      width: 18%; /* Adjust width for consistency with other elements */;
+      position: relative;
+      padding: 5px; /* Add padding for better visual appearance */;
+      font-family: 'arial', sans-serif;
+      font-size: 15px;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      position: fixed; /* Keeps the element in the same place even when scrolling */
+      left: 25px; /* Distance from the left edge of the viewport */
+      top: 78px; /* Distance from the top edge of the viewport */
+      z-index: 1; /* Ensures the element stays on top of other content */
+
+      color: grey; /* Color of the text or icon */;
+
+
+
+
+
+
+  }
+
+.cog-icon i,
+.acc {
+  font-family: 'arial', sans-serif; /* Add the desired font-family */;
+
+}
+
+  /* Adjust other styles as needed */
+
+  /* Accessibility button styles */
+  #accessibility-button {
+    position: fixed;
+    margin-top: 40%;
+    margin-left: 30%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+  }
+
+
+  #accessibility-dropup button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+
+  }
+  @media screen and (max-width: 585px) {
+    .cog-icon {
+
+    }
+
+    .up-content {
+
+    }
+}
+
+/* Base styles */
+.cog-icon .fa-gear {
+    cursor: pointer;
+    /* Ensure there's enough padding for easy tapping on touch devices */
+    padding: 5px;
+}
+
+.acc {
+    display: inline; /* Or 'block', depending on your layout */
+}
+
+/* Hide the Accessibility text on smaller screens */
+@media (max-width: 600px) {
+    .acc {
+        display: none;
+    }
+
+    /* Optionally, increase the size of the icon for easier interaction on touch devices */
+    .cog-icon .fa-gear {
+        font-size: 15px; /* Adjust based on your design */
+    }
+}
+
+
+
+body {
+  background-color: ghostwhite;
+  font-family: 'arial', sans-serif;
+}
+#searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
+color:red;
+font-size: 15px
+
+
+}
+/* Style the search input */
+input[type=text] {
+  padding: 5px; /* Add padding */
+
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  outline: none; /* Remove default outline */;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+
+/* Style the placeholder text */
+input[type=text]::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
+/* Optional: Style on focus */
+input[type=text]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on focus */
+}
+
+/* Default values */
+:root {
+  --dropup-bg-light: grey;
+  --dropup-bg-dark: grey; /* Change to your desired dark mode background color */
+}
+
+/* Common styles for both light and dark modes */
+.dropup-content {
+    display: none;
+    position: absolute;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0%;
+    margin-left: 79.5%;
+    margin-top: 0%;
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode .dropup-content,
+body.dark-mode .dropup-content * {
+    color: white; /* Text color in dark mode */
+    background-color: dimgrey; /* Background color in dark mode */
+}
+body.light-mode .topnav {
+  background-color: whitesmoke;
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav #button.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+
+
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+
+
+/* Light mode styles */
+body.light-mode .dropup-content,
+body.light-mode .dropup-content * {
+    color: black; /* Text color in light mode */
+
+}
+
+body.light-mode .dropup-content button {
+    color: black; /* Button text color in light mode */
+    background-color: whitesmoke; /* Button background color in light mode */
+}
+
+body.light-mode .cog-icon,
+body.light-mode .cog-icon * {
+    color: black; /* Icon color in light mode */
+    background-color: whitesmoke; /* Icon background color in light mode */
+}
+
+/* Add your existing styles here */
+
+
+}
+
+/* Hide the welcome message by default */
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    transition: none;
+    background-color: #1a1a1a;
+      overflow-x: hidden;
+    padding-top: 20px;
+    scroll-behavior: auto;
+      overflow-y: auto;
+
+      z-index: 1;
+
+      left: -250px;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      color: white;
+      transition: left 0.5s;
+
+}
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Light Mode Styles */
+.light-mode .sidebar {
+    background-color: #f0f0f0; /* Light background for light mode */
+}
+
+.light-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.light-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #a0a0a0 #e0e0e0;
+}
+
+/* Dark Mode Styles */
+.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+}
+
+.dark-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #2c2c2c;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dark-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #555 #2c2c2c;
+}
+
+
+   .sidebar a {
+       padding: 8px 8px 8px 16px;
+       text-decoration: none;
+       font-size: 14px;
+       color: white;
+       display: block;
+       font-size: 15px
+
+   }
+   .sidebar a:focus {
+    outline: 2px solid dimgrey; /* Customize as needed */
+}
+
+   /* Light mode styles */
+   body.light-mode .sidebar,
+   body.light-mode .sidebar * {
+       color: black; /* Text color in light mode */;
+       background-color: whitesmoke; /* Background color in light mode */;
+
+   }
+
+   /* Search Input Styles */
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 2px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+
+
+   .sidebar a:hover {
+       color: grey;
+   }
+
+
+
+
+
+   .sidebar h3 {
+       color: #f1f1f1;
+
+   }
+   .menu-toggle {
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    position: fixed; /* Keeps the element in the same place even when scrolling */
+    left: 25px; /* Distance from the left edge of the viewport */
+    top: 78px; /* Distance from the top edge of the viewport */
+    z-index: 1; /* Ensures the element stays on top of other content */
+    font-size: 25px; /* Size of the text or icon inside */
+    color: grey; /* Color of the text or icon */;
+    background-color: black;
+    padding-right:5px;
+        padding-left:5px;
+
+
+    /* Smooth transition effects for color and box-shadow when they change */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Optional: Default box-shadow for visual depth (example) */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}
+
+   /* Style for .menu-toggle when active */
+   .menu-toggle.active {
+       color: blue; /* Change color when active */;
+       background-color: transparent
+
+   }
+
+
+
+
+   /* Main Content Section */
+   main {
+       margin-left: 0;
+
+       padding: 16px; /* Adjust padding to your needs */
+   }
+
+
+
+   @media screen and (max-width: 1085px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+
+   @media screen and (max-width: 785px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+   @media screen and (max-width: 750px) {
+     .menu-toggle {
+       top: 120px;
+     }
+   }
+
+
+
+
+
+
+   @media screen and (max-width: 585px) {
+       .sidebar {
+
+       }
+
+       main {
+           padding-top: 60px;
+       }
+
+           .menu-toggle {
+             top:80px;
+           }
+   }
+
+
+/* ... other styles remain the same ... */
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: white;
+  width:50%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.sidebar-open .container {
+    margin-left: 250px; /* Adjust according to the width of your sidebar */
+}
+
+.mySlides {display: none;}
+       #mainContent {transition: margin-left .5s;}
+
+       .mySlides {display: none;}
+        #mainContent {transition: margin-left .5s;}
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #mySidebar {width: 100%; display: none;}
+            #mainContent {margin-left: 0;}
+            .w3-sidebar.w3-bar-block {float: none;}
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        h1 {
+            margin: 0.5em 0;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+
+        .content.small {
+            margin-left: 0; /* Less margin when sidebar is collapsed */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.5s;
+
+        }
+
+        .sidebar-visible .sidebar {
+            left: 0;
+        }
+
+        .sidebar-visible .content {
+            margin-left: 250px;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        select {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  width: 30%;
+  font-style: normal;
+
+
+}
+
+select:hover {
+  border-color: blue;
+  border: 2px solid blue
+}
+
+
+
+
+
+.opening-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.opening-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: grey;
+}
+#enter-site-button {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Make the text bold */;
+    border-color: #fff; /* White border on hover/focus */
+
+}
+
+#enter-site-button:hover, #enter-site-button:focus {
+    background-color: dodgerblue;
+    border-color: #fff; /* White border on hover/focus */
+}
+
+#enter-site-button:active {
+    background-color: #3e8e41; /* Even darker green when active/clicked */
+    transform: translateY(2px); /* Mimic button press */
+}
+
+
+
+.welcome {
+  color:white;
+  font-size: 40px;
+}
+.dark-mode .welcome {
+  background-color: black;
+  color: white;
+}
+
+
+
+.light-mode .opening-screen button {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-mode .opening-screen button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.dark-mode .opening-screen button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .opening-screen {
+        width: 100%; /* Resets to full viewport width without exceeding it */
+        margin-top: 0; /* Removes negative top margin */
+        margin-left: 0;
+        margin-right: 0;
+        height: 50vh; /* Set a fixed height or max-height as preferred */
+        /* Alternative: You might use max-height if you want to ensure it doesn't exceed a certain height but can be shorter */
+        height: auto; /* Allows the height to adjust based on content */
+        min-height: 100vh; /* Ensures it's at least the full height of the viewport */
+    }
+}
+
+
+.welcome {
+    font-size: 35px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    background-color: black; /* Background color */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px 0; /* Margin outside the div */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-family: 'Arial', sans-serif; /* Specify a font-family */
+    border: 5px solid white; /* Optional: Add a border */;
+    animation:fadeIn 2s;
+    font-weight: bold
+
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 28px; /* Slightly smaller font size */
+        padding: 15px; /* Slightly less padding */
+        margin: 15px 0; /* Adjusted margin */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    .welcome {
+        font-size: 20px; /* Even smaller font size for very small screens */
+        padding: 10px; /* Less padding to save space */
+        margin: 10px 0; /* Adjusted margin */
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.underwelcome {
+  color:white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Other styles remain unchanged */
+
+/* Responsive adjustments for small screens */
+@media (max-width: 720px) {
+    .opening-screen p {
+        font-size: 30px;
+
+    }
+    .opening-screen {
+
+    }
+    .opening-screen button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+}
+#about {
+    background-color: black; /* Adjusted background color */
+    padding: 40px; /* Ample padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Ensure it fills the width */
+    margin: 0; /* Remove default margins */
+    /* Optional: Adjust height based on content or specific design needs */
+    min-height: 200px; /* Example min-height, adjust as needed */;
+
+}
+
+
+#about h2 {
+  margin-bottom: 20px; /* Space below the heading */;
+      color:white;
+    font-size: 28px; /* Slightly larger font size for headings */;
+    font-weight: bold;
+}
+
+
+
+
+#about p {
+    font-size: 16px; /* Comfortable reading font size */
+    line-height: 1.6; /* Increased line height for readability */
+    color: white; /* Dark color for contrast and readability */;
+    font-weight: normal;
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+
+    #about p {
+        font-size: 14px; /* Smaller font size for comfortable reading */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #about h2 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    #about p {
+        font-size: 12px; /* Even smaller font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for compactness */
+    }
+}
+
+
+.opening-screen {
+    height: 1200px; /* Fixed height for large screens */
+    margin-top: -8%;
+  width: calc(100%); /* Adds back the 5% margin from both sides */
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -14%;
+}
+
+/* Smaller devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .opening-screen {
+    height: 600px; /* Adjust height for smaller devices */
+    margin-top: -18%;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .opening-screen {
+    height: 800px; /* Adjust height for medium-sized devices */
+  }
+}
+
+/* Large devices (desktops, but less than 1200px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .opening-screen {
+    height: 1000px; /* Adjust height for larger devices, but not the largest */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .opening-screen {
+    height: 1200px; /* Original height for the largest screens */
+  }
+}
+
+#featured-games-section {
+    margin-top: 20px;
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: black; /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Adjust based on your preference */
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Add a transition effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 0; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(314px); /* Move further left from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.next {
+  right: 20px; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(20px); /* Move further right from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 20px 0 20px; /* Adds space above and below the title */
+  font-size: 25px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 5px;
+  border-radius: 5px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  width:60%;
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Maximum width of the slideshow */
+  margin: auto; /* Center the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* Position the buttons in the middle vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Rounded corners for the left side */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Rounded corners for the right side */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Full-width images within slides */
+.mySlides img {
+  display: block; /* Ensures the image is block level to take the width properly */
+  margin: auto; /* Centers the image */
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+    justify-content: center;
+}
+
+.game-item {
+    width: 200px; /* Adjust based on your design */
+    text-align: center;
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.game-title {
+    margin-top: 10px;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666; /* Adjust color based on your theme */;
+    width: 50%;
+
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    position: relative; /* For positioning the game-info */
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Defines a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintains a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    text-align: center; /* Centers the content within each game */
+}
+
+.game img {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images for aesthetics */
+}
+
+.game-info {
+    text-align: center; /* Ensures the game information text is centered */
+    color: #fff; /* Text color, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Adds padding around the text for spacing */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Optional: Adds rounded corners to the background of the text */
+    width: 100%; /* Ensures the text container matches the width of the image above */
+    box-sizing: border-box; /* Ensures the width calculation includes padding */
+}
+
+#featuredGameContainer {
+  margin-top: 20px;
+  text-align: center; /* Centers the image */
+}
+
+#featuredGameImage {
+  max-width: 600px; /* Adjust based on your design */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional styling */
+}
+
+.slideshow-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+.image-link .caption, .image-caption-wrapper .caption {
+  display: block;
+  text-align: center;
+  color: #000; /* Caption text color */
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 8px; /* Space between the image and caption */
+}
+
+
+.image-caption-wrapper {
+  text-align: center; /* Center the image and caption */
+}
+
+.caption-link {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #000; /* Or any color that fits your design */
+  text-decoration: none; /* Optional: removes the underline */;
+  background-color: white
+}
+
+.caption-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of children */
+    width: 100%; /* Adjust based on your layout */
+    margin: auto; /* Center the container */
+}
+
+
+
+
+
+
+    /* styles.css */
+    #games-list {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      background-color: white;
+      font-size: 15px;
+      width: 80%;
+      padding: 5px;
+      border: 2px solid white
+
+    }
+    /* Additional styles for lists within #games-list */
+    #games-list ul, #games-list ol {
+      padding-left: 20px; /* Standard indentation for lists */
+    }
+
+    #games-list ul {
+      list-style-type: disc; /* Bullet points for unordered lists */
+    }
+
+    #games-list ol {
+      list-style-type: decimal; /* Numbers for ordered lists */
+    }
+
+    /* Style for list items */
+    #games-list li {
+      margin-bottom: 10px; /* Adds space between list items */
+      color: #333; /* Optionally, make text color slightly lighter than black for readability */
+    }
+
+
+
+
+
+  /* Style for the sort section */
+  #sort-section {
+    width:100%;
+    margin: 20px auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+  h2 {
+    color:white
+  }
+
+  /* Style for select dropdowns */
+  #mainCategory, #subCategory {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+
+  }
+
+
+  #filterCheckbox {
+    margin-top: 10px;
+}
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2
+  }
+
+
+
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white
+  }
+
+  #zoomIn {
+    right: 130px; /* Adjust based on your layout */;
+    z-index:2
+  }
+
+  #zoomOut {
+    right: 80px; /* Adjust based on your layout */;
+      z-index:2
+  }
+
+  /* Caption Style */
+  #pcaption {
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+  }
+
+
+
+  .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+
+      background-color: black;
+      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+        color:white;
+    }
+    body.light-mode .footer, body.light-mode .footer * {
+        width: 100%;
+        background-color: #f1f1f1; /* Light grey background for the footer */
+        text-align: center;
+        padding: 20px;
+        color: #000; /* Dark text color for readability */
+        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+      }
+      body.dark-mode #sort-section, body.sort-section * {
+
+    background-color: #f1f1f1; /* Light grey background for the footer */
+
+    color: black; /* Dark text color for readability */
+
+  }
+  body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: black; /* Dark text color for readability */
+
+}
+
+body.light-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+body.light-mode #about h2 {
+color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+
+body.light-mode #sort-section, body.sort-section * {
+
+background-color: grey; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #sort-section, body.sort-section * {
+
+background-color: black; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+.copy {
+  color:white
+}
+.sort {
+  font-size: 25px;
+  color:white
+
+
+}
+body.light-mode .sort {
+  color:white
+}
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}  #google_translate_element {
+    width: 100%;
+    }
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Zoom buttons */
+.zoom-btn {
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 20px
+}
+
+#zoomOut {
+font-size: 20px
+}
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
+}
+
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+.cog-icon {
+    cursor: pointer;
+    /* Additional styling */
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+
+}
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button:active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.dark-mode .accessibility-button:hover {
+  background-color: dimgrey; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.dark-mode .accessibility-button:active {
+  background-color: dimgrey; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.light-mode .accessibility-button:hover {
+  background-color: grey; /* Darken button slightly on hover */;
+  color:white
+}
+
+/* Styles for active/clicked state */
+.light-mode .accessibility-button:active {
+  background-color: grey; /* Darken button further when clicked */;
+  color:white
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  scroll-behavior: auto;
+
+  width: 9.8%;
+  max-width: 140px;
+  min-width: 140px;
+
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown:active {
+  background-color: grey;
+  color:white
+}
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown {
+  color: black
+}
+
+
+
+
+/* Dark Mode styles for dropdown and its content */
+.light-mode .dropdown-content,
+.light-mode .dropdown:hover {
+  background-color: grey; /* Dark Mode background color */;
+  color:white
+}
+
+
+
+
+
+.light-mode .accessibility-button {
+
+color: black;
+
+
+
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
+
+
+
+}
+.light-mode .accessibility-button:active {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+}
+.light-mode .accessibility-button:hover {
+
+
+background-color: grey;
+color:white
+
+
+}
+/* Dark Mode styles for dropdown and its content */
+.dark-mode .dropdown-content,
+.dark-mode .dropdown:hover {
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.light-mode .topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
+/* Style for dropdown links */
+.dropdown-content button {
+  display: block;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+}
+
+/* Show the dropdown menu */
+.show {display: block;}
+
+/* Accessibility button styles */
+
+}
+
+/* Adjust width for screens within the range of 685px to 1024px */
+@media screen and (min-width: 290px) and (max-width: 3000px) {
+  .dropdown-content {
+    width: 100%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad:active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+
+
+
+
+}
+
+html {
+  font-family: arial;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: sticky; /* Make the navigation bar fixed */
+  top: 0;         /* Align the navigation bar at the top of the page */
+  width: 100%;    /* Make the navigation bar span the full width of the page */
+  z-index: 3;     /* Ensure the navigation bar stays on top of other elements */;
+  font-size: 15px
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 14px;
+  padding-right: 16px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 3;
+
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  font-family: arial;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: grey;
+  color: white;
+
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #1a1a1a;;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2%;
+
+}
+
+
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: dimgrey;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .topnav .title, .topnav .icon {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .accessibility-button {
+    position: static;
+    transform: none;
+    order: -1; /* Ensures the button stays in the middle */
+    flex-basis: 100%; /* Take full width to maintain order */
+  }
+
+  /* Additional adjustments for mobile view */
+  .topnav .title {
+    order: -2; /* Title comes first */
+  }
+
+  .topnav .icon {
+    /* Last in order, no need to set explicitly */
+  }
+}
+
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2.6%;
+
+  width: 18%;
+}
+
+
+
+
+
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
+
+
+:focus {
+    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
+}
+
+}
+
+body.increase-contrast {
+  filter: contrast(110%) sepia(0%);
+}
+
+body.decrease-contrast {
+  filter: contrast(90%) sepia(0%);
+}
+
+body.sepia-effect {
+  filter: contrast(100%) sepia(100%);
+}
+/* CSS for sepia and contrast adjustments */
+
+
+.sepia-effect {
+  filter: sepia(100%);
+}
+
+.increase-contrast {
+  filter: contrast(110%);
+}
+
+.decrease-contrast {
+  filter: contrast(90%);
+}
+/* Light mode styles */
+body {
+  background-color: #fff; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+
+
+
+
+/* Light mode styles */
+body {
+  background-color: #fff;
+  color: #000;
+    font-family:   'arial', sans-serif; /* Add the desired font-family */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
+
+
+
+
+
+
+body.light-mode .topnav a {
+  color: #000; /* Black font color for the links in the navbar */;
+
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+body.dark-mode .topnav a {
+  color: #fff; /* White font color for the links in the navbar in dark mode */
+}
+
+
+
+
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+body .topnav a {
+  color: #fff; /* White font color for the links in the navbar in normal mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: #ff0000;
+  color: #000;
+}
+
+
+
+  .dropup-hidden {
+    display: none; /* Hide the dropdown when the dropup-hidden class is present */
+  }
+
+
+
+
+  /* Normal mode styles */
+  body {
+    background-color: white;
+    color: #000;
+  }
+
+  /* Change background color to red */
+  .dropup-content {
+
+      background-color: dodgerblue; /* Change background color to red */
+      position: fixed;
+      width: 18%;
+  padding: 5px; /* Add padding for better visual appearance */
+
+      color: white;
+
+  }
+
+
+
+  button {
+    color:white
+  }
+
+  /* Add styling for font awesome icon */
+  .fa {
+      cursor: pointer;
+      color: white; /* Change font color to white */
+
+  }
+
+
+
+
+
+
+  /* Change background color of the icon container */
+  .cog-icon {
+      background-color: dodgerblue; /* Change to your desired background color */
+      margin-left:77%; /* Adjust margin for better alignment */;
+      border-radius: 5px;
+      width: 18%; /* Adjust width for consistency with other elements */;
+      position: relative;
+      padding: 5px; /* Add padding for better visual appearance */;
+      font-family: 'arial', sans-serif;
+      font-size: 15px;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      position: fixed; /* Keeps the element in the same place even when scrolling */
+      left: 25px; /* Distance from the left edge of the viewport */
+      top: 78px; /* Distance from the top edge of the viewport */
+      z-index: 1; /* Ensures the element stays on top of other content */
+
+      color: grey; /* Color of the text or icon */;
+
+
+
+
+
+
+  }
+
+.cog-icon i,
+.acc {
+  font-family: 'arial', sans-serif; /* Add the desired font-family */;
+
+}
+
+  /* Adjust other styles as needed */
+
+  /* Accessibility button styles */
+  #accessibility-button {
+    position: fixed;
+    margin-top: 40%;
+    margin-left: 30%;
+    width: 80%;
+    max-width: 300px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+  }
+
+
+  #accessibility-dropup button {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'arial', sans-serif;
+    font-size: 15px;
+
+  }
+  @media screen and (max-width: 585px) {
+    .cog-icon {
+
+    }
+
+    .up-content {
+
+    }
+}
+
+/* Base styles */
+.cog-icon .fa-gear {
+    cursor: pointer;
+    /* Ensure there's enough padding for easy tapping on touch devices */
+    padding: 5px;
+}
+
+.acc {
+    display: inline; /* Or 'block', depending on your layout */
+}
+
+/* Hide the Accessibility text on smaller screens */
+@media (max-width: 600px) {
+    .acc {
+        display: none;
+    }
+
+    /* Optionally, increase the size of the icon for easier interaction on touch devices */
+    .cog-icon .fa-gear {
+        font-size: 15px; /* Adjust based on your design */
+    }
+}
+
+
+
+body {
+  background-color: ghostwhite;
+  font-family: 'arial', sans-serif;
+}
+#searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
+color:red;
+font-size: 15px
+
+
+}
+/* Style the search input */
+input[type=text] {
+  padding: 5px; /* Add padding */
+
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  outline: none; /* Remove default outline */;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+
+/* Style the placeholder text */
+input[type=text]::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
+/* Optional: Style on focus */
+input[type=text]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on focus */
+}
+
+/* Default values */
+:root {
+  --dropup-bg-light: grey;
+  --dropup-bg-dark: grey; /* Change to your desired dark mode background color */
+}
+
+/* Common styles for both light and dark modes */
+.dropup-content {
+    display: none;
+    position: absolute;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0%;
+    margin-left: 79.5%;
+    margin-top: 0%;
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode .dropup-content,
+body.dark-mode .dropup-content * {
+    color: white; /* Text color in dark mode */
+    background-color: dimgrey; /* Background color in dark mode */
+}
+body.light-mode .topnav {
+  background-color: whitesmoke;
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav #button.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+
+
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+
+
+/* Light mode styles */
+body.light-mode .dropup-content,
+body.light-mode .dropup-content * {
+    color: black; /* Text color in light mode */
+
+}
+
+body.light-mode .dropup-content button {
+    color: black; /* Button text color in light mode */
+    background-color: whitesmoke; /* Button background color in light mode */
+}
+
+body.light-mode .cog-icon,
+body.light-mode .cog-icon * {
+    color: black; /* Icon color in light mode */
+    background-color: whitesmoke; /* Icon background color in light mode */
+}
+
+/* Add your existing styles here */
+
+
+}
+
+/* Hide the welcome message by default */
+.hidden {
+    display: none;
+}
+
+
+
+
+/* Sidebar Styles */
+.sidebar {
+
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    transition: none;
+    background-color: #1a1a1a;
+      overflow-x: hidden;
+    padding-top: 20px;
+    scroll-behavior: auto;
+      overflow-y: auto;
+
+      z-index: 1;
+
+      left: -250px;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+      color: white;
+      transition: left 0.5s;
+
+}
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Light Mode Styles */
+.light-mode .sidebar {
+    background-color: #f0f0f0; /* Light background for light mode */
+}
+
+.light-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.light-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #a0a0a0 #e0e0e0;
+}
+
+/* Dark Mode Styles */
+.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+}
+
+.dark-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #2c2c2c;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dark-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #555 #2c2c2c;
+}
+
+
+   .sidebar a {
+       padding: 8px 8px 8px 16px;
+       text-decoration: none;
+       font-size: 14px;
+       color: white;
+       display: block;
+       font-size: 15px
+
+   }
+   .sidebar a:focus {
+    outline: 2px solid dimgrey; /* Customize as needed */
+}
+
+   /* Light mode styles */
+   body.light-mode .sidebar,
+   body.light-mode .sidebar * {
+       color: black; /* Text color in light mode */;
+       background-color: whitesmoke; /* Background color in light mode */;
+
+   }
+
+   /* Search Input Styles */
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 2px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+
+
+   .sidebar a:hover {
+       color: grey;
+   }
+
+
+
+
+
+   .sidebar h3 {
+       color: #f1f1f1;
+
+   }
+   .menu-toggle {
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    position: fixed; /* Keeps the element in the same place even when scrolling */
+    left: 25px; /* Distance from the left edge of the viewport */
+    top: 78px; /* Distance from the top edge of the viewport */
+    z-index: 1; /* Ensures the element stays on top of other content */
+    font-size: 25px; /* Size of the text or icon inside */
+    color: grey; /* Color of the text or icon */;
+    background-color: black;
+    padding-right:5px;
+        padding-left:5px;
+
+
+    /* Smooth transition effects for color and box-shadow when they change */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Optional: Default box-shadow for visual depth (example) */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}
+
+   /* Style for .menu-toggle when active */
+   .menu-toggle.active {
+       color: blue; /* Change color when active */;
+       background-color: transparent
+
+   }
+
+
+
+
+   /* Main Content Section */
+   main {
+       margin-left: 0;
+
+       padding: 16px; /* Adjust padding to your needs */
+   }
+
+
+
+   @media screen and (max-width: 1085px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+
+   @media screen and (max-width: 785px) {
+     .menu-toggle {
+       top: 80px;
+     }
+   }
+   @media screen and (max-width: 750px) {
+     .menu-toggle {
+       top: 120px;
+     }
+   }
+
+
+
+
+
+
+   @media screen and (max-width: 585px) {
+       .sidebar {
+
+       }
+
+       main {
+           padding-top: 60px;
+       }
+
+           .menu-toggle {
+             top:80px;
+           }
+   }
+
+
+/* ... other styles remain the same ... */
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: white;
+  width:50%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.sidebar-open .container {
+    margin-left: 250px; /* Adjust according to the width of your sidebar */
+}
+
+.mySlides {display: none;}
+       #mainContent {transition: margin-left .5s;}
+
+       .mySlides {display: none;}
+        #mainContent {transition: margin-left .5s;}
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #mySidebar {width: 100%; display: none;}
+            #mainContent {margin-left: 0;}
+            .w3-sidebar.w3-bar-block {float: none;}
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        h1 {
+            margin: 0.5em 0;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+
+        .content.small {
+            margin-left: 0; /* Less margin when sidebar is collapsed */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.5s;
+
+        }
+
+        .sidebar-visible .sidebar {
+            left: 0;
+        }
+
+        .sidebar-visible .content {
+            margin-left: 250px;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        select {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  width: 30%;
+  font-style: normal;
+
+
+}
+
+select:hover {
+  border-color: blue;
+  border: 2px solid blue
+}
+
+
+
+
+
+.opening-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.opening-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: grey;
+}
+#enter-site-button {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Make the text bold */;
+    border-color: #fff; /* White border on hover/focus */
+
+}
+
+#enter-site-button:hover, #enter-site-button:focus {
+    background-color: dodgerblue;
+    border-color: #fff; /* White border on hover/focus */
+}
+
+#enter-site-button:active {
+    background-color: #3e8e41; /* Even darker green when active/clicked */
+    transform: translateY(2px); /* Mimic button press */
+}
+
+
+
+.welcome {
+  color:white;
+  font-size: 40px;
+}
+.dark-mode .welcome {
+  background-color: black;
+  color: white;
+}
+
+
+
+.light-mode .opening-screen button {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-mode .opening-screen button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.dark-mode .opening-screen button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .opening-screen {
+        width: 100%; /* Resets to full viewport width without exceeding it */
+        margin-top: 0; /* Removes negative top margin */
+        margin-left: 0;
+        margin-right: 0;
+        height: 50vh; /* Set a fixed height or max-height as preferred */
+        /* Alternative: You might use max-height if you want to ensure it doesn't exceed a certain height but can be shorter */
+        height: auto; /* Allows the height to adjust based on content */
+        min-height: 100vh; /* Ensures it's at least the full height of the viewport */
+    }
+}
+
+
+.welcome {
+    font-size: 35px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    background-color: black; /* Background color */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px 0; /* Margin outside the div */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-family: 'Arial', sans-serif; /* Specify a font-family */
+    border: 5px solid white; /* Optional: Add a border */;
+    animation:fadeIn 2s;
+    font-weight: bold
+
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 28px; /* Slightly smaller font size */
+        padding: 15px; /* Slightly less padding */
+        margin: 15px 0; /* Adjusted margin */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    .welcome {
+        font-size: 20px; /* Even smaller font size for very small screens */
+        padding: 10px; /* Less padding to save space */
+        margin: 10px 0; /* Adjusted margin */
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.underwelcome {
+  color:white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Other styles remain unchanged */
+
+/* Responsive adjustments for small screens */
+@media (max-width: 720px) {
+    .opening-screen p {
+        font-size: 30px;
+
+    }
+    .opening-screen {
+
+    }
+    .opening-screen button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+}
+#about {
+    background-color: black; /* Adjusted background color */
+    padding: 40px; /* Ample padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Ensure it fills the width */
+    margin: 0; /* Remove default margins */
+    /* Optional: Adjust height based on content or specific design needs */
+    min-height: 200px; /* Example min-height, adjust as needed */;
+
+}
+
+
+#about h2 {
+  margin-bottom: 20px; /* Space below the heading */;
+      color:white;
+    font-size: 28px; /* Slightly larger font size for headings */;
+    font-weight: bold;
+}
+
+
+
+
+#about p {
+    font-size: 16px; /* Comfortable reading font size */
+    line-height: 1.6; /* Increased line height for readability */
+    color: white; /* Dark color for contrast and readability */;
+    font-weight: normal;
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+
+    #about p {
+        font-size: 14px; /* Smaller font size for comfortable reading */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #about h2 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    #about p {
+        font-size: 12px; /* Even smaller font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for compactness */
+    }
+}
+
+
+.opening-screen {
+    height: 1200px; /* Fixed height for large screens */
+    margin-top: -8%;
+  width: calc(100%); /* Adds back the 5% margin from both sides */
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -14%;
+}
+
+/* Smaller devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .opening-screen {
+    height: 600px; /* Adjust height for smaller devices */
+    margin-top: -18%;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .opening-screen {
+    height: 800px; /* Adjust height for medium-sized devices */
+  }
+}
+
+/* Large devices (desktops, but less than 1200px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .opening-screen {
+    height: 1000px; /* Adjust height for larger devices, but not the largest */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .opening-screen {
+    height: 1200px; /* Original height for the largest screens */
+  }
+}
+
+#featured-games-section {
+    margin-top: 20px;
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: black; /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Adjust based on your preference */
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Add a transition effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 0; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(314px); /* Move further left from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.next {
+  right: 20px; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(20px); /* Move further right from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 20px 0 20px; /* Adds space above and below the title */
+  font-size: 25px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 5px;
+  border-radius: 5px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  width:60%;
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Maximum width of the slideshow */
+  margin: auto; /* Center the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* Position the buttons in the middle vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Rounded corners for the left side */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Rounded corners for the right side */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Full-width images within slides */
+.mySlides img {
+  display: block; /* Ensures the image is block level to take the width properly */
+  margin: auto; /* Centers the image */
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+    justify-content: center;
+}
+
+.game-item {
+    width: 200px; /* Adjust based on your design */
+    text-align: center;
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.game-title {
+    margin-top: 10px;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666; /* Adjust color based on your theme */;
+    width: 50%;
+
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    position: relative; /* For positioning the game-info */
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Defines a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintains a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    text-align: center; /* Centers the content within each game */
+}
+
+.game img {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images for aesthetics */
+}
+
+.game-info {
+    text-align: center; /* Ensures the game information text is centered */
+    color: #fff; /* Text color, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Adds padding around the text for spacing */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Optional: Adds rounded corners to the background of the text */
+    width: 100%; /* Ensures the text container matches the width of the image above */
+    box-sizing: border-box; /* Ensures the width calculation includes padding */
+}
+
+#featuredGameContainer {
+  margin-top: 20px;
+  text-align: center; /* Centers the image */
+}
+
+#featuredGameImage {
+  max-width: 600px; /* Adjust based on your design */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional styling */
+}
+
+.slideshow-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+.image-link .caption, .image-caption-wrapper .caption {
+  display: block;
+  text-align: center;
+  color: #000; /* Caption text color */
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 8px; /* Space between the image and caption */
+}
+
+
+.image-caption-wrapper {
+  text-align: center; /* Center the image and caption */
+}
+
+.caption-link {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #000; /* Or any color that fits your design */
+  text-decoration: none; /* Optional: removes the underline */;
+  background-color: white
+}
+
+.caption-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of children */
+    width: 100%; /* Adjust based on your layout */
+    margin: auto; /* Center the container */
+}
+
+
+
+
+
+
+    /* styles.css */
+    #games-list {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      background-color: white;
+      font-size: 15px;
+      width: 80%;
+      padding: 5px;
+      border: 2px solid white
+
+    }
+    /* Additional styles for lists within #games-list */
+    #games-list ul, #games-list ol {
+      padding-left: 20px; /* Standard indentation for lists */
+    }
+
+    #games-list ul {
+      list-style-type: disc; /* Bullet points for unordered lists */
+    }
+
+    #games-list ol {
+      list-style-type: decimal; /* Numbers for ordered lists */
+    }
+
+    /* Style for list items */
+    #games-list li {
+      margin-bottom: 10px; /* Adds space between list items */
+      color: #333; /* Optionally, make text color slightly lighter than black for readability */
+    }
+
+
+
+
+
+  /* Style for the sort section */
+  #sort-section {
+    width:100%;
+    margin: 20px auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+  h2 {
+    color:white
+  }
+
+  /* Style for select dropdowns */
+  #mainCategory, #subCategory {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+
+  }
+
+
+  #filterCheckbox {
+    margin-top: 10px;
+}
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2
+  }
+
+
+
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white
+  }
+
+  #zoomIn {
+    right: 130px; /* Adjust based on your layout */;
+    z-index:2;
+    top:80px
+  }
+
+  #zoomOut {
+    right: 80px; /* Adjust based on your layout */;
+      z-index:2;
+        top:80px
+  }
+
+  /* Caption Style */
+  #pcaption {
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+  }
+
+
+
+  .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+
+      background-color: black;
+      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+        color:white;
+    }
+    body.light-mode .footer, body.light-mode .footer * {
+        width: 100%;
+        background-color: #f1f1f1; /* Light grey background for the footer */
+        text-align: center;
+        padding: 20px;
+        color: #000; /* Dark text color for readability */
+        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+      }
+      body.dark-mode #sort-section, body.sort-section * {
+
+    background-color: #f1f1f1; /* Light grey background for the footer */
+
+    color: black; /* Dark text color for readability */
+
+  }
+  body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: black; /* Dark text color for readability */
+
+}
+
+body.light-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+body.light-mode #about h2 {
+color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+
+body.light-mode #sort-section, body.sort-section * {
+
+background-color: grey; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #sort-section, body.sort-section * {
+
+background-color: black; /* Light grey background for the footer */
+
+color: white; /* Dark text color for readability */
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+.copy {
+  color:white
+}
+.sort {
+  font-size: 25px;
+  color:white
+
+
+}
+body.light-mode .sort {
+  color:white
+}
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}  #google_translate_element {
+    width: 100%;
+    }
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  top:40px
+}
+
+
+/* Zoom buttons */
+.zoom-btn {
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+}
+
+#zoomOut {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+
+}
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
+}
+
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+.cog-icon {
+    cursor: pointer;
+    /* Additional styling */
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+
+}
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button.active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.dark-mode .accessibility-button:hover {
+  background-color: dimgrey; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.dark-mode .accessibility-button.active {
+  background-color: dimgrey; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.light-mode .accessibility-button:hover {
+  background-color: grey; /* Darken button slightly on hover */;
+  color:white
+}
+
+/* Styles for active/clicked state */
+.light-mode .accessibility-button.active {
+  background-color: grey; /* Darken button further when clicked */;
+  color:white
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  scroll-behavior: auto;
+
+  width: 9.8%;
+  max-width: 140px;
+  min-width: 140px;
+
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown.active {
+  background-color: grey;
+  color:white
+}
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown {
+  color: black
+}
+
+
+
+
+/* Dark Mode styles for dropdown and its content */
+.light-mode .dropdown-content,
+.light-mode .dropdown:hover {
+  background-color: grey; /* Dark Mode background color */;
+  color:white
+}
+
+
+
+
+
+.light-mode .accessibility-button {
+
+color: black;
+
+
+
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
+
+
+
+}
+.light-mode .accessibility-button.active {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+}
+.light-mode .accessibility-button:hover {
+
+
+background-color: grey;
+color:white
+
+
+}
+/* Dark Mode styles for dropdown and its content */
+.dark-mode .dropdown-content,
+.dark-mode .dropdown:hover {
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.light-mode .topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
+/* Style for dropdown links */
+.dropdown-content button {
+  display: block;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+}
+
+/* Show the dropdown menu */
+.show {display: block;}
+
+/* Accessibility button styles */
+
+}
+
+/* Adjust width for screens within the range of 685px to 1024px */
+@media screen and (min-width: 290px) and (max-width: 3000px) {
+  .dropdown-content {
+    width: 100%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad.active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+
+
+/* Style for the dropdown toggle and SVG icon */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+
+
+#signupSection h2 {
+  color:black
+}
+
+#signupSection button {
+  color:white;
+  background-color: red;
+  border:2px solid black
+}
+.auth-links {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the items horizontally (if needed) */
+    gap: 3px; /* Adjust the gap between items as needed */
+    /* Add additional styling as needed */
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: #007BFF; /* Example link color */
+    /* Add additional link styling as needed */
+}
+
+.auth-links span {
+    color: #000; /* Color of the separator */
+    /* Adjust styling for the separator as needed */
+}
+
+
+#form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+
+
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#form-switch {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-switch button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logged-out-toolbar img {
+    width: 50px; /* Adjust size as needed */
+}
+
+
+
+#toggleForms {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+form p {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+    /* Small Screens */
+    @media (max-width: 1060px) {
+        .dropdown2 .user-icon {
+            display: inline-block; /* Show dropdown toggle icon */
+            cursor: pointer;
+            font-size: 10px;
+
+
+
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+              background-color: red;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+              font-size: 10px;
+        }
+
+        .dropdown-content2 {
+            position: absolute;
+            z-index: 1;
+              background-color: red
+        }
+    }
+
+    /* Larger Screens */
+    @media (min-width: 1060px) {
+        .auth-links {
+            display: block; /* Only show direct links, no dropdown */;
+
+        }
+
+        .auth-links a {
+            margin: 0 10px; /* Spacing between links */
+        }
+    }
+    /* Larger Screens */
+    @media (max-width: 2200px) {
+
+    .user-icon {
+        cursor: pointer; /* Indicates clickable items */
+        display: flex; /* Aligns the icon and caret */
+        align-items: center; /* Centers items vertically */;
+
+    }
+
+    .user-icon img {
+        width: 23px; /* Width as specified */;
+
+    }
+
+
+
+
+    .dropdown-content2 a {
+        color: black; /* Text color for links */
+        padding: 12px 16px; /* Padding for link items */
+        text-decoration: none; /* Removes underline from links */;
+        background-color: white; /* Light background for the dropdown */
+        display: block; /* Ensures links are block-level, aiding in clickability */
+    }
+
+    /* General styling for links in the dropdown */
+.dropdown-content2 a {
+    color: #333; /* Dark grey text color for better readability */
+    padding: 10px 15px; /* Ample padding for easier clickability */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make each link take up the full width of the dropdown */
+    background-color: #f9f9f9; /* Light background color for the dropdown */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.dropdown-content2 a:hover, .dropdown-content2 a:focus {
+    background-color: #ddd; /* Slightly darker background on hover/focus for visual feedback */
+    color: #000; /* Optional: Change text color on hover/focus */
+}
+
+/* Active link styling (if applicable) */
+.dropdown-content2 a:active {
+    background-color: #ccc; /* Even darker background for an active link */
+    color: #000; /* Optional: Change text color for active link */
+}
+
+
+.user-info {
+    position: fixed;
+    display: inline-block;
+    margin-right: 10px
+}
+
+
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: dimgrey;
+
+    min-width: 100px;
+    right: 0;
+    z-index: 1;
+    top:53.5px;
+
+}
+
+.dropdown-content2 div {
+    color: white;
+    padding: 12px ;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 13px
+
+}
+}
+/* Larger Screens */
+@media (min-width: 0px) and (max-width: 300px){
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+     .user-icon img {
+         display: none; /* Hide the image */;
+         width: 15px
+     }
+     .user-icon::before {
+         content: "\f007"; /* Font Awesome person icon unicode */
+         font-family: "Font Awesome 5 Free"; /* Adjust based on the version of Font Awesome you're using */
+         font-weight: 900; /* Necessary for solid icons */
+         display: inline-block; /* Display the pseudo-element as an inline block */;
+         font-size: 13px
+
+     }
+
+.accessibility-button {
+
+font-size:15px;
+margin-left: -10px
+
+}
+.topnav a.icon  {
+  font-size: 15px
+}
+}
+
+
+#formsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #formsContainer {
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+.user-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 10px;
+    margin-right: 15px;
+}
+
+
+/* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+.user-icon:focus {
+    outline: none;
+}
+
+/* Rest of the styles remain unchanged */
+@media (min-width: 300px) and (max-width: 600px){
+
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+
+
+  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+  .user-icon:focus {
+      outline: none;
+  }
+}
+/* Rest of the styles remain unchanged */
+@media (min-width: 600px) and (max-width: 1060px){
+
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+
+
+  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+  .user-icon:focus {
+      outline: none;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+.loginSection h2 {
+  color:black
+}
