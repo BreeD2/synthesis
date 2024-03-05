@@ -8251,9 +8251,8 @@ color:white
   color: white;
 }
 
-/* Add a dark background on topnav links and the dropdown button on hover */
 .light-mode .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: grey;
   color: white;
 }
 
