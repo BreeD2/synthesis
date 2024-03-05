@@ -3267,7 +3267,7 @@ margin-left: -10px
 }
 
 #signupContainer {
-    max-width: 400px;
+    max-width: 80%;
     margin: auto;
     padding: 20px;
     background-color: #f4f4f4;
@@ -3275,7 +3275,7 @@ margin-left: -10px
 }
 
 #signupForm input {
-    width: calc(100% - 22px);
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -3290,6 +3290,9 @@ margin-left: -10px
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+#signupContainer h2 {
+  color:black
 }
 
 #signupForm button:hover {
