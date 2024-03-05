@@ -31,55 +31,83 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
+  <div class="read-aloud">
   <!-- Navigation Bar with Logo and Website Name -->
-   <div class="topnav"id="myTopnav">
-     <!-- Logo and Website Name -->
-     <a href="..//index.html">
-       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;Reminiscence&ensp;Collection
-  </a>
+  <div class="topnav" id="myTopnav">
+    <a href="..//index.html" class="logo">
+      <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
-     <!-- Navigation Links -->
-     <a class="active" href="..//index.html">Home</a>
-      <a href="..//games/index.html">Games</a>
-     <a href="..//about/index.html">About</a>
-     <a href="..//contact/index.html">Contact</a>
-      <a href="..//login/index.html">Login</a>
-       <a href="..//signup/index.html">Signup</a>
-
-     <!-- Search Input -->
-     <input type="text" placeholder="Search..">
-
-     <!-- Accessibility Button and Dropdown -->
-     <div class="dropdown">
-       <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
-      
-         <div id="google_translate_element"></div>
-         <button onclick="resetSettings()">Reset Settings</button>
-         <button onclick="increaseFont()">Increase Font Size</button>
-         <button onclick="decreaseFont()">Decrease Font Size</button>
-         <button onclick="invertColors()">Invert Colors</button>
-         <button onclick="toggleLightMode()">Toggle Light Mode</button>
-         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-         <button onclick="increaseBrightness()">Increase Brightness</button>
-         <button onclick="decreaseBrightness()">Decrease Brightness</button>
-         <button onclick="increaseContrast()">Increase Contrast</button>
-         <button onclick="decreaseContrast()">Decrease Contrast</button>
-         <button onclick="adjustSaturation(10)">Increase Saturation</button>
-         <button onclick="adjustSaturation(-10)">Decrease Saturation</button>
-
-         <button onclick="applyBlueYellowFilter()">Apply Blue-Yellow Filter</button>
-         <button onclick="applyHueRotate()" class="adjust-filter-button">Hue Rotate</button>
-         <button onclick="applySepia()" class="adjust-filter-button">Sepia</button>
-         <button onclick="toggleGrayscale()">Toggle Grayscale</button>
-
-       </div>
-     </div>
-
- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-   <i class="fa fa-bars"></i>
  </a>
 
-</div>
+    <!-- Menu Toggle Icon -->
+
+    <!-- Navigation Links -->
+    <a class="active" href="..//index.html">Home</a>
+  <a href="..//games/index.html">Games</a>
+    <a href="..//about/index.html">About</a>
+    <a href="..//contact/index.html">Contact</a>
+
+
+
+
+
+        <input type="text" placeholder="Search.." name="search">
+
+
+
+        <!-- Accessibility Button and Dropdown -->
+        <div class="dropdown">
+          <button class="accessibility-button">
+    <span class="accessibility-text">Accessibility</span>
+    <i class="fa fa-caret-down"></i>
+  </button>
+
+          <div class="dropdown-content">
+            <div id="google_translate_element"></div>
+            <button onclick="resetSettings()">Reset Settings</button>
+            <button onclick="increaseFont()">Increase Font Size</button>
+            <button onclick="decreaseFont()">Decrease Font Size</button>
+
+            <button onclick="toggleLightMode()">Toggle Light Mode</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+          <button id="speakSelectedText">Read Selected Text</button>
+          <button id="stopButton">Stop Reading</button>
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="user-info">
+            <div class="dropdown2">
+                <button class="user-icon" onclick="toggleDropdown2()">
+                    <img src="../icon.png" alt="User icon">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="dropdown-content2" style="display: none;">
+                    <div onclick="window.location.href='login/index.html';">Login</div>
+                    <div onclick="window.location.href='signup/index.html';">Signup</div>
+                </div>
+            </div>
+            <div class="logged-in-toolbar" style="display: none;">
+                <img src="user-icon.png" alt="User icon">
+                <span>Welcome, User!</span>
+                <button onclick="logOut()">Log out</button>
+            </div>
+
+  </div>
+
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+ </div>
 
 
  <aside class="sidebar">
@@ -374,7 +402,7 @@
    <div class="footer">
      <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
    </div>
-   </div>
+ </div></div>
 
 
 <!-- The Modal -->
@@ -4203,6 +4231,27 @@ function myFunction() {
 // to control their display property separately if they should be visible in responsive mode.
 
 </script>
+
+<script>
+function toggleDropdown2() {
+    const dropdown = document.querySelector('.dropdown-content2');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
+}
+</script>
+
 
 <script>
   // When the user clicks on the button, toggle between hiding and showing the dropdown content

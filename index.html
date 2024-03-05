@@ -33,24 +33,25 @@
   <div class="read-aloud">
   <!-- Navigation Bar with Logo and Website Name -->
   <div class="topnav" id="myTopnav">
-    <a href="index.html" class="logo">
-      <img src="rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
+    <a href="..//index.html" class="logo">
+      <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
  </a>
 
     <!-- Menu Toggle Icon -->
 
     <!-- Navigation Links -->
-    <a class="active" href="index.html">Home</a>
-  <a href="games/index.html">Games</a>
-    <a href="about/index.html">About</a>
-    <a href="contact/index.html">Contact</a>
+    <a class="active" href="..//index.html">Home</a>
+  <a href="..//games/index.html">Games</a>
+    <a href="..//about/index.html">About</a>
+    <a href="..//contact/index.html">Contact</a>
 
 
 
 
-    <!-- Search Input -->
-    <input type="text" placeholder="Search..">
+
+        <input type="text" placeholder="Search.." name="search">
+
 
 
         <!-- Accessibility Button and Dropdown -->
@@ -81,30 +82,22 @@
           </div>
         </div>
         <div class="user-info">
-      <div class="dropdown2">
-          <a href="#" class="user-icon" onclick="toggleDropdown2()">
-              <img src="../icon.png" alt="User icon" style="width:23px;">
-              <i class="fa fa-caret-down"></i>
-          </a>
-          <!-- Dropdown Menu -->
-          <div class="dropdown-content2" style="display: none;">
-              <a href="login.html">Login</a>
-              <a href="signup.html">Signup</a>
-          </div>
-      </div>
-      <div class="logged-in-toolbar" style="display: none;">
-          <a href="#" class="user-icon">
-              <img src="user-icon.png" alt="User icon">
-          </a>
-          <span>Welcome, User!</span>
-          <a href="#" onclick="logOut()">Log out</a>
-      </div>
-  </div>
-
-
-
-
-
+            <div class="dropdown2">
+                <button class="user-icon" onclick="toggleDropdown2()">
+                    <img src="../icon.png" alt="User icon">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="dropdown-content2" style="display: none;">
+                    <div onclick="window.location.href='login/index.html';">Login</div>
+                    <div onclick="window.location.href='signup/index.html';">Signup</div>
+                </div>
+            </div>
+            <div class="logged-in-toolbar" style="display: none;">
+                <img src="user-icon.png" alt="User icon">
+                <span>Welcome, User!</span>
+                <button onclick="logOut()">Log out</button>
+            </div>
 
   </div>
 
@@ -112,9 +105,6 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
-
-
- </div>
 
  </div>
 
