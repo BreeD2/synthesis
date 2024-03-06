@@ -3374,19 +3374,13 @@ form p {
 }
 }
 /* Larger Screens */
-@media (min-width: 0px) and (max-width: 300px){
+@media (min-width: 0px) and (max-width: 350px){
 
   .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
+
+      margin-left: -35px;
+      margin-top: -65px;
+
   }
      .user-icon img {
          display: none; /* Hide the image */;
@@ -3397,18 +3391,22 @@ form p {
          font-family: "Font Awesome 5 Free"; /* Adjust based on the version of Font Awesome you're using */
          font-weight: 900; /* Necessary for solid icons */
          display: inline-block; /* Display the pseudo-element as an inline block */;
-         font-size: 13px
+         font-size: 15px;
+         position: fixed
+
 
      }
 
 .accessibility-button {
 
-font-size:15px;
-margin-left: -10px
+font-size:13px;
+margin-left: -10px;
+margin-top: 5px;
 
 }
 
 }
+
 
 
 #formsContainer {
@@ -3431,7 +3429,7 @@ form {
 
 form input[type="text"],
 form input[type="password"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -3440,7 +3438,7 @@ form input[type="password"] {
 }
 
 form button[type="submit"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -3536,7 +3534,7 @@ p a:hover {
 
 @media screen and (max-width: 300px) {
   .title-text {
-    font-size: 10px; /* Smaller font size on screens less than or equal to 600px wide */;
+    font-size: 13px; /* Smaller font size on screens less than or equal to 600px wide */;
     margin: 0;
   }
   img {
@@ -3925,7 +3923,7 @@ rgb(146, 172, 67)
 
 
 .form button {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -4090,16 +4088,9 @@ form p {
 @media (min-width: 0px) and (max-width: 300px){
 
   .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
+
+      font-size: 10px;   left: calc(100% - 550px); /* Adjusts based on viewport width */
+
   }
      .user-icon img {
          display: none; /* Hide the image */;
@@ -4121,7 +4112,9 @@ margin-left: -10px
 
 }
 .topnav a.icon  {
-  font-size: 15px
+  font-size: 13px;
+  margin-top: 6.8px;
+
 }
 }
 
@@ -4146,7 +4139,7 @@ form {
 
 form input[type="text"],
 form input[type="password"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -4155,7 +4148,7 @@ form input[type="password"] {
 }
 
 form button[type="submit"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -4211,20 +4204,12 @@ p a:hover {
 }
 
 /* Rest of the styles remain unchanged */
-@media (min-width: 300px) and (max-width: 600px){
+@media (min-width: 350px) and (max-width: 600px){
 
 
   .user-icon {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-top: 15px;
-      font-size: 10px;
-      margin-right: 15px;
+
+    margin-left: -35px
   }
 
 
@@ -4256,8 +4241,22 @@ p a:hover {
       outline: none;
   }
 }
+@media screen and (min-width: 0px) and (max-width: 300px) {
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] {
+    font-size: 15px;
+  }
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive a.icon {
+  top:-7.4px;
+  height:auto
+  }
+}
 
-@media screen and (max-width: 1060px) {
+
+
+
+@media screen (min-width: 300px) and (max-width: 1060px) {
   .topnav a:not(:first-child), .topnav input[type="text"] {
     display: none; /* Hide all a elements that are not the first child and the search input by default */
   }
@@ -4281,4 +4280,44 @@ p a:hover {
     margin: 10px 15px; /* Add some margin for visual separation */
     width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
   }
+}
+
+/* General form styling */
+.form-group {
+  margin-bottom: 20px; /* Adds space between each form group */
+}
+
+label {
+  display: block; /* Makes the label take up the full width */
+  margin-bottom: 5px; /* Adds a little space between the label and the input field */;
+
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%; /* Makes input fields take up 100% of their parent's width */
+  padding: 10px; /* Adds some padding inside the input fields */
+  margin-bottom: 10px; /* Adds space below the input fields */
+  border: 1px solid #ccc; /* Adds a border to the input fields */
+  border-radius: 4px; /* Rounds the corners of the input fields */
+}
+
+textarea {
+  resize: vertical; /* Allows the textarea to be resized vertically */''
+}
+
+button[type="submit"] {
+  background-color: #4CAF50; /* Adds a background color to the submit button */
+  color: white; /* Changes the text color to white */
+  padding: 10px 20px; /* Adds padding inside the button */
+  border: none; /* Removes the border */
+  border-radius: 4px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  font-size: 16px; /* Increases the font size */;
+    width: 80%; /* Makes input fields take up 100% of their parent's width */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* Changes the background color when hovering */
 }
