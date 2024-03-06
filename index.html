@@ -73,14 +73,9 @@
 
           <button id="speakSelectedText">Read Selected Text</button>
           <button id="stopButton">Stop Reading</button>
-
-
-
-
-
-
           </div>
         </div>
+
         <div class="user-info">
             <div class="dropdown2">
                 <button class="user-icon" onclick="toggleDropdown2()">
@@ -3377,6 +3372,7 @@ function speakText() {
 
 
 
+
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
@@ -4231,14 +4227,19 @@ imgAlt: "Cover art of Uncharted 4: A Thief’s End"
 </script>
 
 
-
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
+    var userIcon = document.querySelector(".user-icon"); // Select the .user-icon
+
     if (x.className === "topnav") {
         x.className += " responsive";
+        // Hide the .user-icon when entering responsive mode
+        if (userIcon) userIcon.style.display = "none";
     } else {
         x.className = "topnav";
+        // Show the .user-icon when exiting responsive mode
+        if (userIcon) userIcon.style.display = "block";
     }
 
     // Get all elements with the 'dropdown-content' class within the topnav
@@ -4253,11 +4254,6 @@ function myFunction() {
         }
     }
 }
-
-// This part is to ensure the dropdown content does not display in responsive mode
-// You may need to add an event listener or modify existing ones for dropdown buttons
-// to control their display property separately if they should be visible in responsive mode.
-
 </script>
 
 <script>
@@ -4522,6 +4518,8 @@ window.onclick = function(event) {
     }
 }
 </script>
+
+
 
   </body>
   </html>
