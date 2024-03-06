@@ -16,8 +16,8 @@ html {
 
 .topnav {
   overflow: hidden;
-  background-color: black;
-  position: sticky; /* Make the navigation bar fixed */
+
+  position: fixed; /* Make the navigation bar fixed */
   top: 0;         /* Align the navigation bar at the top of the page */
   width: 100%;    /* Make the navigation bar span the full width of the page */
   z-index: 3;     /* Ensure the navigation bar stays on top of other elements */;
@@ -37,6 +37,7 @@ html {
   text-decoration: none;
   font-size: 17px;
   z-index: 3;
+
 
 
 }
@@ -103,12 +104,6 @@ body.dark-mode .topnav a.active {
     text-align: center;
   }
 
-  .accessibility-button {
-    position: static;
-    transform: none;
-    order: -1; /* Ensures the button stays in the middle */
-    flex-basis: 100%; /* Take full width to maintain order */
-  }
 
   /* Additional adjustments for mobile view */
   .topnav .title {
@@ -209,12 +204,6 @@ body {
 
 
 
-/* Light mode styles */
-body {
-  background-color: #fff;
-  color: #000;
-    font-family:   'arial', sans-serif; /* Add the desired font-family */
-}
 
 /* Dark mode styles */
 body.dark-mode {
@@ -284,8 +273,9 @@ body {
 }
 
 body .topnav {
-  background-color: #ff0000; /* Red background for the navbar in normal mode */
+  background-color: red; /* Red background for the navbar in normal mode */
   color: #fff; /* White font color for the navbar in normal mode */;
+  position: sticky
 
 }
 
@@ -315,7 +305,7 @@ body {
     color: #000;
   }
 
-  /* Change background color to red */
+
   .dropup-content {
 
       background-color: dodgerblue; /* Change background color to red */
@@ -336,10 +326,17 @@ body {
   /* Add styling for font awesome icon */
   .fa {
       cursor: pointer;
-      color: white; /* Change font color to white */
+      color: white; /* Change font color to white */;
+
 
   }
 
+  /* Add styling for font awesome icon */
+  .light-mode .fa {
+      cursor: pointer;
+      color: black; /* Change font color to white */
+
+  }
 
 
 
@@ -357,7 +354,7 @@ body {
       font-size: 15px;
       margin-top: 0%;
       margin-bottom: 0%;
-      position: fixed; /* Keeps the element in the same place even when scrolling */
+      position: sticky; /* Keeps the element in the same place even when scrolling */
       left: 25px; /* Distance from the left edge of the viewport */
       top: 78px; /* Distance from the top edge of the viewport */
       z-index: 1; /* Ensures the element stays on top of other content */
@@ -379,33 +376,9 @@ body {
 
   /* Adjust other styles as needed */
 
-  /* Accessibility button styles */
-  #accessibility-button {
-    position: fixed;
-    margin-top: 40%;
-    margin-left: 30%;
-    width: 80%;
-    max-width: 300px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
-  }
 
 
-  #accessibility-dropup button {
-    display: block;
-    margin-bottom: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
 
-  }
   @media screen and (max-width: 585px) {
     .cog-icon {
 
@@ -435,7 +408,8 @@ body {
 
     /* Optionally, increase the size of the icon for easier interaction on touch devices */
     .cog-icon .fa-gear {
-        font-size: 15px; /* Adjust based on your design */
+        font-size: 15px; /* Adjust based on your design */;
+        position: sticky;
     }
 }
 
@@ -555,31 +529,22 @@ body.light-mode .cog-icon * {
 
 
 
-
-/* Sidebar Styles */
+/* Refined Sidebar Styles */
 .sidebar {
-
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    height: 100vh;
-    transition: none;
-    background-color: #1a1a1a;
-      overflow-x: hidden;
-    padding-top: 20px;
-    scroll-behavior: auto;
-      overflow-y: auto;
-
-      z-index: 1;
-
-      left: -250px;
-      background-color: #111;
-      overflow-x: hidden;
-      padding-top: 20px;
-      color: white;
-      transition: left 0.5s;
-
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Sidebar position fixed to the viewport */
+    top: 50px; /* Distance from the top of the viewport */
+    left: -250px; /* Initially positioned off-screen to the left */
+    height: 100%; /* Full viewport height */
+    padding-top: 20px; /* Padding at the top inside the sidebar */
+    background-color: #111; /* Sidebar background color */
+    color: white; /* Text color */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    transition: left 0.5s; /* Smooth transition for toggling visibility */
+    z-index: 1; /* Ensure sidebar is above other content but below modals/popups */
 }
+
 .sidebar::-webkit-scrollbar {
     width: 15px;
     background: #e0e0e0;
@@ -694,25 +659,21 @@ body.light-mode .cog-icon * {
        color: #f1f1f1;
 
    }
-   .menu-toggle {
+ .menu-toggle {
     cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
     position: fixed; /* Keeps the element in the same place even when scrolling */
-    left: 25px; /* Distance from the left edge of the viewport */
-    top: 78px; /* Distance from the top edge of the viewport */
+    left: 14px; /* Distance from the left edge of the viewport */
+
     z-index: 1; /* Ensures the element stays on top of other content */
     font-size: 25px; /* Size of the text or icon inside */
     color: grey; /* Color of the text or icon */;
     background-color: black;
     padding-right:5px;
         padding-left:5px;
-
-
-    /* Smooth transition effects for color and box-shadow when they change */
-    transition: color 0.3s ease, box-shadow 0.3s ease;
-
-    /* Optional: Default box-shadow for visual depth (example) */
+          top: 74px;
+    transition: color 0.3s ease; box-shadow 0.3s ease;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
-}
+}}
 
    /* Style for .menu-toggle when active */
    .menu-toggle.active {
@@ -733,22 +694,6 @@ body.light-mode .cog-icon * {
 
 
 
-   @media screen and (max-width: 1085px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-
-   @media screen and (max-width: 785px) {
-     .menu-toggle {
-       top: 80px;
-     }
-   }
-   @media screen and (max-width: 750px) {
-     .menu-toggle {
-       top: 120px;
-     }
-   }
 
 
 
@@ -765,7 +710,7 @@ body.light-mode .cog-icon * {
        }
 
            .menu-toggle {
-             top:80px;
+             top: 74px;
            }
    }
 
@@ -838,7 +783,7 @@ body.light-mode .cog-icon * {
 
 
 .sidebar-open .container {
-    margin-left: 250px; /* Adjust according to the width of your sidebar */
+    margin-left: 200px; /* Adjust according to the width of your sidebar */
 }
 
 .mySlides {display: none;}
@@ -915,7 +860,7 @@ body.light-mode .cog-icon * {
         }
 
         .sidebar-visible .content {
-            margin-left: 250px;
+            margin-left: 240px;
         }
         /* Position the image container (needed to position the left and right arrows) */
         .container {
@@ -1062,6 +1007,7 @@ select:hover {
 .welcome {
   color:white;
   font-size: 40px;
+  font-weight: bolder;
 }
 .dark-mode .welcome {
   background-color: black;
@@ -1116,7 +1062,7 @@ select:hover {
     font-family: 'Arial', sans-serif; /* Specify a font-family */
     border: 5px solid white; /* Optional: Add a border */;
     animation:fadeIn 2s;
-    font-weight: bold
+    font-weight: bolder
 
 }
 
@@ -1130,13 +1076,32 @@ select:hover {
 }
 
 /* Further adjustments for very small screens, like smartphones */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
     .welcome {
-        font-size: 20px; /* Even smaller font size for very small screens */
+        font-size: 25px; /* Even smaller font size for very small screens */
         padding: 10px; /* Less padding to save space */
         margin: 10px 0; /* Adjusted margin */
     }
+    /* Styling for the heading within the about section */
+#about .what {
+  color: white; /* Dark grey for readability */
+  font-size: 25px; /* Larger font size for heading */
+
+
 }
+
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 780px) {
+
+    .what {
+      color:white;
+      font-size:10px
+    }
+
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -1181,7 +1146,7 @@ select:hover {
   margin-bottom: 20px; /* Space below the heading */;
       color:white;
     font-size: 28px; /* Slightly larger font size for headings */;
-    font-weight: bold;
+
 }
 
 
@@ -1673,10 +1638,13 @@ select:hover {
 
   }
 
+  #filterOptions {
+      margin-top: 15px; /* Adjust the value as needed */
+  }
 
-  #filterCheckbox {
-    margin-top: 10px;
-}
+
+
+
 
 
   /* The Modal (background) */
@@ -1794,6 +1762,1768 @@ body.light-mode h2, body.sort-section h2 * {
 color: white; /* Dark text color for readability */
 
 }
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px;
+  font-weight: 500; /* Bold font weight for emphasis */
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+
+.dark-mode .sort {
+
+  color:white
+
+
+}
+
+.light-mode .sort {
+
+  color:black
+
+
+}
+
+
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  top:40px
+}
+
+
+/* Zoom buttons */
+.zoom-btn {
+  font-size: 24px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+
+
+#zoomIn {
+  right: 130px; /* Adjust based on your layout */;
+  z-index:2;
+  background-color: red
+}
+
+#zoomOut {
+  right: 80px; /* Adjust based on your layout */;
+    z-index:2;
+      background-color: red
+}
+
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+}
+
+#zoomOut {
+  font-size: 15px;
+  top:37px;
+  padding: 5px
+
+}
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
+}
+
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+
+
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive a.icon {
+    position: sti;
+    right: 0;
+    top: 0;
+
+
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+}
+
+
+@media screen and (max-width: 1060px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+  }
+}
+
+
+.cog-icon {
+    cursor: pointer;
+    /* Additional styling */
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+  position: sticky;
+  top:0px;
+
+}
+
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button.active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.dark-mode .accessibility-button:hover {
+  background-color: dimgrey; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.dark-mode .accessibility-button.active {
+  background-color: dimgrey; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.light-mode .accessibility-button:hover {
+  background-color: grey; /* Darken button slightly on hover */;
+  color:white
+}
+
+/* Styles for active/clicked state */
+.light-mode .accessibility-button.active {
+  background-color: grey; /* Darken button further when clicked */;
+  color:white
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: ;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown.active {
+background-color: blue
+
+
+}
+
+/* Style for .dropdown when active */
+.dropdown.active {
+  background-color: dodgerblue; /* Change background color to blue when active */
+}
+
+/* Style for .dropdown on hover */
+.dropdown:hover {
+  background-color: dodgerblue; /* Change background color to lightblue on hover */
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: fixed;
+  scroll-behavior: auto;
+
+  width: 9.8%;
+  max-width: 140px;
+  min-width: 140px;
+
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown.active {
+  background-color: grey;
+  color:white
+}
+
+
+
+/* Style the dropdown content (hidden by default) */
+.light-mode .dropdown {
+  color: black
+}
+
+
+
+
+/* Dark Mode styles for dropdown and its content */
+.light-mode .dropdown-content,
+.light-mode .dropdown:hover {
+  background-color: grey; /* Dark Mode background color */;
+  color:white
+}
+
+
+
+
+
+.light-mode .accessibility-button {
+
+color: black;
+
+
+
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
+
+
+
+}
+.light-mode .accessibility-button.active {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+}
+.light-mode .accessibility-button:hover {
+
+
+background-color: grey;
+color:white
+
+
+}
+/* Dark Mode styles for dropdown and its content */
+.dark-mode .dropdown-content,
+.dark-mode .dropdown:hover {
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.light-mode .topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: grey;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1060px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1060px) {
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive a.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position:fixed;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+
+  }
+}
+
+
+
+
+
+
+/* Container for the dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+
+
+
+  border-radius: 5px;
+  margin: 0%;
+
+
+}
+
+/* Style for dropdown links */
+.dropdown-content button {
+  display: block;
+  margin-bottom: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+}
+
+/* Show the dropdown menu */
+.show {display: block;}
+
+/* Accessibility button styles */
+
+}
+
+/* Adjust width for screens within the range of 685px to 1024px */
+@media screen and (min-width: 290px) and (max-width: 3000px) {
+  .dropdown-content {
+    width: 100%; /* Adjusted width for medium-sized screens */
+  }
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad.active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+@media screen and (max-width: 600px) {
+  .accessibility-text {
+    display: none; /* Hides the "Accessibility" text */;
+  position: fixed
+  }
+  .accessibility-button i {
+    /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
+    display: none; /* Hide the caret-down icon */;
+      position: sticky
+
+  }
+  .accessibility-button .fa-cog {
+    display: inline-block; /* Make sure the gear icon is visible */;
+    position: sticky;
+
+  }
+}
+
+.title-text {
+  font-size: 16px; /* Default font size */
+}
+
+.sort {
+  margin: 1%;
+  font-size: 15px
+}
+
+@media screen and (max-width: 300px) {
+  .title-text {
+    font-size: 11px; /* Smaller font size on screens less than or equal to 600px wide */;
+    margin: 0;
+  }
+}
+
+.topnav .search-input {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+
+
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1060px) {
+    .topnav .search-input {
+        float: none;
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust as needed */
+    }
+}
+
+
+
+.content {
+    margin-left: 0; /* Content starts with no left margin */
+    transition: margin-left 0.5s; /* Smooth transition for content margin */
+}
+
+.featured-games-title {
+  font-size:20px
+}
+
+/* When the sidebar is visible */
+.sidebar-visible .sidebar {
+    left: 0; /* Bring sidebar into view */
+}
+
+.sidebar-visible .content {
+    margin-left: 200px; /* Push content to the right to make space for the sidebar */
+}
+
+.custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  top:10px;
+  position: relative;
+  padding-left: 25px; /* Space for the custom checkbox */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Create a custom checkbox */
+.dark-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Create a custom checkbox */
+.light-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */;
+  border: 1px solid #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: red;
+}
+
+/* When the checkbox is checked, add a blue background */
+.light-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.dark-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.light-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.dark-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .sidebar a {
+       font-size: 13px;
+
+    }
+
+   .sidebar input[type="text"], #mainCategory, #subCategory, #games-list,  label {
+         font-size: 13px;
+    }
+      .sidebar h3 {
+        font-size:20px
+      }
+      .sort {
+        font-size: 13px;
+        margin:5%
+      }
+
+    input[type="checkbox"] {
+        font-size: 13px;
+        margin-bottom: 50%;
+    }
+
+    .fa.fa-gamepad {
+      font-size: 20px;
+    }
+
+
+
+
+
+    .sidebar {
+      width:200px
+    }
+
+    /* Adjust as necessary for alignment */
+    .custom-checkbox-label span + span {
+      vertical-align: middle; /* Corrected alignment */
+    }
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Adjust based on your layout */
+}
+
+.profile-icon {
+  width: 32px; /* Example size, adjust as needed */
+  height: 32px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 16px; /* Adjust as needed */
+  color: #fff; /* Adjust based on your theme */
+}
+
+
+
+
+
+
+#google_translate_element {
+    width: 100%;
+    }
+
+
+
+}
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid white; /* Example style */
+}
+
+
+/* Add to the existing styles */
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: blue;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signInButton:hover {
+  background-color: #ddd;
+}
+
+/* Existing styles remain the same; add these for the auth buttons */
+
+.auth-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input fields and Submit button */
+input[type=text], input[type=password], input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#login-button {
+  color:rgb(146, 172, 67)white
+}
+
+
+/* Paste */
+
+
+/* Style for the dropdown toggle and SVG icon */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 29px;
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 10px;
+margin-bottom: 10px;
+  text-align: center;
+  /* position: center; Remove or correct this line */
+}
+
+
+.user-info:hover {
+  background-color: grey
+}
+
+.user-icon img {
+
+    width: 23px; /* Width of the image */
+    height: 23px; /* Height of the image */;
+
+
+}
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+.dropdown2 {
+    position: sticky;
+    display: inline-block;
+}
+
+.dropdown2 .user-icon {
+    cursor: pointer;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a:hover {
+    background-color: #ddd;
+}
+
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid white; /* Example style */
+}
+
+
+/* Add to the existing styles */
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: blue;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signInButton:hover {
+  background-color: #ddd;
+}
+
+/* Existing styles remain the same; add these for the auth buttons */
+
+.auth-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input fields and Submit button */
+input[type=text], input[type=password], input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#login-button {
+  color:rgb(146, 172, 67)white
+}
+
+
+
+
+
+/* Style for the dropdown toggle and SVG icon */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+
+
+#signupSection h2 {
+  color:black
+}
+
+#signupSection button {
+  color:white;
+  background-color: red;
+  border:2px solid black
+}
+.auth-links {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the items horizontally (if needed) */
+    gap: 3px; /* Adjust the gap between items as needed */
+    /* Add additional styling as needed */
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: #007BFF; /* Example link color */
+    /* Add additional link styling as needed */
+}
+
+.auth-links span {
+    color: #000; /* Color of the separator */
+    /* Adjust styling for the separator as needed */
+}
+
+
+#form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+
+
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#form-switch {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-switch button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logged-out-toolbar img {
+    width: 50px; /* Adjust size as needed */
+}
+
+
+
+#toggleForms {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+form p {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+    /* Small Screens */
+    @media (max-width: 1060px) {
+        .dropdown2 .user-icon {
+            display: inline-block; /* Show dropdown toggle icon */
+            cursor: pointer;
+            font-size: 10px;
+
+
+
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+              background-color: red;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+              font-size: 10px;
+        }
+
+        .dropdown-content2 {
+            position: absolute;
+            z-index: 1;
+              background-color: red
+        }
+    }
+
+    /* Larger Screens */
+    @media (min-width: 1060px) {
+        .auth-links {
+            display: block; /* Only show direct links, no dropdown */;
+
+        }
+
+        .auth-links a {
+            margin: 0 10px; /* Spacing between links */
+        }
+    }
+    /* Larger Screens */
+    @media (max-width: 2200px) {
+
+    .user-icon {
+        cursor: pointer; /* Indicates clickable items */
+        display: flex; /* Aligns the icon and caret */
+        align-items: center; /* Centers items vertically */;
+
+    }
+
+    .user-icon img {
+        width: 23px; /* Width as specified */;
+
+    }
+
+
+
+
+    .dropdown-content2 a {
+        color: black; /* Text color for links */
+        padding: 12px 16px; /* Padding for link items */
+        text-decoration: none; /* Removes underline from links */;
+        background-color: white; /* Light background for the dropdown */
+        display: block; /* Ensures links are block-level, aiding in clickability */
+    }
+
+    /* General styling for links in the dropdown */
+.dropdown-content2 a {
+    color: #333; /* Dark grey text color for better readability */
+    padding: 10px 15px; /* Ample padding for easier clickability */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make each link take up the full width of the dropdown */
+    background-color: #f9f9f9; /* Light background color for the dropdown */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.dropdown-content2 a:hover, .dropdown-content2 a:focus {
+    background-color: #ddd; /* Slightly darker background on hover/focus for visual feedback */
+    color: #000; /* Optional: Change text color on hover/focus */
+}
+
+/* Active link styling (if applicable) */
+.dropdown-content2 a:active {
+    background-color: #ccc; /* Even darker background for an active link */
+    color: #000; /* Optional: Change text color for active link */
+}
+
+
+.user-info {
+    position: fixed;
+    display: inline-block;
+    margin-right: 10px
+}
+
+
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: grey;
+
+    min-width: 100px;
+    right: 0;
+    z-index: 1;
+    top:53px;
+    font-size: 13px
+
+}
+
+.dropdown-content2 div {
+    color: white;
+    padding: 12px ;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 13px'
+
+}
+}
+/* Larger Screens */
+@media (min-width: 0px) and (max-width: 300px){
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+     .user-icon img {
+         display: none; /* Hide the image */;
+         width: 15px
+     }
+     .user-icon::before {
+         content: "\f007"; /* Font Awesome person icon unicode */
+         font-family: "Font Awesome 5 Free"; /* Adjust based on the version of Font Awesome you're using */
+         font-weight: 900; /* Necessary for solid icons */
+         display: inline-block; /* Display the pseudo-element as an inline block */;
+         font-size: 13px
+
+     }
+
+.accessibility-button {
+
+font-size:15px;
+margin-left: -10px
+
+}
+
+}
+
+
+#formsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #formsContainer {
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+.user-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 10px;
+    margin-right: 15px;
+}
+
+
+/* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+.user-icon:focus {
+    outline: none;
+}
+
+/* Rest of the styles remain unchanged */
+@media (min-width: 300px) and (max-width: 600px){
+
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+
+
+  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+  .user-icon:focus {
+      outline: none;
+  }
+}
+
+
+.accessibility-butto1n {
+  position: fixed
+}
+
 body.dark-mode #about h2 {
   color: black; /* Slightly darker color for headings for emphasis */
 }

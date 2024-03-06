@@ -59,8 +59,9 @@
 
 
 
-    <!-- Search Input -->
-    <input type="text" placeholder="Search..">
+
+        <input type="text" placeholder="Search.." name="search">
+
 
 
         <!-- Accessibility Button and Dropdown -->
@@ -82,44 +83,27 @@
 
           <button id="speakSelectedText">Read Selected Text</button>
           <button id="stopButton">Stop Reading</button>
-
-
-
-
-
-
           </div>
         </div>
+
         <div class="user-info">
             <div class="dropdown2">
-                <a href="#" class="user-icon" onclick="toggleDropdown2()">
+                <button class="user-icon" onclick="toggleDropdown2()">
                     <img src="../icon.png" alt="User icon">
                     <i class="fa fa-caret-down"></i>
-                </a>
+                </button>
                 <!-- Dropdown Menu -->
                 <div class="dropdown-content2" style="display: none;">
-      <div onclick="window.location.href='../login/index.html';">Login</div>
-      <div onclick="window.location.href='index.html';">Signup</div>
-  </div>
-
+                    <div onclick="window.location.href='..//login/index.html';">Login</div>
+                    <div onclick="window.location.href='..//signup/index.html';">Signup</div>
+                </div>
             </div>
             <div class="logged-in-toolbar" style="display: none;">
-                <a href="#" class="user-icon">
-                    <img src="user-icon.png" alt="User icon">
-                </a>
+                <img src="user-icon.png" alt="User icon">
                 <span>Welcome, User!</span>
-                <a href="#" onclick="logOut()">Log out</a>
+                  <div onclick="window.location.href='..//myprofile/index.html';">My Profile</div>
+                <button onclick="logOut()">Log out</button>
             </div>
-
-
-
-
-
-
-
-
-
-
 
   </div>
 
@@ -127,9 +111,6 @@
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
-
-
-
 
  </div>
 

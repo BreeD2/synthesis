@@ -2970,7 +2970,7 @@ input[type=submit]:hover {
 }
 
 
-
+/* Paste */
 
 
 /* Style for the dropdown toggle and SVG icon */
@@ -2982,11 +2982,25 @@ input[type=submit]:hover {
 }
 
 .user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 29px;
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 10px;
+margin-bottom: 10px;
+  text-align: center;
+  /* position: center; Remove or correct this line */
+}
 
-    background-color: white; /* Example background color */;
 
-    border-radius: 50%; /* Makes the background rounded */
-    line-height: 0; /* Removes extra line-height space */
+.user-info:hover {
+  background-color: grey
 }
 
 .user-icon img {
@@ -3339,12 +3353,13 @@ form p {
 .dropdown-content2 {
     display: none;
     position: absolute;
-    background-color: dimgrey;
+    background-color: grey;
 
     min-width: 100px;
     right: 0;
     z-index: 1;
-    top:53.5px;
+    top:53px;
+    font-size: 13px
 
 }
 
@@ -3503,11 +3518,7 @@ p a:hover {
       outline: none;
   }
 }
-.user-icon {
-    position:  fixed;
-    top: 0; /* Adjusted to align with the top of the viewport */
-    left: calc(100% - 200px); /* Adjusts based on viewport width */
-}
+
 
 .accessibility-butto1n {
   position: fixed

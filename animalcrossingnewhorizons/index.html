@@ -74,14 +74,9 @@
 
           <button id="speakSelectedText">Read Selected Text</button>
           <button id="stopButton">Stop Reading</button>
-
-
-
-
-
-
           </div>
         </div>
+
         <div class="user-info">
             <div class="dropdown2">
                 <button class="user-icon" onclick="toggleDropdown2()">
@@ -90,13 +85,14 @@
                 </button>
                 <!-- Dropdown Menu -->
                 <div class="dropdown-content2" style="display: none;">
-                    <div onclick="window.location.href='login/index.html';">Login</div>
-                    <div onclick="window.location.href='signup/index.html';">Signup</div>
+                    <div onclick="window.location.href='..//login/index.html';">Login</div>
+                    <div onclick="window.location.href='..//signup/index.html';">Signup</div>
                 </div>
             </div>
             <div class="logged-in-toolbar" style="display: none;">
                 <img src="user-icon.png" alt="User icon">
                 <span>Welcome, User!</span>
+                  <div onclick="window.location.href='..//myprofile/index.html';">My Profile</div>
                 <button onclick="logOut()">Log out</button>
             </div>
 
@@ -108,6 +104,9 @@
     </a>
 
  </div>
+
+
+
 
 
  <aside class="sidebar">
@@ -3427,7 +3426,12 @@ function showSlides(n) {
         document.body.classList.toggle('light-mode');
         // Set button styles explicitly for light mode
         if (document.body.classList.contains('light-mode')) {
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
+            document.getElementById('<div class="logged-in-toolbar" style="display: none;">
+    <img src="user-icon.png" alt="User icon">
+    <span>Welcome, User!</span>
+      <div onclick="window.location.href='myprofile/index.html';">My Profile</div>
+    <button onclick="logOut()">Log out</button>
+</div>sibility-dropup').style.backgroundColor = 'white';
             document.getElementById('accessibility-dropup').style.color = 'black';
         } else {
             // Set button styles explicitly for dark mode
@@ -4320,5 +4324,296 @@ console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
 </script>
 
 
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    var userIcon = document.querySelector(".user-icon"); // Select the .user-icon
+
+    if (x.className === "topnav") {
+        x.className += " responsive";
+        // Hide the .user-icon when entering responsive mode
+        if (userIcon) userIcon.style.display = "none";
+    } else {
+        x.className = "topnav";
+        // Show the .user-icon when exiting responsive mode
+        if (userIcon) userIcon.style.display = "block";
+    }
+
+    // Get all elements with the 'dropdown-content' class within the topnav
+    var dropdowns = x.getElementsByClassName("dropdown");
+    for (var i = 0; i < dropdowns.length; i++) {
+        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
+        if (x.className.includes("responsive")) {
+            dropdowns[i].style.display = "none";
+        } else {
+            // Reset style in case it was previously modified
+            dropdowns[i].style.display = "";
+        }
+    }
+}
+</script>
+
+<script>
+  // When the user clicks on the button, toggle between hiding and showing the dropdown content
+  document.querySelector('.accessibility-button').onclick = function() {
+    document.querySelector('.dropdown-content').classList.toggle('show');
+  };
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.accessibility-button')) {
+      var dropdowns = document.getElementsByClassName('dropdown-content');
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
+</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const accessibilityButton = document.querySelector('.accessibility-button');
+  const iconSpan = document.createElement('span');
+  iconSpan.innerHTML = '<i class="fa fa-cog" style="display:none;"></i>'; // Gear icon is hidden by default
+  accessibilityButton.appendChild(iconSpan); // Add the gear icon span to the button
+
+  // Function to update the icon based on screen width
+  function updateIcon() {
+    if (window.innerWidth <= 600) {
+      // Small screens: show gear icon, hide caret-down
+      accessibilityButton.querySelector('.fa-cog').style.display = 'inline-block';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'none';
+    } else {
+      // Larger screens: show caret-down, hide gear icon
+      accessibilityButton.querySelector('.fa-cog').style.display = 'none';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'inline-block';
+    }
+  }
+
+  // Add search input to the designated container
+  const searchContainer = document.querySelector('.search-container');
+  if (searchContainer) {
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search..';
+    searchContainer.appendChild(searchInput);
+  }
+
+  window.addEventListener('resize', updateIcon);
+  updateIcon(); // Call once on load
+});
+</script>
+
+<script>
+function toggleFocusHighlight() {
+  var styleElement = document.getElementById('focus-highlight-style');
+
+  if (styleElement) {
+    // If the style element exists, remove it to disable focus highlight
+    styleElement.remove();
+  } else {
+    // Create a new style element to add focus highlight styles
+    styleElement = document.createElement('style');
+    styleElement.id = 'focus-highlight-style';
+    styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+    document.head.appendChild(styleElement);
+  }
+}
+</script>
+
+<script>
+document.getElementById('speakSelectedText').addEventListener('click', function() {
+    // Get selected text
+    var text = getSelectedText();
+    if (text) {
+        speakText(text);
+    } else {
+        console.log('No text selected.');
+    }
+});
+
+function getSelectedText() {
+    var text = '';
+    if (typeof window.getSelection != "undefined") {
+        text = window.getSelection().toString();
+    } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+
+function speakText(textToSpeak) {
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance();
+        msg.text = textToSpeak;
+        window.speechSynthesis.speak(msg);
+    } else {
+        console.log('Text-to-Speech not supported.');
+    }
+}
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const stopButton = document.getElementById('stopButton');
+    stopButton.addEventListener('click', function() {
+        if ('speechSynthesis' in window) {
+            speechSynthesis.cancel();
+        }
+    });
+});
+</script>
+
+<script>
+const bcrypt = require('bcrypt');
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(session({
+  secret: 'your secret key',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+// Assuming you have a User model and database setup
+app.post('/signup', async (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  // Save username, hashedPassword, and an optional profileImageUrl to your database
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = await User.findOne({ username });
+  if (user && await bcrypt.compare(password, user.hashedPassword)) {
+    req.session.userId = user.id; // Log the user in
+    res.json({ message: "Logged in successfully" });
+  } else {
+    res.status(401).json({ message: "Invalid credentials" });
+  }
+});
+</script>
+
+
+<script>
+app.get('/profile', async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ message: "Not authenticated" });
+  }
+
+  const user = await User.findById(req.session.userId);
+  res.json({ username: user.username, profileImageUrl: user.profileImageUrl });
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const signInButton = document.getElementById('signInButton');
+  const userProfile = document.querySelector('.user-profile');
+  const userNameDiv = document.querySelector('.user-name');
+
+  signInButton.addEventListener('click', () => {
+    // Simulate sign in process
+    signInButton.style.display = 'none'; // Hide sign in button
+    userProfile.style.display = 'flex'; // Show user profile
+  });
+
+  userNameDiv.addEventListener('click', () => {
+    const newName = prompt('Enter new name:');
+    if (newName) {
+      userNameDiv.textContent = newName;
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loginButton = document.getElementById('loginButton');
+  const logoutButton = document.getElementById('logoutButton');
+  const userProfile = document.getElementById('userProfile');
+  const userName = document.getElementById('userName');
+  const userIcon = document.getElementById('userIcon');
+
+  // Simulate a user sign-in process
+  loginButton.addEventListener('click', () => {
+    // Here, you would replace these values with those from your sign-in process
+    const exampleUser = {
+      name: 'John Doe',
+      icon: 'path/to/user-icon.jpg' // Use a real image path
+    };
+    // Display user information
+    userName.textContent = exampleUser.name;
+    userIcon.src = exampleUser.icon;
+
+    // Update UI
+    loginButton.style.display = 'none';
+    userProfile.style.display = 'flex';
+  });
+
+  // Simulate user sign-out
+  logoutButton.addEventListener('click', () => {
+    // Hide user info and show login button
+    userProfile.style.display = 'none';
+    loginButton.style.display = 'block';
+  });
+});
+
+
+</script>
+
+<script>
+// Simulate checking login status on page load
+document.addEventListener('DOMContentLoaded', () => {
+    checkLoginStatus();
+});
+
+function logIn() {
+    // Here you would have your actual login logic
+    localStorage.setItem('isLoggedIn', 'true');
+    checkLoginStatus();
+}
+
+function logOut() {
+    localStorage.removeItem('isLoggedIn');
+    checkLoginStatus();
+}
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
+    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
+}
+</script>
+<script>
+function toggleDropdown2() {
+    const dropdown = document.querySelector('.dropdown-content2');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
+}
+</script>
 
  </body>

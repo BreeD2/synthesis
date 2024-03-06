@@ -16,7 +16,7 @@ html {
 
 .topnav {
   overflow: hidden;
-  background-color: black;
+
   position: fixed; /* Make the navigation bar fixed */
   top: 0;         /* Align the navigation bar at the top of the page */
   width: 100%;    /* Make the navigation bar span the full width of the page */
@@ -37,6 +37,7 @@ html {
   text-decoration: none;
   font-size: 17px;
   z-index: 3;
+
 
 
 }
@@ -103,12 +104,6 @@ body.dark-mode .topnav a.active {
     text-align: center;
   }
 
-  .accessibility-button {
-    position: sticky;
-    transform: none;
-    order: -1; /* Ensures the button stays in the middle */
-    flex-basis: 100%; /* Take full width to maintain order */
-  }
 
   /* Additional adjustments for mobile view */
   .topnav .title {
@@ -331,7 +326,8 @@ body {
   /* Add styling for font awesome icon */
   .fa {
       cursor: pointer;
-      color: white; /* Change font color to white */
+      color: white; /* Change font color to white */;
+
 
   }
 
@@ -380,34 +376,9 @@ body {
 
   /* Adjust other styles as needed */
 
-  /* Accessibility button styles */
-  #accessibility-button {
-    position: sticky;
-    margin-top: 40%;
-    margin-left: 30%;
-    width: 80%;
-    max-width: 300px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
-  }
 
 
-  #accessibility-dropup button {
-    display: block;
-    margin-bottom: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'arial', sans-serif;
-    font-size: 15px;
 
-
-  }
   @media screen and (max-width: 585px) {
     .cog-icon {
 
@@ -437,7 +408,8 @@ body {
 
     /* Optionally, increase the size of the icon for easier interaction on touch devices */
     .cog-icon .fa-gear {
-        font-size: 15px; /* Adjust based on your design */
+        font-size: 15px; /* Adjust based on your design */;
+        position: sticky;
     }
 }
 
@@ -2292,6 +2264,7 @@ p {
   font-family: arial;
   margin: 0;
   position: sticky;
+  top:0px;
 
 }
 
@@ -2355,7 +2328,7 @@ p {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: ;
 }
 
 /* Add a black background color to the top navigation */
@@ -2536,6 +2509,7 @@ color:white
 @media screen and (max-width: 1060px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
+
   }
   .topnav a.icon {
     float: right;
@@ -2657,7 +2631,7 @@ color:black;
   .accessibility-button i {
     /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
     display: none; /* Hide the caret-down icon */;
-      position: sticky;
+      position: sticky
 
   }
   .accessibility-button .fa-cog {
@@ -2678,11 +2652,8 @@ color:black;
 
 @media screen and (max-width: 300px) {
   .title-text {
-    font-size: 10px; /* Smaller font size on screens less than or equal to 600px wide */;
+    font-size: 11px; /* Smaller font size on screens less than or equal to 600px wide */;
     margin: 0;
-  }
-  img {
-    display: none
   }
 }
 
@@ -2999,6 +2970,180 @@ input[type=submit]:hover {
 }
 
 
+/* Paste */
+
+
+/* Style for the dropdown toggle and SVG icon */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 29px;
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 10px;
+margin-bottom: 10px;
+  text-align: center;
+  /* position: center; Remove or correct this line */
+}
+
+
+.user-info:hover {
+  background-color: grey
+}
+
+.user-icon img {
+
+    width: 23px; /* Width of the image */
+    height: 23px; /* Height of the image */;
+
+
+}
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+.dropdown2 {
+    position: sticky;
+    display: inline-block;
+}
+
+.dropdown2 .user-icon {
+    cursor: pointer;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a:hover {
+    background-color: #ddd;
+}
+
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid white; /* Example style */
+}
+
+
+/* Add to the existing styles */
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: blue;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signInButton:hover {
+  background-color: #ddd;
+}
+
+/* Existing styles remain the same; add these for the auth buttons */
+
+.auth-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input fields and Submit button */
+input[type=text], input[type=password], input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#login-button {
+  color:rgb(146, 172, 67)white
+}
+
+
 
 
 
@@ -3064,14 +3209,6 @@ rgb(146, 172, 67)
 
 
 
-.form input {
-    display: block;
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
 
 .form button {
     width: 100%;
@@ -3098,11 +3235,7 @@ rgb(146, 172, 67)
     width: 50px; /* Adjust size as needed */
 }
 
-#signupForm, #loginForm {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-}
+
 
 #toggleForms {
     cursor: pointer;
@@ -3126,17 +3259,20 @@ form p {
         .dropdown2 .user-icon {
             display: inline-block; /* Show dropdown toggle icon */
             cursor: pointer;
+            font-size: 10px;
+
 
 
         }
 
         .dropdown-content2 a {
             color: black;
-            padding: 12px 16px;
+            padding: 12px;
             text-decoration: none;
             display: block;
               background-color: red;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+              font-size: 10px;
         }
 
         .dropdown-content2 {
@@ -3209,6 +3345,7 @@ form p {
 .user-info {
     position: fixed;
     display: inline-block;
+    margin-right: 10px
 }
 
 
@@ -3216,22 +3353,23 @@ form p {
 .dropdown-content2 {
     display: none;
     position: absolute;
-    background-color: dimgrey;
+    background-color: grey;
 
-    min-width: 160px;
+    min-width: 100px;
     right: 0;
     z-index: 1;
-    top:53.5px;
-    font-size: 15px
+    top:53px;
+    font-size: 13px
+
 }
 
 .dropdown-content2 div {
     color: white;
-    padding: 12px 16px;
+    padding: 12px ;
     text-decoration: none;
     display: block;
     cursor: pointer;
-    font-size: 15px
+    font-size: 13px'
 
 }
 }
@@ -3239,9 +3377,17 @@ form p {
 @media (min-width: 0px) and (max-width: 300px){
 
   .user-icon {
-         margin-left: -50px; /* Your specific margin adjustment */
-         /* Change the icon to a person icon */
-     }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
      .user-icon img {
          display: none; /* Hide the image */;
          width: 15px
@@ -3261,10 +3407,123 @@ font-size:15px;
 margin-left: -10px
 
 }
-.topnav a.icon  {
-  font-size: 15px
+
 }
+
+
+#formsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+
 }
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #formsContainer {
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+.user-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 10px;
+    margin-right: 15px;
+}
+
+
+/* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+.user-icon:focus {
+    outline: none;
+}
+
+/* Rest of the styles remain unchanged */
+@media (min-width: 300px) and (max-width: 600px){
+
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+
+
+  /* Ensure the button doesn't show an outline when focused for aesthetic reasons, but consider accessibility implications */
+  .user-icon:focus {
+      outline: none;
+  }
+}
+
+
+.accessibility-butto1n {
+  position: fixed
+}
+
 
 #signupContainer {
     max-width: 80%;

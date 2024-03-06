@@ -31,14 +31,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-
-
-
+  <div class="read-aloud">
+  <!-- Navigation Bar with Logo and Website Name -->
   <div class="topnav" id="myTopnav">
     <a href="..//index.html" class="logo">
       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
-  </a>
+ </a>
 
     <!-- Menu Toggle Icon -->
 
@@ -75,14 +74,9 @@
 
           <button id="speakSelectedText">Read Selected Text</button>
           <button id="stopButton">Stop Reading</button>
-
-
-
-
-
-
           </div>
         </div>
+
         <div class="user-info">
             <div class="dropdown2">
                 <button class="user-icon" onclick="toggleDropdown2()">
@@ -91,13 +85,14 @@
                 </button>
                 <!-- Dropdown Menu -->
                 <div class="dropdown-content2" style="display: none;">
-                    <div onclick="window.location.href='login/index.html';">Login</div>
-                    <div onclick="window.location.href='signup/index.html';">Signup</div>
+                    <div onclick="window.location.href='..//login/index.html';">Login</div>
+                    <div onclick="window.location.href='..//signup/index.html';">Signup</div>
                 </div>
             </div>
             <div class="logged-in-toolbar" style="display: none;">
                 <img src="user-icon.png" alt="User icon">
                 <span>Welcome, User!</span>
+                  <div onclick="window.location.href='..//myprofile/index.html';">My Profile</div>
                 <button onclick="logOut()">Log out</button>
             </div>
 
@@ -108,7 +103,9 @@
       <i class="fa fa-bars"></i>
     </a>
 
-  </div>
+ </div>
+
+
 
 
   <aside class="sidebar">
