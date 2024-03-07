@@ -107,30 +107,33 @@
  </div>
 
  <aside class="sidebar">
-     <h3>All Games</h3>
- <input type="text" placeholder="Search..">
- <br>
-     <label><input type="checkbox" id="filterCheckbox"> Sort</label>
+    <h3>All Games</h3>
+<input type="text" placeholder="Search..">
+<br>
+<label class="custom-checkbox">
+<input type="checkbox" id="filterCheckbox" hidden>
+<span class="checkmark"></span><div class=sort>Sort</div>
+</label>
 
- <div id="filterOptions" style="display: none;">
-     <select id="mainCategory" onchange="updateSubCategory()">
-         <option value="" disabled selected hidden>Choose a category</option>
-         <option value="publisher">Publisher</option>
-         <option value="developer">Developer</option>
-         <option value="series">Series</option>
-         <option value="platform">Platform</option>
-         <option value="releasedDate">Released Dates</option>
-         <option value="genre">Genre</option>
-         <option value="mode">Mode</option>
-     </select>
 
-     <select id="subCategory" onchange="sortAndDisplayGames()">
-         <option value="" disabled selected hidden>Select a subcategory</option>
-         <!-- Additional options will be dynamically filled based on the main category selection -->
-     </select>
-       <div id="games-list">Choose from the categories above</div>
- </div>
+<div id="filterOptions" style="display: none;">
+    <select id="mainCategory" onchange="updateSubCategory()">
+        <option value="" disabled selected hidden>Choose a category</option>
+        <option value="publisher">Publisher</option>
+        <option value="developer">Developer</option>
+        <option value="series">Series</option>
+        <option value="platform">Platform</option>
+        <option value="releasedDate">Released Dates</option>
+        <option value="genre">Genre</option>
+        <option value="mode">Mode</option>
+    </select>
 
+    <select id="subCategory" onchange="sortAndDisplayGames()">
+        <option value="" disabled selected hidden>Select a subcategory</option>
+        <!-- Additional options will be dynamically filled based on the main category selection -->
+    </select>
+      <div id="games-list">Choose from the categories above</div>
+</div>
 
 
 

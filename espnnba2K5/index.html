@@ -108,7 +108,11 @@
      <h3>All Games</h3>
  <input type="text" placeholder="Search..">
  <br>
-     <label><input type="checkbox" id="filterCheckbox"> Sort</label>
+ <label class="custom-checkbox">
+ <input type="checkbox" id="filterCheckbox" hidden>
+ <span class="checkmark"></span><div class=sort>Sort</div>
+ </label>
+
 
  <div id="filterOptions" style="display: none;">
      <select id="mainCategory" onchange="updateSubCategory()">

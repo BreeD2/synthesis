@@ -1670,17 +1670,6 @@ select:hover {
     max-width: 700px;
   }
 
-  /* The Close Button */
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2
-  }
 
 
 
@@ -1692,25 +1681,75 @@ select:hover {
     font-size: 24px;
     cursor: pointer;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color:red;
     border: none;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
-    border:2px solid white
+    border:2px solid white;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+
   }
 
   #zoomIn {
-    right: 130px; /* Adjust based on your layout */;
+    right: 0px; /* Adjust based on your layout */;
     z-index:2;
-    top:80px
+    top:600px;
+    position: sticky;
+      font-size: 15px;
+      background-color:
+
+
   }
 
   #zoomOut {
-    right: 80px; /* Adjust based on your layout */;
+    right: 0px; /* Adjust based on your layout */;
       z-index:2;
-        top:80px
+      top:600px;
+    position: sticky;
+      font-size: 15px;
+
   }
+
+  /* The Close Button */
+  .close {
+    position: fixed;
+    top: 105px;
+    right: 50px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+border:2px solid white;
+  border-radius: 5px;
+    background-color: red;
+    z-index: 3
+  }
+
+
+  #downloadButton {
+      padding: 10px 20px; /* Adjust padding as needed */
+      font-size: 16px; /* Adjust font size as needed */
+      font-weight: bold;
+
+      border: none;
+      border-radius: 5px;
+      background-color: red; /* Button background color */
+      color: #fff; /* Button text color */
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+      top::100px;
+        position: fixed;
+
+
+  }
+
 
   /* Caption Style */
   #pcaption {
@@ -2054,58 +2093,16 @@ p {
 
 
 
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 50px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  top:40px
-}
 
 
-/* Zoom buttons */
-.zoom-btn {
-  font-size: 24px;
-  padding: 10px;
-  margin: 20px;
-  cursor: pointer;
-}
 
 
-#downloadButton {
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    background-color: red; /* Button background color */
-    color: #fff; /* Button text color */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
 
 
-}
 
-
-#zoomIn {
-  right: 130px; /* Adjust based on your layout */;
-  z-index:2;
-  background-color: red
-}
-
-#zoomOut {
-  right: 80px; /* Adjust based on your layout */;
-    z-index:2;
-      background-color: red
-}
 
   @media screen and (max-width: 585px) {#zoomIn {
-  font-size: 15px;
+  font-size: 10px;
   top:37px;
   padding: 5px
 }
@@ -2931,13 +2928,6 @@ a:focus, button:focus, input:focus {
 
 
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
 .close:hover,
 .close:focus {
@@ -3105,13 +3095,6 @@ a:focus, button:focus, input:focus {
 
 
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
 .close:hover,
 .close:focus {

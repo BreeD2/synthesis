@@ -3588,17 +3588,6 @@ p a:hover {
     padding: 20px;
 }
 
-#zoomIn {
-  right: 130px; /* Adjust based on your layout */;
-  z-index:2;
-  background-color: red
-}
-
-#zoomOut {
-  right: 80px; /* Adjust based on your layout */;
-    z-index:2;
-      background-color: red
-}
 
 button {
   background-color: red
@@ -3763,3 +3752,80 @@ color: black;
   color:white;
   background-color: #222;
 }
+
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color:red;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+
+  }
+
+  #zoomIn {
+    right: 0px; /* Adjust based on your layout */;
+    z-index:2;
+    top:600px;
+    position: sticky;
+      font-size: 15px;
+      background-color:
+
+
+  }
+
+  #zoomOut {
+    right: 0px; /* Adjust based on your layout */;
+      z-index:2;
+      top:600px;
+    position: sticky;
+      font-size: 15px;
+
+  }
+
+  /* The Close Button */
+  .close {
+    position: fixed;
+    top: 105px;
+    right: 50px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+border:2px solid white;
+  border-radius: 5px;
+    background-color: red;
+    z-index: 3
+  }
+
+
+  #downloadButton {
+      padding: 10px 20px; /* Adjust padding as needed */
+      font-size: 16px; /* Adjust font size as needed */
+      font-weight: bold;
+
+      border: none;
+      border-radius: 5px;
+      background-color: red; /* Button background color */
+      color: #fff; /* Button text color */
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+      top::100px;
+        position: fixed;
+
+
+  }
