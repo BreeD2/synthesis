@@ -3761,6 +3761,14 @@ border:2px solid white;
     right:50px;
 
   }
+  .light-mode .close {
+    background-color: white;
+    color:black
+  }
+  .dark-mode .close {
+    background-color: black;
+    color:white
+  }
 
 
   #downloadButton {
@@ -3783,6 +3791,13 @@ border:2px solid white;
 
   }
 
+  .light-mode #downloadButton {
+    background-color: white;
+    color:black
+  }
+  .dark-mode #downloadButton {
+    background-color: black
+  }
 
   .close:hover,
   .close:focus {
@@ -3790,7 +3805,80 @@ border:2px solid white;
     text-decoration: none;
     cursor: pointer;
   }
+  .light-mode .close:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+      border:2px solid white
+  }
+  .light-mode #zoomIn:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
+  .light-mode #zoomOut:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
 
+  .light-mode #downloadButton:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
+
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .dark-mode .close:hover,
+    .close:focus {
+      background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+        border:2px solid white
+    }
+    .dark-mode #zoomIn:hover,
+    .close:focus {
+    background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
+    .dark-mode #zoomOut:hover,
+    .close:focus {
+    background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
+
+    .dark-mode #downloadButton:hover,
+    .close:focus {
+      background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
   @media screen and (max-width: 585px) {#zoomIn {
   font-size: 10px;
 
@@ -3820,6 +3908,7 @@ border:2px solid white;
   #likeButton, #commentButton, #rateButton {
     font-size: 10px
   }
+
 
 
 
