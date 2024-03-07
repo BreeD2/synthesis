@@ -783,7 +783,7 @@ body.light-mode .cog-icon * {
 
 
 .sidebar-open .container {
-    margin-left: 200px; /* Adjust according to the width of your sidebar */
+    margin-left: 250px; /* Adjust according to the width of your sidebar */
 }
 
 .mySlides {display: none;}
@@ -2695,7 +2695,7 @@ color:black;
 }
 
 .sidebar-visible .content {
-    margin-left: 200px; /* Push content to the right to make space for the sidebar */
+    margin-left: 250px; /* Push content to the right to make space for the sidebar */
 }
 
 .custom-checkbox {

@@ -13,7 +13,7 @@
  <meta name="theme-color" content="#ffffff">
    <center>
 
-   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -40,8 +40,8 @@
     <!-- Menu Toggle Icon -->
 
     <!-- Navigation Links -->
-    <a class="active" href="..//index.html">Home</a>
-  <a href="..//games/index.html">Games</a>
+    <a class="..//index.html">Home</a>
+  <a class="active" href="..//games/index.html">Games</a>
     <a href="..//about/index.html">About</a>
     <a href="..//contact/index.html">Contact</a>
 
@@ -380,7 +380,7 @@ index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Ca
 
 <div class="footer">
   <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
-</div>
+</div></div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -3140,23 +3140,7 @@ function showSlides(n) {
 }
         </script>
 
-<script>
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-      var sidebar = document.getElementById('sidebar');
-      var content = document.getElementById('main-content');
-      var isSmallScreen = window.innerWidth < 768;
 
-      // Toggle sidebar visibility and adjust content size
-      if (sidebar.style.left === '-250px') {
-          sidebar.style.left = '0px';
-          content.classList.add(isSmallScreen ? 'small-screen' : 'big-screen');
-      } else {
-          sidebar.style.left = '-250px';
-          content.classList.remove(isSmallScreen ? 'small-screen' : 'big-screen');
-      }
-  });
-
-</script>
     <script>
       document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.body.classList.toggle('sidebar-visible');
