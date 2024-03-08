@@ -433,7 +433,8 @@ width: 108px;
     font-size: 15px
 }
 @media (max-width: 1060px) {
-  .dropdown-content  {width:100%
+  .dropdown-content  {width:100%;
+    background-color: dodgerblue;
 }
 .menu-toggle {
   font-size: 1px
@@ -467,7 +468,73 @@ body.light-mode .topnav a.active {
   background-color: grey;;
   color: #ffffff;
 }
+@media (min-width: 1060px) {
 
+.search-results2 {
+      width: 18%;
+    margin: 0 auto; /* Center the box */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border */
+
+    background-color: #fff; /* White background */
+    position: fixed; /* Positions relative to the nearest positioned ancestor */
+    z-index: 1000; /* Ensures it's above other content */
+
+    top: 100px; /* Positions the results directly below the search bar */
+    left: 50%;
+    float: right;
+    padding: 6px;
+    border: none;
+  top: 5.1%;
+margin-left:29.4%;
+    font-size: 10px;
+    border-radius: 5px
+}}
+
+.search-results2 {
+    display: none; /* Hide the container initially */
+    /* Other styles remain unchanged */;
+    text-align: left
+}
+
+
+@media (max-width: 1060px) {
+    .search-results2 {
+  width: calc(100% - 30px);
+    margin: 0 auto; /* Center the box */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border */
+
+    background-color: #fff; /* White background */
+    position: fixed; /* Positions relative to the nearest positioned ancestor */
+    z-index: 1000; /* Ensures it's above other content */
+
+    top: 100px; /* Positions the results directly below the search bar */
+    left: 50%;
+    float: right;
+    padding: 6px;
+    border: none;
+  top: 41.1%;
+left:15px;
+    font-size: 10px;
+    border-radius: 5px
+    }
+}
+
+.search-results2 div {
+    padding: 8px;
+    border-bottom: 1px solid #eee; /* Light line between results */
+}
+
+.search-results2 div:last-child {
+    border-bottom: none; /* Removes border from the last result */
+}
+
+.search-results2 a {
+    text-decoration: none;
+    color: #333; /* Dark grey text */
+    display: block; /* Makes the whole area clickable */
+}
 
 
 body.light-mode .topnav a {

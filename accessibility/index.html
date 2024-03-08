@@ -31,50 +31,59 @@
       <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="topnav" id="myTopnav">
-      <a href="..//index.html" class="logo">
+    <!-- Navigation Bar with Logo and Website Name -->
+<div class="topnav" id="myTopnav">
+  <a href="..//index.html" class="logo">
     <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
 </a>
-      <a href=#index.html" class="active">Home</a>
-      <a href="#games">Games</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <!-- Accessibility Button and Dropdown -->
-      <div class="dropdown">
-        <button class="dropbtn">
-          <i class="fas fa-wheelchair"></i>
+<a href="index.html" class="active">Home</a>
+   <a href="#games">Games</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+   <!-- Accessibility Button and Dropdown -->
+   <!-- User Information Dropdown -->
+   <input type="text" id="searchInput" placeholder="Search.." onkeyup="searchFunction()">
+   
+
+   <div class="dropdown2">
+     <button class="dropbtn2">
+       <i class="fa fa-user"></i> User
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content2">
+       <a href="#">Login</a>
+       <a href="#">Profile</a>
+       <a href="#">Logout</a>
+     </div>
+   </div>
+   <div class="dropdown">
+     <button class="dropbtn">
+       <i class="fas fa-wheelchair"></i>
 Accessibility<i class="fa fa-caret-down"></i>
 
-        </button>
-        <div class="dropdown-content">
-          <div id="google_translate_element"></div>
-          <button onclick="resetSettings()">Reset Settings</button>
-          <button onclick="increaseFont()">Increase Font Size</button>
-          <button onclick="decreaseFont()">Decrease Font Size</button>
-          <button onclick="toggleLightMode()">Toggle Light Mode</button>
-          <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-          <button id="speakSelectedText">Read Selected Text</button>
-          <button id="stopButton">Stop Reading</button>
-        </div>
-      </div>
-      <!-- User Information Dropdown -->
-      <div class="dropdown2">
-        <button class="dropbtn2">
-          <i class="fa fa-user"></i> User
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content2">
-          <a href="#">Login</a>
-          <a href="#">Profile</a>
-          <a href="#">Logout</a>
-        </div>
-      </div>
+     </button>
+     <div class="dropdown-content">
+       <div id="google_translate_element"></div>
+       <button onclick="resetSettings()">Reset Settings</button>
+       <button onclick="increaseFont()">Increase Font Size</button>
+       <button onclick="decreaseFont()">Decrease Font Size</button>
+       <button onclick="toggleLightMode()">Toggle Light Mode</button>
+       <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+       <button id="speakSelectedText">Read Selected Text</button>
+       <button id="stopButton">Stop Reading</button>
+     </div>
+   </div>
 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
 
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+     <i class="fa fa-bars"></i>
+   </a>
+
+
+</div>
+<!-- Moved searchResults outside the topnav -->
+<div id="searchResults" class="search-results"></div>
 
       <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -87,6 +96,12 @@ Accessibility<i class="fa fa-caret-down"></i>
       }
     }
   </script>
+
+
+
+
+</body>
+</html>
 
 
 

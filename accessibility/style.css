@@ -438,3 +438,31 @@ width: 170px;
     background-color: transparent;
     font-size: 15px
 }
+
+
+.search-results {
+    max-width: 600px; /* Adjust based on your design */
+    margin: 20px auto; /* Center the box and add some margin at the top */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Optional: adds subtle shadow */
+    background-color: #fff; /* White background */
+    position: absolute; /* Optional: Adjust based on your layout */
+    z-index: 1000; /* Ensures it's above other content */
+    width: calc(100% - 40px); /* Full width with padding */
+}
+
+.search-results div {
+    padding: 8px;
+    border-bottom: 1px solid #eee; /* Light line between results */
+}
+
+.search-results div:last-child {
+    border-bottom: none; /* Removes border from the last result */
+}
+
+.search-results a {
+    text-decoration: none;
+    color: #333; /* Dark grey text */
+    display: block; /* Makes the whole area clickable */
+}
