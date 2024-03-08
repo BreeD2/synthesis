@@ -1,63 +1,94 @@
-<!-- Navigation Bar with Logo and Website Name -->
-<div class="topnav" id="myTopnav">
-    <a href="index.html" class="logo">
-      <img src="rpa.png" alt="Reminiscence Collection" style="height: 23px;"> Reminiscence Collection
-    </a>
-
-    <!-- Navigation Links -->
-    <a class="active" href="index.html">Home</a>
-    <a href="games/index.html">Games</a>
-    <a href="about/index.html">About</a>
-    <a href="contact/index.html">Contact</a>
-    <a href="login/index.html">Login</a>
-    <a href="signup/index.html">Signup</a>
-
-    <div class="user-info">
-    <div class="dropdown2">
-        <a href="#" class="user-icon" onclick="toggleDropdown2()">
-            <img src="../icon.png" alt="User icon">
-            <i class="fa fa-caret-down"></i>
-        </a>
-        <!-- Dropdown Menu -->
-        <div class="dropdown-content2" style="display: none;">
-<div onclick="window.location.href='../login/index.html';">Login</div>
-<div onclick="window.location.href='index.html';">Signup</div>
-</div>
-
-    </div>
-    <div class="logged-in-toolbar" style="display: none;">
-        <a href="#" class="user-icon">
-            <img src="user-icon.png" alt="User icon">
-        </a>
-        <span>Welcome, User!</span>
-        <a href="#" onclick="logOut()">Log out</a>
-    </div>
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Hell’s Kitchen: The Game</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
+</head>
+<body>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Responsive TopNav with Accessibility</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="..//index.html" class="logo">
+    <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
+
+</a>
+      <a href=#index.html" class="active">Home</a>
+      <a href="#games">Games</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <!-- Accessibility Button and Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">
+          <i class="fas fa-wheelchair"></i>
+Accessibility<i class="fa fa-caret-down"></i>
+
+        </button>
+        <div class="dropdown-content">
+          <div id="google_translate_element"></div>
+          <button onclick="resetSettings()">Reset Settings</button>
+          <button onclick="increaseFont()">Increase Font Size</button>
+          <button onclick="decreaseFont()">Decrease Font Size</button>
+          <button onclick="toggleLightMode()">Toggle Light Mode</button>
+          <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+          <button id="speakSelectedText">Read Selected Text</button>
+          <button id="stopButton">Stop Reading</button>
+        </div>
+      </div>
+      <!-- User Information Dropdown -->
+      <div class="dropdown2">
+        <button class="dropbtn2">
+          <i class="fa fa-user"></i> User
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content2">
+          <a href="#">Login</a>
+          <a href="#">Profile</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+
+
+      <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 
 
 
-
-
-
-
-
-
-</div>
-
-    <!-- Search Input -->
-    <input type="text" placeholder="Search..">
-
-    <!-- Menu Toggle Icon -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-</div>
-
-<!-- Accessibility Button and Dropdown Positioned Outside but Styled to Appear Centered -->
-<div class="dropdown">
-    <button class="accessibility-button">Accessibility <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <!-- Accessibility Options Here -->
-    </div>
-</div>
+</body>
+</html>
