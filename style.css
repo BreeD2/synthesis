@@ -535,7 +535,16 @@ left:15px;
     color: #333; /* Dark grey text */
     display: block; /* Makes the whole area clickable */
 }
+/* Default state, possibly hidden */
+.search-results2 {
+    display: none; /* Default to hidden */
+    /* Other styles */
+}
 
+/* Visible state */
+.search-results2.visible {
+    display: block; /* Make visible when needed */
+}
 
 body.light-mode .topnav a {
   color: #000; /* Black font color for the links in the navbar */;
