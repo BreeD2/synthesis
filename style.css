@@ -67,22 +67,9 @@ body {
   text-align: left;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: red;
-  min-width: 120px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
 
-.dropdown:hover {
-background-color: dodgerblue
-}
 
-.:hover {
-background-color: #555
-}
+
 .dropdown-content button {
   float: none;
   color: white;
@@ -215,7 +202,9 @@ background-color: #555
 }
 
 
-@media (min-width: 768px) {
+
+
+@media (min-width: 1068px) {
 /* Style the dropdown content (hidden by default) */
 .dropdown-content2 {
   display: none;
@@ -226,6 +215,8 @@ width: 108px;
   z-index: 1;
   color:white
 }
+
+
 }
 /* Style the links inside the dropdown */
 .dropdown-content a {
@@ -240,15 +231,6 @@ width: 108px;
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover {
   background-color: #555;
-  color: white;
-}
-.dropdown:hover .dropbtn {
-  background-color: dodgerblue
-}
-
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: dodgerblue;
   color: white;
 }
 
@@ -271,7 +253,7 @@ width: 108px;
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1080px) {
-  .topnav.responsive {position: relative;}
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -365,7 +347,7 @@ width: 108px;
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1080px) {
-  .topnav.responsive {position: relative;}
+
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -450,6 +432,14 @@ width: 108px;
     background-color: transparent;
     font-size: 15px
 }
+@media (max-width: 1060px) {
+  .dropdown-content  {width:100%
+}
+.menu-toggle {
+  font-size: 1px
+}
+
+}
 
 
 @media (min-width: 1060px) {
@@ -505,10 +495,17 @@ body.light-mode .topnav a:hover {
   color: white;
 }
 
-/* Add a dark background on topnav links and the dropdown button on hover */ .dropdown:hover .dropbtn {
+/* Add a dark background on topnav links and the dropdown button on hover */
+.dropdown:hover .dropbtn {
   background-color: dodgerblue;
   color: white;
 }
+
+.dropdown a:hover{
+  background-color: red;
+  color: white;
+}
+
 
 /* Add a dark background on topnav links and the dropdown button on hover */ .dropdown2:hover .dropbtn2 {
   background-color: #555;
@@ -537,9 +534,14 @@ body.light-mode .topnav a:hover {
   background-color: darkgrey;
   color: black;
 }
+ .dropdown-content button:hover{
+  background-color: grey;
+  color: white;
+}
+
 
 .light-mode  .dropdown-content2 a .dropbtn2 {
-  background-color: grey;
+  background-color: lightgrey;
   color: black;
 }
 .light-mode  .dropdown-content2 .dropdown-content2 a{
@@ -959,7 +961,7 @@ body {
 body .topnav {
   background-color: red; /* Red background for the navbar in normal mode */
   color: #fff; /* White font color for the navbar in normal mode */;
-  position: sticky
+
 
 }
 
