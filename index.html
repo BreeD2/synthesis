@@ -41,12 +41,13 @@
 
  </a>
  <a href="index.html" class="active">Home</a>
-     <a href="#games">Games</a>
-     <a href="#about">About</a>
-     <a href="#contact">Contact</a>
+     <a href="games/index.html">Games</a>
+     <a href="about/index.html">About</a>
+     <a href="contact/index.html">Contact</a>
      <!-- Accessibility Button and Dropdown -->
      <!-- User Information Dropdown -->
      <input type="text" id="searchInput2" placeholder="Search.." onkeyup="searchFunction()">
+     <button id="clearSearch" onclick="clearSearchFunction()">X</button>
        <!-- Other navigation items -->
 
      <div class="dropdown2">
@@ -55,9 +56,10 @@
          <i class="fa fa-caret-down"></i>
        </button>
        <div class="dropdown-content2">
-         <a href="#">Login</a>
-         <a href="#">Profile</a>
-         <a href="#">Logout</a>
+          <a href="signup">Signup</a>
+         <a href="login/index.html">Login</a>
+         <a href="myprofile">My Profile</a>
+         <a href="logout">Logout</a>
        </div>
      </div>
      <div class="dropdown">
@@ -4480,23 +4482,26 @@ function myFunction() {
 const searchFunction = () => {
     const input = document.getElementById('searchInput2').value.toLowerCase();
     const resultsContainer = document.getElementById('searchResults2');
+    const clearButton = document.getElementById('clearSearch');
 
-    // Make the results container visible only if there's input
+    // Toggle visibility of results container and clear button based on input
     if (input) {
         resultsContainer.style.display = 'block';
+        clearButton.style.display = 'inline'; // Show the clear button when there's input
     } else {
         resultsContainer.style.display = 'none';
-        return; // Exit the function early if there's no input
+        clearButton.style.display = 'none'; // Hide the clear button when input is empty
     }
 
     resultsContainer.innerHTML = ''; // Clear previous results
+
 
     const searchData = [
         { name: 'About', url: 'about/index.html' },
       { name: 'Animal Crossing: New Horizons', url: 'animalcrossingnewhorizons/index.html' },
     { name: 'Animal Crossing: New Leaf', url: 'animalcrossingnewleaf/index.html' },
     { name: 'Assassin’s Creed Odyssey', url: 'assassinscreedodyssey/index.html' },
-    { name: 'Batman: Arkham City', url: '..//batmanarkhamcity/index.html' },
+    { name: 'Batman: Arkham City', url: 'batmanarkhamcity/index.html' },
     { name: 'Big Brain Academy: Wii Degree', url: 'bigbrainacademywiidegree/index.html' },
     { name: 'Blur', url: 'blur/index.html' },
     { name: 'Cars', url: 'cars/index.html' },
@@ -4557,6 +4562,7 @@ const searchFunction = () => {
     { name: 'LittleBigPlanet 3', url: 'littlebigplanet3/index.html' },
     { name: 'LittleBigPlanet Karting', url: 'littlebigplanetkarting/index.html' },
       { name: 'Login', url: 'login/index.html' },
+        { name: 'Logout', url: 'logout/index.html' },
     { name: 'Luigi\'s Mansion: Dark Moon', url: 'luigismansiondarkmoon/index.html' },
     { name: 'M&M’s Adventure', url: 'mandmsadventure/index.html' },
     { name: 'Madagascar 3: The Video Game', url: 'madagascar3thevideogame/index.html' },
@@ -4687,13 +4693,24 @@ const searchFunction = () => {
         const a = document.createElement('a');
         a.textContent = item.name;
         a.href = item.url;
-        a.target = '_blank';
+
         div.appendChild(a);
         resultsContainer.appendChild(div);
     });
 };
 
+const clearSearchFunction = () => {
+    document.getElementById('searchInput2').value = ''; // Clear input
+    document.getElementById('searchResults2').innerHTML = ''; // Clear previous results
+    document.getElementById('searchResults2').style.display = 'none'; // Optionally hide the results container
+    document.getElementById('clearSearch').style.display = 'none'; // Hide the clear button
+};
+
+// Optionally, automatically trigger the search function when the input is cleared
+document.getElementById('searchInput2').addEventListener('input', searchFunction);
+
 </script>
+
 
 
   </body>

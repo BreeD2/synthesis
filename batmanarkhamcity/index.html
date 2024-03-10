@@ -42,67 +42,60 @@
     <!-- Menu Toggle Icon -->
 
     <!-- Menu Toggle Icon -->
+    <!-- Navigation Bar with Logo and Website Name -->
+    <div class="topnav" id="myTopnav">
+      <a href="..//index.html" class="logo">
+        <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
-    <a class="..//index.html">Home</a>
-  <a class="active" href="..//games/index.html">Games</a>
-    <a href="..//about/index.html">About</a>
-    <a href="..//contact/index.html">Contact</a>
+   </a>
+   <a href="index.html" class="active">Home</a>
+       <a href="games/index.html">Games</a>
+       <a href="about/index.html">About</a>
+       <a href="contact/index.html">Contact</a>
+       <!-- Accessibility Button and Dropdown -->
+       <!-- User Information Dropdown -->
+       <input type="text" id="searchInput2" placeholder="Search.." onkeyup="searchFunction()">
+         <!-- Other navigation items -->
 
+       <div class="dropdown2">
+         <button class="dropbtn2">
+           <i class="fa fa-user"></i> User
+           <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content2">
+           <a href="#">Login</a>
+           <a href="#">Profile</a>
+           <a href="#">Logout</a>
+         </div>
+       </div>
+       <div class="dropdown">
+         <button class="dropbtn">
+           <i class="fas fa-wheelchair"></i>
+  Accessibility<i class="fa fa-caret-down"></i>
 
-
-
-
-        <input type="text" placeholder="Search.." name="search">
-
-
-
-        <!-- Accessibility Button and Dropdown -->
-        <div class="dropdown">
-          <button class="accessibility-button">
-    <span class="accessibility-text">Accessibility</span>
-    <i class="fa fa-caret-down"></i>
-  </button>
-
-          <div class="dropdown-content">
-            <div id="google_translate_element"></div>
-            <button onclick="resetSettings()">Reset Settings</button>
-            <button onclick="increaseFont()">Increase Font Size</button>
-            <button onclick="decreaseFont()">Decrease Font Size</button>
-
-            <button onclick="toggleLightMode()">Toggle Light Mode</button>
-            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
-
-          <button id="speakSelectedText">Read Selected Text</button>
-          <button id="stopButton">Stop Reading</button>
-          </div>
-        </div>
-
-        <div class="user-info">
-            <div class="dropdown2">
-                <button class="user-icon" onclick="toggleDropdown2()">
-                    <img src="../icon.png" alt="User icon">
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <!-- Dropdown Menu -->
-                <div class="dropdown-content2" style="display: none;">
-                    <div onclick="window.location.href='..//login/index.html';">Login</div>
-                    <div onclick="window.location.href='..//signup/index.html';">Signup</div>
-                </div>
-            </div>
-            <div class="logged-in-toolbar" style="display: none;">
-                <img src="user-icon.png" alt="User icon">
-                <span>Welcome, User!</span>
-                  <div onclick="window.location.href='..//myprofile/index.html';">My Profile</div>
-                <button onclick="logOut()">Log out</button>
-            </div>
-
-  </div>
+         </button>
+         <div class="dropdown-content">
+           <div id="google_translate_element"></div>
+           <button onclick="resetSettings()">Reset Settings</button>
+           <button onclick="increaseFont()">Increase Font Size</button>
+           <button onclick="decreaseFont()">Decrease Font Size</button>
+           <button onclick="toggleLightMode()">Toggle Light Mode</button>
+           <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+           <button id="speakSelectedText">Read Selected Text</button>
+           <button id="stopButton">Stop Reading</button>
+         </div>
+       </div>
 
 
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+       </a>
+
+
+   </div>
+   <!-- Moved searchResults outside the topnav -->
+   <div id="searchResults2" class="search-results2"></div>
+
 
  </div>
 

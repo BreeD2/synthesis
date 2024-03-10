@@ -478,7 +478,7 @@ body.light-mode .topnav a.active {
 
     background-color: #fff; /* White background */
     position: fixed; /* Positions relative to the nearest positioned ancestor */
-    z-index: 1000; /* Ensures it's above other content */
+    z-index: 5; /* Ensures it's above other content */
 
     top: 100px; /* Positions the results directly below the search bar */
     left: 50%;
@@ -494,7 +494,8 @@ margin-left:29.4%;
 .search-results2 {
     display: none; /* Hide the container initially */
     /* Other styles remain unchanged */;
-    text-align: left
+    text-align: left;
+    z-index: 5
 }
 
 
@@ -507,14 +508,13 @@ margin-left:29.4%;
 
     background-color: #fff; /* White background */
     position: fixed; /* Positions relative to the nearest positioned ancestor */
-    z-index: 1000; /* Ensures it's above other content */
-
+    z-index: 3; /* Ensures it's above other content */
     top: 100px; /* Positions the results directly below the search bar */
     left: 50%;
     float: right;
     padding: 6px;
     border: none;
-  top: 41.1%;
+  top: 45.5%;
 left:15px;
     font-size: 10px;
     border-radius: 5px
@@ -544,6 +544,40 @@ left:15px;
 /* Visible state */
 .search-results2.visible {
     display: block; /* Make visible when needed */
+}
+
+@media screen and (min-width: 1060px) {
+
+#clearSearch {
+      display: none;
+      cursor: pointer;
+      /* Additional styling to position the X button appropriately */
+      position: absolute;
+      right: 50px;
+      top: 12px;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      color:black
+  }
+}
+@media screen and (max-width: 1060px) {
+
+#clearSearch {
+      display: block;
+      cursor: pointer;
+      /* Additional styling to position the X button appropriately */
+      position: absolute;
+      right: 100px;
+      top: 52px;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      color:black;
+      z-index:6;
+      margin-top:233px;
+      margin-right: -70px
+  }
 }
 
 body.light-mode .topnav a {
@@ -672,7 +706,7 @@ body.light-mode .topnav a:hover {
 
 /* Light mode styles */
 .light-mode .dropdown-content2 {
-  background-color: grey; /* Light background */
+  background-color: #555; /* Light background */
   color: white; /* Dark text */
 }
 .light-mode .dropdown-content {
@@ -680,14 +714,21 @@ body.light-mode .topnav a:hover {
   color: white; /* Dark text */
 }
 
+.light-mode .fa {
+  color:black
+}
 .light-mode .dropdown-content2 a, .light-mode .dropdown-content button {
+  color: white;
+  background-color: transparent
+}
+.dark-mode .dropdown-content2 a, .dark-mode .dropdown-content button {
   color: white;
   background-color: transparent
 }
 
 /* Dark mode styles */
 .dark-mode .dropdown-content2, .dark-mode .dropdown-content {
-  background-color: #333; /* Dark background */
+  background-color: #555; /* Dark background */
   color: white; /* Light text */
 }
 /* Hover effects for .dropbtn in light mode */
@@ -741,6 +782,12 @@ body.light-mode .topnav a:hover {
 .dark-mode .dropdown:hover .dropbtn,
 .dark-mode .dropdown2:hover .dropbtn2 {
   background-color: slategrey; /* Lighter dark background for contrast in dark mode */
+  color: white; /* Darker text for readability in dark mode */
+}
+/* Hover effects for .dropbtn in dark mode */
+
+.light-mode .dropdown2:hover .dropbtn2 {
+  background-color: #555; /* Lighter dark background for contrast in dark mode */
   color: white; /* Darker text for readability in dark mode */
 }
 
@@ -1326,7 +1373,7 @@ body.dark-mode .cog-icon * {
     background-color: black;
     padding-right:5px;
         padding-left:5px;
-          top: 74px;
+          top: 80px;
     transition: color 0.3s ease; box-shadow 0.3s ease;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
 }}
@@ -1370,6 +1417,23 @@ body.dark-mode .cog-icon * {
            }
    }
 
+      @media screen and (max-width: 1060px) {
+          .sidebar {
+
+          }
+
+          main {
+              padding-top: 60px;
+          }
+
+          .fa.fa-gamepad {
+            font-size: 20px;
+          }
+          .menu-toggle {
+            left:15px
+          }
+
+      }
 
 /* ... other styles remain the same ... */
 
@@ -2371,6 +2435,8 @@ select:hover {
 
   }
 
+}
+
   /* The Close Button */
   .close {
     position: fixed;
@@ -2764,7 +2830,7 @@ p {
 }
 
 #zoomOut {
-  font-size: 15px;
+  font-size: 10px;
   top:37px;
   padding: 5px
 
@@ -2854,8 +2920,10 @@ p {
     text-align: left;
   }
   .topnav.responsive input[type="text"] {
-    margin: 10px 15px; /* Add some margin for visual separation */
-    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */
+    margin: 10px 15px; /* Add some margin for visual separation */;
+      z-index: 5;
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */;
+
   }
 }
 
@@ -3280,7 +3348,10 @@ color:black;
     .fa.fa-gamepad {
       font-size: 20px;
     }
-
+    .menu-toggle {
+      left:10px;
+      top:75px
+    }
 
 
 
