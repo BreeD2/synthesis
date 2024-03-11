@@ -507,14 +507,14 @@ margin-left:29.4%;
     border: 1px solid #ddd; /* Light grey border */
 
     background-color: #fff; /* White background */
-    position: fixed; /* Positions relative to the nearest positioned ancestor */
+    position: absolute;; /* Positions relative to the nearest positioned ancestor */
     z-index: 3; /* Ensures it's above other content */
-    top: 100px; /* Positions the results directly below the search bar */
+
     left: 50%;
     float: right;
     padding: 6px;
     border: none;
-  top: 47.5%;
+  top:310px;
 left:15px;
     font-size: 10px;
     border-radius: 5px
@@ -569,14 +569,15 @@ left:15px;
       cursor: pointer;
       /* Additional styling to position the X button appropriately */
       position: absolute;
-      right: 100px;
-      top: 52px;
+      right:103px;
+      top:281px;
       border: none;
       background: transparent;
       font-size: 16px;
-      color:black;
-      z-index:6;
-      margin-top:231px;
+      color:grey;
+      z-index:1000;
+
+
       margin-right: -70px
   }
 }
