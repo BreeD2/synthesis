@@ -507,17 +507,18 @@ margin-left:29.4%;
     border: 1px solid #ddd; /* Light grey border */
 
     background-color: #fff; /* White background */
-    position: absolute;; /* Positions relative to the nearest positioned ancestor */
+    position: fixed; /* Positions relative to the nearest positioned ancestor */
     z-index: 3; /* Ensures it's above other content */
 
-    left: 50%;
+
     float: right;
     padding: 6px;
     border: none;
-  top: 300px;
+  margin-top: 300px;
 left:15px;
     font-size: 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    top: 0px;
     }
 }
 
