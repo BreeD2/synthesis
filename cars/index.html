@@ -354,8 +354,8 @@ Accessibility<i class="fa fa-caret-down"></i>
              <div id="main-content" class="content">
 
  <div class="game-container">
-       <img src="carsps2.png" alt="Cars" class="game-cover"download="Cars">
-       <img src="carsngc.png" alt="Cars" class="game-cover"download="Cars">
+       <img src="carsps2.png" alt="Cars (PlayStation 2)" class="game-cover"download="Cars">
+       <img src="carsngc.png" alt="Cars (Nintendo GameCube)" class="game-cover"download="Cars">
        <h1 class="game-title">Cars</h1>
        <button id="likeButton" class="icon-button"><i class="far fa-thumbs-up"></i> Like</button>
     <button id="commentButton" class="icon-button"><i class="far fa-comment"></i> Comment</button>
@@ -422,24 +422,29 @@ Adventure
  <!-- The Modal -->
  <div id="myModal" class="modal">
      <!-- The Close Button -->
-     <span class="close">&times;</span>
+       <span class="close">Close</span>
 
      <!-- Modal Content (The Image) -->
      <img class="modal-content" id="img01">
 
      <!-- Control Buttons -->
      <div class="modal-footer">
-       <!-- Zoom In Button -->
-       <button id="zoomIn" class="zoom-btn">+</button>
+         <!-- Zoom In Button -->
+         <button id="zoomIn" class="zoom-btn">+</button>
 
-       <!-- Zoom Out Button -->
-       <button id="zoomOut" class="zoom-btn">-</button>
-         <a href="carsps2.png" download="Cars">
-           <button id="downloadButton">Download</button>
+         <!-- Zoom Out Button -->
+         <button id="zoomOut" class="zoom-btn">-</button>
 
+         <!-- Download Button -->
+         <a id="downloadLink" download>
+             <button id="downloadButton">Download</button>
          </a>
      </div>
  </div>
+
+ <img src="carsps2.png" alt="Cars (PlayStation 2)" class="game-cover">
+ <img src="carsngc.png" alt="Cars (Nintendo GameCube)" class="game-cover">
+
 
 <script>
   document.getElementById("rateButton").addEventListener("click", function() {
@@ -494,40 +499,34 @@ Adventure
 
 
 <script>
-  // Get the modal
-var modal = document.getElementById("myModal");
+// Get modal elements
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+const span = document.getElementsByClassName("close")[0];
+const downloadLink = document.getElementById("downloadLink");
 
-// Get the image and insert it inside the modal
-var img = document.querySelector(".game-cover");
-var modalImg = document.getElementById("img01");
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
+// Get images and attach click event to open in modal
+const images = document.getElementsByClassName("game-cover");
+for (let img of images) {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        // Update download link for the currently displayed image
+        downloadLink.href = this.src;
+        // Optionally, set the download attribute to a filename based on the image source or another criterion
+        downloadLink.download = this.alt; // Use the alt text or customize as needed
+    }
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span>, close the modal
+// Close the modal when clicking on <span> (x)
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-// Zoom functionality
-var zoomLevel = 1;
-var zoomStep = 0.1;
+// Add zoom in/out functionality if desired
+// This will require additional JavaScript to adjust the `modalImg` style properties
 
-document.getElementById("zoomIn").addEventListener("click", function() {
-    zoomLevel += zoomStep;
-    modalImg.style.transform = "scale(" + zoomLevel + ")";
-});
-
-document.getElementById("zoomOut").addEventListener("click", function() {
-    if (zoomLevel > zoomStep) {
-        zoomLevel -= zoomStep;
-        modalImg.style.transform = "scale(" + zoomLevel + ")";
-    }
-});
 </script>
 
 <script>
