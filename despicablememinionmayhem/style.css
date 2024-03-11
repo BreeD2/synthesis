@@ -559,10 +559,10 @@ left:15px;
       border: none;
       background: transparent;
       font-size: 16px;
-      color:black
+      color:black;
+      z-index:6;
   }
-}
-@media screen and (max-width: 1060px) {
+}@media screen and (max-width: 1060px) {
 
 #clearSearch {
       display: block;
