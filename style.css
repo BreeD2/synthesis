@@ -570,7 +570,8 @@ left:15px;
       cursor: pointer;
       /* Additional styling to position the X button appropriately */
       position: absolute;
-      right:103px;
+      background-color: red;
+      right:100px;
       top:281px;
       border: none;
       background: transparent;

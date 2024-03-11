@@ -4,7 +4,6 @@
 
 body {
   background-color:white;
-  margin-top: 100px
 
 
 
@@ -510,15 +509,16 @@ margin-left:29.4%;
     background-color: #fff; /* White background */
     position: fixed; /* Positions relative to the nearest positioned ancestor */
     z-index: 3; /* Ensures it's above other content */
-    top: 100px; /* Positions the results directly below the search bar */
-    left: 50%;
+
+
     float: right;
     padding: 6px;
     border: none;
-  top: 47.5%;
+  margin-top: 300px;
 left:15px;
     font-size: 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    top: 0px;
     }
 }
 
@@ -570,14 +570,16 @@ left:15px;
       cursor: pointer;
       /* Additional styling to position the X button appropriately */
       position: absolute;
-      right: 100px;
-      top: 52px;
+      background-color: red;
+      right:100px;
+      top:281px;
       border: none;
       background: transparent;
       font-size: 16px;
-      color:black;
-      z-index:6;
-      margin-top:231px;
+      color:grey;
+      z-index:1000;
+
+
       margin-right: -70px
   }
 }
@@ -2152,7 +2154,6 @@ select:hover {
 }
 
 .game-cover {
-
     width: 100%;
     height: auto;
     border-radius: 5px; /* Optional for rounded corners */
@@ -2168,7 +2169,6 @@ select:hover {
     width: 50%;
 
 }
-
 
 .games-grid {
     display: grid;
@@ -3864,63 +3864,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-#likeButton:hover, #commentButton:hover, #rateButton:hover {
-
-    background-color: black;
-
-}
-
-.light-mode #likeButton {
-
-    background-color: whitesmoke;
-    color:black
-}
-.light-mode #commentButton {
-  background-color: whitesmoke;
-  color:black
-}
-
-.light-mode #likeButton:hover {
-
-  background-color: gray;
-  color:white
-
-}
-.light-mode #commentButton:hover {
-  background-color: gray;
-  color:white
-  }
-  .light-mode #rateButton:hover{
-    background-color: gray;
-    color:white
-    }
-/* Dark Mode */
-
-.dark-mode #likeButton {
-
-    background-color: whitesmoke;
-    color:black
-}
-.dark-mode #commentButton {
-  background-color: whitesmoke;
-  color:black
-}
-
-.dark-mode #likeButton:hover {
-
-  background-color: darkgray;
-  color:white
-
-}
-.dark-mode #commentButton:hover {
-  background-color: darkgray;
-  color:white
-  }
-  .dark-mode #rateButton:hover{
-    background-color: darkgray;;
-    color:white
-    }
-
 
 .game-info .star-rating .fas,
 .game-info .star-rating .far {
@@ -4193,13 +4136,24 @@ border:2px solid white;
     border:2px solid white
   }
 
+  #zoomIn:hover {
+  background-color: black;
+  color: white;
+    border-color: white
+  }
 
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
+    #zoomOut:hover {
+    background-color: black;
+    color: white;
+      border-color: white
     }
+    .close:hover {
+    background-color: black;
+    color: white;
+      border-color: white
+    }
+
+
     .dark-mode .close:hover,
     .close:focus {
       background-color: dimgrey;
@@ -4290,73 +4244,6 @@ margin-top: 20px;
 
 
 } }
-
-
-.game-container {
-    max-width: 800px;
-      margin-top: 15%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-top: 100px
-}
-.light-mode .game-container {
-
-    background-color: whitesmoke;
-
-}
-
-
-
-
-    /* Existing CSS for game-container */
-.game-cover {
-    cursor: pointer;
-}
-
-.game-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Optional for rounded corners */
-}
-
-
-
-.game-card img {
-  width: 100%;
-  height: auto;
-}
-
-.game-info {
-  padding: 15px;
-}
-
-.game-title {
-  margin: 10px 0 5px;
-}
-
-.game-info {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    font-style: normal;
-}
-
-p {
-  font-style: normal;
-}
-
-.game-info {
-    line-height: 1.5; /* Adjust line height for better readability */
-    font-size: 15px; /* Adjust font size as needed */;
-    padding: 20px
-
-}
 
 #downloadButton:hover {
   background-color: black
