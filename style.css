@@ -4149,7 +4149,7 @@ border:2px solid white;
       border-color: white
     }
 
-    
+
     .dark-mode .close:hover,
     .close:focus {
       background-color: dimgrey;
@@ -4240,3 +4240,7 @@ margin-top: 20px;
 
 
 } }
+
+#downloadButton:hover {
+  background-color: black
+}
