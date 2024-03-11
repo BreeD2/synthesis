@@ -8498,3 +8498,8 @@ margin-top: 20px;
 #downloadButton:hover {
   background-color: black
 }
+
+.game-container {
+  margin-top:100px;
+  width: 80%
+}

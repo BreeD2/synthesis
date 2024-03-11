@@ -13,7 +13,7 @@
  <meta name="theme-color" content="#ffffff">
    <center>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -98,11 +98,7 @@ Accessibility<i class="fa fa-caret-down"></i>
      <h3>All Games</h3>
  <input type="text" placeholder="Search..">
  <br>
- <label class="custom-checkbox">
- <input type="checkbox" id="filterCheckbox" hidden>
- <span class="checkmark"></span><div class=sort>Sort</div>
- </label>
-
+     <label><input type="checkbox" id="filterCheckbox"> Sort</label>
 
  <div id="filterOptions" style="display: none;">
      <select id="mainCategory" onchange="updateSubCategory()">
@@ -355,7 +351,7 @@ Accessibility<i class="fa fa-caret-down"></i>
              <div id="main-content" class="content">
 
                <div class="game-container">
-                     <img src="hellskitchenthegame.png" alt="Hell’s Kitchen:<br> The Game" class="game-cover"download="Hell’s Kitchen:<br> The Game">
+                     <img src="hellskitchenthegame.png" alt="Hell’s Kitchen: The Game" class="game-cover"download="Hell’s Kitchen: The Game">
 
                      <h1 class="game-title">Hell’s Kitchen:<br> The Game</h1>
                      <button id="likeButton" class="icon-button"><i class="far fa-thumbs-up"></i> Like</button>
@@ -369,32 +365,75 @@ Accessibility<i class="fa fa-caret-down"></i>
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
 
-                     <p class="game-info"><strong>Developer(s):</strong><br>Ludia
+                     <p class="game-info"><strong>Developer(s):</strong><br>Rockstar North
 
 
 
               </p>
-                     <p class="game-info"><strong>Publisher(s):</strong><br>Ubisoft
+                     <p class="game-info"><strong>Publisher(s):</strong><br>Rockstar Games
               </p>
-                     <p class="game-info"><strong>Series:</strong><br>Hell’s Kitchen</p>
-                     <p class="game-info"><strong>Platform(s):</strong><br>iOS<br>
-macOS<br>
-Microsoft Windows<br>
-Nintendo Wii<br>
-Nintendo DS
+                     <p class="game-info"><strong>Series:</strong><br>Grand Theft Auto</p>
+                     <p class="game-info"><strong>Platform(s):</strong><br>PC<br>
+PlayStation 3<br>
+PlayStation 4<br>
+PlayStation 5<br>
+Xbox 360<br>
+Xbox One<br>
+Xbox Series X/S
 
               </p>
-                     <p class="game-info"><strong>Released Date(s):</strong><br>North America: September 9, 2008 (Nintendo DS, Nintendo Wii)<br>
-North America: September 22, 2008 (PC, Mac)<br>
-Australia: September 25, 2008<br>
-Europe: September 26, 2008<br>
-Europe: October 31, 2008 (Nintendo Wii)<br>
-Australia: 2008 (Nintendo Wii)<br>
-iOS<br>
-January 28, 2009
+                     <p class="game-info"><strong>Released Date(s):</strong><br>PlayStation 3<br>
+United States Canada<br>
+September 17, 2013<br>
+United Kingdom<br>
+Europe<br>
+September 17, 2013<br>
+Australia<br>
+New Zealand<br>
+September 17, 2013<br>
+Japan<br>
+October 10, 2013<br>
+Xbox 360<br>
+United States | Canada<br>
+September 17, 2013<br>
+United Kingdom<br>
+Europe<br>
+September 17, 2013<br>
+Australia<br>
+New Zealand<br>
+September 17, 2013<br>
+Japan<br>
+October 10, 2013<br>
+PlayStation 4<br>
+United States Canada<br>
+November 18, 2014
+United Kingdom<br>
+Europe<br>
+November 18, 2014<br>
+Australia<br>
+New Zealand
+November 18, 2014<br>
+Japan<br>
+December 11, 2014<br>
+Xbox One<br>
+United States | Canada<br>
+November 18, 2014<br>
+United Kingdom | Europe<br>
+November 18, 2014<br>
+Australia | New Zealand<br>
+November 18, 2014<br>
+Japan<br>
+December 11, 2014<br>
+
+PC<br>
+April 14, 2015<br>
+PlayStation 5<br>
+March 15, 2022<br>
+Xbox Series X/S<br>
+March 15, 2022
 
               </p>
-                     <p class="game-info"><strong>Genre(s):</strong><br>Simulation
+                     <p class="game-info"><strong>Genre(s):</strong><br>Action<br>Adventure
 
 
 
@@ -420,27 +459,28 @@ January 28, 2009
  </div></div>
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">Close</span>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+          <!-- The Close Button -->
+          <span class="close">Close</span>
 
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
 
-    <!-- Control Buttons -->
-    <div class="modal-footer">
-      <!-- Zoom In Button -->
-      <button id="zoomIn" class="zoom-btn">+</button>
+          <!-- Control Buttons -->
+          <div class="modal-footer">
+            <!-- Zoom In Button -->
+            <button id="zoomIn" class="zoom-btn">+</button>
 
-      <!-- Zoom Out Button -->
-      <button id="zoomOut" class="zoom-btn">-</button>
-        <a href="hellskitchenthegame.png" download="Hell’s Kitchen: The Game">
-          <button id="downloadButton">Download</button>
+            <!-- Zoom Out Button -->
+            <button id="zoomOut" class="zoom-btn">-</button>
+              <a href="hoteltransylvania.png" download="Hotel Transylvania">
+                <button id="downloadButton">Download</button>
 
-        </a>
-    </div>
-</div>
+              </a>
+          </div>
+        </div>
+
 <script>
   document.getElementById("rateButton").addEventListener("click", function() {
    var ratingContainer = document.getElementById("ratingContainer");
@@ -4869,118 +4909,6 @@ app.post('/login', async (req, res) => {
 </script>
 
 
-<script>
-app.get('/profile', async (req, res) => {
-  if (!req.session.userId) {
-    return res.status(401).json({ message: "Not authenticated" });
-  }
-
-  const user = await User.findById(req.session.userId);
-  res.json({ username: user.username, profileImageUrl: user.profileImageUrl });
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const signInButton = document.getElementById('signInButton');
-  const userProfile = document.querySelector('.user-profile');
-  const userNameDiv = document.querySelector('.user-name');
-
-  signInButton.addEventListener('click', () => {
-    // Simulate sign in process
-    signInButton.style.display = 'none'; // Hide sign in button
-    userProfile.style.display = 'flex'; // Show user profile
-  });
-
-  userNameDiv.addEventListener('click', () => {
-    const newName = prompt('Enter new name:');
-    if (newName) {
-      userNameDiv.textContent = newName;
-    }
-  });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const loginButton = document.getElementById('loginButton');
-  const logoutButton = document.getElementById('logoutButton');
-  const userProfile = document.getElementById('userProfile');
-  const userName = document.getElementById('userName');
-  const userIcon = document.getElementById('userIcon');
-
-  // Simulate a user sign-in process
-  loginButton.addEventListener('click', () => {
-    // Here, you would replace these values with those from your sign-in process
-    const exampleUser = {
-      name: 'John Doe',
-      icon: 'path/to/user-icon.jpg' // Use a real image path
-    };
-    // Display user information
-    userName.textContent = exampleUser.name;
-    userIcon.src = exampleUser.icon;
-
-    // Update UI
-    loginButton.style.display = 'none';
-    userProfile.style.display = 'flex';
-  });
-
-  // Simulate user sign-out
-  logoutButton.addEventListener('click', () => {
-    // Hide user info and show login button
-    userProfile.style.display = 'none';
-    loginButton.style.display = 'block';
-  });
-});
-
-
-</script>
-
-<script>
-// Simulate checking login status on page load
-document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
-});
-
-function logIn() {
-    // Here you would have your actual login logic
-    localStorage.setItem('isLoggedIn', 'true');
-    checkLoginStatus();
-}
-
-function logOut() {
-    localStorage.removeItem('isLoggedIn');
-    checkLoginStatus();
-}
-
-function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
-    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
-}
-</script>
-<script>
-function toggleDropdown2() {
-    const dropdown = document.querySelector('.dropdown-content2');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-}
-
-// Optional: Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.user-icon img')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content2");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === 'block') {
-                openDropdown.style.display = 'none';
-            }
-        }
-    }
-}
-</script>
-
-
 <!-- Heyo This is Important -->
 
 <script>
@@ -5534,6 +5462,118 @@ const searchFunction = () => {
 
 </script>
 
+
+
+<script>
+app.get('/profile', async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ message: "Not authenticated" });
+  }
+
+  const user = await User.findById(req.session.userId);
+  res.json({ username: user.username, profileImageUrl: user.profileImageUrl });
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const signInButton = document.getElementById('signInButton');
+  const userProfile = document.querySelector('.user-profile');
+  const userNameDiv = document.querySelector('.user-name');
+
+  signInButton.addEventListener('click', () => {
+    // Simulate sign in process
+    signInButton.style.display = 'none'; // Hide sign in button
+    userProfile.style.display = 'flex'; // Show user profile
+  });
+
+  userNameDiv.addEventListener('click', () => {
+    const newName = prompt('Enter new name:');
+    if (newName) {
+      userNameDiv.textContent = newName;
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loginButton = document.getElementById('loginButton');
+  const logoutButton = document.getElementById('logoutButton');
+  const userProfile = document.getElementById('userProfile');
+  const userName = document.getElementById('userName');
+  const userIcon = document.getElementById('userIcon');
+
+  // Simulate a user sign-in process
+  loginButton.addEventListener('click', () => {
+    // Here, you would replace these values with those from your sign-in process
+    const exampleUser = {
+      name: 'John Doe',
+      icon: 'path/to/user-icon.jpg' // Use a real image path
+    };
+    // Display user information
+    userName.textContent = exampleUser.name;
+    userIcon.src = exampleUser.icon;
+
+    // Update UI
+    loginButton.style.display = 'none';
+    userProfile.style.display = 'flex';
+  });
+
+  // Simulate user sign-out
+  logoutButton.addEventListener('click', () => {
+    // Hide user info and show login button
+    userProfile.style.display = 'none';
+    loginButton.style.display = 'block';
+  });
+});
+
+
+</script>
+
+<script>
+// Simulate checking login status on page load
+document.addEventListener('DOMContentLoaded', () => {
+    checkLoginStatus();
+});
+
+function logIn() {
+    // Here you would have your actual login logic
+    localStorage.setItem('isLoggedIn', 'true');
+    checkLoginStatus();
+}
+
+function logOut() {
+    localStorage.removeItem('isLoggedIn');
+    checkLoginStatus();
+}
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
+    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
+}
+</script>
+<script>
+function toggleDropdown2() {
+    const dropdown = document.querySelector('.dropdown-content2');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
+}
+</script>
 
 
  </body>
