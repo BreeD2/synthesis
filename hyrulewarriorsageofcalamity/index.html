@@ -350,7 +350,8 @@ Accessibility<i class="fa fa-caret-down"></i>
              <div id="main-content" class="content">
 
                <div class="game-container">
-                     <img src="hyrulewarriorsageofcalamity.png" alt="Hyrule Warriors: Age of Calamity" class="game-cover"download="Hyrule Warriors: Age of Calamity">
+                 <img src="hyrulewarriorsageofcalamityfront.png" alt="Dark Souls Remastered Front" class="game-cover"download="Hyrule Warriors: Age of Calamity Front">
+   <img src="hyrulewarriorsageofcalamityback.png" alt="Hyrule Warriors: Age of Calamity" class="game-cover"download="Hyrule Warriors: Age of Calamity Back">
 
                      <h1 class="game-title">Hyrule Warriors:<br> Age of Calamity</h1>
                      <button id="likeButton" class="icon-button"><i class="far fa-thumbs-up"></i> Like</button>
@@ -409,25 +410,27 @@ Australia: September 11, 2010
  <!-- The Modal -->
  <div id="myModal" class="modal">
      <!-- The Close Button -->
-      <span class="close">Close</span>
+       <span class="close">Close</span>
 
      <!-- Modal Content (The Image) -->
      <img class="modal-content" id="img01">
 
      <!-- Control Buttons -->
      <div class="modal-footer">
-       <!-- Zoom In Button -->
-       <button id="zoomIn" class="zoom-btn">Zoom In</button>
+         <!-- Zoom In Button -->
+         <button id="zoomIn" class="zoom-btn">+</button>
 
-       <!-- Zoom Out Button -->
-       <button id="zoomOut" class="zoom-btn">Zoom Out</button>
-         <a href="facebreakerkoparty.png" download="FaceBreaker K.O. Party">
-           <button id="downloadButton">Download</button>
+         <!-- Zoom Out Button -->
+         <button id="zoomOut" class="zoom-btn">-</button>
 
+         <!-- Download Button -->
+         <a id="downloadLink" download>
+             <button id="downloadButton">Download</button>
          </a>
      </div>
  </div>
-<script>
+
+ <script>
   document.getElementById("rateButton").addEventListener("click", function() {
    var ratingContainer = document.getElementById("ratingContainer");
    ratingContainer.style.display = ratingContainer.style.display === "none" ? "block" : "none";
@@ -480,40 +483,43 @@ Australia: September 11, 2010
 
 
 <script>
-  // Get the modal
-var modal = document.getElementById("myModal");
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('img01');
+    var downloadLink = document.getElementById('downloadLink');
+    var closeBtn = document.getElementsByClassName('close')[0];
 
-// Get the image and insert it inside the modal
-var img = document.querySelector(".game-cover");
-var modalImg = document.getElementById("img01");
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span>, close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Zoom functionality
-var zoomLevel = 1;
-var zoomStep = 0.1;
-
-document.getElementById("zoomIn").addEventListener("click", function() {
-    zoomLevel += zoomStep;
-    modalImg.style.transform = "scale(" + zoomLevel + ")";
-});
-
-document.getElementById("zoomOut").addEventListener("click", function() {
-    if (zoomLevel > zoomStep) {
-        zoomLevel -= zoomStep;
-        modalImg.style.transform = "scale(" + zoomLevel + ")";
+    // Function to open the modal and display the clicked image
+    var images = document.getElementsByClassName('game-cover');
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            downloadLink.href = this.src; // Set the download link to the source of the clicked image
+        }
     }
+
+    // Close the modal when the close button is clicked
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // Zoom in and zoom out functionality
+    var zoomInBtn = document.getElementById('zoomIn');
+    var zoomOutBtn = document.getElementById('zoomOut');
+    var zoomLevel = 100;
+
+    zoomInBtn.addEventListener('click', function() {
+        zoomLevel += 10;
+        modalImg.style.transform = 'scale(' + zoomLevel / 100 + ')';
+    });
+
+    zoomOutBtn.addEventListener('click', function() {
+        zoomLevel = Math.max(zoomLevel - 10, 100); // Prevent zooming out below original size
+        modalImg.style.transform = 'scale(' + zoomLevel / 100 + ')';
+    });
 });
+
 </script>
 
 <script>
