@@ -2485,16 +2485,14 @@ border:2px solid white;
     font-size: 20px;
   }
 
-
-
   .footer {
       width: 100%;
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
-
+      position: relative;
       background-color: black;
-      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+      margin-top: 100px;
         color:white;
     }
     body.light-mode .footer, body.light-mode .footer * {
@@ -4257,7 +4255,10 @@ margin-top: 20px;
        padding: 20px;
        border-radius: 8px;
        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-       margin-top:100px
+       top:100px;
+       position: relative;
+
+
    }
    .light-mode .game-container {
 

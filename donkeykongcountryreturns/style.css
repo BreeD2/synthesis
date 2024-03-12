@@ -2486,15 +2486,14 @@ border:2px solid white;
   }
 
 
-
   .footer {
       width: 100%;
       background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
-
+      position: relative;
       background-color: black;
-      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
+      margin-top: 100px;
         color:white;
     }
     body.light-mode .footer, body.light-mode .footer * {
@@ -8541,3 +8540,16 @@ margin-top: 20px;
 .game-cover {
    cursor: pointer;
 }
+
+.game-container {
+       max-width: 800px;
+       margin: auto;
+       background-color: white;
+       padding: 20px;
+       border-radius: 8px;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       top:100px;
+       position: relative;
+
+
+   }

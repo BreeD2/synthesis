@@ -2488,15 +2488,15 @@ border:2px solid white;
 
 
   .footer {
-      width: 100%;
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 20px;
-
-      background-color: black;
-      margin-top: auto; /* Ensures that the footer is pushed to the bottom */;
-        color:white;
-    }
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    background-color: black;
+    margin-top: 100px;
+      color:white;
+  }
     body.light-mode .footer, body.light-mode .footer * {
         width: 100%;
         background-color: #f1f1f1; /* Light grey background for the footer */
