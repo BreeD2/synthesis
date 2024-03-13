@@ -2496,14 +2496,7 @@ border:2px solid white;
       margin-top: 100px;
         color:white;
     }
-    body.light-mode .footer, body.light-mode .footer * {
-        width: 100%;
-        background-color: #f1f1f1; /* Light grey background for the footer */
-        text-align: center;
-        padding: 20px;
-        color: #000; /* Dark text color for readability */
-        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-      }
+
       body.dark-mode #sort-section, body.sort-section * {
 
     background-color: #f1f1f1; /* Light grey background for the footer */
@@ -2563,14 +2556,7 @@ body.light-mode .featured-games-title {
 background-color: grey;
 color:white
 }
-body.dark-mode .footer, body.dark-mode .footer * {
-    width: 100%;
-    background-color: black; /* Light grey background for the footer */
-    text-align: center;
-    padding: 20px;
-    color: white; /* Dark text color for readability */
-    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-  }
+
 
 body.dark-mode h2, body.sort-section h2 * {
 
