@@ -1,0 +1,4295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+
+
+
+
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: red;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: red;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+
+
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+
+
+.dropdown-content button {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: none;
+  font-size: 15px
+
+
+
+
+}
+.
+/* Style for the dropdown buttons */
+.dropdown .dropbtn, .dropdown2 .dropbtn2 {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer; /* Change cursor on hover */;
+  outline: none
+}
+
+/* Container for  content */
+.dropdown-content, .dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: transparent; /* Light background for dropdown */
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow for dropdown */
+  z-index: 1;
+  outline:none
+}
+
+
+/* Style for links and buttons within the dropdown */
+.dropdown-content a,.dropdown-content button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    outline:none;
+    background-color: transparent;
+    font-size: 15px
+
+}
+
+.dropdown-content2 a, {
+  color: white
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover, .dropdown-content2 a:hover {
+  background-color: #ddd;
+}
+
+
+
+/* Responsive menu icon */
+.topnav .icon {
+  display: none;
+}
+
+
+
+
+
+
+
+  @media screen and (max-width: 1060px) {
+  .topnav .icon {
+    display: block; /* Ensure the menu icon is always visible */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a,  .topnav.responsive .dropdown, .topnav.responsive .dropdown2 {
+    display: block; /* This shows the hidden elements when the menu icon is clicked */
+    float: none;
+    text-align: left;
+  }
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  color:white
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+
+
+@media (min-width: 1068px) {
+/* Style the dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #555;
+width: 108px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color:white
+}
+
+
+}
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1080px) {
+  .topnav a:not(:first-child),
+  .dropdown .dropbtn, .dropdown2 {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1080px) {
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    outline: none;
+    background-color: transparent;
+    font-size: 17px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+  color:white
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown2 .dropbtn2 {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  display: block
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: red;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color:white
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content2 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1080px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn2 {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1080px) {
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown2 {float: none;}
+    .topnav.responsive .dropdown2:hover {background-color: #555;}
+  .topnav.responsive .dropdown-content2 {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .dropdown-content {
+    width: 40%
+  }
+}
+/* Dropdown container - needed to position the dropdown content */
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+  color:white
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown2 .dropbtn2 {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #555;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color:white
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content2 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Style for links and buttons within the dropdown */
+.dropdown-content2 a,.dropdown-content2 button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    outline:none;
+    background-color: transparent
+
+}
+
+.dropdown-content2 a, .dropdown-content2 button {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px
+}
+@media (max-width: 1060px) {
+  .dropdown-content  {width:100%;
+    background-color: dodgerblue;
+}
+.menu-toggle {
+  font-size: 1px
+}
+
+}
+
+
+@media (min-width: 1060px) {
+   .dropdown2 .dropbtn2  {
+     display:block
+}
+.dropdown-content {
+  font-size: 15px;
+  position: fixed;
+  text-align: center;
+  width:168px;
+    background-color: dodgerblue;
+
+  }
+}
+ .dropdown-content2 {
+  font-size: 15px;
+  position: fixed;
+  text-align: center;
+
+}
+}
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+@media (min-width: 1060px) {
+
+.search-results2 {
+      width: 18%;
+    margin: 0 auto; /* Center the box */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border */
+
+    background-color: #fff; /* White background */
+    position: fixed; /* Positions relative to the nearest positioned ancestor */
+    z-index: 5; /* Ensures it's above other content */
+
+    top: 100px; /* Positions the results directly below the search bar */
+    left: 50%;
+    float: right;
+    padding: 6px;
+    border: none;
+  top: 5.1%;
+margin-left:29.4%;
+    font-size: 10px;
+    border-radius: 5px
+}}
+
+.search-results2 {
+    display: none; /* Hide the container initially */
+    /* Other styles remain unchanged */;
+    text-align: left;
+    z-index: 5
+}
+
+
+@media (max-width: 1060px) {
+    .search-results2 {
+  width: calc(100% - 30px);
+    margin: 0 auto; /* Center the box */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border */
+
+    background-color: #fff; /* White background */
+    position: fixed; /* Positions relative to the nearest positioned ancestor */
+    z-index: 3; /* Ensures it's above other content */
+
+
+    float: right;
+    padding: 6px;
+    border: none;
+  margin-top: 300px;
+left:15px;
+    font-size: 10px;
+    border-radius: 5px;
+    top: 0px;
+    }
+}
+
+.search-results2 div {
+    padding: 8px;
+    border-bottom: 1px solid #eee; /* Light line between results */
+}
+
+.search-results2 div:last-child {
+    border-bottom: none; /* Removes border from the last result */
+}
+
+.search-results2 a {
+    text-decoration: none;
+    color: #333; /* Dark grey text */
+    display: block; /* Makes the whole area clickable */
+}
+/* Default state, possibly hidden */
+.search-results2 {
+    display: none; /* Default to hidden */
+    /* Other styles */
+}
+
+/* Visible state */
+.search-results2.visible {
+    display: block; /* Make visible when needed */
+}
+
+@media screen and (min-width: 1060px) {
+
+#clearSearch {
+      display: none;
+      cursor: pointer;
+      /* Additional styling to position the X button appropriately */
+      position: absolute;
+      right: 50px;
+      top: 12px;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      color:black;
+      z-index: 6
+  }
+}
+@media screen and (max-width: 1060px) {
+
+#clearSearch {
+      display: block;
+      cursor: pointer;
+      /* Additional styling to position the X button appropriately */
+      position: absolute;
+      background-color: red;
+      right:100px;
+      top:281px;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      color:grey;
+      z-index:1000;
+
+
+      margin-right: -70px
+  }
+}
+
+body.light-mode .topnav a {
+  color: #000; /* Black font color for the links in the navbar */;
+
+}
+
+body.light-mode .topnav a:hover {
+  color: white; /* Black font color for the links in the navbar */;
+
+}
+/* Dark Mode styles for dropdown and its content */
+.dark-mode .dropdown-content,
+ {
+  background-color: dimgrey; /* Dark Mode background color */;
+  color:white
+}
+.dark-mode .dropdown-content2 a:hover {
+  background-color: black
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: grey;
+  color: white;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.dropdown a:hover{
+  background-color: red;
+  color: white;
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */ .dropdown2:hover .dropbtn2 {
+  background-color: #555;
+  color: white;
+}
+
+.light-mode /* Add a dark background on topnav links and the dropdown button on hover */ .dropdown:hover .dropbtn  {
+  background-color: grey;
+  color: white;
+}
+.light-mode .fa.fa-user:active {
+
+}
+
+.light-mode  .dropdown2:hover .dropbtn2 {
+  background-color: grey;
+  color: white;
+}
+
+.light-mode  .dropdown2 .dropdown .dropbtn2 {
+  background-color: grey;
+  color: black;
+}
+
+.light-mode /* Add a dark background on topnav links and the dropdown button on hover */ .dropdown-content:hover .dropbtn .i{
+  background-color: darkgrey;
+  color: black;
+}
+ .dropdown-content button:hover{
+  background-color: grey;
+  color: white;
+}
+
+
+.light-mode  .dropdown-content2 a .dropbtn2 {
+  background-color: lightgrey;
+  color: black;
+}
+.light-mode  .dropdown-content2 .dropdown-content2 a{
+  background-color: grey;
+  color: black;
+}
+
+.light-mode .dropdown2 .dropbtn2 .fas.fa-wheelchair {
+  color:black
+}
+
+.dark-mode /* Add a dark background on topnav links and the dropdown button on hover */ .dropdown:hover .dropbtn {
+  background-color: slategrey;
+  color: white;
+}
+.light-mode .fas.fa-wheelchair {
+  color:black
+}
+.light-mode .fas.fa-wheelchair:hover {
+  color:white
+}
+.light-mode .fa.fa-user{
+  color:black
+}
+.light-mode .fa.fa-user:hover{
+  color:white
+}
+.light-mode .dropdown2:hover{
+  color:white
+}
+.light-mode .dropdown {
+  color:red
+}
+
+.light-mode .dropdown .dropbtn {
+  color:black
+}
+.dropdown .dropbtn {
+  color:white
+}
+.light-mode .dropdown2 .dropbtn2 {
+  color:black
+}
+.light-mode .dropdown-content:hover{
+  color:red
+}
+.light-mode .dropdown-content button {
+  color:red
+}
+
+
+
+/* Light mode styles */
+.light-mode .dropdown-content2 {
+  background-color: #555; /* Light background */
+  color: white; /* Dark text */
+}
+.light-mode .dropdown-content {
+  background-color: darkgrey; /* Light background */
+  color: white; /* Dark text */
+}
+
+.light-mode .fa {
+  color:black
+}
+.light-mode .dropdown-content2 a, .light-mode .dropdown-content button {
+  color: white;
+  background-color: transparent
+}
+.dark-mode .dropdown-content2 a, .dark-mode .dropdown-content button {
+  color: white;
+  background-color: transparent
+}
+
+/* Dark mode styles */
+.dark-mode .dropdown-content2, .dark-mode .dropdown-content {
+  background-color: #555; /* Dark background */
+  color: white; /* Light text */
+}
+/* Hover effects for .dropbtn in light mode */
+.light-mode .dropdown:hover .dropbtn {
+  background-color: darkgrey; /* Dark background for contrast */
+  color: white; /* White text for readability */
+}
+
+.light-mode .dropdown:hover .dropbtn i {
+  color: white; /* Ensure icons also turn white on hover */
+}
+
+/* Hover effects for .dropbtn in dark mode */
+.dark-mode .dropdown:hover .dropbtn {
+  background-color: #555; /* Lighter dark background for contrast */
+  color: white; /* Darker text for readability */
+}
+
+.dark-mode .dropdown:hover .dropbtn i {
+  color: white; /* Ensure icons also change color appropriately on hover */
+}
+/* Hover effects for .dropbtn in light mode */
+.light-mode .dropdown:hover .dropbtn,
+.light-mode .dropdown2:hover .dropbtn2 {
+  background-color: darkgrey; /* Dark background for contrast in light mode */
+  color: white; /* White text for readability in light mode */
+}
+
+.light-mode .dropdown2:hover .dropbtn2 {
+  background-color: grey; /* Dark background for contrast in light mode */
+  color: white; /* White text for readability in light mode */
+}
+
+
+.light-mode .dropdown-content2 a:hover {
+  background-color: lightgrey; /* Dark background for contrast in light mode */
+  color: white; /* White text for readability in light mode */
+}
+
+.light-mode .dropdown-content button:hover {
+  background-color: lightgrey; /* Dark background for contrast in light mode */
+  color: white; /* White text for readability in light mode */
+}
+
+.light-mode .dropdown:hover .dropbtn i,
+.light-mode .dropdown2:hover .dropbtn2 i {
+  color: white; /* Ensure icons also turn white on hover in light mode */
+}
+
+/* Hover effects for .dropbtn in dark mode */
+.dark-mode .dropdown:hover .dropbtn,
+.dark-mode .dropdown2:hover .dropbtn2 {
+  background-color: slategrey; /* Lighter dark background for contrast in dark mode */
+  color: white; /* Darker text for readability in dark mode */
+}
+/* Hover effects for .dropbtn in dark mode */
+
+.light-mode .dropdown2:hover .dropbtn2 {
+  background-color: #555; /* Lighter dark background for contrast in dark mode */
+  color: white; /* Darker text for readability in dark mode */
+}
+
+.dark-mode .dropdown:hover .dropbtn i,
+.dark-mode .dropdown2:hover .dropbtn2 i {
+  color: white; /* Ensure icons also change color appropriately on hover in dark mode */
+}
+
+
+
+.dark-mode .dropdown-content2 a, .dark-mode .dropdown-content button {
+  color: white;
+}
+.fa.fa-user {
+  color:white
+}
+.dark-mode  .dropdown2:hover .dropbtn2 {
+  background-color: #555;
+  color: white;
+}
+
+.dark-mode .dropdown-content {
+  background-color: slategrey;
+  color: white;
+}
+.dark-mode .dropdown-content button:hover {
+  background-color: black;
+  color: white;
+}
+body.light-mode .dropdown-content2 a {
+    color: white; /* This will now take precedence over the .topnav a color */;
+    background-color: transparent
+
+}
+
+
+html {
+  font-family: arial;
+}
+
+.topnav {
+  overflow: hidden;
+
+  position: fixed; /* Make the navigation bar fixed */
+  top: 0;         /* Align the navigation bar at the top of the page */
+  width: 100%;    /* Make the navigation bar span the full width of the page */
+  z-index: 3;     /* Ensure the navigation bar stays on top of other elements */;
+  font-size: 15px
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 14px;
+  padding-right: 16px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 3;
+
+
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+  font-family: arial;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: grey;
+  color: white;
+
+
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #1a1a1a;;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2%;
+
+}
+
+
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav a.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+/* Dark mode styles for the "active" element */
+body.dark-mode .topnav a.active {
+  background-color: dimgrey;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .topnav .title, .topnav .icon {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+
+  /* Additional adjustments for mobile view */
+  .topnav .title {
+    order: -2; /* Title comes first */
+  }
+
+  .topnav .icon {
+    /* Last in order, no need to set explicitly */
+  }
+}
+
+
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 2.6%;
+
+  width: 18%;
+}
+
+
+
+
+
+
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.invert-colors {
+  filter: invert(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index as needed to ensure it's above other elements */
+}
+.dark-mode {
+  /* Dark mode styles for the body */
+}
+
+.dark-mode .your-navbar-class {
+  /* Dark mode styles for the navbar */
+}
+
+
+:focus {
+    outline: 2px solid #0078d4; /* Add a focus indicator for keyboard users */
+}
+
+}
+
+body.increase-contrast {
+  filter: contrast(110%) sepia(0%);
+}
+
+body.decrease-contrast {
+  filter: contrast(90%) sepia(0%);
+}
+
+body.sepia-effect {
+  filter: contrast(100%) sepia(100%);
+}
+/* CSS for sepia and contrast adjustments */
+
+
+.sepia-effect {
+  filter: sepia(100%);
+}
+
+.increase-contrast {
+  filter: contrast(110%);
+}
+
+.decrease-contrast {
+  filter: contrast(90%);
+}
+/* Light mode styles */
+body {
+  background-color: #fff; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+
+
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: gray; /* Red background for normal mode */
+  color: #000;
+}
+
+
+
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .topnav {
+  background-color: #222; /* Dark background for the navbar in dark mode */
+  color: #fff; /* White font color for the navbar in dark mode */
+}
+
+body.dark-mode .topnav a {
+  color: #fff; /* White font color for the links in the navbar in dark mode */
+}
+
+
+
+
+/* Normal mode styles */
+body {
+  background-color: gainsboro; /* Red background for normal mode */
+  color: #000;
+}
+
+body .topnav {
+  background-color: red; /* Red background for the navbar in normal mode */
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+
+}
+
+body .topnav a {
+  color: #fff; /* White font color for the links in the navbar in normal mode */
+}
+
+
+/* Normal mode styles */
+body {
+  background-color: #ff0000;
+  color: #000;
+}
+
+
+
+
+
+
+
+  /* Normal mode styles */
+  body {
+    background-color: white;
+    color: #000;
+  }
+
+
+  .dropup-content {
+
+      background-color: dodgerblue; /* Change background color to red */
+      position: fixed;
+      width: 18%;
+  padding: 5px; /* Add padding for better visual appearance */
+
+      color: white;
+
+  }
+
+
+
+  button {
+    color:white
+  }
+
+  /* Add styling for font awesome icon */
+  .fa {
+      cursor: pointer;
+      color: white; /* Change font color to white */;
+
+
+  }
+
+
+
+body {
+  background-color: ghostwhite;
+  font-family: 'arial', sans-serif;
+}
+#searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
+color:red;
+font-size: 15px
+
+
+}
+/* Style the search input */
+input[type=text] {
+  padding: 5px; /* Add padding */
+
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  outline: none; /* Remove default outline */;
+  font-family: arial;
+  font-size: 15px;
+
+
+}
+
+
+/* Style the placeholder text */
+input[type=text]::placeholder {
+  color: #999; /* Set placeholder text color */
+}
+
+/* Optional: Style on focus */
+input[type=text]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow on focus */
+}
+
+/* Default values */
+:root {
+  --dropup-bg-light: grey;
+  --dropup-bg-dark: grey; /* Change to your desired dark mode background color */
+}
+
+/* Common styles for both light and dark modes */
+.dropup-content {
+    display: none;
+    position: absolute;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0%;
+    margin-left: 79.5%;
+    margin-top: 0%;
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode .dropup-content,
+body.dark-mode .dropup-content * {
+    color: white; /* Text color in dark mode */
+    background-color: dimgrey; /* Background color in dark mode */
+}
+body.light-mode .topnav {
+  background-color: whitesmoke;
+  color: #fff; /* White font color for the navbar in normal mode */;
+
+}
+
+/* Dark mode styles for the "active" element */
+body.light-mode .topnav #button.active {
+  background-color: grey;;
+  color: #ffffff;
+}
+
+
+
+body.dark-mode .cog-icon,
+body.dark-mode .cog-icon * {
+    color: white; /* Icon color in dark mode */
+    background-color: dimgrey; /* Icon background color in dark mode */
+}
+
+
+
+
+/* Hide the welcome message by default */
+.hidden {
+    display: none;
+}
+
+
+
+/* Refined Sidebar Styles */
+.sidebar {
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Sidebar position fixed to the viewport */
+    top: 50px; /* Distance from the top of the viewport */
+    left: -250px; /* Initially positioned off-screen to the left */
+    height: 100%; /* Full viewport height */
+    padding-top: 20px; /* Padding at the top inside the sidebar */
+    background-color: #111; /* Sidebar background color */
+    color: white; /* Text color */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    transition: left 0.5s; /* Smooth transition for toggling visibility */
+    z-index: 1; /* Ensure sidebar is above other content but below modals/popups */
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Light Mode Styles */
+.light-mode .sidebar {
+    background-color: #f0f0f0; /* Light background for light mode */
+}
+
+.light-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #e0e0e0;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 5px;
+}
+
+.light-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+.light-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #a0a0a0 #e0e0e0;
+}
+
+/* Dark Mode Styles */
+.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Dark background for dark mode */
+}
+
+.dark-mode .sidebar::-webkit-scrollbar {
+    width: 15px;
+    background: #2c2c2c;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.dark-mode .sidebar {
+    scrollbar-width: auto;
+    scrollbar-color: #555 #2c2c2c;
+}
+
+
+   .sidebar a {
+       padding: 8px 8px 8px 16px;
+       text-decoration: none;
+       font-size: 14px;
+       color: white;
+       display: block;
+       font-size: 15px
+
+   }
+   .sidebar a:focus {
+    outline: 2px solid dimgrey; /* Customize as needed */
+}
+
+   /* Light mode styles */
+   body.light-mode .sidebar,
+   body.light-mode .sidebar * {
+       color: black; /* Text color in light mode */;
+       background-color: whitesmoke; /* Background color in light mode */;
+
+   }
+
+   /* Search Input Styles */
+.sidebar input[type="text"] {
+    width: 80%;
+    padding: 2px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.sidebar input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+
+
+   .sidebar a:hover {
+       color: grey;
+   }
+
+
+
+
+
+   .sidebar h3 {
+       color: #f1f1f1;
+
+   }
+ .menu-toggle {
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    position: fixed; /* Keeps the element in the same place even when scrolling */
+    left: 14px; /* Distance from the left edge of the viewport */
+
+    z-index: 1; /* Ensures the element stays on top of other content */
+    font-size: 25px; /* Size of the text or icon inside */
+    color: grey; /* Color of the text or icon */;
+    background-color: black;
+    padding-right:5px;
+        padding-left:5px;
+          top: 80px;
+    transition: color 0.3s ease; box-shadow 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.9);
+}}
+
+   /* Style for .menu-toggle when active */
+   .menu-toggle.active {
+       color: blue; /* Change color when active */;
+       background-color: transparent
+
+   }
+
+
+
+
+   /* Main Content Section */
+   main {
+       margin-left: 0;
+
+       padding: 16px; /* Adjust padding to your needs */
+   }
+
+
+
+
+
+
+
+
+
+   @media screen and (max-width: 585px) {
+       .sidebar {
+
+       }
+
+       main {
+           padding-top: 60px;
+       }
+
+           .menu-toggle {
+             top: 74px;
+           }
+   }
+
+      @media screen and (max-width: 1060px) {
+          .sidebar {
+
+          }
+
+          main {
+              padding-top: 60px;
+          }
+
+          .fa.fa-gamepad {
+            font-size: 20px;
+          }
+          .menu-toggle {
+            left:15px
+          }
+
+      }
+
+/* ... other styles remain the same ... */
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.lides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: white;
+  width:50%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.sidebar-open .container {
+    margin-left: 200px; /* Adjust according to the width of your sidebar */
+}
+
+.mySlides {display: none;}
+       #mainContent {transition: margin-left .5s;}
+
+       .mySlides {display: none;}
+        #mainContent {transition: margin-left .5s;}
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #mySidebar {width: 100%; display: none;}
+            #mainContent {margin-left: 0;}
+            .w3-sidebar.w3-bar-block {float: none;}
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        h1 {
+            margin: 0.5em 0;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+
+        .content.small {
+            margin-left: 0; /* Less margin when sidebar is collapsed */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.5s;
+
+        }
+
+        .sidebar-visible .sidebar {
+            left: 0;
+        }
+
+        .sidebar-visible .content {
+            margin-left: 240px;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        select {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  width: 30%;
+  font-style: normal;
+
+
+}
+
+select:hover {
+  border-color: blue;
+  border: 2px solid blue
+}
+
+
+
+
+
+.opening-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.opening-screen button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: grey;
+}
+#enter-site-button {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    background-color: red; /* Green background */
+    color: white; /* White text */
+    font-weight: bold; /* Make the text bold */;
+    border-color: #fff; /* White border on hover/focus */
+
+}
+
+#enter-site-button:hover, #enter-site-button:focus {
+    background-color: dodgerblue;
+    border-color: #fff; /* White border on hover/focus */
+}
+
+#enter-site-button:active {
+    background-color: #3e8e41; /* Even darker green when active/clicked */
+    transform: translateY(2px); /* Mimic button press */
+}
+
+
+
+.welcome {
+  color:white;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.dark-mode .welcome {
+  background-color: black;
+  color: white;
+}
+
+
+
+.light-mode .opening-screen button {
+  background-color: white;
+  color: black;
+}
+
+
+
+.dark-mode .opening-screen button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.dark-mode .opening-screen button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .opening-screen {
+        width: 100%; /* Resets to full viewport width without exceeding it */
+        margin-top: 0; /* Removes negative top margin */
+        margin-left: 0;
+        margin-right: 0;
+        height: 50vh; /* Set a fixed height or max-height as preferred */
+        /* Alternative: You might use max-height if you want to ensure it doesn't exceed a certain height but can be shorter */
+        height: auto; /* Allows the height to adjust based on content */
+        min-height: 100vh; /* Ensures it's at least the full height of the viewport */
+    }
+}
+
+
+.welcome {
+    font-size: 35px; /* Adjust the font size */
+    color: #fff; /* Text color */
+    background-color: black; /* Background color */
+    padding: 20px; /* Padding inside the div */
+    margin: 20px 0; /* Margin outside the div */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    font-family: 'Arial', sans-serif; /* Specify a font-family */
+    border: 5px solid white; /* Optional: Add a border */;
+    animation:fadeIn 2s;
+    font-weight: bolder
+
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .welcome {
+        font-size: 28px; /* Slightly smaller font size */
+        padding: 15px; /* Slightly less padding */
+        margin: 15px 0; /* Adjusted margin */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 780px) {
+    .welcome {
+        font-size: 25px; /* Even smaller font size for very small screens */
+        padding: 10px; /* Less padding to save space */
+        margin: 10px 0; /* Adjusted margin */
+    }
+    /* Styling for the heading within the about section */
+#about .what {
+  color: white; /* Dark grey for readability */
+  font-size: 25px; /* Larger font size for heading */
+
+
+}
+
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 780px) {
+
+    .what {
+      color:white;
+      font-size:10px
+    }
+
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.underwelcome {
+  color:white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* Other styles remain unchanged */
+
+/* Responsive adjustments for small screens */
+@media (max-width: 720px) {
+    .opening-screen p {
+        font-size: 30px;
+
+    }
+    .opening-screen {
+
+    }
+    .opening-screen button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+
+    }
+}
+#about {
+    background-color: black; /* Adjusted background color */
+    padding: 40px; /* Ample padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Ensure it fills the width */
+    margin: 0; /* Remove default margins */
+    /* Optional: Adjust height based on content or specific design needs */
+    min-height: 200px; /* Example min-height, adjust as needed */;
+
+}
+
+
+#about h2 {
+  margin-bottom: 20px; /* Space below the heading */;
+      color:white;
+    font-size: 28px; /* Slightly larger font size for headings */;
+
+}
+
+
+
+
+#about p {
+    font-size: 16px; /* Comfortable reading font size */
+    line-height: 1.6; /* Increased line height for readability */
+    color: white; /* Dark color for contrast and readability */;
+    font-weight: normal;
+}
+
+/* Responsive adjustments for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+
+    #about p {
+        font-size: 14px; /* Smaller font size for comfortable reading */
+    }
+}
+
+/* Further adjustments for very small screens, like smartphones */
+@media screen and (max-width: 480px) {
+    #about {
+        padding: 10px; /* Further reduced padding for very small screens */
+    }
+
+    #about h2 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    #about p {
+        font-size: 12px; /* Even smaller font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for compactness */
+    }
+}
+
+
+.opening-screen {
+    height: 1200px; /* Fixed height for large screens */
+    margin-top: -8%;
+  width: calc(100%); /* Adds back the 5% margin from both sides */
+    background: url('featured/p1.webp') no-repeat center center/cover;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -14%;
+}
+
+/* Smaller devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  .opening-screen {
+    height: 600px; /* Adjust height for smaller devices */
+    margin-top: -18%;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .opening-screen {
+    height: 800px; /* Adjust height for medium-sized devices */
+  }
+}
+
+/* Large devices (desktops, but less than 1200px) */
+@media (min-width: 993px) and (max-width: 1199px) {
+  .opening-screen {
+    height: 1000px; /* Adjust height for larger devices, but not the largest */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .opening-screen {
+    height: 1200px; /* Original height for the largest screens */
+  }
+}
+
+#featured-games-section {
+    margin-top: 20px;
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: black; /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Adjust based on your preference */
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Add a transition effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 0; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(314px); /* Move further left from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.next {
+  right: 20px; /* Adjust this value to move further away from the center */
+  transform: translateY(-50%) translateX(20px); /* Move further right from its initial position */;
+  color:white;
+  background-color: red
+}
+
+.featured-games-title {
+  text-align: center;
+  margin: 20px 0 20px; /* Adds space above and below the title */
+  font-size: 25px; /* Adjust font size as needed */
+  color: #ffffff; /* Change color as needed */
+  font-weight: bold;
+  background-color: red; /* Background color to make it stand out */
+  padding: 5px;
+  border-radius: 5px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+  width:60%;
+  margin-left: auto; /* Centers the title */
+  margin-right: auto; /* Centers the title */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px; /* Maximum width of the slideshow */
+  margin: auto; /* Center the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* Position the buttons in the middle vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Rounded corners for the left side */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; /* Rounded corners for the right side */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Full-width images within slides */
+.mySlides img {
+  display: block; /* Ensures the image is block level to take the width properly */
+  margin: auto; /* Centers the image */
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust based on your design */
+    justify-content: center;
+}
+
+.game-item {
+    width: 200px; /* Adjust based on your design */
+    text-align: center;
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+.game-title {
+    margin-top: 10px;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666; /* Adjust color based on your theme */;
+    width: 50%;
+
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    position: relative; /* For positioning the game-info */
+}
+
+.game img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+}
+
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Defines a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+
+
+.game-info {
+    /* No need for position: absolute; */
+    text-align: center;
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Padding for the info */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintains a three-column layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.game {
+    text-align: center; /* Centers the content within each game */
+}
+
+.game img {
+    width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio of the images */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images for aesthetics */
+}
+
+.game-info {
+    text-align: center; /* Ensures the game information text is centered */
+    color: #fff; /* Text color, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Adds a semi-transparent background for readability */
+    padding: 10px 0; /* Adds padding around the text for spacing */
+    margin-top: 10px; /* Adds space between the image and the description */
+    border-radius: 10px; /* Optional: Adds rounded corners to the background of the text */
+    width: 100%; /* Ensures the text container matches the width of the image above */
+    box-sizing: border-box; /* Ensures the width calculation includes padding */
+}
+
+#featuredGameContainer {
+  margin-top: 20px;
+  text-align: center; /* Centers the image */
+}
+
+#featuredGameImage {
+  max-width: 600px; /* Adjust based on your design */
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional styling */
+}
+
+.slideshow-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the container without distorting the image */
+}
+.image-link .caption, .image-caption-wrapper .caption {
+  display: block;
+  text-align: center;
+  color: #000; /* Caption text color */
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 8px; /* Space between the image and caption */
+}
+
+
+.image-caption-wrapper {
+  text-align: center; /* Center the image and caption */
+}
+
+.caption-link {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #000; /* Or any color that fits your design */
+  text-decoration: none; /* Optional: removes the underline */;
+  background-color: white
+}
+
+.caption-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of children */
+    width: 100%; /* Adjust based on your layout */
+    margin: auto; /* Center the container */
+}
+
+
+
+
+
+
+    /* styles.css */
+    #games-list {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: black;
+      background-color: white;
+      font-size: 15px;
+      width: 80%;
+      padding: 5px;
+      border: 2px solid white
+
+    }
+    /* Additional styles for lists within #games-list */
+    #games-list ul, #games-list ol {
+      padding-left: 20px; /* Standard indentation for lists */
+    }
+
+    #games-list ul {
+      list-style-type: disc; /* Bullet points for unordered lists */
+    }
+
+    #games-list ol {
+      list-style-type: decimal; /* Numbers for ordered lists */
+    }
+
+    /* Style for list items */
+    #games-list li {
+      margin-bottom: 10px; /* Adds space between list items */
+      color: #333; /* Optionally, make text color slightly lighter than black for readability */
+    }
+
+
+
+
+
+  /* Style for the sort section */
+  #sort-section {
+    width:100%;
+    margin: 20px auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  }
+  h2 {
+    color:white
+  }
+
+  /* Style for select dropdowns */
+  #mainCategory, #subCategory {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    cursor: pointer;
+    font-weight: normal;
+    text-align: center;
+
+  }
+
+  #filterOptions {
+      margin-top: 15px; /* Adjust the value as needed */
+  }
+
+
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+
+
+
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color:red;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+
+  }
+
+  #zoomIn {
+    right: 0px; /* Adjust based on your layout */;
+    z-index:2;
+    top:600px;
+    position: sticky;
+      font-size: 15px;
+      background-color:
+
+
+  }
+
+  #zoomOut {
+    right: 0px; /* Adjust based on your layout */;
+      z-index:2;
+      top:600px;
+    position: sticky;
+      font-size: 15px;
+
+  }
+
+}
+
+  /* The Close Button */
+  .close {
+    position: fixed;
+    top: 105px;
+    right: 50px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+border:2px solid white;
+  border-radius: 5px;
+    background-color: red;
+    z-index: 3
+  }
+
+
+  #downloadButton {
+      padding: 10px 20px; /* Adjust padding as needed */
+      font-size: 16px; /* Adjust font size as needed */
+      font-weight: bold;
+
+      border: none;
+      border-radius: 5px;
+      background-color: red; /* Button background color */
+      color: #fff; /* Button text color */
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+      top::100px;
+        position: fixed;
+
+
+  }
+
+
+  /* Caption Style */
+  #pcaption {
+    color: #fff;
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+  }
+
+
+  .footer {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      background-color: black;
+      margin-top: 100px;
+        color:white;
+    }
+    body.light-mode .footer, body.light-mode .footer * {
+        width: 100%;
+        background-color: #f1f1f1; /* Light grey background for the footer */
+        text-align: center;
+        padding: 20px;
+        color: #000; /* Dark text color for readability */
+        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+      }
+      body.dark-mode #sort-section, body.sort-section * {
+
+    background-color: #f1f1f1; /* Light grey background for the footer */
+
+    color: black; /* Dark text color for readability */
+
+  }
+  body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: black; /* Dark text color for readability */
+
+}
+
+body.light-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+body.dark-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about p {
+color: white;
+}
+body.light-mode #about p {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+.what {
+  color:white;
+  font-size:30px;
+  font-weight: 500; /* Bold font weight for emphasis */
+}
+body.light-mode .what {
+  color:black;
+  background-color: white
+}
+body.light-mode #about h2 {
+  color: black; /* Slightly darker color for headings for emphasis */
+}
+body.light-mode #about {
+  background-color: white; /* Slightly darker color for headings for emphasis */
+}
+
+body.dark-mode #about {
+background-color: black;
+}
+body.dark-mode .featured-games-title {
+background-color: black;
+color:white
+}
+body.light-mode .featured-games-title {
+background-color: grey;
+color:white
+}
+body.dark-mode .footer, body.dark-mode .footer * {
+    width: 100%;
+    background-color: black; /* Light grey background for the footer */
+    text-align: center;
+    padding: 20px;
+    color: white; /* Dark text color for readability */
+    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
+  }
+
+body.dark-mode h2, body.sort-section h2 * {
+
+
+
+color: white; /* Dark text color for readability */
+
+}
+
+
+.dark-mode .sort {
+
+  color:white
+
+
+}
+
+.light-mode .sort {
+
+  color:black
+
+
+}
+
+
+
+body.light-mode .prev {
+  background-color: grey;
+  color:white
+
+}
+body.light-mode .next {
+  background-color: grey;
+  color:white;
+
+
+}
+body.light-mode .welcome {
+  background-color: white;
+  color:black;
+    border:5px solid black
+
+
+}
+
+body.light-mode .underwelcome {
+
+  color:black;
+
+}
+body.light-mode .opening-screen {
+
+}
+
+body.light-mode #enter-site-button {
+    background-color: grey;
+    color:white
+}
+body.light-mode #enter-site-button:hover {
+    background-color: #222;
+    color:white
+}
+body.dark-mode #enter-site-button {
+    background-color: dimgrey;
+    color:white
+}
+body.dark-mode #enter-site-button:hover {
+    background-color: black;
+    color:white
+}
+
+
+body.light-mode .caption-container {
+
+  background-color: grey
+}
+
+body.dark-mode .prev {
+  background-color: black;
+  color:white
+
+}
+body.dark-mode .next {
+  background-color: black;
+  color:white;
+
+
+}
+
+    /* Ensure the slideshow container is relative */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px; /* Adjust based on your preference */
+      margin: auto;
+      overflow: hidden; /* Prevents overflow from arrows */
+    }
+
+    /* Adjusting arrows to be aligned with the image */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* Centers vertically */
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 1; /* Ensures arrows are above the image */
+    }
+
+    .next {
+      right: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    .prev {
+      left: 6%; /* Adjust based on image width to align with the edges */
+    }
+
+    /* Caption text positioning */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 80%; /* Match image width */
+      text-align: center;
+      padding: 8px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      margin: auto;
+      left: 0;
+      right: 0; /* Centers the caption */
+    }
+
+    @media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 18px; /* Keeps the arrow size the same */
+    padding: 12px; /* Slightly reduce padding for smaller screens if needed */
+  }
+
+  .next {
+    right: 3.4%; /* Adjust if needed for very small screens */
+  }
+
+  .prev {
+    left: 3.4%; /* Adjust if needed for very small screens */
+  }
+}
+
+#featured-games {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.games-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  width: 300px;
+
+  overflow: hidden;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  margin: 10px 0 5px;
+}
+
+.game-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+
+p {
+  font-style: normal;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 10px;
+  top:37px;
+  padding: 5px
+}
+
+#zoomOut {
+  font-size: 10px;
+  top:37px;
+  padding: 5px
+
+}
+}
+
+
+.dark-mode .game-card {
+  background-color: black;
+
+}
+
+.light-mode .game-card {
+  background-color: grey;
+}
+
+
+.dark-mode .game-info p {
+
+  color: white;
+
+}
+
+.dark-mode  .game-info {
+
+
+  background-color: dimgrey
+}
+
+.dark-mode .game-info h3 {
+
+  color: white; /* Example color */
+}
+
+.light-mode .game-info p {
+
+  color: black;
+
+}
+
+.light-mode  .game-info {
+
+
+  background-color: white
+}
+
+.light-mode .game-info h3 {
+
+  color: black; /* Example color */
+}
+
+
+
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+
+
+  }
+}
+
+
+@media screen and (max-width: 1060px) {
+  .topnav a:not(:first-child), .topnav input[type="text"] {
+    display: none; /* Hide all a elements that are not the first child and the search input by default */
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive a,
+  .topnav.responsive input[type="text"] { /* Display the links and search input when responsive */
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive input[type="text"] {
+    margin: 10px 15px; /* Add some margin for visual separation */;
+      z-index: 5;
+    width: calc(100% - 30px); /* Adjust width to fit inside the topnav container */;
+
+  }
+}
+
+
+.cog-icon {
+    cursor: pointer;
+    /* Additional styling */
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Adjust based on layout */
+    background-color: #f9f9f9;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropup-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.accessibility-button {
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: arial;
+  margin: 0;
+  position: sticky;
+  top:0px;
+
+}
+
+
+/* Styles for hover state */
+.accessibility-button:hover {
+  background-color: dodgerblue; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.accessibility-button.active {
+  background-color: dodgerblue; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.dark-mode .accessibility-button:hover {
+  background-color: dimgrey; /* Darken button slightly on hover */
+}
+
+/* Styles for active/clicked state */
+.dark-mode .accessibility-button.active {
+  background-color: dimgrey; /* Darken button further when clicked */
+}
+
+/* Styles for hover state */
+.light-mode .accessibility-button:hover {
+  background-color: grey; /* Darken button slightly on hover */;
+  color:white
+}
+
+/* Styles for active/clicked state */
+.light-mode .accessibility-button.active {
+  background-color: grey; /* Darken button further when clicked */;
+  color:white
+}
+
+
+
+
+
+
+
+.show {
+  display: block;
+}
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: ;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.light-mode .accessibility-button {
+
+color: black;
+
+
+
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down {
+  color: #333; /* Change the color of the icon */
+
+}
+
+/* Basic style for the caret-down icon */
+.light-mode .fa.fa-caret-down:hover {
+  color: white; /* Change the color of the icon */
+
+}
+
+.light-mode .accessibility-button:hover {
+
+color: white;
+
+
+
+}
+.light-mode .accessibility-button.active {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+}
+.light-mode .accessibility-button:hover {
+
+
+background-color: grey;
+color:white
+
+
+}
+
+
+/* Custom style for the gamepad icon */
+.fa.fa-gamepad {
+  color: white; /* Change the color of the icon */
+  font-size: 24px; /* Adjust the size of the icon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+
+/* Additional style for when the icon is active in light mode */
+.light-mode .fa.fa-gamepad.active {
+  color: black; /* Change the icon color to black when active */
+  background-color: transparent; /* Ensure the background remains transparent */
+  box-shadow: none; /* Explicitly remove any box shadow */
+}
+
+
+/* Additional style for focus, if the icon is used within a focusable element */
+.light-mode .fa.fa-gamepad {
+color:black;
+
+}
+
+.light-mode .menu-toggle {
+  background-color: whitesmoke;
+  color:black
+}
+
+.light-mode .menu-toggle.active {
+  background-color: transparent;
+  color:black;
+  box-shadow: none;
+    box-shadow: 0px 2px 5px whitesmoke;
+}
+@media screen and (max-width: 600px) {
+  .accessibility-text {
+    display: none; /* Hides the "Accessibility" text */;
+  position: fixed
+  }
+  .accessibility-button i {
+    /* If you decide to switch icons via CSS, ensure you have the correct classes added/removed in your JavaScript as well */
+    display: none; /* Hide the caret-down icon */;
+      position: sticky
+
+  }
+  .accessibility-button .fa-cog {
+    display: inline-block; /* Make sure the gear icon is visible */;
+    position: sticky;
+
+  }
+}
+
+.title-text {
+  font-size: 16px; /* Default font size */
+}
+
+.sort {
+  margin: 1%;
+  font-size: 15px
+}
+
+@media screen and (max-width: 300px) {
+  .title-text {
+    font-size: 11px; /* Smaller font size on screens less than or equal to 600px wide */;
+    margin: 0;
+  }
+}
+
+.topnav .search-input {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+
+
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1060px) {
+    .topnav .search-input {
+        float: none;
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust as needed */
+    }
+}
+
+
+
+.content {
+    margin-left: 0; /* Content starts with no left margin */
+    transition: margin-left 0.5s; /* Smooth transition for content margin */
+}
+
+.featured-games-title {
+  font-size:20px
+}
+
+/* When the sidebar is visible */
+.sidebar-visible .sidebar {
+    left: 0; /* Bring sidebar into view */
+}
+
+.sidebar-visible .content {
+    margin-left: 200px; /* Push content to the right to make space for the sidebar */
+}
+
+.custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  top:10px;
+  position: relative;
+  padding-left: 25px; /* Space for the custom checkbox */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create a custom checkbox */
+.custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Create a custom checkbox */
+.dark-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+/* Create a custom checkbox */
+.light-mode .custom-checkbox .checkmark {
+  position: absolute;
+  margin-top: 10%;
+
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 4px; /* Optional: for rounded corners */;
+  border: 1px solid #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: red;
+}
+
+/* When the checkbox is checked, add a blue background */
+.light-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.dark-mode .custom-checkbox input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.light-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.dark-mode .custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .sidebar a {
+       font-size: 13px;
+
+    }
+
+   .sidebar input[type="text"], #mainCategory, #subCategory, #games-list,  label {
+         font-size: 13px;
+    }
+      .sidebar h3 {
+        font-size:20px
+      }
+      .sort {
+        font-size: 13px;
+        margin:5%
+      }
+
+    input[type="checkbox"] {
+        font-size: 13px;
+        margin-bottom: 50%;
+    }
+
+    .fa.fa-gamepad {
+      font-size: 20px;
+    }
+    .menu-toggle {
+      left:10px;
+      top:75px
+    }
+
+
+
+
+    .sidebar {
+      width:200px
+    }
+
+    /* Adjust as necessary for alignment */
+    .custom-checkbox-label span + span {
+      vertical-align: middle; /* Corrected alignment */
+    }
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Adjust based on your layout */
+}
+
+.profile-icon {
+  width: 32px; /* Example size, adjust as needed */
+  height: 32px;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 16px; /* Adjust as needed */
+  color: #fff; /* Adjust based on your theme */
+}
+
+
+
+
+
+
+#google_translate_element {
+    width: 100%;
+    }
+
+
+
+}
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid white; /* Example style */
+}
+
+
+/* Add to the existing styles */
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: blue;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signInButton:hover {
+  background-color: #ddd;
+}
+
+/* Existing styles remain the same; add these for the auth buttons */
+
+.auth-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input fields and Submit button */
+input[type=text], input[type=password], input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#login-button {
+  color:rgb(146, 172, 67)white
+}
+
+
+/* Paste */
+
+
+.user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 29px;
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 10px;
+margin-bottom: 10px;
+  text-align: center;
+  /* position: center; Remove or correct this line */
+}
+
+
+.user-info:hover {
+  background-color: grey
+}
+
+.user-icon img {
+
+    width: 23px; /* Width of the image */
+    height: 23px; /* Height of the image */;
+
+
+}
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+
+.
+
+
+
+
+a:focus, button:focus, input:focus {
+    outline: 2px solid white; /* Example style */
+}
+
+
+/* Add to the existing styles */
+
+#signInButton {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: blue;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#signInButton:hover {
+  background-color: #ddd;
+}
+
+/* Existing styles remain the same; add these for the auth buttons */
+
+.auth-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Input fields and Submit button */
+input[type=text], input[type=password], input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#login-button {
+  color:rgb(146, 172, 67)white
+}
+
+
+
+
+
+
+
+
+
+/* Styling the SVG icon */
+.login-button svg {
+    fill: white; /* Color of the icon */
+    transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+rgb(146, 172, 67)
+.login-button svg:hover {
+    fill: #1a1a1a; /* Darken icon on hover */
+}
+
+
+#signupSection h2 {
+  color:black
+}
+
+#signupSection button {
+  color:white;
+  background-color: red;
+  border:2px solid black
+}
+.auth-links {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the items horizontally (if needed) */
+    gap: 3px; /* Adjust the gap between items as needed */
+    /* Add additional styling as needed */
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: #007BFF; /* Example link color */
+    /* Add additional link styling as needed */
+}
+
+.auth-links span {
+    color: #000; /* Color of the separator */
+    /* Adjust styling for the separator as needed */
+}
+
+
+#form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+
+
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#form-switch {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-switch button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.logged-out-toolbar img {
+    width: 50px; /* Adjust size as needed */
+}
+
+
+
+#toggleForms {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+form p {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+/* Larger Screens */
+@media (min-width: 0px) and (max-width: 300px){
+
+  .user-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      font-size: 10px;
+      margin-right: 15px;
+  }
+     .user-icon img {
+         display: none; /* Hide the image */;
+         width: 15px
+     }
+     .user-icon::before {
+         content: "\f007"; /* Font Awesome person icon unicode */
+         font-family: "Font Awesome 5 Free"; /* Adjust based on the version of Font Awesome you're using */
+         font-weight: 900; /* Necessary for solid icons */
+         display: inline-block; /* Display the pseudo-element as an inline block */;
+         font-size: 13px
+
+     }
+
+.accessibility-button {
+
+font-size:15px;
+margin-left: -10px
+
+}
+
+}
+
+
+#formsContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+button {
+  background-color: red
+}
+
+#downloadButton {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */;
+
+
+}
+#likeButton, #commentButton, #rateButton {
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-info .star-rating .fas,
+.game-info .star-rating .far {
+    color: #ffc107; /* Gold color for stars */
+    vertical-align: middle;
+}
+
+.game-info {
+    line-height: 1.5; /* Adjust line height for better readability */
+    font-size: 15px; /* Adjust font size as needed */;
+    padding: 20px
+
+}
+
+.game-title {
+    font-size: 30px; /* Default font size */
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .game-title {
+        font-size: 25px; /* Smaller font size on small screens */
+    }
+
+}
+.star {
+    cursor: pointer;
+    color: grey;
+    font-size: 24px;
+}
+.star.hover {
+    cursor: pointer;
+    color: gold;
+    font-size: 24px;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.icon-button {
+  cursor: pointer;
+  color: gray;
+}
+
+.icon-button.hovered {
+  color: orange;
+  background-color: yellow
+}
+
+.icon-button.selected {
+  color: orange;
+}
+
+.light-mode #zoomIn {
+background-color: white;
+color: black;
+  border-color: black
+}
+
+.light-mode #zoomOut {
+  background-color: white;
+  color: black;
+  border-color: black
+}
+.light-mode #downloadButton {
+  background-color: white;
+  color: black;
+  border-color: black
+}
+.dark-mode #zoomOut {
+  background-color: black;
+  color: white;
+  border-color: white
+}
+.dark-mode #zoomIn {
+  background-color: black;
+  color: white;
+  border-color: white
+}
+.dark-mode #downloadButton {
+  background-color: black;
+  color: white;
+  border:2px solid white
+}
+
+.dark-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: white;
+    background-color:  #222;
+
+}
+
+.light-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: black;
+    background-color:  white;
+
+}
+.dark-mode .game-container{
+  background-color: dimgrey;
+  color:white
+}
+
+.dark-mode .game-container{
+  background-color: dimgrey;
+  color:white
+}
+
+.light-mode .game-container{
+  background-color: whitesmoke;
+  color:white
+}
+
+.dark-mode .game-title {
+  color:white
+}
+
+.dark-mode #likeButton,.dark-mode  #commentButton, .dark-mode #rateButton {
+
+    color: white;
+    background-color:  #222;
+
+}
+.light-mode #likeButton,.light-mode  #commentButton, .light-mode #rateButton {
+
+    color: black;
+    background-color:  white;
+
+}
+
+.dark-mode .game-info {
+  color:white;
+  background-color: #222;
+}
+
+
+  /* Zoom Buttons */
+  .zoom-btn {
+    position: fixed;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color:red;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border:2px solid white;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+
+  }
+
+  #zoomIn {
+    right: 0px; /* Adjust based on your layout */;
+    z-index:2;
+    top:600px;
+    position: sticky;
+      font-size: 15px;
+      background-color:
+
+
+  }
+
+  #zoomOut {
+    right: 0px; /* Adjust based on your layout */;
+      z-index:2;
+      top:600px;
+    position: sticky;
+      font-size: 15px;
+
+  }
+
+  /* The Close Button */
+  .close {
+    position: fixed;
+    top:60px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+border:2px solid white;
+  border-radius: 5px;
+    background-color: red;
+    z-index: 3;
+    right:50px;
+
+  }
+  .light-mode .close {
+    background-color: white;
+    color:black
+  }
+  .dark-mode .close {
+    background-color: black;
+    color:white
+  }
+
+
+  #downloadButton {
+    left: 100px; /* Adjust based on your layout */;
+      z-index:2;
+
+    position: sticky;
+      font-size: 15px;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+border:2px solid white;
+  border-radius: 5px;
+    background-color: red;
+    z-index: 3;
+    margin-left: 20px;
+
+
+  }
+
+  .light-mode #downloadButton {
+    background-color: white;
+    color:black
+  }
+  .dark-mode #downloadButton {
+    background-color: black
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .light-mode .close:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+      border:2px solid white
+  }
+  .light-mode #zoomIn:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
+  .light-mode #zoomOut:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
+
+  .light-mode #downloadButton:hover,
+  .close:focus {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid white
+  }
+
+  #zoomIn:hover {
+  background-color: black;
+  color: white;
+    border-color: white
+  }
+
+    #zoomOut:hover {
+    background-color: black;
+    color: white;
+      border-color: white
+    }
+    .close:hover {
+    background-color: black;
+    color: white;
+      border-color: white
+    }
+
+
+    .dark-mode .close:hover,
+    .close:focus {
+      background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+        border:2px solid white
+    }
+    .dark-mode #zoomIn:hover,
+    .close:focus {
+    background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
+    .dark-mode #zoomOut:hover,
+    .close:focus {
+    background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
+
+    .dark-mode #downloadButton:hover,
+    .close:focus {
+      background-color: dimgrey;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      border:2px solid white
+    }
+  @media screen and (max-width: 585px) {#zoomIn {
+  font-size: 10px;
+
+}
+
+#zoomOut {
+  font-size: 10px;
+
+
+}
+.close {
+  font-size: 10px
+
+}
+  #downloadButton {
+    font-size: 10px
+  }
+  .game-info {
+    font-size: 10px
+  }
+  .footer {
+    font-size: 10px
+  }
+  .game-title {
+    font-size: 18px
+  }
+  #likeButton, #commentButton, #rateButton {
+    font-size: 10px
+  }
+
+
+
+
+}
+@media screen and (max-width: 350px) {
+  #zoomIn {
+top: 10px;
+}
+
+#zoomOut {
+top: 10px;
+
+
+}
+.close {
+font-size: 8px
+
+}
+#downloadButton {
+top: 300px;
+margin-right: 25px;
+margin-top: 20px;
+
+
+
+
+} }
+
+#downloadButton:hover {
+  background-color: black
+}
+
+
+.game-container {
+       max-width: 800px;
+       margin: auto;
+       background-color: white;
+       padding: 20px;
+       border-radius: 8px;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       top:100px;
+       position: relative;
+
+
+   }
+   .light-mode .game-container {
+
+       background-color: whitesmoke;
+
+   }
+
+   .game-cover {
+       width: 100%;
+       height: auto;
+       border-radius: 4px;
+   }
+
+   .game-title {
+       margin-top: 20px;
+       color: #333;
+   }
+
+   .game-info {
+       font-size: 16px;
+       line-height: 1.6;
+       color: #666;
+       background-color: white;
+       border-radius: 8px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       font-family: Arial, sans-serif;
+   }
+
+
+   /* Existing CSS for game-container */
+.game-cover {
+   cursor: pointer;
+}
