@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-</head>
-<body>
-  <!doctype html>
-<html lang="en-US">
-<html>
- <head>
-
-   <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
-   <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
- <link rel="manifest" href="..//site.webmanifest">
- <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
- <meta name="msapplication-TileColor" content="#da532c">
- <meta name="theme-color" content="#ffffff">
-   <center>
+    <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
+  <link rel="manifest" href="..//site.webmanifest">
+  <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <center>
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -338,15 +331,25 @@ Accessibility<i class="fa fa-caret-down"></i>
 
         <div id="main-content" class="content">
           <div id="signupContainer">
-      <h2>Signup</h2>
-      <form id="signupForm" action="signup_process.php" method="POST">
-          Email: <input type="email" name="signupEmail" id="signupEmail" required><br>
-          Username: <input type="text" name="signupUsername" id="signupUsername" required><br>
-          Password: <input type="password" name="signupPassword" id="signupPassword" required><br>
-          <button type="submit">Signup</button>
-      </form>
-      <p>Already have an account? <a href="..//login/index.html">Login</a></p>
-  </div>
+        <h2>Signup</h2>
+        <form id="signupForm" action="signup_process.php" method="POST">
+            <div class="form-group">
+                <label for="signupEmail">Email:</label>
+                <input type="email" name="signupEmail" id="signupEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="signupUsername">Username:</label>
+                <input type="text" name="signupUsername" id="signupUsername" placeholder="Choose a username" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Password:</label>
+                <input type="password" name="signupPassword" id="signupPassword" placeholder="Create a password" required>
+            </div>
+            <button type="submit" id="signupButton">Signup</button>
+        </form>
+        <p>Already have an account? <a href="../login/index.html">Login</a></p>
+    </div>
+
 
 
 

@@ -4293,3 +4293,25 @@ margin-top: 20px;
 .game-cover {
    cursor: pointer;
 }
+
+
+.header {
+  margin-top:100px;
+}
+
+
+.header1 {
+  font-size:30px;
+}
+
+.about-archive {
+
+    padding: 20px;
+}
+.development-story {
+    padding: 20px;
+}
+
+.research-focus {
+  padding: 20px;
+}
