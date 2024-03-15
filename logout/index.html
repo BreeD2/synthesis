@@ -1,24 +1,25 @@
-<!doctype html>
-<html lang="en-US">
-<html>
- <head>
-   <title>Watch Dogs</title>
-   <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
-   <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
- <link rel="manifest" href="..//site.webmanifest">
- <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
- <meta name="msapplication-TileColor" content="#da532c">
- <meta name="theme-color" content="#ffffff">
-   <center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
+  <link rel="manifest" href="..//site.webmanifest">
+  <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <center>
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="accessibility/index.html"></script>
   <script src="script.js"></script>
 <style>
@@ -41,10 +42,12 @@
       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
  </a>
- <a href="..//index.html">Home</a>
-     <a href="..//games/index.html"class="active">Games</a>
+ <a href="..//index.html" class="active">Home</a>
+     <a href="..//games/index.html">Games</a>
      <a href="..//about/index.html">About</a>
      <a href="..//contact/index.html">Contact</a>
+     <!-- Accessibility Button and Dropdown -->
+     <!-- User Information Dropdown -->
      <input type="text" id="searchInput2" placeholder="Search.." onkeyup="searchFunction()">
      <button id="clearSearch" onclick="clearSearchFunction()">X</button>
        <!-- Other navigation items -->
@@ -58,7 +61,7 @@
           <a href="..//signup/index.html">Signup</a>
          <a href="..//login/index.html">Login</a>
          <a href="..//myprofile/index.html">My Profile</a>
-         <a href="..//logout/index.html">Logout</a>
+         <a href="index.html">Logout</a>
        </div>
      </div>
      <div class="dropdown">
@@ -88,6 +91,9 @@ Accessibility<i class="fa fa-caret-down"></i>
  </div>
  <!-- Moved searchResults outside the topnav -->
  <div id="searchResults2" class="search-results2"></div>
+
+
+
 
 
  <aside class="sidebar">
@@ -121,456 +127,248 @@ Accessibility<i class="fa fa-caret-down"></i>
 
 
 
-      <ul class="search-results" id="searchResults"></ul>
-     <div id="game-list2">
-       <a href="..//animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
-       ">Animal Crossing: <br>New Horizons</a>
-  <a href="..//animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf
-  ">Animal Crossing: <br>New Leaf</a>
-  <a href="..//assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
-   <a href="..//batmanarkhamcity/index.html" data-game="Batman: Arkham City">Batman: Arkham City</a>
-  <a href="..//bigbrainacademywiidegree/index.html" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
-  <a href="..//blur/index.html" data-game="Blur">Blur</a>
-  <a href="..//cars/index.html" data-game="Cars">Cars</a>
-  <a href="..//darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls<br>Remastered</a>
-  <a href="..//deadpool/index.html" data-game="Deadpool">Deadpool</a>
-  <a href="..//despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: <br>Minion Mayhem</a>
-  <a href="..//disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
-  <a href="..//disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
-  <a href="..//disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
-  <a href="..//djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
-  <a href="..//donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns">Donkey Kong <br>Country Returns</a>
-  <a href="..//donkeykongcountrytropicalfreeze/index.html" data-game="Donkey Kong Country: Tropical Freeze">Donkey Kong Country:<br>Tropical Freeze</a>
-  <a href="..//dragonageinquisition/index.html" data-game="Dragon Age Inquisition">Dragon Age <br>Inquisition</a>
-  <a href="..//dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: <br>Dark Arisen</a>
-  <a href="..//driven/index.html" data-game="Driven">Driven</a>
-  <a href="..//easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: <br> Personal Trainer</a>
-  <a href="..//epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: <br>The Power of Two</a>
-  <a href="..//espnnba2K5/index.html" data-game="ESPN NBA 2K5">ESPN NBA 2K5</a>
-  <a href="..//facebreakerkoparty/index.html" data-game="FaceBreaker K.O. Party">FaceBreaker K.O. Party</a>
-  <a href="..//fallout3/index.html" data-game="Fallout 3">Fallout 3</a>
-  <a href="..//fallout4/index.html" data-game="Fallout 4">Fallout 4</a>
-  <a href="..//fortunestreet/index.html" data-game="Fortune Street">Fortune Street</a>
-  <a href="..//fridaythe13ththegame/index.html" data-game="Friday the 13th: The Game">Friday the 13th: <br>The Game</a>
-  <a href="..//frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: <br>Swampy’s Revenge</a>
-  <a href="..//gameparty/index.html" data-game="Game Party">Game Party</a>
-  <a href="..//granturismo/index.html" data-game="Gran Turismo">Gran Turismo</a>
-  <a href="..//grandtheftautoiv/index.html" data-game="Grand Theft Auto IV">Grand Theft Auto IV</a>
-  <a href="..//grandtheftautov/index.html" data-game="Grand Theft Auto V">Grand Theft Auto V
-  </a>
-  <a href="..//hellskitchenthegame/index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen:<br> The Game</a>
-  <a href="..//hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty:<br> Big City Dreams
-  </a>
-  <a href="//hoteltransylvania/index.html" data-game="Hotel Transylvania">Hotel Transylvania
-  </a>
-  <a href="..//hyrulewarriorsageofcalamity/index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors:<br> Age of Calamity</a>
-  <a href="..//injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: <br>Gods Among Us</a>
-  <a href="..//injustice2/index.html" data-game="Injustice 2">Injustice 2</a>
-  <a href="..//legobatman2dcsuperheroes/index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2:<br> DC Super Heroes
-  </a>
-  <a href="..//legobatman3beyondgothamindex.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3:<br> Beyond Gotham</a>
-  <a href="..//legocityundercover/index.html" data-game="Lego City Undercover">Lego City <br>Undercover</a>
-  <a href="..//legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC <br>Super Villains</a>
-  <a href="..//legojurassicworld/index.html" data-game="Lego Jurassic World">Lego Jurassic World</a>
-  <a href="..//legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel <br>Super Heroes</a>
-  <a href="..//legomarvelsuperheroes2/index.html" data-game="Lego Marvel Super Heroes 2
-  ">Lego Marvel <br>Super Heroes 2</a>
-  <a href="..//legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s<br> Avengers</a>
-  <a href="..//legopiratesofthecaribbean/index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Caribbean</a>
-  <a href="..//legostarwarstheforceawakens/index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: <br>The Force Awakens</a>
-  <a href="..//legotheincredibles/index.html" data-game="Lego The Incredibles">Lego <br>The Incredibles</a>
-  <a href="..//lifeisstrange/index.html" data-game="Life is Strange">Life is Strange</a>
-  <a href="..//lifeisstrange2/index.html" data-game="Life is Strange 2">Life is Strange 2</a>
-  <a href="..//lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: <br>Before the Storm</a>
-  <a href="..//lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: <br>True Colors</a>
-  <a href="..//littlebigplanet/index.html" data-game="LittleBigPlanet">LittleBigPlanet</a>
-  <a href="..//littlebigplanet2/index.html" data-game="LittleBigPlanet 2">LittleBigPlanet 2</a>
-  <a href="..//littlebigplanet3/index.html" data-game="LittleBigPlanet 3">LittleBigPlanet 3</a>
-  <a href="..//littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet <br>Karting</a>
-  <a href="..//luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion:<br> Dark Moon</a>
-  <a href="..//mandmsadventure/index.html" data-game="M&M’s Adventure">M&M’s Adventure</a>
-  <a href="..//madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: <br>The Video Game</a>
-  <a href="..//maddennfl07/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
-  <a href="..//maddennfl09/index.html" data-game="Madden NFL 09">Madden NFL 09</a>
-  <a href="..//maddennfl12/index.html" data-game="Madden NFL 12">Madden NFL 12</a>
-  <a href="..//maddennfl15/index.html" data-game="Madden NFL 15">Madden NFL 15</a>
-  <a href="..//maddennfl16/index.html" data-game="Madden NFL 16">Madden NFL 16</a>
-  <a href="..//maddennfl17/index.html" data-game="Madden NFL 17">Madden NFL 17</a>
-  <a href="..//maddennfl18/index.html" data-game="Madden NFL 18">Madden NFL 18</a
-  <a href="..//maddennfl19/index.html" data-game="Madden NFL 19">Madden NFL 19</a>
-  <a href="..//maddennfl20/index.html" data-game="Madden NFL 20">Madden NFL 20</a>
-  <a href="..//maddennfl25/index.html" data-game="Madden NFL 25">Madden NFL 25</a>
-  <a href="..//marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi:<br> Bowser's Inside Story</a>
-  <a href="..//marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic<br> at the Olympic Games</a>
-  <a href="..//marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic <br>at the London 2012<br> Olympic Games</a>
-  <a href="..//marioandsonicattherio2016olympicgames/index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic<br> at the Rio 2016 <br>Olympic Games</a>
-  <a href="..//mariokart7/index.html" data-game="Mario Kart 7">Mario Kart 7</a>
-  <a href="..//mariokart8/index.html" data-game="Mario Kart 8">Mario Kart 8</a>
-  <a href="..//mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 <br>Deluxe</a>
-  <a href="..//mariokartds/index.html" data-game="Mario Kart DS">Mario Kart DS</a>
-  <a href="..//mariokartwii/index.html" data-game="Mario Kart Wii">Mario Kart Wii</a>
-  <a href="..//marioparty8/index.html" data-game="Mario Party 8">Mario Party 8</a>
-  <a href="..//marioparty10/index.html" data-game="Mario Party 10">Mario Party 10</a>
-  <a href=".//mariopartyds/index.html" data-game="Mario Party DS">Mario Party DS</a>
-  <a href="..//mariopowertennis/index.html" data-game="Mario Power Tennis">Mario Power Tennis</a>
-  <a href="..//mariosportsmix/index.html" data-game="Mario Sports Mix">Mario Sports Mix</a>
-  <a href="..//mariosupersluggers/index.html" data-game="Mario Super Sluggers">Mario Super Sluggers</a>
-  <a href="..//mariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis:<br> Ultra Smash</a>
-  <a href="..//mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: <br>Mini-Land</a>
-  <a href="..//marvelsavenger/index.html" data-game="Marvel’s Avenger">Marvel’s Avenger</a>
-  <a href="..//marvelsspiderman/index.html" data-game="Marvel’s Spider-Man">Marvel’s Spider-Man</a>
-  <a href="..//masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect<br> Legendary Edition</a>
-  <a href="..//midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club:<br> Street Racing</a>
-  <a href="..//midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3:<br> Dub Edition</a>
-  <a href="..//mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11:<br> Aftermath</a>
-  <a href="..//mystreet/index.html" data-game="My Street">My Street</a>
-  <a href="..//mysterymastersmysteriesoftheheartcollection20gamesinallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters <br>MYSTERIES OF THE HEART<br> COLLECTION 20 GAMES <br>IN ALL Hidden Object <br>PC Game</a>
-  <a href="..//nba08/index.html" data-game="NBA 08">NBA 08</a>
-  <a href="..//nba2k8/index.html" data-game="NBA 2K8">NBA 2K8</a>
-  <a href="..//nba2k9/index.html" data-game="NBA 2K9">NBA 2K9</a>
-  <a href="..//nba2k10/index.html" data-game="NBA 2K10">NBA 2K10</a>
-  <a href="..//nba2k11/index.html" data-game="NBA 2K11">NBA 2K11</a>
-  <a href="..//nba2k12/index.html" data-game="NBA 2K12">NBA 2K12</a>
-  <a href="..//nba2k14/index.html" data-game="NBA 2K14">NBA 2K14</a>
-  <a href="..//nba2k15/index.html" data-game="NBA 2K15">NBA 2K15</a>
-  <a href="..//nba2k16/index.html" data-game="NBA 2K16">NBA 2K16</a>
-  <a href="..//nba2k17/index.html" data-game="NBA 2K17">NBA 2K17</a>
-  <a href="..//nba2k18/index.html" data-game="NBA 2K18">NBA 2K18</a>
-  <a href="..//nba2k19/index.html" data-game="NBA 2K19">NBA 2K19</a>
-  <a href="..//nba2k20/index.html" data-game="NBA 2K20">NBA 2K20</a>
-  <a href="..//nba2k21/index.html" data-game="NBA 2K21">NBA 2K21</a>
-  <a href="..//nba2k22/index.html" data-game="NBA 2K22">NBA 2K22</a>
-  <a href="..//nbalive08/index.html" data-game="NBA Live 08">NBA Live 08</a>
-  <a href="..//nbastreet/index.html" data-game="NBA Street">NBA Street</a>
-  <a href="..//needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed:<br> Carbon</a>
-  <a href="..//newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super <br>Mario Bros.</a>
-  <a href="..//newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super <br>Mario Bros. 2</a>
-  <a href="..//newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super <br>Mario Bros. U</a>
-  <a href="..//newsupermariobroswii/ndex.html" data-game="New Super Mario Bros. Wii">New Super <br>Mario Bros. Wi</a>
-  <a href="..//nhl2k10/index.html" data-game="NHL 2K10">NHL 2K10</a>
-  <a href="..//nintendoland/index.html" data-game="Nintendo Land">Nintendo Land</a>
-  <a href="..//phineasandferbacrossthe2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb:<br> Across the 2nd Dimension</a>
-  <a href="..//pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s <br>Party</a>
-  <a href="..//playstationallstarsbattleroyale/index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars<br>Battle Royale</a>
-  <a href="..//rio/index.html" data-game="Rio">Rio</a>
-  <a href="..//shrekforeverafter/index.html" data-game="Shrek Forever After">Shrek Forever After</a>
-  <a href="..//skateit/index.html" data-game="Skate It">Skate It</a>
-  <a href="..//sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega <br>All-Stars Racing</a>
-  <a href="..//sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: <br>Zero Gravity</a>
-  <a href="..//spongebobsquigglepants/index.html" data-game="SpongeBob Squigglepants">SpongeBob Squigglepants</a>
-  <a href="..//sportschampions/index.html" data-game="Sports Champions">Sports Champions</a>
-  <a href="..//stardewvalley/index.html" data-game="Stardew Valley">Stardew Valley</a>
-  <a href="..//stuntman/index.html" data-game="Stuntman">Stuntman</a>
-  <a href="..//sunsetoverdrive/index.html" data-game="Sunset Overdrive">Sunset Overdrive</a>
-  <a href="..//supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario <br>3D All-Stars</a>
-  <a href="..//supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario <br>3D Land</a>
-  <a href="..//supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario <br>3D World</a>
-  <a href="..//supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario <br>Galaxy 2</a>
-  <a href="..//supermariomaker/index.html" data-game="Super Mario Maker">Super Mario Maker</a>
-  <a href="..//supermariomaker2/index.html" data-game="Super Mario Maker 2">Super Mario Maker 2</a>
-  <a href="..//supermarioodyssey/index.html" data-game="Super Mario Odyssey">Super Mario Odyssey</a>
-  <a href="..//supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros.<br> Wonder</a>
-  <a href="..//supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. <br>for Nintendo 3DS</a>
-  <a href="..//supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros.<br> for Wii U</a>
-  <a href="..//theamazingrace/index.html" data-game="The Amazing Race">The Amazing Race</a>
-  <a href="..//theamazingspiderman2/index.html" data-game="The Amazing Spider-Man 2">The Amazing <br>Spider-Man 2</a>
-  <a href="..//theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures <br>of Captain Spirit</a>
-  <a href="..//theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: <br>Skyrim</a>
-  <a href="..//thefairlyoddparentsshadowshowdown/index.html" data-game="The Fairly OddParents: Shadow Showdown
-  ">The Fairly OddParents:<br> Shadow Showdown</a>
-  <a href="..//theincredibles/index.html" data-game="The Incredibles">The Incredibles</a>
-  <a href="..//thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: <br>Breath of the Wild</a>
-  <a href="..//thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie <br>Videogame</a>
-  <a href="..//theoregontrail/index.html" data-game="The Oregon Trail">The Oregon Trail</a>
-  <a href="..//thesims3/index.html" data-game="The Sims 3">The Sims 3</a>
-  <a href="..//thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3:<br> Starter Pack</a>
-  <a href="..//thesims4/index.html" data-game="The Sims 4">The Sims 4</a>
-  <a href="..//thesmurfs/index.html" data-game="The Smurfs">The Smurfs</a>
-  <a href="..//thesmurfs2/index.html" data-game="The Smurfs 2">The Smurfs 2</a>
-  <a href="..//thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The <br>SpongeBob SquarePants Movie</a>
-  <a href="..//thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: <br>Survival Instinct</a>
-  <a href="..//tomodachilife/index.html" data-game="Tomodachi Life">Tomodachi Life</a>
-  <a href="..//tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s <br>Pro Skater 4</a>
-  <a href="..//toystory3/index.html" data-game="Toy Story 3">Toy Story 3</a>
-  <a href="..//transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers:<br> Rise of the Dark Spark</a>
-  <a href="..//udrawstudio/index.html" data-game="uDraw Studio">uDraw Studio</a>
-  <a href="..//ultimatenesremix/index.html" data-game="Ultimate NES Remix">Ultimate NES Remix</a>
-  <a href="..//uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted:<br> Drake’s Fortune</a>
-  <a href="..//uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: <br>A Thief’s End</a>
-  <a href="index.html" data-game="Watch Dogs">Watch Dogs</a>
-  <a href="..//watchdogs2/index.html" data-game="Watch Dogs 2">Watch Dogs 2</a>
-  <a href="..//watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: <br>Legion</a>
-  <a href="..//wiiplay/index.html" data-game="Wii Play">Wii Play</a>
-  <a href="..//wiisports/index.html" data-game="Wii Sports">Wii Sports</a>
-  <a href="..//wipeout/index.html" data-game="Wipeout">Wipeout</a>
-  <a href="..//wipeout2/index.html" data-game="Wipeout 2">Wipeout 2</a>
-  <br><br><br>
-     </div>
-  </aside>
 
-  <!-- Sidebar Toggle Button -->
-  <!-- Sidebar Toggle Button -->
-  <div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
-   <i class="fa fa-gamepad"></i><br>
-  </div>
+<ul class="search-results" id="searchResults"></ul>
+<div id="game-list2">
+ <a href="..//animalcrossingnewhorizons/index.html" data-game="Animal Crossing: New Horizons">Animal Crossing: <br>New Horizons</a>
+<a href="..//animalcrossingnewleaf/index.html" data-game="Animal Crossing: New Leaf">Animal Crossing: <br>New Leaf</a>
+<a href="..//assassinscreedodyssey/index.html" data-game="Assassin’s Creed Odyssey">Assassin’s Creed Odyssey</a>
+<a href="..//batmanarkhamcity/index.html" data-game="Batman: Arkham City">Batman: Arkham City</a>
+<a href="..//bigbrainacademywiidegree/index.html" data-game="Big Brain Academy: Wii Degree">Big Brain Academy: <br> Wii Degree</a>
+<a href="..//blur/index.html" data-game="Blur">Blur</a>
+<a href="..//cars/index.html" data-game="Cars">Cars</a>
+<a href="..//darksoulsremastered/index.html" data-game="Dark Souls Remastered">Dark Souls<br>Remastered</a>
+<a href="..//deadpool/index.html" data-game="Deadpool">Deadpool</a>
+<a href="..//despicablememinionmayhem/index.html" data-game="Despicable Me: Minion Mayhem ">Despicable Me: <br>Minion Mayhem</a>
+<a href="..//disneyinfinity/index.html" data-game="Disney Infinity">Disney Infinity</a>
+<a href="..//disneyinfinity30/index.html" data-game="Disney Infinity 3.0.">Disney Infinity 3.0.</a>
+<a href="..//disneyuniverse/index.html" data-game="Disney Universe">Disney Universe</a>
+<a href="..//djhero2/index.html" data-game="DJ Hero 2">DJ Hero 2</a>
+<a href="..//donkeykongcountryreturns/index.html" data-game="Donkey Kong Country Returns">Donkey Kong <br>Country Returns</a>
+<a href="..//donkeykongcountrytropicalfreeze/index.html" data-game="Donkey Kong Country: Tropical Freeze">Donkey Kong Country:<br>Tropical Freeze</a>
+<a href="..//dragonageinquisition/index.html" data-game="Dragon Age Inquisition">Dragon Age <br>Inquisition</a>
+<a href="..//dragondogmadarkarisen/index.html" data-game="Dragon Dogma: Dark Arisen">Dragon Dogma: <br>Dark Arisen</a>
+<a href="..//driven/index.html" data-game="Driven">Driven</a>
+<a href="..//easportspersonaltrainer/index.html" data-game="EA Sports: Personal Trainer">EA Sports: <br> Personal Trainer</a>
+<a href="..//epicmickey2thepoweroftwo/index.html" data-game="Epic Mickey 2: The Power of Two">Epic Mickey 2: <br>The Power of Two</a>
+<a href="..//espnnba2K5/index.html" data-game="ESPN NBA 2K5">ESPN NBA 2K5</a>
+<a href="..//facebreakerkoparty/index.html" data-game="FaceBreaker K.O. Party">FaceBreaker K.O. Party</a>
+<a href="..//fallout3/index.html" data-game="Fallout 3">Fallout 3</a>
+<a href="..//fallout4/index.html" data-game="Fallout 4">Fallout 4</a>
+<a href="..//fortunestreet/index.html" data-game="Fortune Street">Fortune Street</a>
+<a href="..//fridaythe13ththegame/index.html" data-game="Friday the 13th: The Game">Friday the 13th: <br>The Game</a>
+<a href="..//frogger2swampysrevenge/index.html" data-game="Frogger 2: Swampy’s Revenge">Frogger 2: <br>Swampy’s Revenge</a>
+<a href="..//gameparty/index.html" data-game="Game Party">Game Party</a>
+<a href="..//granturismo/index.html" data-game="Gran Turismo">Gran Turismo</a>
+<a href="..//grandtheftautoiv/index.html" data-game="Grand Theft Auto IV">Grand Theft Auto IV</a>
+<a href="..//grandtheftautov/index.html" data-game="Grand Theft Auto V">Grand Theft Auto V</a>
+<a href="..//hellskitchenthegame/index.html" data-game="Hell’s Kitchen: The Game">Hell’s Kitchen:<br> The Game</a>
+<a href="..//hellokittybigcitydreams/index.html" data-game="Hello Kitty: Big City Dreams">Hello Kitty:<br> Big City Dreams</a>
+<a href="..//hoteltransylvania/index.html" data-game="Hotel Transylvania">Hotel Transylvania</a>
+<a href="..//hyrulewarriorsageofcalamity/index.html" data-game="Hyrule Warriors: Age of Calamity">Hyrule Warriors:<br> Age of Calamity</a>
+<a href="..//injusticegodsamongus/index.html" data-game="Injustice: Gods Among Us">Injustice: <br>Gods Among Us</a>
+<a href="..//injustice2/index.html" data-game="Injustice 2">Injustice 2</a>
+<a href="..//legobatman2dcsuperheroes/index.html" data-game="Lego Batman 2: DC Super Heroes">Lego Batman 2:<br> DC Super Heroes</a>
+<a href="..//legobatman3beyondgotham/index.html" data-game="Lego Batman 3: Beyond Gotham">Lego Batman 3:<br> Beyond Gotham</a>
+<a href="..//legocityundercover/index.html" data-game="Lego City Undercover">Lego City <br>Undercover</a>
+<a href="..//legodcsupervillains/index.html" data-game="Lego DC Super Villains">Lego DC <br>Super Villains</a>
+<a href="..//legojurassicworld/index.html" data-game="Lego Jurassic World">Lego Jurassic World</a>
+<a href="..//legomarvelsuperheroes/index.html" data-game="Lego Marvel Super Heroes">Lego Marvel <br>Super Heroes</a>
+<a href="..//legomarvelsuperheroes2/index.html" data-game="Lego Marvel Super Heroes 2">Lego Marvel <br>Super Heroes 2</a>
+<a href="..//legomarvelsavengers/index.html" data-game="Lego Marvel’s Avengers">Lego Marvel’s<br> Avengers</a>
+<a href="..//legopiratesofthecaribbean/index.html" data-game="Lego Pirates of the Caribbean">Lego <br>Pirates of the Caribbean</a>
+<a href="..//legostarwarstheforceawakens/index.html" data-game="Lego Star Wars: The Force Awakens">Lego Star Wars: <br>The Force Awakens</a>
+<a href="..//legotheincredibles/index.html" data-game="Lego The Incredibles">Lego <br>The Incredibles</a>
+<a href="..//lifeisstrange/index.html" data-game="Life is Strange">Life is Strange</a>
+<a href="..//lifeisstrange2/index.html" data-game="Life is Strange 2">Life is Strange 2</a>
+<a href="..//lifeisstrangebeforethestorm/index.html" data-game="Life Is Strange: Before the Storm">Life Is Strange: <br>Before the Storm</a>
+<a href="..//lifeisstrangetruecolors/index.html" data-game="Life Is Strange: True Colors">Life Is Strange: <br>True Colors</a>
+<a href="..//littlebigplanet/index.html" data-game="LittleBigPlanet">LittleBigPlanet</a>
+<a href="..//littlebigplanet2/index.html" data-game="LittleBigPlanet 2">LittleBigPlanet 2</a>
+<a href="..//littlebigplanet3/index.html" data-game="LittleBigPlanet 3">LittleBigPlanet 3</a>
+<a href="..//littlebigplanetkarting/index.html" data-game="LittleBigPlanet Karting">LittleBigPlanet <br>Karting</a>
+<a href="..//luigismansiondarkmoon/index.html" data-game="Luigi's Mansion: Dark Moon">Luigi's Mansion:<br> Dark Moon</a>
+<a href="..//mandmsadventure/index.html" data-game="M&M’s Adventure">M&M’s Adventure</a>
+<a href="..//madagascar3thevideogame/index.html" data-game="Madagascar 3: The Video Game">Madagascar 3: <br>The Video Game</a>
+<a href="..//maddennfl07/index.html" data-game="Madden NFL 07">Madden NFL 07</a>
+<a href="..//maddennfl09/index.html" data-game="Madden NFL 09">Madden NFL 09</a>
+<a href="..//maddennfl12/index.html" data-game="Madden NFL 12">Madden NFL 12</a>
+<a href="..//maddennfl15/index.html" data-game="Madden NFL 15">Madden NFL 15</a>
+<a href="..//maddennfl16/index.html" data-game="Madden NFL 16">Madden NFL 16</a>
+<a href="..//maddennfl17/index.html" data-game="Madden NFL 17">Madden NFL 17</a>
+<a href="..//maddennfl18/index.html" data-game="Madden NFL 18">Madden NFL 18</a>
+<a href="..//maddennfl19/index.html" data-game="Madden NFL 19">Madden NFL 19</a>
+<a href="..//maddennfl20/index.html" data-game="Madden NFL 20">Madden NFL 20</a>
+<a href="..//maddennfl25/index.html" data-game="Madden NFL 25">Madden NFL 25</a>
+<a href="..//marioandluigibowsersinsidestory/index.html" data-game="Mario & Luigi: Bowser's Inside Story">Mario & Luigi:<br> Bowser's Inside Story</a>
+<a href="..//marioandsonicattheolympicgames/index.html" data-game="Mario & Sonic at the Olympic Games">Mario & Sonic<br> at the Olympic Games</a>
+<a href="..//marioandsonicatthelondon2012olympicgames/index.html" data-game="Mario & Sonic at the London 2012 Olympic Games">Mario & Sonic <br>at the London 2012<br> Olympic Games</a>
+<a href="..//marioandsonicattherio2016olympicgame/index.html" data-game="Mario & Sonic at the Rio 2016 Olympic Games">Mario & Sonic<br> at the Rio 2016 <br>Olympic Games</a>
+<a href="..//mariokart7/index.html" data-game="Mario Kart 7">Mario Kart 7</a>
+<a href="..//mariokart8/index.html" data-game="Mario Kart 8">Mario Kart 8</a>
+<a href="..//mariokart8deluxe/index.html" data-game="Mario Kart 8 Deluxe">Mario Kart 8 <br>Deluxe</a>
+<a href="..//mariokartds/index.html" data-game="Mario Kart DS">Mario Kart DS</a>
+<a href="..//mariokartwii/index.html" data-game="Mario Kart Wii">Mario Kart Wii</a>
+<a href="..//marioparty8/index.html" data-game="Mario Party 8">Mario Party 8</a>
+<a href="..//marioparty10/index.html" data-game="Mario Party 10">Mario Party 10</a>
+<a href="..//mariopartyds/index.html" data-game="Mario Party DS">Mario Party DS</a>
+<a href="..//mariopowertennis/index.html" data-game="Mario Power Tennis">Mario Power Tennis</a>
+<a href="..//mariosportsmix/index.html" data-game="Mario Sports Mix">Mario Sports Mix</a>
+<a href="..//mariosupersluggers/index.html" data-game="Mario Super Sluggers">Mario Super Sluggers</a>
+<a href="..//mariotennisultrasmash/index.html" data-game="Mario Tennis: Ultra Smash">Mario Tennis:<br> Ultra Smash</a>
+<a href="..//mariovsdonkeykongminiland/index.html" data-game="Mario vs. Donkey Kong: Mini-Land">Mario vs. Donkey Kong: <br>Mini-Land</a>
+<a href="..//marvelsavenger/index.html" data-game="Marvel’s Avenger">Marvel’s Avenger</a>
+<a href="..//marvelsspiderman/index.html" data-game="Marvel’s Spider-Man">Marvel’s Spider-Man</a>
+<a href="..//masseffectlegendaryedition/index.html" data-game="Mass Effect Legendary Edition">Mass Effect<br> Legendary Edition</a>
+<a href="..//midnightclubstreetracing/index.html" data-game="Midnight Club: Street Racing">Midnight Club:<br> Street Racing</a>
+<a href="..//midnightclub3dubedition/index.html" data-game="Midnight Club 3: Dub Edition">Midnight Club 3:<br> Dub Edition</a>
+<a href="..//mortalkombat11aftermath/index.html" data-game="Mortal Kombat 11: Aftermath">Mortal Kombat 11:<br> Aftermath</a>
+<a href="..//mystreet/index.html" data-game="My Street">My Street</a>
+<a href="..//mysterymastersmysteriesoftheheartcollection20gamesinallhiddenobjectpcgame/index.html" data-game="Mystery Masters MYSTERIES OF THE HEART COLLECTION 20 GAMES IN ALL Hidden Object PC Game">Mystery Masters <br>MYSTERIES OF THE HEART<br> COLLECTION 20 GAMES <br>IN ALL Hidden Object <br>PC Game</a>
+<a href="..//nba08/index.html" data-game="NBA 08">NBA 08</a>
+<a href="..//nba2k8/index.html" data-game="NBA 2K8">NBA 2K8</a>
+<a href="..//nba2k9/index.html" data-game="NBA 2K9">NBA 2K9</a>
+<a href="..//nba2k10/index.html" data-game="NBA 2K10">NBA 2K10</a>
+<a href="..//nba2k11/index.html" data-game="NBA 2K11">NBA 2K11</a>
+<a href="..//nba2k12/index.html" data-game="NBA 2K12">NBA 2K12</a>
+<a href="..//nba2k14/index.html" data-game="NBA 2K14">NBA 2K14</a>
+<a href="..//nba2k15/index.html" data-game="NBA 2K15">NBA 2K15</a>
+<a href="..//nba2k16/index.html" data-game="NBA 2K16">NBA 2K16</a>
+<a href="..//nba2k17/index.html" data-game="NBA 2K17">NBA 2K17</a>
+<a href="..//nba2k18/index.html" data-game="NBA 2K18">NBA 2K18</a>
+<a href="..//nba2k19/index.html" data-game="NBA 2K19">NBA 2K19</a>
+<a href="..//nba2k20/index.html" data-game="NBA 2K20">NBA 2K20</a>
+<a href="..//nba2k21/index.html" data-game="NBA 2K21">NBA 2K21</a>
+<a href="..//nba2k22/index.html" data-game="NBA 2K22">NBA 2K22</a>
+<a href="..//nbalive08/index.html" data-game="NBA Live 08">NBA Live 08</a>
+<a href="..//nbastreet/index.html" data-game="NBA Street">NBA Street</a>
+<a href="..//needforspeedcarbon/index.html" data-game="Need for Speed: Carbon">Need for Speed:<br> Carbon</a>
+<a href="..//newsupermariobros/index.html" data-game="New Super Mario Bros.">New Super <br>Mario Bros.</a>
+<a href="..//newsupermariobros2/index.html" data-game="New Super Mario Bros. 2">New Super <br>Mario Bros. 2</a>
+<a href="..//newsupermariobrosu/index.html" data-game="New Super Mario Bros. U">New Super <br>Mario Bros. U</a>
+<a href="..//newsupermariobroswii/index.html" data-game="New Super Mario Bros. Wii">New Super <br>Mario Bros. Wi</a>
+<a href="..//nhl2k10/index.html" data-game="NHL 2K10">NHL 2K10</a>
+<a href="..//nintendoland/index.html" data-game="Nintendo Land">Nintendo Land</a>
+<a href="..//phineasandferbacrossthe2nddimension/index.html" data-game="Phineas and Ferb: Across the 2nd Dimension">Phineas and Ferb:<br> Across the 2nd Dimension</a>
+<a href="..//pinkiepiesparty/index.html" data-game="Pinkie Pie’s Party">Pinkie Pie’s <br>Party</a>
+<a href="..//playstationallstarsbattleroyale/index.html" data-game="PlayStation All-Stars Battle Royale">PlayStation All-Stars<br>Battle Royale</a>
+<a href="..//rio/index.html" data-game="Rio">Rio</a>
+<a href="..//shrekforeverafter/index.html" data-game="Shrek Forever After">Shrek Forever After</a>
+<a href="..//skateit/index.html" data-game="Skate It">Skate It</a>
+<a href="..//sonicandsegaallstarsracing/index.html" data-game="Sonic & Sega All-Stars Racing">Sonic & Sega <br>All-Stars Racing</a>
+<a href="..//sonicriderszerogravity/index.html" data-game="Sonic Riders: Zero Gravity">Sonic Riders: <br>Zero Gravity</a>
+<a href="..//spongebobsquigglepants/index.html" data-game="SpongeBob Squigglepants">SpongeBob Squigglepants</a>
+<a href="..//sportschampions/index.html" data-game="Sports Champions">Sports Champions</a>
+<a href="..//stardewvalley/index.html" data-game="Stardew Valley">Stardew Valley</a>
+<a href="..//stuntman/index.html" data-game="Stuntman">Stuntman</a>
+<a href="..//sunsetoverdrive/index.html" data-game="Sunset Overdrive">Sunset Overdrive</a>
+<a href="..//supermario3dallstars/index.html" data-game="Super Mario 3D All-Stars">Super Mario <br>3D All-Stars</a>
+<a href="..//supermario3dland/index.html" data-game="Super Mario 3D Land">Super Mario <br>3D Land</a>
+<a href="..//supermario3dworld/index.html" data-game="Super Mario 3D World">Super Mario <br>3D World</a>
+<a href="..//supermariogalaxy2/index.html" data-game="Super Mario Galaxy 2">Super Mario <br>Galaxy 2</a>
+<a href="..//supermariomaker/index.html" data-game="Super Mario Maker">Super Mario Maker</a>
+<a href="..//supermariomaker2/index.html" data-game="Super Mario Maker 2">Super Mario Maker 2</a>
+<a href="..//supermarioodyssey/index.html" data-game="Super Mario Odyssey">Super Mario Odyssey</a>
+<a href="..//supermariobroswonder/index.html" data-game="Super Mario Bros. Wonder">Super Mario Bros.<br> Wonder</a>
+<a href="..//supersmashbrosfornintendo3ds/index.html" data-game="Super Smash Bros. for Nintendo 3DS">Super Smash Bros. <br>for Nintendo 3DS</a>
+<a href="..//supersmashbrosforwiiu/index.html" data-game="Super Smash Bros. for Wii U">Super Smash Bros.<br> for Wii U</a>
+<a href="..//theamazingrace/index.html" data-game="The Amazing Race">The Amazing Race</a>
+<a href="..//theamazingspiderman2/index.html" data-game="The Amazing Spider-Man 2">The Amazing <br>Spider-Man 2</a>
+<a href="..//theawesomeadventuresofcaptainspirit/index.html" data-game="The Awesome Adventures of Captain Spirit">The Awesome Adventures <br>of Captain Spirit</a>
+<a href="..//theelderscrollsvskyrim/index.html" data-game="The Elder Scrolls V: Skyrim">The Elder Scrolls V: <br>Skyrim</a>
+<a href="..//thefairlyoddparentsshadowshowdown/index.html" data-game="The Fairly OddParents: Shadow Showdown
+">The Fairly OddParents:<br> Shadow Showdown</a>
+<a href="..//theincredibles/index.html" data-game="The Incredibles">The Incredibles</a>
+<a href="..//thelegendofzeldabreathofthewild/index.html" data-game="The Legend of Zelda: Breath of the Wild">The Legend of Zelda: <br>Breath of the Wild</a>
+<a href="..//thelegomovievideogame/index.html" data-game="The Lego Movie Videogame">The Lego Movie <br>Videogame</a>
+<a href="..//theoregontrail/index.html" data-game="The Oregon Trail">The Oregon Trail</a>
+<a href="..//thesims3/index.html" data-game="The Sims 3">The Sims 3</a>
+<a href="..//thesims3starterpack/index.html" data-game="The Sims 3: Starter Pack">The Sims 3:<br> Starter Pack</a>
+<a href="..//thesims4/index.html" data-game="The Sims 4">The Sims 4</a>
+<a href="..//thesmurfs/index.html" data-game="The Smurfs">The Smurfs</a>
+<a href="..//thesmurfs2/index.html" data-game="The Smurfs 2">The Smurfs 2</a>
+<a href="..//thespongebobsquarepantsmovie/index.html" data-game="The SpongeBob SquarePants Movie">The <br>SpongeBob SquarePants Movie</a>
+<a href="..//thewalkingdeadsurvivalinstinct/index.html" data-game="The Walking Dead: Survival Instinct">The Walking Dead: <br>Survival Instinct</a>
+<a href="..//tomodachilife/index.html" data-game="Tomodachi Life">Tomodachi Life</a>
+<a href="..//tonyhawksproskater4/index.html" data-game="Tony Hawk’s Pro Skater 4">Tony Hawk’s <br>Pro Skater 4</a>
+<a href="..//toystory3/index.html" data-game="Toy Story 3">Toy Story 3</a>
+<a href="..//transformersriseofthedarkspark/index.html" data-game="Transformers: Rise of the Dark Spark">Transformers:<br> Rise of the Dark Spark</a>
+<a href="..//udrawstudio/index.html" data-game="uDraw Studio">uDraw Studio</a>
+<a href="..//ultimatenesremix/index.html" data-game="Ultimate NES Remix">Ultimate NES Remix</a>
+<a href="..//uncharteddrakesfortune/index.html" data-game="Uncharted: Drake’s Fortune">Uncharted:<br> Drake’s Fortune</a>
+<a href="..//uncharted4athiefsend/index.html" data-game="Uncharted 4: A Thief’s End">Uncharted 4: <br>A Thief’s End</a>
+<a href="..//watchdogs/index.html" data-game="Watch Dogs">Watch Dogs</a>
+<a href="..//watchdogs2/index.html" data-game="Watch Dogs 2">Watch Dogs 2</a>
+<a href="..//watchdogslegion/index.html" data-game="Watch Dogs: Legion">Watch Dogs: <br>Legion</a>
+<a href="..//wiiplay/index.html" data-game="Wii Play">Wii Play</a>
+<a href="..//wiisports/index.html" data-game="Wii Sports">Wii Sports</a>
+<a href="..//wipeout/index.html" data-game="Wipeout">Wipeout</a>
+<a href="..//wipeout2/index.html" data-game="Wipeout 2">Wipeout 2</a>
+<br><br><br>
+</div>
+</aside>
 
-  <div id="searchResults">
+<!-- Sidebar Toggle Button -->
+<div class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+  <i class="fa fa-gamepad"></i><br>
+</div>
+
+<div id="searchResults">
 
 
 
-     </div>
-
-     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width:200px;" id="mySidebar">
-         <button onclick="toggleSidebar()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-         <!-- Add your sidebar content here -->
-     </div>
-
-             <div id="main-content" class="content">
-
- <div class="game-container">
-   <img src="watchdogs.png" alt="Watch Dogs" class="game-cover">
-
-
-       <h1 class="game-title">Watch Dogs</h1>
-       <button id="likeButton" class="icon-button"><i class="far fa-thumbs-up"></i> Like</button>
-    <button id="commentButton" class="icon-button"><i class="far fa-comment"></i> Comment</button>
-    <button id="rateButton" class="icon-button"><i class="fas fa-star"></i> Rate</button>
-  <div id="ratingContainer" style="display: none;">
-      <span class="star" data-value="1">&#9733;</span>
-      <span class="star" data-value="2">&#9733;</span>
-      <span class="star" data-value="3">&#9733;</span>
-      <span class="star" data-value="4">&#9733;</span>
-      <span class="star" data-value="5">&#9733;</span>
-  </div>
-
-       <p class="game-info"><strong>Developer(s):</strong><br>Ubisoft Montreal
+    </div>
 
 
 
 
-</p>
-       <p class="game-info"><strong>Publisher(s):</strong><br>Ubisoft
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;width:200px;" id="mySidebar">
+        <button onclick="toggleSidebar()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+        <!-- Add your sidebar content here -->
+    </div>
 
 
+        <div id="main-content" class="content">
+          <div id="app">
 
-
-
-
-</p>
-       <p class="game-info"><strong>Series:</strong><br>Watch Dogs
-
-
-
-
-
-
-
-</p>
-       <p class="game-info"><strong>Platform(s):</strong><br>Microsoft Windows<br>
-Nintendo Wii U<br>
-PlayStation 3<br>
-PlayStation 4<br>
-Xbox 360<br>
-Xbox One
-
-
-
-
-
-
-</p>
-       <p class="game-info"><strong>Released Date(s):</strong><br>North America: May 27, 2014<br>
-Australia: May 27, 2014<br>
-Europe: May 27, 2014
-
-
-
-
-
-
-</p>
-       <p class="game-info"><strong>Genre(s):</strong><br>Action<br>
-Adventure<br>
-Shooter
-
-
-
-
-
-</p>
-       <p class="game-info"><strong>Mode(s):</strong><br>Single-player & Multiplayer
-
-
-
-</p>
-
-       <p class="game-info">
-     <strong>Bree's Review:</strong><br><span class="star-rating">
-         <i class="fas fa-star"></i> <!-- 1st star -->
-         <i class="fas fa-star"></i> <!-- 2nd star -->
-         <i class="fas fa-star"></i> <!-- 3rd star -->
-         <i class="fas fa-star"></i> <!-- 4th star -->
-         <i class="far fa-star"></i> <!-- 5th star (empty) -->
-     </span>
-     <br> After experiencing my first foray into the Animal Crossing universe with "New Leaf," I've become quite the enthusiast. "Animal Crossing: New Horizons" elevates the series with its expansive customization options, allowing for a level of personal expression I hadn't encountered before in gaming. For the first time, I was able to craft a character who truly mirrored my appearance, adding a personal touch to my virtual escapade. The game's landscaping possibilities are impressive, offering endless creativity in designing one's island paradise. The ability to design and share unique clothing, hats, and art enhances this further, although I'm less thrilled about the restriction of one island per console — a limitation that feels unnecessarily binding without investing in additional hardware. While I yearn for richer dialogues from the animal inhabitants to enrich the world further, my overall experience has been profoundly positive. Acquiring the game in March 2020, amid the pandemic, it provided not just a delightful escape but a means to connect and share moments with others during isolation.
-
- </p>
-
-   </div>
-   <div class="footer">
-     <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
-   </div>
-   </div>
-
-
-     <!-- The Modal -->
-     <div id="myModal" class="modal">
-         <!-- The Close Button -->
-         <span class="close">Close</span>
-
-         <!-- Modal Content (The Image) -->
-         <img class="modal-content" id="img01">
-
-         <!-- Control Buttons -->
-         <div class="modal-footer">
-           <!-- Zoom In Button -->
-           <button id="zoomIn" class="zoom-btn">+</button>
-
-           <!-- Zoom Out Button -->
-           <button id="zoomOut" class="zoom-btn">-</button>
-           <!-- Download Button -->
-           <a id="downloadLink" download>
-               <button id="downloadButton">Download</button>
-               <a href="watchdogs.png" download="Watch Dogs">
-                  <a>
-
-
-             </a>
-         </div>
+       <div id="logged-in" style="display: none;"> <!-- Initially hidden -->
+           <h2>Welcome, User!</h2>
+           <form class="logout-form" onsubmit="logout(event)">
+               <button type="submit">Logout</button>
+           </form>
        </div>
 
-<script>
-  document.getElementById("rateButton").addEventListener("click", function() {
-   var ratingContainer = document.getElementById("ratingContainer");
-   ratingContainer.style.display = ratingContainer.style.display === "none" ? "block" : "none";
- });
-
-  document.querySelectorAll('.star').forEach(star => {
-    star.addEventListener('mouseover', hoverStars);
-    star.addEventListener('mouseout', function() {
-      updateStars(this.parentElement);
-    });
-    star.addEventListener('click', setRating);
-  });
-
-  function hoverStars() {
-    this.classList.add('hover');
-    const hoverValue = this.dataset.value;
-    this.parentElement.querySelectorAll('.star').forEach(star => {
-      if (star.dataset.value <= hoverValue) {
-        star.classList.add('hover');
-      } else {
-        star.classList.remove('hover');
-      }
-    });
-  }
-
-  function setRating() {
-    const ratingValue = this.dataset.value;
-    const ratingContainer = this.parentElement;
-    if (!ratingContainer.dataset.hasRated) {
-      ratingContainer.dataset.rating = ratingValue;
-      ratingContainer.dataset.hasRated = "true";
-      updateStars(ratingContainer);
-      alert("You rated this " + ratingValue + " stars. Thank you for your feedback!");
-    }
-  }
-
-  function updateStars(ratingContainer) {
-    const ratingValue = ratingContainer.dataset.rating;
-    ratingContainer.querySelectorAll('.star').forEach(star => {
-      star.classList.remove('hover');
-      if (star.dataset.value <= ratingValue) {
-        star.classList.add('selected');
-      } else {
-        star.classList.remove('selected');
-      }
-    });
-  }
-</script>
+       <!-- Not logged-in state (this would also be dynamically shown or hidden based on login status) -->
+       <div id="not-logged-in" style="display: none;"> <!-- Initially hidden -->
+           <h2>You are not logged in.</h2>
+           <p class="login-message">Please login to access the logout form.</p>
+       </div>
+   </div>
 
 
 
-<script>
-  // Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal
-var img = document.querySelector(".game-cover");
-var modalImg = document.getElementById("img01");
-img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div class="modal-footer">
 
-// When the user clicks on <span>, close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+    <button id="zoomIn" class="zoom-btn">+</button>
+    <button id="zoomOut" class="zoom-btn">-</button>
+    <!-- The Download button is dynamic based on the image shown, so it's moved to JavaScript -->
 
-// Zoom functionality
-var zoomLevel = 1;
-var zoomStep = 0.1;
 
-document.getElementById("zoomIn").addEventListener("click", function() {
-    zoomLevel += zoomStep;
-    modalImg.style.transform = "scale(" + zoomLevel + ")";
-});
+  </div>
+</div>
 
-document.getElementById("zoomOut").addEventListener("click", function() {
-    if (zoomLevel > zoomStep) {
-        zoomLevel -= zoomStep;
-        modalImg.style.transform = "scale(" + zoomLevel + ")";
-    }
-});
-</script>
 
-<script>
-  document.getElementById("likeButton").addEventListener("click", function() {
-    if (isUserSignedIn()) {
-        // Logic to handle liking the game
-        alert("Liked!");
-    } else {
-        alert("Please sign in to like this game.");
-    }
-});
 
-document.getElementById("commentButton").addEventListener("click", function() {
-    if (isUserSignedIn()) {
-        // Logic to handle commenting on the game
-        alert("Opening comment box..."); // Placeholder action
-    } else {
-        alert("Please sign in to comment on this game.");
-    }
-});
-document.getElementById("rateButton").addEventListener("click", function() {
-    if (isUserSignedIn()) {
-        // Logic to handle commenting on the game
-        alert("Opening comment box..."); // Placeholder action
-    } else {
-        alert("Please sign in to comment on this game.");
-    }
-});
+<div class="footer">
+  <div class="copy">Copyright &copy; 2024 Reminiscence Collection. All rights reserved.</div>
+</div>
 
-function isUserSignedIn() {
-    // Placeholder function: Implement your authentication check here
-    // Return true if user is signed in, false otherwise
-    return false; // Change this based on actual sign-in status
-}
-</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -3191,7 +2989,7 @@ function updateSubCategory() {
   console.log("Main category selected:", mainCategory); // Debugging line
 
   // Clear previous subcategory options
-  subCategory.innerHTML = '<option value="" disabled selected hidden>Select a subcategory</option>';
+  subCategory.innerHTML = '<option value="" disabled selected hidden>Choose a subcategory</option>';
 
   // Example: Dummy data for demonstration
   const optionsData = {
@@ -3300,7 +3098,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         <script>
-          let slideIndex = 1;
+        let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -3316,8 +3114,7 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -3328,26 +3125,9 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}</script>
+}
+        </script>
 
-<script>
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-      var sidebar = document.getElementById('sidebar');
-      var content = document.getElementById('main-content');
-      var isSmallScreen = window.innerWidth < 768;
-
-      // Toggle sidebar visibility and adjust content size
-      if (sidebar.style.left === '-250px') {
-          sidebar.style.left = '0px';
-          content.classList.add(isSmallScreen ? 'small-screen' : 'big-screen');
-      } else {
-          sidebar.style.left = '-250px';
-          content.classList.remove(isSmallScreen ? 'small-screen' : 'big-screen');
-      }
-  });
-
-</script>
     <script>
       document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.body.classList.toggle('sidebar-visible');
@@ -3370,67 +3150,35 @@ function showSlides(n) {
 
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const speakButton = document.getElementById('speakButton');
+    speakButton.addEventListener('click', function() {
+        speakText();
+    });
+});
 
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            var mainContent = document.querySelector('main');
+function speakText() {
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance();
+        let textToRead = '';
 
-            if (sidebar.style.left === '0px') {
-                sidebar.style.left = '-250px';
-                mainContent.style.marginLeft = '0px';
-            } else {
-                sidebar.style.left = '0px';
-                mainContent.style.marginLeft = '250px';
-            }
-        }
-
-        function liveSearch(query) {
-            var searchResultsContainer = document.getElementById('searchResults');
-            searchResultsContainer.innerHTML = ''; // Clear previous results
-
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var simulatedResults = [
-                'Game 1 Result',
-                'Game 2 Result',
-                'Another Game Result',
-                'Yet Another Result',
-                'Example Game Result'
-            ];
-
-            // Filter results based on the query
-            var filteredResults = simulatedResults.filter(function (result) {
-                return result.toLowerCase().includes(query.toLowerCase());
-            });
-
-            // Display filtered results in the sidebar
-            filteredResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality or other features
-            // ...
+        document.querySelectorAll('.read-aloud').forEach(element => {
+            textToRead += element.textContent + ' ';
         });
-    </script>
+
+        utterance.text = textToRead;
+        speechSynthesis.speak(utterance);
+    } else {
+        alert('Your browser does not support text-to-speech functionality.');
+    }
+}
+
+</script>
 
 
 
-    <!-- JavaScript for Sidebar Toggle and Game Details (unchanged from the previous example) -->
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.querySelector('.sidebar');
-            sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
-        }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your existing JavaScript code for modal functionality
-            // ...
-        });
-    </script>
 
     <script>
         function toggleDropdown() {
@@ -3449,83 +3197,16 @@ function showSlides(n) {
         document.body.classList.toggle('light-mode');
         // Set button styles explicitly for light mode
         if (document.body.classList.contains('light-mode')) {
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'white';
-            document.getElementById('accessibility-dropup').style.color = 'black';
+            document.getElementById('.accessibility-dropup').style.backgroundColor = 'white';
+            document.getElementById('.accessibility-dropup').style.color = 'black';
         } else {
             // Set button styles explicitly for dark mode
-            document.getElementById('accessibility-dropup').style.backgroundColor = 'dodgerblue';
-            document.getElementById('accessibility-dropup').style.color = 'white';
+            document.getElementById('.accessibility-dropup').style.backgroundColor = 'dodgerblue';
+            document.getElementById('.accessibility-dropup').style.color = 'white';
         }
     }
 </script>
 
-<!-- JavaScript -->
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-<!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Contrast and Sepia control scripts -->
-    <!-- Saturation, Contrast, and Sepia control scripts -->
-    <!-- Red-Green Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Blue-Yellow Filter control scripts -->
-    <!-- Grayscale Filter control scripts -->
-    <script>
-      var grayscaleFilter = false;
-
-      function updateFilter() {
-        document.body.style.filter = grayscaleFilter ? "grayscale(100%)" : "none";
-      }
-
-      function toggleGrayscale() {
-        grayscaleFilter = !grayscaleFilter;
-        updateFilter();
-      }
-
-      function resetFilter() {
-        grayscaleFilter = false;
-        updateFilter();
-      }
-    </script>
 
 
 
@@ -3683,7 +3364,7 @@ function showSlides(n) {
     }
 
     function toggleAccessibilityMenu() {
-        var accessibilityDropup = document.getElementById("accessibility-dropup");
+        var accessibilityDropup = document.getElementById(".accessibility-dropup");
         accessibilityDropup.style.display = (accessibilityDropup.style.display === "block") ? "none" : "block";
     }
 
@@ -3720,209 +3401,14 @@ function showSlides(n) {
 </script>
 
 <!-- JavaScript -->
-<script>
-    function toggleLightMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('dark-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'light-mode' class based on the current state
-        document.body.classList.toggle('light-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    function toggleDarkMode() {
-        // Remove other classes that might affect the background
-        document.body.classList.remove('light-mode');
-        document.body.classList.remove('invert-colors');
-
-        // Add or remove the 'dark-mode' class based on the current state
-        document.body.classList.toggle('dark-mode');
-
-        // Close the dropup after the action
-        closeAccessibilityDropup();
-    }
-
-    // Add this function to close the dropup
-    function closeAccessibilityDropup() {
-        var dropup = document.getElementById('accessibility-dropup');
-        dropup.style.display = 'none';
-    }
-</script>
-
-<!-- JavaScript -->
 
 
 
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
 
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
 
-    // Reset font size to default
-    document.body.style.fontSize = "";
 
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
 
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
 
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
-}
-
-console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-    // ... (existing code)
-    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality
-        // ...
-    });
-</script>
-
-<!-- JavaScript for Sidebar Toggle and Live Search -->
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the sidebar
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
-
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        var mainContent = document.querySelector('main');
-
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px';
-            mainContent.style.marginLeft = '0px';
-        } else {
-            sidebar.style.left = '0px';
-            mainContent.style.marginLeft = '250px';
-        }
-    }
-
-    async function liveSearch(query) {
-        var searchResultsContainer = document.getElementById('searchResults');
-        var gameListContainer = document.getElementById('game-list2');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
-
-        try {
-            // Simulate fetching results from a server (Replace with actual data retrieval)
-            var response = await fetch(`https://api.example.com/search?q=${encodeURIComponent(query)}`);
-            var serverResults = await response.json();
-
-            // Display server results in the search results list
-            serverResults.forEach(function (result) {
-                var listItem = document.createElement('li');
-                listItem.textContent = result;
-                searchResultsContainer.appendChild(listItem);
-            });
-
-            // Update game list based on the query
-            gameListContainer.innerHTML = ''; // Clear previous game list
-
-            // Simulate updating the game list based on the search query
-            // Replace with your logic to filter and update game list
-            var filteredGames = [
-                'Animal Crossing: New Horizons',
-                'Animal Crossing: New Leaf',
-                'Assassins Creed Odyssey',
-                'Yet Another Game Title',
-                'Example Game Title'
-            ];
-
-            // Display filtered games in the game list
-            filteredGames.forEach(function (game) {
-                var gameLink = document.createElement('a');
-                gameLink.href = '#'; // Replace with actual link or action
-                gameLink.setAttribute('data-game', game);
-                gameLink.textContent = game;
-                gameListContainer.appendChild(gameLink);
-            });
-        } catch (error) {
-            console.error('Error fetching results:', error);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Your existing JavaScript code for modal functionality or other features
-        // ...
-    });
-</script>
 <script>
   function applyGreenRedFilter() {
      document.body.style.filter = "sepia(100%) saturate(100%) hue-rotate(120deg)";
@@ -3978,7 +3464,33 @@ function decreaseFont() {
 }
 </script>
 
+  <script>
+    function decreaseFont() {
+        // Decrease the font size
+        var currentFontSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+        var newFontSize = currentFontSize * 0.9; // Adjust the multiplication factor as needed
+        document.body.style.fontSize = newFontSize + 'px';
 
+        // Adjust the sidebar size
+        var sidebar = document.querySelector('.sidebar');
+        var currentSidebarWidth = parseFloat(window.getComputedStyle(sidebar, null).getPropertyValue('width'));
+        var newSidebarWidth = currentSidebarWidth * 0.9; // Adjust the multiplication factor as needed
+        sidebar.style.width = newSidebarWidth + 'px';
+
+        // Adjust other elements inside the sidebar if needed
+        var links = document.querySelectorAll('.sidebar a');
+        links.forEach(function(link) {
+            var currentLinkSize = parseFloat(window.getComputedStyle(link, null).getPropertyValue('font-size'));
+            var newLinkSize = currentLinkSize * 0.9; // Adjust the multiplication factor as needed
+            link.style.fontSize = newLinkSize + 'px';
+        });
+
+        // Adjust the top position of the sidebar to maintain its top position
+        var topnavHeight = document.querySelector('.topnav').offsetHeight;
+        sidebar.style.top = topnavHeight + 'px';
+    }
+
+</script>
 <script>
 
   function applyRedFilter() {
@@ -4053,61 +3565,63 @@ function decreaseFont() {
     }
 
 </script>
-
 <script>
-    // Called once the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        storeOriginalFontSizes(); // Store original font sizes for specified elements
-        // Add any other initialization code here...
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  // Initial setup, storing original font sizes
+  storeOriginalFontSizes();
+});
 
-    // Store the original font sizes
-    function storeOriginalFontSizes() {
-        const selector = '.sidebar *,  .welcome, .underwelcome, .game-container, .game-title,#h1,.opening-screen button,.game-container,.game-info,#likeButton,.footer, #commentButton, #rateButton,.game-title, #enter-site-button';
-        document.querySelectorAll(selector).forEach(element => {
-            element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
-        });
-    }
+// Store the original font sizes of elements within the login form for resetting later
+function storeOriginalFontSizes() {
+  const selector = '#formsContainer, #formsContainer h2, .footer, .form-group label, #loginButton, p';
+  document.querySelectorAll(selector).forEach(element => {
+    element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
+  });
+}
 
-    // Adjust the font size of elements
-    function adjustFontSize(factor, selector) {
-        document.querySelectorAll(selector).forEach(element => {
-            const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
-            element.style.fontSize = `${currentFontSize * factor}px`;
-        });
-    }
+// Adjust the font size of specified elements within the login form
+function adjustFontSize(factor, selector) {
+  document.querySelectorAll(selector).forEach(element => {
+    const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
+    element.style.fontSize = `${currentFontSize * factor}px`;
+  });
+}
 
-    // Increase font size
-    function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
-    }
+// Increase font size within the login form
+function increaseFont() {
+  adjustFontSize(1.1, '#formsContainer, #formsContainer h2, .form-group label, .footer, #loginButton, p');
+}
 
-    // Decrease font size
-    function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button');
-    }
+// Decrease font size within the login form
+function decreaseFont() {
+  adjustFontSize(0.9, '#formsContainer, #formsContainer h2, .form-group label, .footer, #loginButton, p');
+}
 
-    // Reset font sizes to their original values
-    function resetFont() {
-        const selector = '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.game-container,.game-info,#likeButton, #commentButton, #rateButton,.game-title,.footer, #enter-site-button';
-        document.querySelectorAll(selector).forEach(element => {
-            const originalFontSize = element.getAttribute('data-original-font-size');
-            if (originalFontSize) element.style.fontSize = originalFontSize;
-        });
+// Reset font sizes to their original values specifically for the login form
+function resetFont() {
+  const selector = '#formsContainer, #formsContainer h2, .form-group label, #loginButton, p, .footer';
+  document.querySelectorAll(selector).forEach(element => {
+    const originalFontSize = element.getAttribute('data-original-font-size');
+    if (originalFontSize) {
+      element.style.fontSize = originalFontSize;
     }
+  });
+  // Re-store the original font sizes after reset to ensure adjustments are based on the reset size
+  storeOriginalFontSizes();
+}
 
-    // Reset settings including font sizes and other visual modifications
-    function resetSettings() {
-        resetFont(); // Resets font sizes
-        // Here, add other reset actions (e.g., removing classes, resetting filters)
-        // Example: document.body.classList.remove('dark-mode', 'invert-colors');
-        // Reset global style adjustments if any
-        document.body.style.filter = '';
-        document.body.style.webkitFilter = '';
-        // Close the accessibility menu if you have a function to do so
-        // closeAccessibilityDropup(); // Uncomment if this function is defined
-    }
+// Resets all settings including font sizes and other visual modifications
+function resetSettings() {
+  resetFont(); // Reset font sizes
+  document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode'); // Reset visual modes
+  document.body.style.filter = '';
+  document.body.style.webkitFilter = '';
+  // Add any additional reset functionalities as needed
+}
+
 </script>
+
+
 
 <script>// Get the modal
 var modal = document.getElementById("myModal");
@@ -4195,65 +3709,474 @@ document.getElementById('filterCheckbox').addEventListener('change', function() 
 </script>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}</script>
-
-<script>
-
+fetch('/api/featured-games')
+  .then(response => response.json())
+  .then(games => {
+    const carousel = document.querySelector('.games-carousel');
+    games.forEach(game => {
+      const card = document.createElement('div');
+      card.className = 'game-card';
+      card.innerHTML = `
+        <img src="${game.coverImage}" alt="${game.title}">
+        <p class="game-title">${game.title}</p>
+        <!-- Add more details as needed -->
+      `;
+      carousel.appendChild(card);
+    });
+  })
+  .catch(error => console.error('Error fetching featured games:', error));
 </script>
-<script>
-  // When the user clicks on the button, toggle between hiding and showing the dropdown content
-  document.querySelector('.accessibility-button').onclick = function() {
-    document.querySelector('.dropdown-content').classList.toggle('show');
-  };
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.accessibility-button')) {
-      var dropdowns = document.getElementsByClassName('dropdown-content');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get all images that will open the modal and insert them inside the modal when clicked
+  var imgs = document.querySelectorAll(".game-cover");
+  var modalImg = document.getElementById("img01");
+
+  // Attach onclick event to each image
+  imgs.forEach(img => {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
     }
-  };
+  });
+
+  // Get the <span> element that closes the modal and close it when clicked
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Zoom functionality
+  var zoomLevel = 1;
+  var zoomStep = 0.1;
+
+  document.getElementById("zoomIn").addEventListener("click", function() {
+    zoomLevel += zoomStep;
+    modalImg.style.transform = "scale(" + zoomLevel + ")";
+  });
+
+  document.getElementById("zoomOut").addEventListener("click", function() {
+    if (zoomLevel > 1) { // Ensure zoom level does not go below 1
+      zoomLevel -= zoomStep;
+      modalImg.style.transform = "scale(" + zoomLevel + ")";
+    }
+  });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const gameDetails = [
+    [
+      // Details for game slot 1
+      {
+        title: "Super Mario Odyssey",
+        developer: [
+      "Nintendo",
+"<br>Tencent Games (China)",
+      ],
+        publisher: [
+      "1-UP Studio",
+"<br>Nintendo EPD Tokyo",
+      ],
+        series: "Super Mario",
+        platform: "Nintendo Switch",
+        releaseDates: [
+      "Japan: October 27, 2017",
+"<br>USA: October 27, 2017",
+"<br>Mexico: October 27, 2017",
+"<br>Europe: October 27, 2017",
+"<br>Australia: October 27, 2017",
+"<br>Hong Kong: October 27, 2017",
+"<br>South Korea: December 1, 2017",
+"<br>Republic of China: December 1, 2017",
+"<br>China: March 16, 2020"
+      ],
+        genres:
+        [
+      "Action",
+      "<br>Adventure","<br>Platformer"
+
+      ],
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/supermarioodyssey.png",
+        imgAlt: "Cover art of Super Mario Odyssey"
+      },
+      {
+        title: "NBA 2K22",
+        developer: "Visual Concepts",
+        publisher: "2K",
+        series: "NBA 2K",
+        platform: [
+    "Apple Arcade (Arcade Edition)",
+    "<br>Microsoft Windows",
+    "<br>Nintendo Switch",
+    "<br>PlayStation 4",
+    "<br>PlayStation 5",
+    "<br>Xbox One",
+    "<br>Xbox Series X/S"
+  ],
+  releaseDates: [
+"Worldwide: September 10, 2021",
+"<br>Arcade Edition",
+"<br>Worldwide: October 19, 2021"
+],
+        genres: "Sports",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/nba2k22.png",
+        imgAlt: "Cover art of NBA 2K22"
+      },
+      {
+        title: "The Walking Dead: Survival Instinct",
+        developer: "Terminal Reality",
+        publisher: "Activision",
+        series: "The Walking Dead",
+        platform: [
+    "Microsoft Windows",
+"<br>Nintendo Wii U",
+"<br>PlayStation 3",
+"<br>Xbox 360"
+  ],
+  releaseDates: [
+"North America: March 19, 2013",
+"Australia: March 21, 2013",
+"Europe: March 22, 2013"
+],
+        genres: [
+      "Shooter",
+      "<br>Survival"
+      ],
+        modes: "Single-player Only",
+        imgSrc: "featured/thewalkingdeadsurvivalinstinct.jpg",
+        imgAlt: "Cover art of The Walking Dead: Survival Instinct"
+      },
+      {
+        title: "NBA 2K22",
+        developer: "Visual Concepts",
+        publisher: "2K",
+        series: "NBA 2K",
+        platform: [
+    "Apple Arcade (Arcade Edition)",
+    "<br>Microsoft Windows",
+    "<br>Nintendo Switch",
+    "<br>PlayStation 4",
+    "<br>PlayStation 5",
+    "<br>Xbox One",
+    "<br>Xbox Series X/S"
+  ],
+  releaseDates: [
+"Worldwide: September 10, 2021",
+"<br>Arcade Edition",
+"<br>Worldwide: October 19, 2021"
+],
+        genres: "Sports",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/nba2k22.png",
+        imgAlt: "Cover art of NBA 2K22"
+      },
+      {
+        title: "Tomodachi Life",
+        developer: "Nintendo SPD7",
+        publisher: "Nintendo",
+        series: "Tomodachi Life",
+        platform: [
+    "Nintendo 3DS"
+  ],
+  releaseDates: [
+"Japan: April 18, 2013",
+"<br>North America: June 6, 2014",
+"<br>Europe: June 6, 2014",
+"<br>Australia: June 7, 2014",
+"<br>South Korea: July 17, 2014",
+],
+        genres: [
+      "Simulation"
+      ],
+        modes: "Single-player Only",
+        imgSrc: "featured/tomodachilife.jpg",
+        imgAlt: "Cover art of Tomodachi Life"
+      },
+    ],
+    [
+      // Details for game slot 2
+      {
+        title: "Midnight Club 3: Dub Edition",
+        developer: "Rockstar San Diego",
+        publisher: "Rockstar Games",
+        series: "Midnight Club",
+        platform: [
+      "PlayStation 2",
+"<br>PlayStation Portable",
+"<br>Xbox"
+      ],
+        releaseDates: [
+      "PlayStation 2", "<br>Xbox",
+"<br>North America: April 12, 2005",
+"<br>Phase Alternating Line: April 15, 2005",
+"<br>PlayStation Portable",
+"<br>North America: June 28, 2005",
+"<br>Phase Alternating Line: September 1, 2005",
+"<br>Remix",
+"<br>North America: March 13, 2006",
+"<br>Europe: March 17, 2006"
+      ],
+        genres: "Racing",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/midnightclub3dubedition.png",
+        imgAlt: "Cover art of Midnight Club 3: Dub Edition"
+      },
+      // Details for game slot 2
+      {
+        title: "Frogger 2: Swampy’s Revenge",
+        developer: [
+      "Blitz Games (PlayStation, Dreamcast, Microsoft Windows)",
+"<br>Game Titan (Game Boy Color)"
+      ],
+        publisher: "Frogger",
+        series: "Frogger",
+        platform: [
+      "Dreamcast",
+"<br>Game Boy Color",
+"<br>Microsoft Windows",
+"<br>PlayStation"
+      ],
+        releaseDates: [
+      "North America: September 21, 2000",
+"<br>Europe: October 13, 2000 (PC, PlayStation)",
+"<br>Dreamcast",
+"<br>North America: October 13, 2000"
+      ],
+        genres: "Action",
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/frogger2swampysrevenge.jpg",
+        imgAlt: "Cover art of Frogger 2: Swampy’s Revenge"
+      },
+      {
+        title: "The Sims 3: Starter Pack",
+        developer: [
+      "Maxis"
+      ],
+        publisher: "Electronic Arts",
+        series: "The Sims",
+        platform: [
+      "Mac",
+"<br>PC",
+
+      ],
+        releaseDates: [
+      "March 25, 2013"
+      ],
+        genres: "Simulation",
+        modes: "Single-player Only",
+        imgSrc: "featured/thesims3starterpack.png",
+        imgAlt: "Cover art of The Sims 3: Starter Pack"
+      },
+      {
+  title: "The SpongeBob SquarePants Movie",
+  developer: [
+    "AWE Games (Microsoft Windows)",
+    "<br>Aspyr (Mac)",
+    "<br>Heavy Iron Studios (PlayStation 2, Nintendo GameCube, Xbox)",
+    "<br>WayForward Technologies (Game Boy Advance)"
+  ],
+  publisher: [
+    "Aspyr (Mac)",
+    "<br>THQ"
+  ],
+  series: "SpongeBob SquarePants",
+  platform: [
+    "Game Boy Advance",
+    "<br>Mac OS X",
+    "<br>Mobile",
+    "<br>Microsoft Windows",
+    "<br>Nintendo GameCube",
+    "<br>PlayStation 2",
+    "<br>Xbox"
+  ],
+  releaseDates: [
+    "<br>Game Boy Advance, Nintendo GameCube, PlayStation 2, PC, Xbox",
+    "<br>North America: October 27, 2004",
+    "<br>Phase Alternating Line: February 18, 2005",
+    "<br>Mobile", "November 2004",
+    "<br>Mac OS X", "North America: December 12, 2005",
+  ],
+  genres: ["Platformer", "<br>Adventure"],
+  modes: "Single-player Only",
+  imgSrc: "featured/thespongebobsquarepantsmovie.png",
+  imgAlt: "Cover art of The SpongeBob SquarePants Movie"
+},
+{
+title: "Uncharted 4: A Thief’s End",
+developer: [
+"Naughty Dog"
+],
+publisher: [
+"Sony Computer Entertainment"
+],
+series: "Uncharted",
+platform: [
+"Microsoft Windows",
+"<br>PlayStation 4",
+"<br>PlayStation 5",
+],
+releaseDates: [
+"PlayStation 4",
+"<br>May 10, 2016",
+"<br>PlayStation 5",
+"<br>January 28, 2022",
+"<br>Microsoft Windows",
+"<br>October 19, 2022",
+],
+genres: ["Action",
+"<br>Adventure",
+"<br>Shooter"],
+modes: "Single-player & Multiplayer",
+imgSrc: "featured/uncharted4athiefsend.png",
+imgAlt: "Cover art of Uncharted 4: A Thief’s End"
+}
+
+    ],
+    [
+      // Details for game slot 3
+      {
+        title: "LittleBigPlanet",
+        developer:
+      "Media Molecule",
+        publisher: "Sony Computer Entertainment",
+        series: "LittleBigPlanet",
+        platform:
+      "PlayStation 3",
+
+        releaseDates: [
+      "October 27, 2008",
+"<br>North America: October 27, 2008",
+"<br>Europe: November 5, 2008",
+"<br>Australia: November 7, 2008",
+"<br>Game of the Year Edition",
+"<br>North America: September 8, 2009",
+"<br>United Kingdom: April 16, 2010",
+      ],
+        genres:[
+      "Platformer",
+"<br>Sandbox",
+
+
+      ],
+        modes:
+      "Single-player & Multiplayer",
+
+        imgSrc: "featured/littlebigplanet.png",
+        imgAlt: "LittleBigPlanet",
+      },
+      {
+        title: "DJ Hero 2",
+        developer: "FreeStyleGames",
+        publisher: "Activision",
+        series: "DJ Hero",
+        platform: [
+      "Nintendo Wii",
+"<br>PlayStation 3",
+"<br>Xbox 360"
+      ],
+        releaseDates: [
+      "North America: October 19, 2010",
+"<br>Australia: October 19, 2010",
+"<br>Europe: October 22, 2010"
+      ],
+        genres:
+        [
+      "Music"
+
+      ],
+        modes: "Single-player & Multiplayer",
+        imgSrc: "featured/djhero2.png",
+        imgAlt: "Cover art of DJ Hero 2"
+      },
+      {
+        title: "uDraw Studio",
+        developer: "Pipeworks Software",
+        publisher: "THQ",
+        series: "uDraw",
+        platform: [
+      "Nintendo Wii",
+
+      ],
+        releaseDates: [
+      "North America: November 14, 2010",
+"<br>Australia: February 24, 2011",
+"<br>Europe: March 4, 2011",
+      ],
+        genres:
+        [
+      "Art"
+
+      ],
+        modes: "Single-player Only",
+        imgSrc: "featured/udrawstudio.png",
+        imgAlt: "Cover art of uDraw Studio"
+      },
+    ]
+  ];
+
+  function updateGameInfo(slotIndex) {
+    const slot = gameDetails[slotIndex];
+    const currentGame = slot[Math.floor(Math.random() * slot.length)];
+    const gameCard = document.querySelector(`#game${slotIndex + 1}-info`).parentNode;
+    gameCard.querySelector('.game-cover').src = currentGame.imgSrc;
+    gameCard.querySelector('.game-cover').alt = currentGame.imgAlt;
+
+    // For releaseDates, assuming it's a string. Adding a <br> for an additional line space
+      const releaseDatesString = `<br>${currentGame.releaseDates}`;
+
+    const gameInfo = gameCard.querySelector('.game-info');
+    gameInfo.innerHTML = `<h3 class="game-title">${currentGame.title}</h3>
+                          <p><strong>Developer(s):</strong><br>${currentGame.developer}</p>
+                          <p><strong>Publisher(s):</strong><br>${currentGame.publisher}</p>
+                          <p><strong>Series:</strong><br>${currentGame.series}</p>
+                          <p><strong>Platform(s):</strong><br>${currentGame.platform}</p>
+                          <p><strong>Released Date(s):</strong><br>${currentGame.releaseDates}</p>
+                          <p><strong>Genre(s):</strong><br>${currentGame.genres}</p>
+                          <p><strong>Mode(s):</strong><br>${currentGame.modes}</p>`;
+  }
+
+  // Initial update
+  gameDetails.forEach((_, index) => updateGameInfo(index));
+
+  // Schedule updates (e.g., every 2 minutes = 120000 milliseconds)
+  setInterval(() => {
+    gameDetails.forEach((_, index) => updateGameInfo(index));
+  }, 10000);
+});
+
+</script>
+
 
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
+    var userInfo = document.querySelector(".user-info"); // Select the .user-info container
+    var dropdown = document.querySelector(".dropdown"); // Assuming you also want to select and hide .dropdown
+
     if (x.className === "topnav") {
         x.className += " responsive";
+        // Hide .user-info in responsive mode
+        if (userInfo) userInfo.style.display = "none";
+        // Hide .dropdown in responsive mode, if it exists
+        if (dropdown) dropdown.style.display = "none";
     } else {
         x.className = "topnav";
-    }
-
-    // Get all elements with the 'dropdown-content' class within the topnav
-    var dropdowns = x.getElementsByClassName("dropdown");
-    for (var i = 0; i < dropdowns.length; i++) {
-        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
-        if (x.className.includes("responsive")) {
-            dropdowns[i].style.display = "none";
-        } else {
-            // Reset style in case it was previously modified
-            dropdowns[i].style.display = "";
-        }
+        // Show .user-info when not in responsive mode
+        if (userInfo) userInfo.style.display = "";
+        // Show .dropdown when not in responsive mode, if it exists
+        if (dropdown) dropdown.style.display = "";
     }
 }
-
-// This part is to ensure the dropdown content does not display in responsive mode
-// You may need to add an event listener or modify existing ones for dropdown buttons
-// to control their display property separately if they should be visible in responsive mode.
-
 </script>
+
+
+
 
 <script>
   // When the user clicks on the button, toggle between hiding and showing the dropdown content
@@ -4276,131 +4199,394 @@ function myFunction() {
 </script>
 
 
+
 <script>
-  // Get modal elements
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-var zoomInButton = document.getElementById("zoomIn");
-var zoomOutButton = document.getElementById("zoomOut");
+document.addEventListener('DOMContentLoaded', function() {
+  const accessibilityButton = document.querySelector('.accessibility-button');
+  const iconSpan = document.createElement('span');
+  iconSpan.innerHTML = '<i class="fa fa-cog" style="display:none;"></i>'; // Gear icon is hidden by default
+  accessibilityButton.appendChild(iconSpan); // Add the gear icon span to the button
 
-// Initial zoom scale
-var imgZoom = 1;
-
-// Zoom in function
-function zoomIn() {
-  imgZoom += 0.1; // Increase zoom
-  modalImg.style.transform = `scale(${imgZoom})`;
-}
-
-// Zoom out function
-function zoomOut() {
-  imgZoom -= 0.1; // Decrease zoom
-  modalImg.style.transform = `scale(${imgZoom})`;
-}
-
-// Attach zoom event listeners
-zoomInButton.onclick = zoomIn;
-zoomOutButton.onclick = zoomOut;
-
-// Image click to open modal
-document.querySelectorAll('.mySlides img').forEach(img => {
-  img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.getAttribute('data-caption'); // Assuming you use 'data-caption' attribute for captions
-    imgZoom = 1; // Reset zoom
-    modalImg.style.transform = `scale(${imgZoom})`; // Apply reset
-  }
-});
-
-// Close modal
-document.getElementsByClassName("close")[0].onclick = function() {
-  modal.style.display = "none";
-}
-</script>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-<script>
-document.getElementById('filterCheckbox').addEventListener('change', function() {
-    var filterOptionsDiv = document.getElementById('filterOptions');
-    if (this.checked) {
-        filterOptionsDiv.style.display = 'block';
+  // Function to update the icon based on screen width
+  function updateIcon() {
+    if (window.innerWidth <= 600) {
+      // Small screens: show gear icon, hide caret-down
+      accessibilityButton.querySelector('.fa-cog').style.display = 'inline-block';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'none';
     } else {
-        filterOptionsDiv.style.display = 'none';
+      // Larger screens: show caret-down, hide gear icon
+      accessibilityButton.querySelector('.fa-cog').style.display = 'none';
+      accessibilityButton.querySelector('.fa-caret-down').style.display = 'inline-block';
     }
+  }
+
+  // Add search input to the designated container
+  const searchContainer = document.querySelector('.search-container');
+  if (searchContainer) {
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search..';
+    searchContainer.appendChild(searchInput);
+  }
+
+  window.addEventListener('resize', updateIcon);
+  updateIcon(); // Call once on load
 });
 </script>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+function toggleFocusHighlight() {
+  var styleElement = document.getElementById('focus-highlight-style');
+
+  if (styleElement) {
+    // If the style element exists, remove it to disable focus highlight
+    styleElement.remove();
   } else {
-    x.className = "topnav";
+    // Create a new style element to add focus highlight styles
+    styleElement = document.createElement('style');
+    styleElement.id = 'focus-highlight-style';
+    styleElement.innerText = `:focus { outline: 2px solid yellow; }`; // Customize as needed
+    document.head.appendChild(styleElement);
   }
-}</script>
-
-<script>
-
-</script>
-<script>
-  // When the user clicks on the button, toggle between hiding and showing the dropdown content
-  document.querySelector('.accessibility-button').onclick = function() {
-    document.querySelector('.dropdown-content').classList.toggle('show');
-  };
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.accessibility-button')) {
-      var dropdowns = document.getElementsByClassName('dropdown-content');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  };
+}
 </script>
 
 <script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+document.getElementById('speakSelectedText').addEventListener('click', function() {
+    // Get selected text
+    var text = getSelectedText();
+    if (text) {
+        speakText(text);
     } else {
-        x.className = "topnav";
+        console.log('No text selected.');
     }
+});
 
-    // Get all elements with the 'dropdown-content' class within the topnav
-    var dropdowns = x.getElementsByClassName("dropdown");
-    for (var i = 0; i < dropdowns.length; i++) {
-        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
-        if (x.className.includes("responsive")) {
-            dropdowns[i].style.display = "none";
-        } else {
-            // Reset style in case it was previously modified
-            dropdowns[i].style.display = "";
+function getSelectedText() {
+    var text = '';
+    if (typeof window.getSelection != "undefined") {
+        text = window.getSelection().toString();
+    } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+
+function speakText(textToSpeak) {
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance();
+        msg.text = textToSpeak;
+        window.speechSynthesis.speak(msg);
+    } else {
+        console.log('Text-to-Speech not supported.');
+    }
+}
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const stopButton = document.getElementById('stopButton');
+    stopButton.addEventListener('click', function() {
+        if ('speechSynthesis' in window) {
+            speechSynthesis.cancel();
         }
+    });
+});
+</script>
+
+<script>
+const bcrypt = require('bcrypt');
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(session({
+  secret: 'your secret key',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+// Assuming you have a User model and database setup
+app.post('/signup', async (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 10);
+  // Save username, hashedPassword, and an optional profileImageUrl to your database
+});
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = await User.findOne({ username });
+  if (user && await bcrypt.compare(password, user.hashedPassword)) {
+    req.session.userId = user.id; // Log the user in
+    res.json({ message: "Logged in successfully" });
+  } else {
+    res.status(401).json({ message: "Invalid credentials" });
+  }
+});
+</script>
+
+
+<script>
+app.get('/profile', async (req, res) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ message: "Not authenticated" });
+  }
+
+  const user = await User.findById(req.session.userId);
+  res.json({ username: user.username, profileImageUrl: user.profileImageUrl });
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const signInButton = document.getElementById('signInButton');
+  const userProfile = document.querySelector('.user-profile');
+  const userNameDiv = document.querySelector('.user-name');
+
+  signInButton.addEventListener('click', () => {
+    // Simulate sign in process
+    signInButton.style.display = 'none'; // Hide sign in button
+    userProfile.style.display = 'flex'; // Show user profile
+  });
+
+  userNameDiv.addEventListener('click', () => {
+    const newName = prompt('Enter new name:');
+    if (newName) {
+      userNameDiv.textContent = newName;
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const loginButton = document.getElementById('loginButton');
+  const logoutButton = document.getElementById('logoutButton');
+  const userProfile = document.getElementById('userProfile');
+  const userName = document.getElementById('userName');
+  const userIcon = document.getElementById('userIcon');
+
+  // Simulate a user sign-in process
+  loginButton.addEventListener('click', () => {
+    // Here, you would replace these values with those from your sign-in process
+    const exampleUser = {
+      name: 'John Doe',
+      icon: 'path/to/user-icon.jpg' // Use a real image path
+    };
+    // Display user information
+    userName.textContent = exampleUser.name;
+    userIcon.src = exampleUser.icon;
+
+    // Update UI
+    loginButton.style.display = 'none';
+    userProfile.style.display = 'flex';
+  });
+
+  // Simulate user sign-out
+  logoutButton.addEventListener('click', () => {
+    // Hide user info and show login button
+    userProfile.style.display = 'none';
+    loginButton.style.display = 'block';
+  });
+});
+
+
+</script>
+
+<script>
+// Simulate checking login status on page load
+document.addEventListener('DOMContentLoaded', () => {
+    checkLoginStatus();
+});
+
+function logIn() {
+    // Here you would have your actual login logic
+    localStorage.setItem('isLoggedIn', 'true');
+    checkLoginStatus();
+}
+
+function logOut() {
+    localStorage.removeItem('isLoggedIn');
+    checkLoginStatus();
+}
+
+function checkLoginStatus() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
+    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
+}
+</script>
+
+  </body>
+  </html>
+
+
+
+    <script>
+      document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('signupUsername').value;
+      const password = document.getElementById('signupPassword').value;
+
+      fetch('/signup', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+      }).then(response => {
+          if (response.ok) {
+              alert('Signup successful');
+          } else {
+              alert('Signup failed');
+          }
+      });
+  });
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+
+      fetch('/login', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+      }).then(response => {
+          if (response.ok) {
+              alert('Login successful');
+              // Redirect or change UI state here
+          } else {
+              alert('Login failed');
+          }
+      });
+  });
+</script>
+<script>
+  document.getElementById('initialSignupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Simulate email confirmation step
+    alert('A confirmation email has been sent. Please check your inbox.');
+    document.getElementById('initialSignupForm').style.display = 'none';
+    document.getElementById('completeSignupForm').style.display = 'block';
+});
+
+function completeSignup() {
+    // Implement actual signup logic here
+    alert('Signup complete. You can now log in.');
+    toggleForms();
+}
+
+function toggleForms() {
+    const signupSection = document.getElementById('signupSection');
+    const loginSection = document.getElementById('loginSection');
+    if (signupSection.style.display === 'none') {
+        signupSection.style.display = 'block';
+        loginSection.style.display = 'none';
+    } else {
+        signupSection.style.display = 'none';
+        loginSection.style.display = 'block';
     }
 }
 
-// This part is to ensure the dropdown content does not display in responsive mode
-// You may need to add an event listener or modify existing ones for dropdown buttons
-// to control their display property separately if they should be visible in responsive mode.
-
 </script>
-
 <script>
-function toggleDropdown2() {
+  const express = require('express');
+const nodemailer = require('nodemailer');
+const jwt = require('jsonwebtoken');
+const app = express();
+app.use(express.json());
+
+const JWT_SECRET = "your_secret_here"; // Use a real secret in production
+const transporter = nodemailer.createTransport({/* SMTP settings */});
+
+app.post('/initialSignup', async (req, res) => {
+    const { email } = req.body;
+    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1h' });
+
+    // Send confirmation email
+    const confirmationUrl = `http://yourfrontend.com/confirmSignup?token=${token}`;
+    await transporter.sendMail({
+        to: email,
+        subject: 'Confirm your email',
+        html: `Please click this link to confirm your email: <a href="${confirmationUrl}">Confirm Email</a>`
+    });
+
+    res.send('Confirmation email sent.');
+});
+
+app.post('/completeSignup', (req, res) => {
+    const { token, username, password } = req.body;
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+        // Save the username and password to your database
+        res.send('Signup completed.');
+    } catch (error) {
+        res.status(400).send('Invalid or expired token.');
+    }
+});
+
+app.listen(3000, () => console.log('Server running'));
+</script>
+<script>
+  document.getElementById('initialSignupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('signupEmail').value;
+    // Send email to backend...
+});
+
+function completeSignup() {
+    const username = document.getElementById('signupUsername').value;
+    const password = document.getElementById('signupPassword').value;
+    const token = /* Extract token from URL */;
+    // Send username, password, and token to backend...
+}
+</script>
+<script>
+  function toggleDropdown() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    document.getElementById(isLoggedIn ? 'loggedInMenu' : 'loggedOutMenu').style.display = 'block';
+}
+
+// Placeholder function to simulate logging out
+function logOut() {
+    localStorage.setItem('isLoggedIn', 'false');
+    // Hide the dropdown and update UI as necessary
+    document.getElementById('loggedInMenu').style.display = 'none';
+    alert('Logged out');
+}
+
+// Example function to simulate setting login status (not tied to actual authentication)
+function simulateLogin() {
+    localStorage.setItem('isLoggedIn', 'true');
+    document.getElementById('loggedOutMenu').style.display = 'none';
+    alert('Logged in');
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon-dropdown img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
+}
+</script>
+<script>
+  function toggleDropdown() {
     const dropdown = document.querySelector('.dropdown-content2');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
 }
 
 // Optional: Close the dropdown if the user clicks outside of it
@@ -4416,118 +4602,98 @@ window.onclick = function(event) {
     }
 }
 </script>
+<script>function toggleDropdown2() {
+    const dropdown = document.querySelector('.dropdown-content2');
+    // Toggle display
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
 
+// Example logout function
+function logOut() {
+    // Hide logged-in toolbar
+    document.querySelector('.logged-in-toolbar').style.display = 'none';
+    // Show logged-out view
+    document.querySelector('.logged-out-toolbar').style.display = 'block';
+    // Optionally, reset dropdown
+    document.querySelector('.dropdown-content2').style.display = 'none';
+    // Here, you should also handle the actual logout logic, like clearing session data
+    alert('You have been logged out.');
+}
 
-<script>
-  // When the user clicks on the button, toggle between hiding and showing the dropdown content
-  document.querySelector('.accessibility-button').onclick = function() {
-    document.querySelector('.dropdown-content').classList.toggle('show');
-  };
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.accessibility-button')) {
-      var dropdowns = document.getElementsByClassName('dropdown-content');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon img')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
         }
-      }
     }
-  };
+}
 </script>
-
-
 <script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
+  function toggleDropdown2() {
+      const dropdownContent = document.querySelector('.dropdown-content2');
+      dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  }
 
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
+  // Close dropdown when clicking outside
+  window.addEventListener('click', function(event) {
+      if (!event.target.matches('.user-icon, .user-icon img')) {
+          const dropdowns = document.getElementsByClassName("dropdown-content2");
+          for (let i = 0; i < dropdowns.length; i++) {
+              let openDropdown = dropdowns[i];
+              if (openDropdown.style.display === 'block') {
+                  openDropdown.style.display = 'none';
+              }
+          }
+      }
+  });
 
-    // Reset font size to default
-    document.body.style.fontSize = "";
-
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
-
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
+</script>
+<script>
+function toggleDropdown2() {
+    // Select the dropdown menu
+    var dropdown = document.querySelector('.dropdown-content2');
+    // Toggle the display property
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
 }
 
-console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-    // ... (existing code)
-    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
-</script>
-
-
-
-<script>
-  function resetSettings() {
-    // Remove other classes that might affect the background
-    document.body.classList.remove('dark-mode');
-    document.body.classList.remove('invert-colors');
-    document.body.classList.remove('light-mode');
-
-    // Reset other variables if needed
-    grayscaleFilter = false;
-    redGreenFilter = 0;
-    saturation = 100;
-    contrast = 100;
-    sepia = 0;
-    brightness = 100;
-
-    // Reset font size to default
-    document.body.style.fontSize = "";
-
-    // Reset invert colors
-    document.body.classList.remove("invert-colors");
-
-    // Temporarily disable transitions during reset
-    document.body.classList.add("disable-transition");
-
-    // Update the styles to reflect the default settings
-    updateFilter();
-    updateStyles();
-    updateContrast();
-    updateBrightness();
-
-    // Close the dropup after the action
-    closeAccessibilityDropup();
-
-    // Enable transitions after the reset
-    setTimeout(function () {
-        document.body.classList.remove("disable-transition");
-    }, 1000); // Adjust the timeout value based on your transition duration
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.user-icon, .user-icon img, .user-icon i')) {
+        var dropdowns = document.querySelectorAll(".dropdown-content2");
+        dropdowns.forEach(function(dropdown) {
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        });
+    }
 }
-
-console.log("Before reset:", document.querySelector('.sidebar').offsetWidth);
-    // ... (existing code)
-    console.log("After reset:", document.querySelector('.sidebar').offsetWidth);
 </script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+    // Simulated login process
+    var username = document.getElementById('loginUsername').value;
+    var password = document.getElementById('loginPassword').value;
+
+    // Example: Check if username and password match a predefined set
+    if(username === "user" && password === "pass") {
+        alert("Login successful!");
+        // Redirect to another page upon successful login
+        window.location.href = "welcome.html"; // Change "welcome.html" to your actual page
+    } else {
+        alert("Login failed. Please check your username and password.");
+    }
+});</script>
 
 <script>
 function myFunction() {
@@ -5097,64 +5263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const loginButton = document.getElementById('loginButton');
-  const logoutButton = document.getElementById('logoutButton');
-  const userProfile = document.getElementById('userProfile');
-  const userName = document.getElementById('userName');
-  const userIcon = document.getElementById('userIcon');
 
-  // Simulate a user sign-in process
-  loginButton.addEventListener('click', () => {
-    // Here, you would replace these values with those from your sign-in process
-    const exampleUser = {
-      name: 'John Doe',
-      icon: 'path/to/user-icon.jpg' // Use a real image path
-    };
-    // Display user information
-    userName.textContent = exampleUser.name;
-    userIcon.src = exampleUser.icon;
-
-    // Update UI
-    loginButton.style.display = 'none';
-    userProfile.style.display = 'flex';
-  });
-
-  // Simulate user sign-out
-  logoutButton.addEventListener('click', () => {
-    // Hide user info and show login button
-    userProfile.style.display = 'none';
-    loginButton.style.display = 'block';
-  });
-});
-
-
-</script>
-
-<script>
-// Simulate checking login status on page load
-document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
-});
-
-function logIn() {
-    // Here you would have your actual login logic
-    localStorage.setItem('isLoggedIn', 'true');
-    checkLoginStatus();
-}
-
-function logOut() {
-    localStorage.removeItem('isLoggedIn');
-    checkLoginStatus();
-}
-
-function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
-    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
-}
-</script>
 <script>
 function toggleDropdown2() {
     const dropdown = document.querySelector('.dropdown-content2');
@@ -5175,6 +5284,8 @@ window.onclick = function(event) {
 }
 </script>
 
+
+<!-- Heyo This is Important -->
 
 <script>
 document.getElementById('speakSelectedText').addEventListener('click', function() {
@@ -5615,7 +5726,7 @@ const searchFunction = () => {
   { name: 'Mario Party DS', url: '..//mariopartyds/index.html' },
   { name: 'Mario Power Tennis', url: '..//mariopowertennis/index.html' },
   { name: 'Mario Sports Mix', url: '..//mariosportsmix/index.html' },
-  { name: 'Mario Super Sluggers', url: '..//mariosupersluggers/index.html' },
+  { name: 'Mario Super Sluggers', url: '..//..//mariosupersluggers/index.html' },
   { name: 'Mario Tennis: Ultra Smash', url: '..//mariotennisultrasmash/index.html' },
   { name: 'Mario vs. Donkey Kong: Mini-Land', url: '..//mariovsdonkeykongminiland/index.html' },
   { name: 'Marvel’s Avenger', url: '..//marvelsavenger/index.html' },
@@ -5645,7 +5756,7 @@ const searchFunction = () => {
   { name: 'NBA Live 08', url: '..//nbalive08/index.html' },
   { name: 'NBA Street', url: '..//nbastreet/index.html' },
   { name: 'Need for Speed: Carbon', url: '..//needforspeedcarbon/index.html' },
-  { name: 'New Super Mario Bros.', url: '..//obros/index.html' },
+  { name: 'New Super Mario Bros.', url: '..//newsupermariobros/index.html' },
     { name: 'New Super Mario Bros. 2', url: '..//newsupermariobros2/index.html' },
     { name: 'New Super Mario Bros. U', url: '..//newsupermariobrosu/index.html' },
     { name: 'New Super Mario Bros. Wii', url: '..//newsupermariobroswii/index.html' },
@@ -5722,363 +5833,8 @@ const searchFunction = () => {
         resultsContainer.appendChild(div);
     });
 };
-
 </script>
 
-
-<!-- Heyo This is Important -->
-
-<script>
-document.getElementById('speakSelectedText').addEventListener('click', function() {
-    // Get selected text
-    var text = getSelectedText();
-    if (text) {
-        speakText(text);
-    } else {
-        console.log('No text selected.');
-    }
-});
-
-function getSelectedText() {
-    var text = '';
-    if (typeof window.getSelection != "undefined") {
-        text = window.getSelection().toString();
-    } else if (typeof document.selection != "undefined" && document.selection.type == "Text") {
-        text = document.selection.createRange().text;
-    }
-    return text;
-}
-
-function speakText(textToSpeak) {
-    if ('speechSynthesis' in window) {
-        const msg = new SpeechSynthesisUtterance();
-        msg.text = textToSpeak;
-        window.speechSynthesis.speak(msg);
-    } else {
-        console.log('Text-to-Speech not supported.');
-    }
-}
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const stopButton = document.getElementById('stopButton');
-    stopButton.addEventListener('click', function() {
-        if ('speechSynthesis' in window) {
-            speechSynthesis.cancel();
-        }
-    });
-});
-</script>
-
-<script>
-const bcrypt = require('bcrypt');
-const express = require('express');
-const session = require('express-session');
-
-const app = express();
-
-// Middleware
-app.use(express.json());
-app.use(session({
-  secret: 'your secret key',
-  resave: false,
-  saveUninitialized: true,
-}));
-
-// Assuming you have a User model and database setup
-app.post('/signup', async (req, res) => {
-  const { username, password } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 10);
-  // Save username, hashedPassword, and an optional profileImageUrl to your database
-});
-
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-  const user = await User.findOne({ username });
-  if (user && await bcrypt.compare(password, user.hashedPassword)) {
-    req.session.userId = user.id; // Log the user in
-    res.json({ message: "Logged in successfully" });
-  } else {
-    res.status(401).json({ message: "Invalid credentials" });
-  }
-});
-</script>
-
-
-<script>
-app.get('/profile', async (req, res) => {
-  if (!req.session.userId) {
-    return res.status(401).json({ message: "Not authenticated" });
-  }
-
-  const user = await User.findById(req.session.userId);
-  res.json({ username: user.username, profileImageUrl: user.profileImageUrl });
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const signInButton = document.getElementById('signInButton');
-  const userProfile = document.querySelector('.user-profile');
-  const userNameDiv = document.querySelector('.user-name');
-
-  signInButton.addEventListener('click', () => {
-    // Simulate sign in process
-    signInButton.style.display = 'none'; // Hide sign in button
-    userProfile.style.display = 'flex'; // Show user profile
-  });
-
-  userNameDiv.addEventListener('click', () => {
-    const newName = prompt('Enter new name:');
-    if (newName) {
-      userNameDiv.textContent = newName;
-    }
-  });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const loginButton = document.getElementById('loginButton');
-  const logoutButton = document.getElementById('logoutButton');
-  const userProfile = document.getElementById('userProfile');
-  const userName = document.getElementById('userName');
-  const userIcon = document.getElementById('userIcon');
-
-  // Simulate a user sign-in process
-  loginButton.addEventListener('click', () => {
-    // Here, you would replace these values with those from your sign-in process
-    const exampleUser = {
-      name: 'John Doe',
-      icon: 'path/to/user-icon.jpg' // Use a real image path
-    };
-    // Display user information
-    userName.textContent = exampleUser.name;
-    userIcon.src = exampleUser.icon;
-
-    // Update UI
-    loginButton.style.display = 'none';
-    userProfile.style.display = 'flex';
-  });
-
-  // Simulate user sign-out
-  logoutButton.addEventListener('click', () => {
-    // Hide user info and show login button
-    userProfile.style.display = 'none';
-    loginButton.style.display = 'block';
-  });
-});
-
-
-</script>
-
-<script>
-// Simulate checking login status on page load
-document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
-});
-
-function logIn() {
-    // Here you would have your actual login logic
-    localStorage.setItem('isLoggedIn', 'true');
-    checkLoginStatus();
-}
-
-function logOut() {
-    localStorage.removeItem('isLoggedIn');
-    checkLoginStatus();
-}
-
-function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
-    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
-}
-</script>
-<script>
-function toggleDropdown2() {
-    const dropdown = document.querySelector('.dropdown-content2');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-}
-
-// Optional: Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.user-icon img')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content2");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === 'block') {
-                openDropdown.style.display = 'none';
-            }
-        }
-    }
-}
-</script>
-
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-
-    // Get all elements with the 'dropdown-content' class within the topnav
-    var dropdowns = x.getElementsByClassName("dropdown");
-    for (var i = 0; i < dropdowns.length; i++) {
-        // If the topnav is in responsive mode, ensure dropdown-content remains hidden
-        if (x.className.includes("responsive")) {
-            dropdowns[i].style.display = "none";
-        } else {
-            // Reset style in case it was previously modified
-            dropdowns[i].style.display = "";
-        }
-    }
-}
-
-// This part is to ensure the dropdown content does not display in responsive mode
-// You may need to add an event listener or modify existing ones for dropdown buttons
-// to control their display property separately if they should be visible in responsive mode.
-
-</script>
-
-<script>
-  // When the user clicks on the button, toggle between hiding and showing the dropdown content
-  document.querySelector('.accessibility-button').onclick = function() {
-    document.querySelector('.dropdown-content').classList.toggle('show');
-  };
-
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.accessibility-button')) {
-      var dropdowns = document.getElementsByClassName('dropdown-content');
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  };
-</script>
-
-<script>
-function updateNavigationForLoggedInUser(userName, profileImagePath) {
-  const profileSection = document.querySelector('.profile-section');
-  profileSection.querySelector('.profile-name').textContent = userName;
-  profileSection.querySelector('.profile-icon').src = profileImagePath;
-
-  // Hide the login and signup links
-  document.querySelector('a[href="login/index.html"]').style.display = 'none';
-  document.querySelector('a[href="..//signup/index.html"]').style.display = 'none';
-
-  // Show the profile section
-  profileSection.style.display = 'flex';
-}
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const loginButton = document.getElementById('loginButton');
-  const logoutButton = document.getElementById('logoutButton');
-  const userProfile = document.getElementById('userProfile');
-  const userName = document.getElementById('userName');
-  const userIcon = document.getElementById('userIcon');
-
-  // Simulate a user sign-in process
-  loginButton.addEventListener('click', () => {
-    // Here, you would replace these values with those from your sign-in process
-    const exampleUser = {
-      name: 'John Doe',
-      icon: 'path/to/user-icon.jpg' // Use a real image path
-    };
-    // Display user information
-    userName.textContent = exampleUser.name;
-    userIcon.src = exampleUser.icon;
-
-    // Update UI
-    loginButton.style.display = 'none';
-    userProfile.style.display = 'flex';
-  });
-
-  // Simulate user sign-out
-  logoutButton.addEventListener('click', () => {
-    // Hide user info and show login button
-    userProfile.style.display = 'none';
-    loginButton.style.display = 'block';
-  });
-});
-
-
-</script>
-
-<script>
-// Simulate checking login status on page load
-document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
-});
-
-function logIn() {
-    // Here you would have your actual login logic
-    localStorage.setItem('isLoggedIn', 'true');
-    checkLoginStatus();
-}
-
-function logOut() {
-    localStorage.removeItem('isLoggedIn');
-    checkLoginStatus();
-}
-
-function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    document.querySelector('.logged-in-toolbar').style.display = isLoggedIn ? 'block' : 'none';
-    document.querySelector('.logged-out-toolbar').style.display = isLoggedIn ? 'none' : 'flex';
-}
-</script>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  var searchResults = document.getElementById("searchResults2");
-
-  if (x.className === "topnav") {
-    x.className += " responsive";
-    // Show searchResults2 when opening the menu
-    searchResults.style.display = "block";
-  } else {
-    x.className = "topnav";
-    // Hide searchResults2 when closing the menu
-    searchResults.style.display = "none";
-  }
-}
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('myModal');
-    const modalImg = document.getElementById('img01');
-    const downloadLink = document.getElementById('downloadLink');
-    const closeBtn = document.getElementsByClassName('close')[0];
-
-    document.querySelectorAll('.game-cover').forEach(image => {
-        image.onclick = function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            downloadLink.href = this.src; // Sets the download link to the image source
-            downloadLink.setAttribute('download', this.alt); // Uses the alt text as the download filename
-        }
-    });
-
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
-    }
-});
-</script>
 
 <script>
 // Example function to toggle light mode and save the setting
@@ -6119,5 +5875,55 @@ function applySavedSettings() {
 // Call `applySavedSettings` when the page loads
 document.addEventListener('DOMContentLoaded', applySavedSettings);
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Example: Check if user is logged in.
+    // This should be replaced with actual logic to check user's login status, e.g., checking a cookie or local storage.
+    const isLoggedIn = true; // Change to false to simulate not being logged in
+
+    const loggedInDiv = document.getElementById('logged-in');
+    const notLoggedInDiv = document.getElementById('not-logged-in');
+
+    if (isLoggedIn) {
+        loggedInDiv.style.display = 'block'; // Show the logged-in div
+        notLoggedInDiv.style.display = 'none'; // Hide the not-logged-in div
+    } else {
+        loggedInDiv.style.display = 'none'; // Hide the logged-in div
+        notLoggedInDiv.style.display = 'block'; // Show the not-logged-in div
+    }
+});
+
+function logout(event) {
+    event.preventDefault();
+    console.log('Logout logic goes here.');
+
+    // Here, implement your logout logic, such as clearing session storage, cookies, etc.
+    // After logout, you might want to change the isLoggedIn variable accordingly
+    // and update the display of loggedInDiv and notLoggedInDiv, or simply reload the page.
+}
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let isLoggedIn = false; // Initial login state
+        const loginButton = document.getElementById('loginButton');
+
+        updateButtonText();
+
+        loginButton.addEventListener('click', function() {
+            isLoggedIn = !isLoggedIn; // Toggle login state
+            updateButtonText();
+
+            // Here, you would also handle the actual login or logout process
+            // For example, redirecting to a login page or sending a logout request to the server.
+        });
+
+        function updateButtonText() {
+            loginButton.textContent = isLoggedIn ? 'Log out' : 'Log in';
+        }
+    });
+
+</script>
 
 </body>
+</html>

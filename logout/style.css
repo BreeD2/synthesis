@@ -4344,102 +4344,59 @@ button#signupButton {
 
 }
 
-
-button#signupButton:hover {
-    background-color: grey;
+/* Basic reset for margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
 
-p {
-    text-align: center;
+/* Container for the app content */
+#app {
+    width: 90%;
+    max-width: 600px;
+    margin-top:400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dark-mode p {
-      color:white
+/* Styling for the logout form */
+.logout-form {
+    margin-top: 20px;
 }
 
-.light-mode p {
-    color:black
-}
-
-form input[type="password"] {
-  width: calc(100% - 22px);
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color:grey;
-  font-family:arial
-}
-.form-group input {
-    font-family:arial
-}
-
-
-
-form input[type="text"] {
-  width: calc(100% - 22px);
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color:grey;
-  font-family:arial
-}
-
-/* Style placeholders */
-.form-group input::placeholder {
-    color: #888; /* Placeholder text color */
-    opacity: 1; /* Full opacity */
-}
-
-
-
-
-#profile  h2{
-    margin-top: 100px;
-}
-
-.game-item {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.game-actions {
-    margin-top: 10px;
-}
-
-button {
-    margin-right: 10px;
-}
-
-.comment-form {
-    margin-top: 10px;
-}
-
-.comment-input {
-    margin-top: 5px;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-.submit-btn {
-    padding: 8px 15px;
+/* Styling for the logout button */
+.logout-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+}
+/* Styling for the logout button */
+.dark-mode .logout-form button {
+    background-color: black;
+    color: #ffffff;
+    
 }
 
-
-#profile-pic {
-    margin-bottom: 20px;
+.logout-form button:hover {
+    background-color: #0056b3;
 }
 
-#profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Styling for the message displayed when the user is not logged in */
+.login-message {
+    color: #d9534f;
+    font-size: 16px;
+    margin-top: 15px;
 }
 
-#change-pic-btn {
-    display: block;
-    margin-top: 10px;
+/* Styling for headings */
+h2 {
+    color: #333333;
+    margin-bottom: 15px;
 }
