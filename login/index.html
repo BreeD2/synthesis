@@ -3568,77 +3568,61 @@ function decreaseFont() {
 
 </script>
 <script>
-    // Called once the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        storeOriginalFontSizes(); // Store original font sizes for specified elements
-        // Add any other initialization code here...
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  // Initial setup, storing original font sizes
+  storeOriginalFontSizes();
+});
 
-    // Store the original font sizes
-    function storeOriginalFontSizes() {
-        const selector = '.sidebar *, .topnav *, .welcome, .underwelcome, .opening-screen button,p,.featured-games,.featured-games-title, .footer,#enter-site-button';
-        document.querySelectorAll(selector).forEach(element => {
-            element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
-        });
-    }
+// Store the original font sizes of elements within the login form for resetting later
+function storeOriginalFontSizes() {
+  const selector = '#formsContainer, #formsContainer h2, .footer, .form-group label, #loginButton, p';
+  document.querySelectorAll(selector).forEach(element => {
+    element.setAttribute('data-original-font-size', window.getComputedStyle(element).fontSize);
+  });
+}
 
-    // Adjust the font size of elements
-    function adjustFontSize(factor, selector) {
-        document.querySelectorAll(selector).forEach(element => {
-            const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
-            element.style.fontSize = `${currentFontSize * factor}px`;
-        });
-    }
+// Adjust the font size of specified elements within the login form
+function adjustFontSize(factor, selector) {
+  document.querySelectorAll(selector).forEach(element => {
+    const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
+    element.style.fontSize = `${currentFontSize * factor}px`;
+  });
+}
 
-    // Increase font size
-    function increaseFont() {
-        adjustFontSize(1.1, '.sidebar *, .welcome, .underwelcome, .opening-screen button,p,.featured-games-title,.footer,featured-games, .dropdown-content, #enter-site-button');
-    }
+// Increase font size within the login form
+function increaseFont() {
+  adjustFontSize(1.1, '#formsContainer, #formsContainer h2, .form-group label, .footer, #loginButton, p');
+}
 
-    // Decrease font size
-    function decreaseFont() {
-        adjustFontSize(0.9, '.sidebar *, .welcome, .underwelcome, .dropdown-content,.dropdown, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button');
-    }
+// Decrease font size within the login form
+function decreaseFont() {
+  adjustFontSize(0.9, '#formsContainer, #formsContainer h2, .form-group label, .footer, #loginButton, p');
+}
 
-    // Reset font sizes to their original values
-    function resetFont() {
-        const selector = '.sidebar *,  .welcome, .underwelcome, .opening-screen button,.featured-games,.featured-games-title,p,.footer, #enter-site-button';
-        document.querySelectorAll(selector).forEach(element => {
-            const originalFontSize = element.getAttribute('data-original-font-size');
-            if (originalFontSize) element.style.fontSize = originalFontSize;
-        });
+// Reset font sizes to their original values specifically for the login form
+function resetFont() {
+  const selector = '#formsContainer, #formsContainer h2, .form-group label, #loginButton, p, .footer';
+  document.querySelectorAll(selector).forEach(element => {
+    const originalFontSize = element.getAttribute('data-original-font-size');
+    if (originalFontSize) {
+      element.style.fontSize = originalFontSize;
     }
+  });
+  // Re-store the original font sizes after reset to ensure adjustments are based on the reset size
+  storeOriginalFontSizes();
+}
 
-    // New functions for toggling visual modes
-    function invertColors() {
-        document.body.classList.toggle('invert-colors');
-    }
-    // Stop any ongoing speech synthesis
-  if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-  }
+// Resets all settings including font sizes and other visual modifications
+function resetSettings() {
+  resetFont(); // Reset font sizes
+  document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode'); // Reset visual modes
+  document.body.style.filter = '';
+  document.body.style.webkitFilter = '';
+  // Add any additional reset functionalities as needed
+}
 
-    function toggleLightMode() {
-        document.body.classList.add('light-mode');
-        document.body.classList.remove('dark-mode');
-    }
-
-    function toggleDarkMode() {
-        document.body.classList.add('dark-mode');
-        document.body.classList.remove('light-mode');
-    }
-
-    // Reset settings including font sizes and other visual modifications
-    function resetSettings() {
-        resetFont(); // Resets font sizes
-        document.body.classList.remove('dark-mode', 'invert-colors', 'light-mode'); // Resets visual modes
-        // Reset global style adjustments if any
-        document.body.style.filter = '';
-        document.body.style.webkitFilter = '';
-        // Close the accessibility menu if you have a function to do so
-        // closeAccessibilityDropup(); // Uncomment if this function is defined
-    }
 </script>
+
 
 
 <script>// Get the modal
@@ -5950,29 +5934,7 @@ function applySavedSettings() {
 // Call `applySavedSettings` when the page loads
 document.addEventListener('DOMContentLoaded', applySavedSettings);
 </script>
-<script>
-// Increase font size example
-function increaseFont() {
-    let currentSize = parseInt(document.body.style.fontSize || 16);
-    currentSize++;
-    document.body.style.fontSize = `${currentSize}px`;
-    // Save the font size
-    localStorage.setItem('fontSize', `${currentSize}px`);
-}
 
-// Apply saved font size on page load
-function applyFontSize() {
-    const savedFontSize = localStorage.getItem('fontSize');
-    if (savedFontSize) {
-        document.body.style.fontSize = savedFontSize;
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    applySavedSettings(); // For theme
-    applyFontSize(); // For font size
-});
-</script>
 
 </body>
 </html>

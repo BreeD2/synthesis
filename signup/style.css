@@ -2493,25 +2493,10 @@ border:2px solid white;
       padding: 20px;
       position: relative;
       background-color: black;
-      margin-top: 200px;
+      margin-top:160px;
         color:white;
+}
 
-    }
-    body.light-mode .footer, body.light-mode .footer * {
-        width: 100%;
-        background-color: #f1f1f1; /* Light grey background for the footer */
-        text-align: center;
-        padding: 20px;
-        color: #000; /* Dark text color for readability */
-        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-      }
-      body.dark-mode #sort-section, body.sort-section * {
-
-    background-color: #f1f1f1; /* Light grey background for the footer */
-
-    color: black; /* Dark text color for readability */
-
-  }
   body.dark-mode h2, body.sort-section h2 * {
 
 
@@ -2564,14 +2549,7 @@ body.light-mode .featured-games-title {
 background-color: grey;
 color:white
 }
-body.dark-mode .footer, body.dark-mode .footer * {
-    width: 100%;
-    background-color: black; /* Light grey background for the footer */
-    text-align: center;
-    padding: 20px;
-    color: white; /* Dark text color for readability */
-    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-  }
+
 
 body.dark-mode h2, body.sort-section h2 * {
 
@@ -3649,6 +3627,7 @@ rgb(146, 172, 67)
   background-color: red;
   border:2px solid black
 }
+
 .auth-links {
     display: flex;
     align-items: center; /* Align items vertically */
@@ -4295,10 +4274,27 @@ margin-top: 20px;
     border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0,0,0,0.1)
 }
+.light-mode #signupContainer {
+  background-color: white;
+color:black
+}
+.dark-mode #signupContainer {
+  background-color: #555;
+color:white
+}
 
 #signupContainer h2 {
     color: #333;
     text-align: center;
+}
+.light-mode #signupContainer h2 {
+    color: black;
+
+}
+
+.dark-mode #signupContainer h2 {
+    color: white;
+
 }
 
 .form-group {
@@ -4320,12 +4316,34 @@ margin-top: 20px;
 button#signupButton {
     width: 100%;
     padding: 10px;
-    background-color: ;
+    background-color: dodgerblue;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
+
+.dark-mode button#signupButton {
+
+    background-color:black ;
+    color: white;
+}
+
+
+.light-mode button#signupButton {
+
+    background-color:grey ;
+    color: white;
+}
+.light-mode p a {
+    color: grey;
+
+}
+.dark-mode p a {
+    color: white;
+
+}
+
 
 button#signupButton:hover {
     background-color: grey;
@@ -4335,7 +4353,13 @@ p {
     text-align: center;
 }
 
+.dark-mode p {
+      color:white
+}
 
+.light-mode p {
+    color:black
+}
 
 form input[type="password"] {
   width: calc(100% - 22px);
