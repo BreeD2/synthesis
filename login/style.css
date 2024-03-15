@@ -1,10 +1,15 @@
 * {
   box-sizing: border-box;
 }
+body {
+    font-family: Verdana, sans-serif;
+
+      height:auto
+}
 
 body {
   background-color:white;
-
+  height:auto  !important;
 
 
 
@@ -830,6 +835,7 @@ body.light-mode .dropdown-content2 a {
 
 html {
   font-family: arial;
+
 }
 
 .topnav {
@@ -1146,10 +1152,11 @@ body {
 body {
   background-color: ghostwhite;
   font-family: 'arial', sans-serif;
+  height:auto
 }
 #searchResults {font-family: 'arial', sans-serif; /* Add the desired font-family */;
 color:red;
-font-size: 15px
+font-size: 15px;
 
 
 }
@@ -2494,17 +2501,10 @@ border:2px solid white;
     padding: 20px;
     position: relative;
     background-color: black;
-    margin-top: 100px;
+    margin-top:190px;
       color:white;
   }
-    body.light-mode .footer, body.light-mode .footer * {
-        width: 100%;
-        background-color: #f1f1f1; /* Light grey background for the footer */
-        text-align: center;
-        padding: 20px;
-        color: #000; /* Dark text color for readability */
-        margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-      }
+
       body.dark-mode #sort-section, body.sort-section * {
 
     background-color: #f1f1f1; /* Light grey background for the footer */
@@ -2564,14 +2564,7 @@ body.light-mode .featured-games-title {
 background-color: grey;
 color:white
 }
-body.dark-mode .footer, body.dark-mode .footer * {
-    width: 100%;
-    background-color: black; /* Light grey background for the footer */
-    text-align: center;
-    padding: 20px;
-    color: white; /* Dark text color for readability */
-    margin-top: auto; /* Ensures that the footer is pushed to the bottom */
-  }
+
 
 body.dark-mode h2, body.sort-section h2 * {
 
@@ -4290,4 +4283,117 @@ margin-top: 20px;
    /* Existing CSS for game-container */
 .game-cover {
    cursor: pointer;
+}
+
+button#loginButton {
+    width: calc(100% - 22px);
+    padding: 10px;
+    background-color: #007bff; /* Example color, adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px
+}
+.light-mode button#loginButton {
+
+    background-color: grey; /* Example color, adjust as needed */
+    color: white;
+
+}
+.dark-mode button#loginButton {
+
+    background-color: black; /* Example color, adjust as needed */
+    color: white;
+
+}
+
+button#loginButton:hover {
+    background-color: grey;
+}
+
+.light-mode p a {
+    color: grey;
+
+}
+
+.dark-mode p a {
+    color: white
+
+}
+.dark-mode p {
+  color: white
+}
+.light-mode p {
+  color: grey
+}
+
+
+#formsContainer {
+    max-width:500px;
+    margin-top: 100px;
+    max-height: 600px;
+    font-family: Verdana, sans-serif;;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+}
+
+.dark-mode #formsContainer {
+
+    background-color: #555;
+  color:white
+}
+
+.light-mode #formsContainer {
+
+    background-color: white;
+  color:black
+}
+
+
+#loginSection h2 {
+    color: #333;
+    text-align: center;
+}
+
+.light-mode #loginSection h2 {
+    color: #333;
+
+}
+
+.dark-mode #loginSection h2 {
+    color: white;
+
+}
+
+form input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color:grey;
+  font-family:arial;
+
+}
+.form-group input {
+    font-family:arial
+}
+
+
+
+form input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color:grey;
+  font-family:arial
+}
+
+/* Style placeholders */
+.form-group input::placeholder {
+    color: #888; /* Placeholder text color */
+    opacity: 1; /* Full opacity */
 }

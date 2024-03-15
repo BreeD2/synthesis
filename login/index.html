@@ -4,25 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-</head>
-<body>
-  <!doctype html>
-<html lang="en-US">
-<html>
- <head>
+    <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
+  <link rel="manifest" href="..//site.webmanifest">
+  <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <center>
 
-   <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
-   <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="..//favicon-16x16.png">
- <link rel="manifest" href="..//site.webmanifest">
- <link rel="mask-icon" href="..//safari-pinned-tab.svg" color="#5bbad5">
- <meta name="msapplication-TileColor" content="#da532c">
- <meta name="theme-color" content="#ffffff">
-   <center>
-
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet"href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -338,16 +330,23 @@ Accessibility<i class="fa fa-caret-down"></i>
 
         <div id="main-content" class="content">
           <div id="formsContainer">
-        <div id="loginSection">
-            <h2>Login</h2>
-            <form id="loginForm">
-                Username: <input type="text" id="loginUsername" required><br>
-                Password: <input type="password" id="loginPassword" required><br>
-                <button type="submit">Login</button>
-            </form>
-            <p>Need an account? <a href="..//signup/index.html">Signup</a></p>
-        </div>
-    </div>
+      <div id="loginSection">
+          <h2>Login</h2>
+          <form id="loginForm">
+              <div class="form-group">
+                  <label for="loginUsername">Username:</label>
+                  <input type="text" id="loginUsername" placeholder="Enter your username" required>
+              </div>
+              <div class="form-group">
+                  <label for="loginPassword">Password:</label>
+                  <input type="password" id="loginPassword" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" id="loginButton">Login</button>
+          </form>
+          <p>Need an account? <a href="../signup/index.html">Signup</a></p>
+      </div>
+  </div>
+
 
 
 
