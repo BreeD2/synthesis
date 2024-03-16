@@ -4292,3 +4292,105 @@ margin-top: 20px;
 .game-cover {
    cursor: pointer;
 }
+
+#toggleFormBtn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#toggleFormBtn:hover {
+  background-color: cornflowerblue;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin-top: 100px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.dark-mode .contact-form {
+  background-color: #555;
+  color:white
+
+}
+
+
+
+.light-mode .contact-form {
+background-color: white;
+color:white
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group button[type="submit"] {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dark-mode form button[type="submit"] {
+  background-color: black;
+  color: white;
+
+}
+
+.dark-mode form button[type="submit"]:hover {
+  background-color: grey;
+  color: white;
+
+}
+
+.light-mode form button[type="submit"] {
+  background-color: black;
+  color: white;
+
+}
+
+.light-mode form button[type="submit"]:hover {
+  background-color: grey;
+  color: white;
+
+}
+
+.light-mode .contact-form h2 {
+
+  color: black;
+
+}
+
+.light-mode .form-group label {
+  color:black
+}
+
+
+.form-group button[type="submit"]:hover {
+  background-color: cornflowerblue;
+}
