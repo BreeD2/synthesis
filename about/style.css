@@ -4315,3 +4315,26 @@ margin-top: 20px;
 .research-focus {
   padding: 20px;
 }
+.dark-mode .about-archive h2{
+
+    color:white
+}
+.dark-mode .development-story h2 {
+  color:white
+}
+
+.dark-mode .research-focus h2 {
+    color:white
+}
+
+.dark-mode .about-archive p {
+
+    color:white
+}
+.dark-mode .development-story p {
+  color:white
+}
+
+.dark-mode .research-focus p {
+    color:white
+}

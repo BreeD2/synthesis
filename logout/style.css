@@ -4,7 +4,7 @@
 
 body {
   background-color:white;
-
+  height:auto !important;
 
 
 
@@ -2493,7 +2493,7 @@ border:2px solid white;
       padding: 20px;
       position: relative;
       background-color: black;
-      margin-top:160px;
+      margin-top:340px;
         color:white;
 }
 
@@ -4344,22 +4344,23 @@ button#signupButton {
 
 }
 
-/* Basic reset for margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
+
 
 /* Container for the app content */
 #app {
     width: 90%;
     max-width: 600px;
-    margin-top:400px;
+    margin-top:200px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Container for the app content */
+#app h2 {
+  color: black;
+
 }
 
 /* Styling for the logout form */
@@ -4379,9 +4380,28 @@ body, html {
 }
 /* Styling for the logout button */
 .dark-mode .logout-form button {
-    background-color: black;
+    background-color: #555;
     color: #ffffff;
-    
+
+}
+/* Styling for the logout button */
+.light-mode .logout-form button {
+    background-color: grey;
+    color: white;
+
+}
+/* Styling for the logout button */
+.light-mode .logout-form button:hover {
+    background-color: black;
+    color: white;
+
+}
+
+/* Styling for the logout button */
+.dark-mode .logout-form button:hover {
+    background-color: black;
+    color: white;
+
 }
 
 .logout-form button:hover {

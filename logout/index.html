@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Logout</title>
     <link rel="icon" type="image/x-icon" href="..//favicon.ico"/>
     <link rel="apple-touch-icon" sizes="76x76" href="..//apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="..//favicon-32x32.png">
@@ -42,7 +42,7 @@
       <img src="..//rpa.png" alt="Reminiscence Collection" style="height: 23px;">&ensp;<span class="title-text">Reminiscence&ensp;Collection</span>
 
  </a>
- <a href="..//index.html" class="active">Home</a>
+ <a href="..//index.html">Home</a>
      <a href="..//games/index.html">Games</a>
      <a href="..//about/index.html">About</a>
      <a href="..//contact/index.html">Contact</a>
@@ -61,7 +61,7 @@
           <a href="..//signup/index.html">Signup</a>
          <a href="..//login/index.html">Login</a>
          <a href="..//myprofile/index.html">My Profile</a>
-         <a href="index.html">Logout</a>
+         <a href="index.html"class="active">Logout</a>
        </div>
      </div>
      <div class="dropdown">
@@ -5923,6 +5923,35 @@ function logout(event) {
         }
     });
 
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const app = document.getElementById('app');
+    let isLoggedIn = true; // Simulate a logged-in state. Set to false to simulate not being logged in.
+
+    if (isLoggedIn) {
+        app.innerHTML = `
+            <h2>Welcome, User!</h2>
+            <form class="logout-form" onsubmit="logout(event)">
+                <button type="submit">Logout</button>
+            </form>
+        `;
+    } else {
+        app.innerHTML = `
+            <h2>You are not logged in.</h2>
+            <p class="login-message">Please login to access the logout form.</p>
+        `;
+    }
+});
+
+function logout(event) {
+    event.preventDefault();
+    // Here you would handle the logout logic, typically involving a server call.
+    console.log('Logging out...');
+    // Simulate logging out by redirecting or reloading the page.
+    // For demonstration, just display a logged-out message.
+    document.getElementById('app').innerHTML = `<p>You have been logged out.</p>`;
+}
 </script>
 
 </body>
