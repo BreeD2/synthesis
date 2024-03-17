@@ -1,47 +1,44 @@
 <?php
-// Include your database connection file here
-// require_once 'db_connection.php';
+// Replace 'your_server', 'your_username', 'your_password', and 'your_database' with your actual database details
+$servername = "your_server";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database";
 
-// Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate input
-    $username = trim($_POST["username"]);
-    $email = trim($_POST["email"]);
-    $password = trim($_POST["password"]);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (empty($username) || empty($email) || empty($password)) {
-        // Handle error - input fields are empty
-        die("Please fill all the fields.");
-    }
-
-    // Hash the password
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-    // Insert into the database
-    // Create a database connection
-    $conn = new mysqli('your_server', 'your_username', 'your_password', 'your_database');
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $passwordHash);
-
-    // Execute the statement
-    if ($stmt->execute()) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    // Close connections
-    $stmt->close();
-    $conn->close();
-} else {
-    // Not a POST request, handle the error
-    echo "Invalid request.";
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
+
+// Get user input from the form
+$email = $_POST['signupEmail'] ?? '';
+$username = $_POST['signupUsername'] ?? '';
+$password = $_POST['signupPassword'] ?? '';
+
+// Validate input
+if (empty($email) || empty($username) || empty($password)) {
+    echo "All fields are required.";
+    exit;
+}
+
+// Hash the password
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+// Prepare SQL statement to prevent SQL injection
+$stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $email, $username, $passwordHash);
+
+// Execute the prepared statement
+if ($stmt->execute()) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $stmt->error;
+}
+
+// Close statement and connection
+$stmt->close();
+$conn->close();
 ?>
