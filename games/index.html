@@ -513,20 +513,22 @@
              <a href="..//wipeout/index.html" data-game="Wipeout">Wipeout</a>
              <a href="..//wipeout2/index.html" data-game="Wipeout 2">Wipeout 2</a>
              <br><br><br>
-             </div>
+          
             </ul>
         </section>
-        <section id="featured-game">
-          <h2>Featured Game of the Month</h2>
-          <div class="featured-content">
-            <img src="path_to_featured_game_image.jpg" alt="Featured Game Image" class="featured-image">
-            <div class="game-details">
-              <h3>Game Title</h3>
-              <p>Short description of the game, what makes it special, and why it's the featured game of the month.</p>
-              <a href="game_link.html" class="play-now-btn">Play Now</a>
+        <section id="featured-game" class="featured-game-section">
+            <h2 class="section-title">Featured Game of the Month</h2>
+            <div class="featured-content">
+                <img src="../supermariobroswonder/supermariobroswonder.jpg" alt="Super Mario Bros. Wonder" class="featured-image">
+                <div class="game-details">
+                    <h3 class="game-title">Super Mario Bros. Wonder</h3>
+                    <p class="game-description">A side-scrolling platformer that features Mario and his friends, Peach, Luigi, Daisy, and more, who go on an adventure in the Flower Kingdom to stop Bowser. Along the journey, there are multiple collectibles named "Wonder Seeds" that change how the stages look. This game is special for gamers who love platforming games and fans of the Mario series.</p>
+                    <a href="../supermariobroswonder/index.html" class="play-now-btn">Read More About My Review</a>
+                </div>
             </div>
-          </div>
         </section>
+
+
 
         <section id="game-quiz">
   <h2>Which game should you play next?</h2>
@@ -534,7 +536,7 @@
     <p>What genre do you prefer?</p>
     <button class="quiz-btn" data-genre="Action">Action</button>
     <button class="quiz-btn" data-genre="Puzzle">Puzzle</button>
-    <button class="quiz-btn" data-genre="RPG">RPG</button>
+    <button class="quiz-btn" data-genre="Role-playing">Role-playing</button>
     <!-- Add more options as needed -->
   </div>
   <div id="quiz-result" style="display:none;">
@@ -6038,10 +6040,10 @@ document.addEventListener('DOMContentLoaded', function() {
           gameSuggestion = 'Assassin’s Creed Odyssey';
           break;
         case 'Puzzle':
-          gameSuggestion = 'Portal 2';
+          gameSuggestion = 'LittleBigPlanet 2';
           break;
-        case 'RPG':
-          gameSuggestion = 'The Witcher 3: Wild Hunt';
+        case 'Role-playing':
+          gameSuggestion = 'Mass Effect Legendary Edition';
           break;
         // Add more cases as needed
       }

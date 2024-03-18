@@ -2163,12 +2163,7 @@ select:hover {
     margin-top: 10px;
 }
 
-.game-description {
-    font-size: 14px;
-    color: #666; /* Adjust color based on your theme */;
-    width: 50%;
 
-}
 
 .games-grid {
     display: grid;
@@ -4400,7 +4395,15 @@ form input[type="text"] {
 
 #games-list2 h2 {
   text-align: center;
-  color: #333;
+  color: black;
+}
+.light-mode #games-list2 h2 {
+
+  color: black;
+}
+.dark-mode #games-list2 h2 {
+
+  color: white;
 }
 
 #gameSearch {
@@ -4447,8 +4450,20 @@ form input[type="text"] {
 #featured-game {
   text-align: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 20px;
+}
+.light-mode #featured-game {
+
+  background-color: white;
+color:black
+}
+.dark-mode #featured-game {
+  background-color: #555;
+color:white
 }
 
 .featured-content {
@@ -4458,7 +4473,7 @@ form input[type="text"] {
 }
 
 .featured-image {
-  max-width: 200px;
+  max-width:300px;
   margin-right: 20px;
 }
 
@@ -4475,6 +4490,24 @@ form input[type="text"] {
   margin-top: 10px;
   display: inline-block;
 }
+.light-mode .play-now-btn {
+  background-color: grey;
+  color: white;
+}
+.dark-mode .play-now-btn {
+  background-color: black;
+  color: white;
+}
+.light-mode .play-now-btn:hover {
+  background-color: black;
+
+
+}
+.dark-mode .play-now-btn:hover {
+  background-color: grey;
+
+
+}
 
 .play-now-btn:hover {
   background-color: #0056b3;
@@ -4487,7 +4520,7 @@ form input[type="text"] {
 }
 
 .quiz-btn {
-  background-color: #28a745;
+  background-color: dodgerblue;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -4497,7 +4530,7 @@ form input[type="text"] {
 }
 
 .quiz-btn:hover {
-  background-color: #218838;
+  background-color: cornflowerblue;
 }
 
 #showGamesBtn {
@@ -4510,6 +4543,29 @@ form input[type="text"] {
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth background color change on hover */
 }
+.light-mode #showGamesBtn {
+  background-color: grey; /* Blue background */
+  color: white; /* White text */
+
+}
+
+.light-mode #showGamesBtn:hover {
+  background-color: black; /* Blue background */
+  color: white; /* White text */
+
+}
+
+.dark-mode #showGamesBtn {
+  background-color: black; /* Blue background */
+  color: white; /* White text */
+
+}
+
+.dark-mode #showGamesBtn:hover {
+  background-color: grey; /* Blue background */
+  color: white; /* White text */
+
+}
 
 #showGamesBtn:hover {
   background-color: #0056b3; /* Darker blue background on hover */
@@ -4517,4 +4573,119 @@ form input[type="text"] {
 
 #showGamesBtn:focus {
   outline: none; /* Remove outline on focus for a clean look */
+}
+
+
+
+/* new */
+.featured-game-section {
+    background-color: red;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 1200px; /* Max width for large screens */
+}
+
+
+.section-title{
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+.light-mode .section-title{
+    color: black;
+
+}
+.dark-mode .section-title{
+    color: white;
+
+}
+
+.featured-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.featured-image {
+    max-width: 500px; /* Fixed width for consistency */
+    height: auto;
+    border-radius: 8px;
+    order: -1; /* Ensure image always comes first */
+}
+
+.game-details {
+    flex-grow: 1;
+}
+
+.game-title, .game-description, .play-now-btn {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for mobile screens */
+    .featured-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .featured-image, .game-details {
+        width: 100%; /* Full width for small screens */
+        text-align: center; /* Center align the text for mobile */
+    }
+
+    .game-title{
+        text-align: center; /* Center-align text for better readability */;
+        font-size:25px
+    }
+    .game-description {
+        text-align: center; /* Center-align text for better readability */;
+          font-size:15px
+    }
+
+    .play-now-btn {
+        margin: 0 auto; /* Center the button */
+        display: block; /* Make the button block to fill width */
+    }
+}
+
+.light-mode .quiz-btn  {
+    background-color: grey;
+    color: white;
+
+}
+
+.light-mode .quiz-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .quiz-btn  {
+    background-color: black;
+    color: white;
+
+}
+
+.dark-mode .quiz-btn:hover {
+  background-color: grey;
+  color: white;
+}
+.dark-mode #game-quiz h2, {
+    color: red;
+}
+
+.dark-mode #game-quiz h2 {
+    color: white; /* Dark grey color for the title */
+
+}
+
+.light-mode #game-quiz h2 {
+    color: black; /* Dark grey color for the title */
+
+}
+#game-quiz h2 {
+    color: black; /* Dark grey color for the title */
+
 }
