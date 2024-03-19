@@ -4391,7 +4391,13 @@ margin-top: 20px;
 .citations {
 
   margin-top: 120px; /* Margin at the bottom */;
-  text-align: left
+  text-align: left;
+
+
+}
+
+.citations p{
+  padding: 10px
 
 }
 .citations h2{
