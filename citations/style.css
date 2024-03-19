@@ -4387,3 +4387,15 @@ margin-top: 20px;
 .light-mode .research-focus p {
     color:black
 }
+
+.citations {
+
+  margin-top: 120px; /* Margin at the bottom */;
+  text-align: left
+
+}
+.citations h2{
+
+font-size: 25px
+
+}
