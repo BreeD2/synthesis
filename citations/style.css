@@ -4392,6 +4392,8 @@ margin-top: 20px;
 
   margin-top: 120px; /* Margin at the bottom */;
   text-align: left;
+  padding: 20px;
+  text-overflow: auto
 
 
 }
@@ -4404,4 +4406,34 @@ margin-top: 20px;
 
 font-size: 25px
 
+}
+
+.dark-mode .citations h2{
+
+color:white
+}
+
+.dark-mode .citations p{
+
+color:white
+}
+
+.dark-mode .citations a{
+
+color:lightgrey
+}
+
+.light-mode .citations h2{
+
+color:black
+}
+
+.light-mode .citations p{
+
+color:black
+}
+
+.light-mode .citations a{
+
+color:grey
 }
